@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IntelligentLevelEditor</RootNamespace>
+    <AssemblyName>ile</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>strawberry.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>.\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DSDecmp\Exceptions\InputTooLargeException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Exceptions\NotEnoughDataException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Exceptions\StreamTooShortException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Exceptions\TooMuchInputException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\CompositeFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\CompressionFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\LZOvl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\Nitro\CompositeFormats.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\Nitro\Huffman.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\Nitro\LZ10.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\Nitro\LZ11.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\Nitro\NitroCFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Formats\Nitro\RLE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Utils\IOUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Utils\LZUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DSDecmp\Utils\SimpleReversePrioQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Games\Crashmo\Crashmo.cs" />
+    <Compile Include="FormEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditor.Designer.cs">
+      <DependentUpon>FormEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Games\Crashmo\CrashmoLevelData.cs" />
+    <Compile Include="ImageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageBox.designer.cs">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localization.cs" />
+    <Compile Include="Games\Pushmo\PushmoGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Games\Pushmo\PushmoGridControl.Designer.cs">
+      <DependentUpon>PushmoGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarshalUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Games\Pushmo\Pushmo.cs" />
+    <Compile Include="PaletteEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaletteEditor.Designer.cs">
+      <DependentUpon>PaletteEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Games\Pushmo\PushmoImageImport.cs" />
+    <Compile Include="Games\Pushmo\PushmoLevelData.cs" />
+    <Compile Include="SimplePaletteQuantizer\Extensions\Extend.Image.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimplePaletteQuantizer\Extensions\Extend.PixelFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimplePaletteQuantizer\Helpers\Pixel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimplePaletteQuantizer\Helpers\QuantizationHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SimplePaletteQuantizer\Quantizers\IColorQuantizer.cs" />
+    <Compile Include="SimplePaletteQuantizer\Quantizers\XiaolinWu\WuColorCube.cs" />
+    <Compile Include="SimplePaletteQuantizer\Quantizers\XiaolinWu\WuColorQuantizer.cs" />
+    <EmbeddedResource Include="FormEditor.resx">
+      <DependentUpon>FormEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageBox.resx">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\Pushmo\PushmoGridControl.resx">
+      <DependentUpon>PushmoGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PaletteEditor.resx">
+      <DependentUpon>PaletteEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="en-US.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pushmo.ico" />
+    <None Include="Resources\tool_cloud.png" />
+    <None Include="Resources\tool_pencil.png" />
+    <None Include="Resources\tool_pipette.png" />
+    <None Include="Resources\tool_flag.png" />
+    <Content Include="strawberry.ico" />
+    <None Include="Resources\barcode-2d.png" />
+    <None Include="Resources\strawberry.png" />
+    <None Include="Resources\ico_grid.png" />
+    <None Include="Resources\layout_content.png" />
+    <None Include="Resources\folder_picture.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\door_in.png" />
+    <None Include="Resources\page_white_copy.png" />
+    <None Include="Resources\page_white.png" />
+    <None Include="Resources\magnifier.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\ladder_red_ud.png" />
+    <None Include="Resources\bin_closed.png" />
+    <None Include="Resources\arrow_up.png" />
+    <None Include="Resources\arrow_down.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\flag_icon.png" />
+    <None Include="Resources\switch_trans.png" />
+    <None Include="Resources\ladder_yellow.png" />
+    <None Include="Resources\ladder_red.png" />
+    <None Include="Resources\ladder_purple.png" />
+    <None Include="Resources\ladder_green.png" />
+    <None Include="Resources\ladder_blue.png" />
+    <None Include="Resources\pipette-icon.png" />
+    <None Include="Resources\ladder.png" />
+    <None Include="Resources\ruby.png" />
+    <None Include="Resources\flag_blue.png" />
+    <None Include="Resources\palette.png" />
+    <None Include="Resources\paintcan.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\pushmoPalette.gif" />
+    <None Include="Resources\transparentBackground.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
