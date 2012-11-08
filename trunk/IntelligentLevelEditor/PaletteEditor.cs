@@ -10,11 +10,11 @@ namespace IntelligentLevelEditor
         private readonly byte[] _palette = new byte[10];
         private RadioButton _selectedRadio;
 
-        public PaletteEditor(Pushmo.PushmoQrData pData)
+        public PaletteEditor(byte[] paletteData)
         {
             InitializeComponent();
             Localization.ApplyToContainer(this, "PaletteEditor");
-            Buffer.BlockCopy(pData.PaletteData, 0, _palette, 0, 10);
+            Buffer.BlockCopy(paletteData, 0, _palette, 0, 10);
             radColor0.BackColor = Pushmo.PushmoColorPalette.Entries[_palette[0]];
             radColor1.BackColor = Pushmo.PushmoColorPalette.Entries[_palette[1]];
             radColor2.BackColor = Pushmo.PushmoColorPalette.Entries[_palette[2]];

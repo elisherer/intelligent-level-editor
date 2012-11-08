@@ -34,8 +34,10 @@
             this.lblCred = new System.Windows.Forms.Label();
             this.btnThanks = new System.Windows.Forms.Button();
             this.line0 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblPun = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +45,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.Location = new System.Drawing.Point(63, 16);
+            this.lblTitle.Location = new System.Drawing.Point(124, 21);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(135, 13);
             this.lblTitle.TabIndex = 1;
@@ -52,7 +54,7 @@
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
-            this.lblAuthor.Location = new System.Drawing.Point(63, 29);
+            this.lblAuthor.Location = new System.Drawing.Point(126, 34);
             this.lblAuthor.Name = "lblAuthor";
             this.lblAuthor.Size = new System.Drawing.Size(60, 13);
             this.lblAuthor.TabIndex = 2;
@@ -85,6 +87,25 @@
             this.line0.TabIndex = 9;
             this.line0.TabStop = false;
             // 
+            // lblPun
+            // 
+            this.lblPun.AutoSize = true;
+            this.lblPun.Location = new System.Drawing.Point(285, 47);
+            this.lblPun.Name = "lblPun";
+            this.lblPun.Size = new System.Drawing.Size(66, 13);
+            this.lblPun.TabIndex = 11;
+            this.lblPun.Text = "ile by eli... lol";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::IntelligentLevelEditor.Properties.Resources.burger;
+            this.pictureBox2.Location = new System.Drawing.Point(63, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 48);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IntelligentLevelEditor.Properties.Resources.strawberry;
@@ -95,20 +116,12 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // lblPun
-            // 
-            this.lblPun.AutoSize = true;
-            this.lblPun.Location = new System.Drawing.Point(285, 47);
-            this.lblPun.Name = "lblPun";
-            this.lblPun.Size = new System.Drawing.Size(66, 13);
-            this.lblPun.TabIndex = 11;
-            this.lblPun.Text = "ile by eli... lol";
-            // 
             // AboutBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(357, 258);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblPun);
             this.Controls.Add(this.line0);
             this.Controls.Add(this.btnThanks);
@@ -124,6 +137,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,6 +153,7 @@
         private System.Windows.Forms.GroupBox line0;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblPun;
+        private System.Windows.Forms.PictureBox pictureBox2;
 
     }
 }
