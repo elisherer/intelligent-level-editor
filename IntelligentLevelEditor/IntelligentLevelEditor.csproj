@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>strawberry.ico</ApplicationIcon>
+    <ApplicationIcon>burger.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -101,6 +101,12 @@
     <Compile Include="DSDecmp\Utils\SimpleReversePrioQueue.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="GameSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameSelect.Designer.cs">
+      <DependentUpon>GameSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games\Crashmo\Crashmo.cs" />
     <Compile Include="FormEditor.cs">
       <SubType>Form</SubType>
@@ -115,6 +121,13 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Games\Crashmo\CrashmoLevelData.cs" />
+    <Compile Include="Games\IStudio.cs" />
+    <Compile Include="Games\Pushmo\PushmoStudio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Games\Pushmo\PushmoStudio.Designer.cs">
+      <DependentUpon>PushmoStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +174,12 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameSelect.resx">
+      <DependentUpon>GameSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\Pushmo\PushmoStudio.resx">
+      <DependentUpon>PushmoStudio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageBox.resx">
       <DependentUpon>ImageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,11 +214,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="pushmo.ico" />
     <None Include="Resources\tool_cloud.png" />
     <None Include="Resources\tool_pencil.png" />
     <None Include="Resources\tool_pipette.png" />
     <None Include="Resources\tool_flag.png" />
+    <Content Include="burger.ico" />
+    <None Include="Resources\cloud_small.png" />
+    <None Include="Resources\tool_fill.png" />
+    <None Include="Resources\burger.png" />
     <Content Include="strawberry.ico" />
     <None Include="Resources\barcode-2d.png" />
     <None Include="Resources\strawberry.png" />

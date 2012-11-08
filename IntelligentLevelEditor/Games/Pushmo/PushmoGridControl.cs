@@ -158,10 +158,13 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         public void Redraw()
         {
-            if (Height != Image.Height || Width != Image.Width)
-                Image = new Bitmap(Width, Height);
-            DrawPushmoToImage(Image,Width, Height, _grid, true);
-            Invalidate();
+            if (!DesignMode)
+            {
+                if (Height != Image.Height || Width != Image.Width)
+                    Image = new Bitmap(Width, Height);
+                DrawPushmoToImage(Image, Width, Height, _grid, true);
+                Invalidate();
+            }
         }
 
         public Bitmap CreatePreview(int width, int height)
@@ -186,6 +189,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         private void OnPaint(object sender, PaintEventArgs e)
         {
+            if (DesignMode) return;
             if (Height != Image.Height && Width != Image.Width)
                 Redraw();
         }
