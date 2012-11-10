@@ -121,7 +121,14 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Games\Crashmo\CrashmoLevelData.cs" />
+    <Compile Include="Games\Crashmo\CrashmoGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Games\Crashmo\CrashmoGridControl.Designer.cs">
+      <DependentUpon>CrashmoGridControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games\IStudio.cs" />
+    <Compile Include="Games\ImageImporter.cs" />
     <Compile Include="Games\Pushmo\PushmoStudio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,7 +158,6 @@
     <Compile Include="PaletteEditor.Designer.cs">
       <DependentUpon>PaletteEditor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Games\Pushmo\PushmoImageImport.cs" />
     <Compile Include="Games\Pushmo\PushmoLevelData.cs" />
     <Compile Include="SimplePaletteQuantizer\Extensions\Extend.Image.cs">
       <SubType>Code</SubType>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GameSelect.resx">
       <DependentUpon>GameSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\Crashmo\CrashmoGridControl.resx">
+      <DependentUpon>CrashmoGridControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games\Pushmo\PushmoStudio.resx">
       <DependentUpon>PushmoStudio.cs</DependentUpon>

@@ -17,18 +17,25 @@ using com.google.zxing.common;
 /*
  * Todolist:
  * 
- * TODO: add undo/redo
- * TODO: figure out the rest of the flags of the pushmo...
- * TODO: make drawing even faster by using draw-per-change instead of draw-the-all-thing-on-every-change
+ * TODO: (1) add undo/redo
+ * TODO: (2) figure out the rest of the flags of the pushmo...
+ * TODO: (3) make drawing even faster by using draw-per-change instead of draw-the-all-thing-on-every-change
  */
 
 namespace IntelligentLevelEditor
 {
     public partial class FormEditor : Form
     {
+        public enum GameMode
+        {
+            Pushmo,
+            Crashmo
+        }
+
         private string _filePath, _remoteVer;
         private bool _checkNow;
         private IStudio _studio;
+        private GameMode _gameMode;
 
         public FormEditor()
         {
@@ -74,26 +81,39 @@ namespace IntelligentLevelEditor
                 pushmoStudio.LoadData(data);
                 pnlEditor.Controls.Add(pushmoStudio);
                 _studio = pushmoStudio;
+                _gameMode = GameMode.Pushmo;
+                EnableAfterOpen();
             }
-            //todo: else file->open
+            else if (Crashmo.IsMatchingData(data))
+            {
+                /* TODO: enable crashmo loading
+                CleanStudio();
+                var crashmoStudio = new CrashmoStudio { Dock = DockStyle.Fill };
+                crashmoStudio.LoadData(data);
+                pnlEditor.Controls.Add(crashmoStudio);
+                _studio = crashmoStudio;
+                _gameMode = GameMode.Pushmo;
+                EnableAfterOpen();*/
+            }
         }
 
-        private void NewFile(string game)
+        private void NewFile()
         {
-            switch (game)
+            switch (_gameMode)
             {
-                case "Pushmo":
+                case GameMode.Pushmo:
                     CleanStudio();
-                    _studio = new PushmoStudio();
-                    ((PushmoStudio)_studio).Dock = DockStyle.Fill;
+                    _studio = new PushmoStudio { Dock = DockStyle.Fill };
                     pnlEditor.Controls.Add((PushmoStudio)_studio);
+                    EnableAfterOpen();
                     break;
-                case "Crashmo":
-                    //TODO: crashmo new
+                case GameMode.Crashmo:
+                    /*TODO: enable crashmo new
                     CleanStudio();
-                    _studio = new PushmoStudio();
-                    ((PushmoStudio)_studio).Dock = DockStyle.Fill;
-                    pnlEditor.Controls.Add((PushmoStudio)_studio);
+                    _studio = new CrashmoStudio { Dock = DockStyle.Fill };
+                    pnlEditor.Controls.Add((CrashmoStudio)_studio);
+                    EnableAfterOpen();
+                     */
                     break;
             }            
         }
@@ -117,8 +137,8 @@ namespace IntelligentLevelEditor
             var gameSelect = new GameSelect();
             if (gameSelect.ShowDialog() == DialogResult.Cancel)
                 return;
-            NewFile(gameSelect.SelectedGame);
-            EnableAfterOpen();
+            _gameMode = gameSelect.SelectedGame;
+            NewFile();
         }
 
         private void menuFileOpen_Click(object sender, EventArgs e)
@@ -129,7 +149,6 @@ namespace IntelligentLevelEditor
             {
                 var data = File.ReadAllBytes(ofd.FileName);
                 ReadByteArray(data);
-                EnableAfterOpen();
             }
             catch (Exception ex)
             {
@@ -168,13 +187,12 @@ namespace IntelligentLevelEditor
 
         private void menuFileImport_Click(object sender, EventArgs e)
         {
-            /* TODO: fix import to be general
             var ofd = new OpenFileDialog { Filter = Localization.GetString("FileFilterImagesOpen") };
             if (ofd.ShowDialog() != DialogResult.OK) return;
             var image = Image.FromFile(ofd.FileName);
-            PushmoImageImport.Import(new Bitmap(image),gridControl.Bitmap,gridControl.Palette);
-            RefreshGui();
-            RefreshRadioButton();*/
+            //TODO: import get the correct palette in general
+            ImageImporter.Import(new Bitmap(image),Pushmo.PushmoColorPalette,Pushmo.PushmoColorPaletteSize,_studio.GetBitmap(),_studio.GetPalette());
+            _studio.RefreshUI();
         }
 
         private void menuFileExit_Click(object sender, EventArgs e)
@@ -197,7 +215,7 @@ namespace IntelligentLevelEditor
                 var reader = new QRCodeReader();
                 var result = reader.decode(binary);
                 if ((result.RawBytes[0] & 0xf0) != 0x40)
-                    throw new Exception(Localization.GetString("ErrorQRPushmo"));
+                    throw new Exception(Localization.GetString("ErrorQRLevel"));
                 var byteArray = (byte[]) ((ArrayList) result.ResultMetadata[ResultMetadataType.BYTE_SEGMENTS])[0];
                 ReadByteArray(byteArray);
             }
@@ -233,55 +251,10 @@ namespace IntelligentLevelEditor
 
         private void menuQRCodeMakeCard_Click(object sender, EventArgs e)
         {
-            /* TODO: card
-            const int cardWidth = 400;
-            const int cardHeight = 240;
-            const int cardRadius = 20;
-            const int qrPositionX = 200;
-            const int qrPositionY = 34;
-            const int pushmoPositionX = 4;
-            const int pushmoPositionY = 34;
-            var cardColor = new SolidBrush(Color.LightGoldenrodYellow);
-
-            var img = new Bitmap(cardWidth, cardHeight);
-            var g = Graphics.FromImage(img);
-            g.Clear(Color.Transparent);
-            //card style
-            g.FillEllipse(cardColor, 0, 0, cardRadius, cardRadius);
-            g.FillEllipse(cardColor, cardWidth - cardRadius - 1, 0, cardRadius, cardRadius);
-            g.FillEllipse(cardColor, 0, cardHeight - cardRadius - 1, cardRadius, cardRadius);
-            g.FillEllipse(cardColor, cardWidth - cardRadius - 1, cardHeight - cardRadius - 1, cardRadius, cardRadius);
-            g.DrawEllipse(Pens.Black, 0, 0, cardRadius, cardRadius);
-            g.DrawEllipse(Pens.Black, cardWidth - cardRadius - 1, 0, cardRadius, cardRadius);
-            g.DrawEllipse(Pens.Black, 0, cardHeight - cardRadius - 1, cardRadius, cardRadius);
-            g.DrawEllipse(Pens.Black, cardWidth - cardRadius - 1, cardHeight - cardRadius - 1, cardRadius, cardRadius);
-            g.FillRectangle(cardColor, cardRadius / 2, 1, cardWidth - cardRadius, cardHeight - 2);
-            g.FillRectangle(cardColor, 1, cardRadius / 2, cardWidth - 2, cardHeight - cardRadius);
-            g.DrawLine(Pens.Black, cardRadius/2, 0, cardWidth - cardRadius/2, 0);
-            g.DrawLine(Pens.Black, cardRadius/2, cardHeight - 1, cardWidth - cardRadius/2, cardHeight - 1);
-            g.DrawLine(Pens.Black, 0, cardRadius/2, 0, cardHeight - cardRadius/2);
-            g.DrawLine(Pens.Black, cardWidth - 1, cardRadius/2, cardWidth - 1, cardHeight - cardRadius/2);
-            //draw strawberry
-            g.DrawImage(Resources.strawberry,cardWidth-80,qrPositionY-28);
-            //frames for the data
-            g.DrawRectangle(Pens.Black, qrPositionX, qrPositionY, 193, 193);
-            g.DrawRectangle(Pens.Black, pushmoPositionX, pushmoPositionY, 193, 193);
-            //write name of pushmo
-            var font = new Font("Arial", 18.0f, FontStyle.Bold);
-            g.DrawString(_data.Name, font, Brushes.Black, cardWidth / 2, pushmoPositionY / 2, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
-            //draw pushmo
-            g.FillRectangle(Brushes.White, pushmoPositionX + 1, pushmoPositionY + 1, 192, 192);
-            g.DrawImage(gridControl.CreatePreview(192, 192), pushmoPositionX+1, pushmoPositionY+1);
-            //draw qr code
-            g.FillRectangle(Brushes.White, qrPositionX + 1,qrPositionY + 1, 192, 192);
-            var matrix = GetQRMatrix(100);
-            for (var y = 0; y < matrix.Height; ++y)
-                for (var x = 0; x < matrix.Width; ++x)
-                    if (matrix.get_Renamed(x, y) != -1)
-                        g.FillRectangle(Brushes.Black, qrPositionX - 3 + x * 2, qrPositionY - 3 + y * 2, 2, 2);
-            g.Dispose();
-            ImageBox.ShowDialog(img);*/
+            var card = _studio.MakeQrCard(GetQRMatrix(100));
+            ImageBox.ShowDialog(card);
         }
+
         #endregion
 
         #region Menu -> Help
