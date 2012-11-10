@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using IntelligentLevelEditor.Properties;
+using com.google.zxing.common;
 
 namespace IntelligentLevelEditor.Games.Pushmo
 {
@@ -31,6 +34,8 @@ namespace IntelligentLevelEditor.Games.Pushmo
             UpdateGui();
         }
 
+        #region IStudio methods
+
         public void NewData()
         {
             Parent.Text = Application.ProductName + @" v." + Application.ProductVersion;
@@ -49,6 +54,75 @@ namespace IntelligentLevelEditor.Games.Pushmo
             UpdatePushmoDataFromGui();
             return MarshalUtil.StructureToByteArray(_pData);
         }
+
+        public byte[] GetPalette()
+        {
+            return gridControl.Palette;
+        }
+
+        public byte[][] GetBitmap()
+        {
+            return gridControl.Bitmap;
+        }
+
+        public void RefreshUI()
+        {
+            RefreshGui();
+            RefreshRadioButton();
+        }
+
+        public Image MakeQrCard(ByteMatrix qrMatrix)
+        {
+            const int cardWidth = 400;
+            const int cardHeight = 240;
+            const int cardRadius = 20;
+            const int qrPositionX = 200;
+            const int qrPositionY = 34;
+            const int pushmoPositionX = 4;
+            const int pushmoPositionY = 34;
+            var cardColor = new SolidBrush(Color.LightGoldenrodYellow);
+
+            var img = new Bitmap(cardWidth, cardHeight);
+            var g = Graphics.FromImage(img);
+            g.Clear(Color.Transparent);
+            //card style
+            g.FillEllipse(cardColor, 0, 0, cardRadius, cardRadius);
+            g.FillEllipse(cardColor, cardWidth - cardRadius - 1, 0, cardRadius, cardRadius);
+            g.FillEllipse(cardColor, 0, cardHeight - cardRadius - 1, cardRadius, cardRadius);
+            g.FillEllipse(cardColor, cardWidth - cardRadius - 1, cardHeight - cardRadius - 1, cardRadius, cardRadius);
+            g.DrawEllipse(Pens.Black, 0, 0, cardRadius, cardRadius);
+            g.DrawEllipse(Pens.Black, cardWidth - cardRadius - 1, 0, cardRadius, cardRadius);
+            g.DrawEllipse(Pens.Black, 0, cardHeight - cardRadius - 1, cardRadius, cardRadius);
+            g.DrawEllipse(Pens.Black, cardWidth - cardRadius - 1, cardHeight - cardRadius - 1, cardRadius, cardRadius);
+            g.FillRectangle(cardColor, cardRadius / 2, 1, cardWidth - cardRadius, cardHeight - 2);
+            g.FillRectangle(cardColor, 1, cardRadius / 2, cardWidth - 2, cardHeight - cardRadius);
+            g.DrawLine(Pens.Black, cardRadius/2, 0, cardWidth - cardRadius/2, 0);
+            g.DrawLine(Pens.Black, cardRadius/2, cardHeight - 1, cardWidth - cardRadius/2, cardHeight - 1);
+            g.DrawLine(Pens.Black, 0, cardRadius/2, 0, cardHeight - cardRadius/2);
+            g.DrawLine(Pens.Black, cardWidth - 1, cardRadius/2, cardWidth - 1, cardHeight - cardRadius/2);
+            //draw strawberry
+            g.DrawImage(Resources.strawberry,cardWidth-80,qrPositionY-28);
+            //frames for the data
+            g.DrawRectangle(Pens.Black, qrPositionX, qrPositionY, 193, 193);
+            g.DrawRectangle(Pens.Black, pushmoPositionX, pushmoPositionY, 193, 193);
+            //write name of pushmo
+            var font = new Font("Arial", 18.0f, FontStyle.Bold);
+            g.DrawString(_data.Name, font, Brushes.Black, cardWidth / 2, pushmoPositionY / 2, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            //draw pushmo
+            g.FillRectangle(Brushes.White, pushmoPositionX + 1, pushmoPositionY + 1, 192, 192);
+            g.DrawImage(gridControl.CreatePreview(192, 192), pushmoPositionX+1, pushmoPositionY+1);
+            //draw qr code
+            g.FillRectangle(Brushes.White, qrPositionX + 1,qrPositionY + 1, 192, 192);
+            
+            for (var y = 0; y < qrMatrix.Height; ++y)
+                for (var x = 0; x < qrMatrix.Width; ++x)
+                    if (qrMatrix.get_Renamed(x, y) != -1)
+                        g.FillRectangle(Brushes.Black, qrPositionX - 3 + x * 2, qrPositionY - 3 + y * 2, 2, 2);
+            g.Dispose();
+            return img;
+        }
+
+        #endregion
 
         private void RefreshRadioButton()
         {

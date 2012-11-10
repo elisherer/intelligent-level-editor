@@ -5,7 +5,7 @@ using IntelligentLevelEditor.Properties;
 
 namespace IntelligentLevelEditor.Games.Crashmo
 {
-    class Crashmo
+    public class Crashmo
     {
         public enum CrashmoFlags : uint
         {
@@ -19,14 +19,16 @@ namespace IntelligentLevelEditor.Games.Crashmo
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
         public struct CrashmoPosition
         {
-            public byte Flags_X; // bits 6..8 - flags, bits 1..5 - x
-            public byte Y;
-            public byte Type;
+            public ushort Xy; // x = bits 12..16 , y = bits 7..11 *negated*
+            public byte Type; // 1 = flag, 2 = manhole, 3 = shiftswitches, 4 = doors, 5 = cloud
             public byte Flags;
+            // for manholes & doors it's the color 0=red, 1=yellow...
+            // for shiftswitches it's the color (1st nibble) from the palette, 2nd nibble = direction (push, pull, left, right).
+            // for flag & clouds it's nothing
         }
 
         public const int BitmapSize = 32;
-        public const int PushmoColorPaletteSize = 184;
+        public const int CrashmoColorPaletteSize = 184;
         public static readonly ColorPalette CrashmoColorPalette;
 
         static Crashmo()
@@ -65,13 +67,11 @@ namespace IntelligentLevelEditor.Games.Crashmo
             public byte[] PaletteData;
 
             [MarshalAs(UnmanagedType.ByValArray, SizeConst = 6)]
-            public byte[] Unknown4;
+            public byte[] Zeros2;
 
             public uint Flags;
 
-            public CrashmoPosition FlagPosition; //size 2=16x16 3=32x32 ??
-
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 21)]
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x16)] //in the flag - size 2=16x16 3=32x32 ??
             public CrashmoPosition[] Utilities;
 
             [MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x200)]
@@ -81,6 +81,11 @@ namespace IntelligentLevelEditor.Games.Crashmo
             [MarshalAs(UnmanagedType.ByValArray, SizeConst = 3)]
             public byte[] Footer; // = FAFF0F
         } //4+4+4+0x10+0x16+0x22+1+4+7+10+6+4+4+21*4+0x200+1+3 = 720 bytes
+
+        public static bool IsMatchingData(byte[] data)
+        {
+            return (data[0] != 0xAD || data[1] != 0x0A);
+        }
 
         public static CrashmoQrData ReadFromByteArray(byte[] array)
         {
