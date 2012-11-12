@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Drawing.Imaging;
 using com.google.zxing.common;
 
 namespace IntelligentLevelEditor.Games
@@ -12,5 +13,7 @@ namespace IntelligentLevelEditor.Games
         byte[][] GetBitmap();
         void RefreshUI();
         Image MakeQrCard(ByteMatrix qrMatrix);
+        ColorPalette GetAvailableColorPalette();
+        int GetAvailableColorPaletteSize();
     }
 }

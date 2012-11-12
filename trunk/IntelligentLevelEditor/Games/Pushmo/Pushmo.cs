@@ -161,7 +161,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         public static PushmoQrData EmptyPushmoData()
         {
-            var dummyArray = new byte[0x2CE];
+            var dummyArray = new byte[Marshal.SizeOf(typeof(PushmoQrData))];
             var pd = MarshalUtil.ByteArrayToStructure<PushmoQrData>(dummyArray);
             var nameBytes = Encoding.Unicode.GetBytes("NoName");
             Buffer.BlockCopy(nameBytes, 0, pd.LevelName, 0, nameBytes.Length); //?Null

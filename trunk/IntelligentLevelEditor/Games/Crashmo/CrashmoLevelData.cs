@@ -27,6 +27,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
     class CrashmoLevelData
     {
         private string _name = "";
+        private string _author = "";
 
         [CategoryAttribute("Crashmo"), DescriptionAttribute("Name of the level"), PropertyOrder(0)]
         public string Name
@@ -36,17 +37,28 @@ namespace IntelligentLevelEditor.Games.Crashmo
             {
                 _name = value.Contains('\0') ? value.Substring(0, value.IndexOf('\0')) : value;
                 if (_name.Length <= 16) return;
-                MessageBox.Show(Localization.GetString("ErrorNameLength"));
+                MessageBox.Show(@"The length of this property should <= 16");
                 _name = _name.Substring(0,16);
             }
         }
-        
+
+        [CategoryAttribute("Crashmo"), DescriptionAttribute("Author's name"), PropertyOrder(0)]
+        public string Author
+        {
+            get { return _author; }
+            set
+            {
+                _author = value.Contains('\0') ? value.Substring(0, value.IndexOf('\0')) : value;
+                if (_author.Length <= 10) return;
+                MessageBox.Show(@"The length of this property should <= 10");
+                _author = _author.Substring(0, 10);
+            }
+        }
+
         [CategoryAttribute("Crashmo"), DescriptionAttribute("The difficulty level (1-5)"), TypeConverter(typeof(EnumDescriptionConverter)), PropertyOrder(1)]
         public Difficulty Difficulty { set; get; }
         [CategoryAttribute("Crashmo"), DescriptionAttribute("Toggle editing inside the studio."), PropertyOrder(2)]
         public bool Locked { set; get; }
-        [CategoryAttribute("Crashmo"), DescriptionAttribute("Toggle if the size is 32x32 or 16x16."), PropertyOrder(3)]
-        public bool Large { set; get; }
     }
 
     public class PropertySorter : ExpandableObjectConverter

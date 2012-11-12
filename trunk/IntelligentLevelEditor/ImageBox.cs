@@ -13,7 +13,6 @@ namespace IntelligentLevelEditor
         private ImageBox()
         {
             InitializeComponent();
-            Localization.ApplyToContainer(this, "ImageBox");
         }
 
         private void SetImage(Image image)
@@ -32,7 +31,7 @@ namespace IntelligentLevelEditor
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var sfd = new SaveFileDialog { Filter = Localization.GetString("FileFilterImagesSave") };
+            var sfd = new SaveFileDialog { Filter = @"PNG Files|*.png|Jpeg Files|*.jpg|Bitmap Files|*.bmp|GIF Files|*.gif" };
             if (sfd.ShowDialog() != DialogResult.OK) return;
             var imgFormat = ImageFormat.Png;
             switch (Path.GetExtension(sfd.FileName))
@@ -61,7 +60,7 @@ namespace IntelligentLevelEditor
         private void btnZoomIn_Click(object sender, EventArgs e)
         {
             btnZoomIn.Checked = !btnZoomIn.Checked;
-            btnZoomIn.ToolTipText = (btnZoomIn.Checked ? Localization.GetString("ZoomOut") : Localization.GetString("ZoomIn")); //caitsith2
+            btnZoomIn.ToolTipText = (btnZoomIn.Checked ? @"Zoom Out" : @"Zoom In"); //caitsith2
             pictureBox.Width = pictureBox.Image.Width * (btnZoomIn.Checked ? 2 : 1);
             pictureBox.Height = pictureBox.Image.Height * (btnZoomIn.Checked ? 2 : 1);
         }

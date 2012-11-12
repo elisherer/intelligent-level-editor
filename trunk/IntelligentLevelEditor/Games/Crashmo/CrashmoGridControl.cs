@@ -16,10 +16,21 @@ namespace IntelligentLevelEditor.Games.Crashmo
             public byte Type;
             public byte Flags;
 
+            public CrashmoFixedPosition()
+            {
+                
+            }
+
+            public CrashmoFixedPosition(byte x, byte y)
+            {
+                X = x;
+                Y = y;
+            }
+
             public CrashmoFixedPosition(Crashmo.CrashmoPosition src)
             {
                 X = (byte) (src.Xy & 0x1F);
-                Y = (byte) ~( (src.Xy & 0x3E) >> 5 );
+                Y = (byte)(((~src.Xy) >> 5) & 0x1F);
                 Type = src.Type;
                 Flags = src.Flags;
             }
@@ -36,7 +47,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         public byte[] Palette;
         public byte[][] Bitmap;
-        public CrashmoFixedPosition Flag;
+        public bool[][] Cloudy;
+        public CrashmoFixedPosition Flag = new CrashmoFixedPosition {Type = 1};
         public List<CrashmoFixedPosition> Manholes;
         public List<CrashmoFixedPosition> Switches;
         public List<CrashmoFixedPosition> Doors;
@@ -62,6 +74,10 @@ namespace IntelligentLevelEditor.Games.Crashmo
         public CrashmoGridControl()
         {
             InitializeComponent();
+
+            Cloudy = new bool[Crashmo.BitmapSize][];
+            for (var i =0; i< Cloudy.Length; i++)
+                Cloudy[i] = new bool[Crashmo.BitmapSize];
         }
 
         public void SetData(byte[][] data, Crashmo.CrashmoQrData cData)
@@ -119,20 +135,20 @@ namespace IntelligentLevelEditor.Games.Crashmo
             }
         }
         
-        private void DrawManhole(Graphics g, int i, int pixWidth, int pixHeight)
+        private void DrawManhole(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
         {
 
-            if (Manholes[i].X == 0xFF) return;
+            if (pos.X == 0xFF) return;
             Image toDraw = Resources.ladder_red; //if it's 0
-            var flipped = Manholes[i].Y > 0 && Bitmap[Manholes[i].Y - 1][Manholes[i].X] != 0xa && Bitmap[Manholes[i].Y][Manholes[i].X] != 0xa;
-            Manholes[i].Flags = (byte)((Manholes[i].Flags & 0xF0) + 1 * (flipped ? 1 : 0));
-            switch (Manholes[i].Flags >> 4)
+            var flipped = pos.Y > 0 && Bitmap[pos.Y - 1][pos.X] == Bitmap[pos.Y][pos.X];
+            //pos.Flags = (byte)((pos.Flags & 0xF0) + 1 * (flipped ? 1 : 0));
+            switch (pos.Flags)
             {
                 case 1:
-                    toDraw = Resources.ladder_blue;
+                    toDraw = Resources.ladder_yellow;
                     break;
                 case 2:
-                    toDraw = Resources.ladder_yellow;
+                    toDraw = Resources.ladder_blue;
                     break;
                 case 3:
                     toDraw = Resources.ladder_green;
@@ -141,13 +157,66 @@ namespace IntelligentLevelEditor.Games.Crashmo
                     toDraw = Resources.ladder_purple;
                     break;
             }
-            g.DrawImage(toDraw, 1 + Manholes[i].X * pixWidth, 1 + Manholes[i].Y * pixHeight + (flipped ? pixHeight - 2 : 0), pixWidth - 2, flipped ? -pixHeight : pixHeight);
+            g.DrawImage(toDraw, 1 + pos.X * pixWidth, 1 + pos.Y * pixHeight + (flipped ? pixHeight - 2 : 0), pixWidth - 2, flipped ? -pixHeight : pixHeight);
+        }
+
+        private void DrawDoor(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
+        {
+            if (pos.X == 0xFF) return;
+            Image toDraw = Resources.sprite_door_red; //if it's 0
+            switch (pos.Flags)
+            {
+                case 1:
+                    toDraw = Resources.sprite_door_yellow;
+                    break;
+                case 2:
+                    toDraw = Resources.sprite_door_blue;
+                    break;
+                case 3:
+                    toDraw = Resources.sprite_door_green;
+                    break;
+                case 4:
+                    toDraw = Resources.sprite_door_purple;
+                    break;
+            }
+            g.DrawImage(toDraw, 1 + pos.X * pixWidth, 1 + pos.Y * pixHeight , pixWidth - 2, pixHeight);
         }
 
         private void DrawSwitch(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
         {
             if (pos.X == 0xFF) return;
             g.DrawImage(SwitchBitmaps[pos.Flags >> 4], pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
+        }
+
+        private void RecursiveDrawCloud(Graphics g, CrashmoFixedPosition pos, byte baseColor, int pixWidth, int pixHeight)
+        {
+            Cloudy[pos.Y][pos.X] = true; //mark
+            g.FillRectangle(Brushes.White, (pos.X + 0.3f) * pixWidth, (pos.Y + 0.3f) * pixHeight, pixWidth*0.3f, pixHeight*0.3f);
+            // <            
+            if (pos.X > 0 && Bitmap[pos.Y][pos.X - 1] == baseColor && !Cloudy[pos.Y][pos.X - 1])
+                RecursiveDrawCloud(g, new CrashmoFixedPosition((byte)(pos.X - 1), pos.Y), baseColor, pixWidth, pixHeight);
+            // >
+            if (pos.X < Bitmap[0].Length - 1 && Bitmap[pos.Y][pos.X + 1] == baseColor && !Cloudy[pos.Y][pos.X + 1])
+                RecursiveDrawCloud(g, new CrashmoFixedPosition((byte)(pos.X + 1), pos.Y), baseColor, pixWidth, pixHeight);
+            // ^
+            if (pos.Y > 0 && Bitmap[pos.Y - 1][pos.X] == baseColor && !Cloudy[pos.Y - 1][pos.X])
+                RecursiveDrawCloud(g, new CrashmoFixedPosition(pos.X, (byte)(pos.Y - 1)), baseColor, pixWidth, pixHeight);
+            // v
+            if (pos.Y < Bitmap.Length - 1 && Bitmap[pos.Y + 1][pos.X] == baseColor && !Cloudy[pos.Y + 1][pos.X])
+                RecursiveDrawCloud(g, new CrashmoFixedPosition(pos.X, (byte)(pos.Y + 1)), baseColor, pixWidth, pixHeight);
+        }
+
+        private void DrawCloud(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
+        {
+            if (pos.X == 0xFF) return;
+
+            if (Bitmap[pos.Y][pos.X] > 0) //not transparent
+            {
+                RecursiveDrawCloud(g, pos, Bitmap[pos.Y][pos.X], pixWidth, pixHeight);
+                g.DrawImage(Resources.cloud_small, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
+            }
+            else
+                g.DrawImage(Resources.cloud_small, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
         }
 
         private void RecursiveFloodFill(int x, int y, byte baseColor, byte withColor)
@@ -186,8 +255,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
                     g.FillRectangle(transBrush, 0, 0, pixWidth * Crashmo.BitmapSize, pixHeight * Crashmo.BitmapSize);
                 for (var y = 0; y < Bitmap.Length; y++)
                     for (var x = 0; x < Bitmap[y].Length; x++)
-                        if (Bitmap[y][x] != 0x0A)
-                            g.FillRectangle(brushes[Bitmap[y][x]], x * pixWidth, y * pixHeight, pixWidth, pixHeight);
+                        if (Bitmap[y][x] > 0)
+                            g.FillRectangle(brushes[Bitmap[y][x]-1], x * pixWidth, y * pixHeight, pixWidth, pixHeight);
                 if (gridLines)
                 {
                     for (var i = 0; i <= Crashmo.BitmapSize; i++) //vertical lines
@@ -195,15 +264,20 @@ namespace IntelligentLevelEditor.Games.Crashmo
                     for (var i = 0; i <= Crashmo.BitmapSize; i++) //horizontal lines
                         g.DrawLine(Pens.DimGray, 0, i * pixHeight, pixWidth * Crashmo.BitmapSize, i * pixHeight);
                 }
-                if (Flag.X != 0xFF)
+                //reset clouds
+                foreach (var cl in Cloudy)
+                    for (var x = 0; x < cl.Length; x++)
+                        cl[x] = false;
+                foreach (var cloud in Clouds)
+                    DrawCloud(g, cloud, pixWidth, pixHeight);
+                foreach (var manhole in Manholes)
+                    DrawManhole(g, manhole, pixWidth, pixHeight);
+                foreach (var door in Doors)
+                    DrawDoor(g, door, pixWidth, pixHeight);
+                foreach (var swtch in Switches)
+                    DrawSwitch(g, swtch, pixWidth, pixHeight);
+                if (Flag.Type != (byte)Crashmo.PosType.Flag)
                     g.DrawImage(Resources.flag_icon, Flag.X * pixWidth, Flag.Y * pixHeight, pixWidth, pixHeight);
-                for (var i = 0; i < 10; i++)
-                {
-                    DrawManhole(g, i, pixWidth, pixHeight);
-                    DrawSwitch(g, Switches[i], pixWidth, pixHeight);
-                    //TODO: crashmo_gridcontrol: add clouds & doors
-
-                }
             }
             g.Dispose();
         }
@@ -231,8 +305,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
             for (var y = 0; y < Bitmap.Length; y++)
                 for (var x = 0; x < Bitmap[y].Length; x++)
                 {
-                    var clr = Bitmap[y][x] != 0x0A
-                                  ? Crashmo.CrashmoColorPalette.Entries[Palette[Bitmap[y][x]]]
+                    var clr = Bitmap[y][x] > 0
+                                  ? Crashmo.CrashmoColorPalette.Entries[Palette[Bitmap[y][x]-1]]
                                   : Color.Transparent;
                     _thumb.SetPixel(x,y,clr);
                 }

@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
-using IntelligentLevelEditor.Properties;
 using com.google.zxing.common;
+using IntelligentLevelEditor.Properties;
 
-namespace IntelligentLevelEditor.Games.Pushmo
+namespace IntelligentLevelEditor.Games.Crashmo
 {
-    public partial class PushmoStudio : UserControl, IStudio
+    public partial class CrashmoStudio : UserControl, IStudio
     {
         private enum ToolMode
         {
@@ -16,22 +17,24 @@ namespace IntelligentLevelEditor.Games.Pushmo
             Pipette,
             FloodFill,
             Flag,
-            Switches,
-            Manhole
+            Switch,
+            Manhole,
+            Door,
+            Cloud
         }
 
-        private Pushmo.PushmoQrData _pData;
-        private readonly PushmoLevelData _data = new PushmoLevelData();
+        private Crashmo.CrashmoQrData _pData;
+        private readonly CrashmoLevelData _data = new CrashmoLevelData();
         private ToolMode _mode;
         private byte _color;
         private byte _manhole;
         private byte _switch;
 
-        public PushmoStudio()
+        public CrashmoStudio()
         {
             InitializeComponent();
             propertyGrid.SelectedObject = _data;
-            _pData = Pushmo.EmptyPushmoData();
+            _pData = Crashmo.EmptyCrashmoData();
             UpdateGui();
         }
 
@@ -40,20 +43,30 @@ namespace IntelligentLevelEditor.Games.Pushmo
         public void NewData()
         {
             Parent.Text = Application.ProductName + @" v." + Application.ProductVersion;
-            _pData = Pushmo.EmptyPushmoData();
+            _pData = Crashmo.EmptyCrashmoData();
             UpdateGui();
         }
 
         public void LoadData(byte[] data)
         {
-            _pData = Pushmo.ReadFromByteArray(data);
+            _pData = Crashmo.ReadFromByteArray(data);
             UpdateGui();
         }
         
         public byte[] SaveData()
         {
-            UpdatePushmoDataFromGui();
-            return MarshalUtil.StructureToByteArray(_pData);
+            UpdateCrashmoDataFromGui();
+
+            var decompressed = MarshalUtil.StructureToByteArray(_pData);
+            var lz10 = new DSDecmp.Formats.Nitro.LZ10();
+            var ms = new MemoryStream(decompressed);
+            var qrData = new byte[718];
+            var outs = new MemoryStream(qrData);
+            outs.Write(new byte[] {0xAD, 0x0A, 0, 0, 1, 0, 0, 0}, 0, 8); //header
+            var compressedSize = lz10.Compress(ms, decompressed.Length, outs);
+            var compressedSizeBytes = BitConverter.GetBytes(compressedSize);
+            Buffer.BlockCopy(compressedSizeBytes, 0, qrData, 8, 4);
+            return qrData;
         }
 
         public byte[] GetPalette()
@@ -79,8 +92,8 @@ namespace IntelligentLevelEditor.Games.Pushmo
             const int cardRadius = 20;
             const int qrPositionX = 200;
             const int qrPositionY = 34;
-            const int pushmoPositionX = 4;
-            const int pushmoPositionY = 34;
+            const int crashmoPositionX = 4;
+            const int crashmoPositionY = 34;
             var cardColor = new SolidBrush(Color.LightGoldenrodYellow);
 
             var img = new Bitmap(cardWidth, cardHeight);
@@ -102,16 +115,16 @@ namespace IntelligentLevelEditor.Games.Pushmo
             g.DrawLine(Pens.Black, 0, cardRadius/2, 0, cardHeight - cardRadius/2);
             g.DrawLine(Pens.Black, cardWidth - 1, cardRadius/2, cardWidth - 1, cardHeight - cardRadius/2);
             //draw strawberry
-            g.DrawImage(Resources.strawberry,cardWidth-80,qrPositionY-28);
+            g.DrawImage(Resources.burger,cardWidth-80,qrPositionY-28);
             //frames for the data
             g.DrawRectangle(Pens.Black, qrPositionX, qrPositionY, 193, 193);
-            g.DrawRectangle(Pens.Black, pushmoPositionX, pushmoPositionY, 193, 193);
-            //write name of pushmo
+            g.DrawRectangle(Pens.Black, crashmoPositionX, crashmoPositionY, 193, 193);
+            //write name of crashmo
             var font = new Font("Arial", 18.0f, FontStyle.Bold);
-            g.DrawString(_data.Name, font, Brushes.Black, cardWidth / 2, pushmoPositionY / 2, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
-            //draw pushmo
-            g.FillRectangle(Brushes.White, pushmoPositionX + 1, pushmoPositionY + 1, 192, 192);
-            g.DrawImage(gridControl.CreatePreview(192, 192), pushmoPositionX+1, pushmoPositionY+1);
+            g.DrawString(_data.Name, font, Brushes.Black, cardWidth / 2, crashmoPositionY / 2, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            //draw crashmo
+            g.FillRectangle(Brushes.White, crashmoPositionX + 1, crashmoPositionY + 1, 192, 192);
+            g.DrawImage(gridControl.CreatePreview(192, 192), crashmoPositionX+1, crashmoPositionY+1);
             //draw qr code
             g.FillRectangle(Brushes.White, qrPositionX + 1,qrPositionY + 1, 192, 192);
             
@@ -125,28 +138,28 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         public ColorPalette GetAvailableColorPalette()
         {
-            return Pushmo.PushmoColorPalette;
+            return Crashmo.CrashmoColorPalette;
         }
 
         public int GetAvailableColorPaletteSize()
         {
-            return Pushmo.PushmoColorPaletteSize;
+            return Crashmo.CrashmoColorPaletteSize;
         }
 
         #endregion
 
         private void RefreshRadioButton()
         {
-            radColor0.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[0]];
-            radColor1.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[1]];
-            radColor2.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[2]];
-            radColor3.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[3]];
-            radColor4.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[4]];
-            radColor5.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[5]];
-            radColor6.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[6]];
-            radColor7.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[7]];
-            radColor8.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[8]];
-            radColor9.BackColor = Pushmo.PushmoColorPalette.Entries[_pData.PaletteData[9]];
+            radColor0.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[0]];
+            radColor1.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[1]];
+            radColor2.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[2]];
+            radColor3.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[3]];
+            radColor4.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[4]];
+            radColor5.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[5]];
+            radColor6.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[6]];
+            radColor7.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[7]];
+            radColor8.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[8]];
+            radColor9.BackColor = Crashmo.CrashmoColorPalette.Entries[_pData.PaletteData[9]];
 
             gridControl.InitializeSwitches();
             radSwitch0.BackgroundImage = gridControl.SwitchBitmaps[0];
@@ -164,11 +177,11 @@ namespace IntelligentLevelEditor.Games.Pushmo
         private void UpdateGui()
         {
             _data.Name = Encoding.Unicode.GetString(_pData.LevelName);
-            _data.Difficulty = (Difficulty)_pData.Level;
-            _data.Locked = (_pData.Flags & (uint)Pushmo.PushmoFlags.Protected) > 0;
-            _data.Large = (_pData.Flags & (uint)Pushmo.PushmoFlags.Large) > 0;
+            _data.Author = Encoding.Unicode.GetString(_pData.Author);
+            _data.Difficulty = (Difficulty)_pData.Difficulty;
+            _data.Locked = _pData.Protection == 4;
 
-            gridControl.SetData(Pushmo.DecodeTiled(_pData.LevelData), _pData);
+            gridControl.SetData(Crashmo.DecodeTiled(_pData.LevelData), _pData);
             RefreshGui();
             RefreshRadioButton();
             if (!radColor0.Checked)
@@ -178,47 +191,41 @@ namespace IntelligentLevelEditor.Games.Pushmo
             propertyGrid.SelectedObject = _data;
         }
 
-        private void UpdatePushmoDataFromGui()
+        private void UpdateCrashmoDataFromGui()
         {
-            var encodedData = Pushmo.EncodeTiled(gridControl.Bitmap);
+            var encodedData = Crashmo.EncodeTiled(gridControl.Bitmap);
             Buffer.BlockCopy(encodedData, 0, _pData.LevelData, 0, encodedData.Length);
             var nameBytes = Encoding.Unicode.GetBytes(_data.Name);
             Buffer.BlockCopy(nameBytes, 0, _pData.LevelName, 0, nameBytes.Length);
             _pData.LevelName[nameBytes.Length] = 0;
             _pData.LevelName[nameBytes.Length + 1] = 0;
-            _pData.Level = (byte)_data.Difficulty;
-            _pData.FlagPosition = gridControl.Flag;
-            _pData.FlagPosition.Icon = (byte)(_pData.FlagPosition.X != 0xFF ? 0 : 0xFF);
-            _pData.FlagPosition.Flags = (byte)(_pData.FlagPosition.X != 0xFF ? 0 : 0xFF);
-            bool usesSwitches = false, usesManholes = false;
-            for (var i = 0; i < gridControl.PulloutSwitches.Length; i++)
-            {
-                _pData.PulloutSwitches[i] = gridControl.PulloutSwitches[i];
-                _pData.PulloutSwitches[i].Icon = (byte)(_pData.PulloutSwitches[i].X != 0xFF ? i + 1 : 0xFF);
-                if (_pData.PulloutSwitches[i].X == 0xFF)
-                    _pData.PulloutSwitches[i].Flags = 0xFF;
-                else
-                    usesSwitches = true;
-                _pData.Manholes[i] = gridControl.Manholes[i];
-                _pData.Manholes[i].Icon = (byte)(_pData.Manholes[i].X != 0xFF ? i + 0x0B : 0xFF);
-                if (_pData.Manholes[i].X == 0xFF)
-                    _pData.Manholes[i].Flags = 0xFF;
-                else
-                    usesManholes = true;
-            }
-            //flags
-            _pData.Flags = (uint)Pushmo.PushmoFlags.Constant;
-            if (_data.Locked)
-                _pData.Flags += (uint)Pushmo.PushmoFlags.Protected;
-            if (_data.Large)
-                _pData.Flags += (uint)Pushmo.PushmoFlags.Large;
-            if (usesSwitches)
-                _pData.Flags += (uint)Pushmo.PushmoFlags.UsesSwitches;
-            if (usesManholes)
-                _pData.Flags += (uint)Pushmo.PushmoFlags.UsesManholes;
+            var authorBytes = Encoding.Unicode.GetBytes(_data.Author);
+            Buffer.BlockCopy(authorBytes, 0, _pData.Author, 0, authorBytes.Length);
+            _pData.Author[authorBytes.Length] = 0;
+            _pData.Author[authorBytes.Length + 1] = 0;
+
+            _pData.Difficulty = (byte)_data.Difficulty;
+
+            uint i = 0; //add utilities
+
+            if (gridControl.Flag.Type == (byte)Crashmo.PosType.Flag)
+                _pData.Utilities[i++] = gridControl.Flag.UnFix();
+            foreach (var utility in gridControl.Manholes)
+                _pData.Utilities[i++] = utility.UnFix();
+            foreach (var utility in gridControl.Switches)
+                _pData.Utilities[i++] = utility.UnFix();
+            foreach (var utility in gridControl.Doors)
+                _pData.Utilities[i++] = utility.UnFix();
+            foreach (var utility in gridControl.Clouds)
+                _pData.Utilities[i++] = utility.UnFix();
+            while (i < _pData.Utilities.Length)
+                _pData.Utilities[i++] = new Crashmo.CrashmoPosition();
+
+            _pData.UtilitiesLength = i;
+
             //wrapping up
             var data = MarshalUtil.StructureToByteArray(_pData);
-            var crc = Pushmo.CustomCrc32(data, 0xC, 0x2C2);
+            var crc = Crashmo.CustomCrc32(data, 0x8, 0x2C8);
             Buffer.BlockCopy(crc, 0, _pData.CustomCrc32, 0, 4);
         }
 
@@ -234,11 +241,11 @@ namespace IntelligentLevelEditor.Games.Pushmo
             tbtnPipetteTool.Checked = mode == ToolMode.Pipette;
             tbtnFillTool.Checked = mode == ToolMode.FloodFill;
             tbtnFlagTool.Checked = mode == ToolMode.Flag;
-            tbtnSwitchTool.Checked = mode == ToolMode.Switches;
+            tbtnSwitchTool.Checked = mode == ToolMode.Switch;
             tbtnManholeTool.Checked = mode == ToolMode.Manhole;
 
             pnlColors.Visible = mode == ToolMode.Pencil || mode == ToolMode.FloodFill;
-            pnlSwitches.Visible = mode == ToolMode.Switches;
+            pnlSwitches.Visible = mode == ToolMode.Switch;
             pnlManholes.Visible = mode == ToolMode.Manhole;
             lblToolMessage.Visible = mode == ToolMode.Pipette || mode == ToolMode.Flag;
             switch (mode)
@@ -303,10 +310,10 @@ namespace IntelligentLevelEditor.Games.Pushmo
                             break;
                         }
                     break;
-                case ToolMode.Switches:
-                    gridControl.PulloutSwitches[_switch].X = (byte)x;
-                    gridControl.PulloutSwitches[_switch].Y = (byte)y;
-                    gridControl.PulloutSwitches[_switch].Flags = (byte)(_switch << 4);
+                case ToolMode.Switch:
+                    gridControl.Switches[_switch].X = (byte)x;
+                    gridControl.Switches[_switch].Y = (byte)y;
+                    gridControl.Switches[_switch].Flags = (byte)(_switch << 4);
                     break;
             }
             if (_mode != ToolMode.Pipette)
@@ -345,8 +352,8 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         private void btnDeleteSwitch_Click(object sender, EventArgs e)
         {
-            gridControl.PulloutSwitches[_switch].X = 0xFF;
-            gridControl.PulloutSwitches[_switch].Y = 0xFF;
+            gridControl.Switches[_switch].X = 0xFF;
+            gridControl.Switches[_switch].Y = 0xFF;
             gridControl.Redraw();
         }
 
@@ -373,34 +380,34 @@ namespace IntelligentLevelEditor.Games.Pushmo
             if (sender == btnShiftUp)
             {
                 //Data
-                var tempArray = new byte[Pushmo.BitmapSize];
-                Buffer.BlockCopy(gridControl.Bitmap[0], 0, tempArray, 0, Pushmo.BitmapSize);
-                for (var y = 1; y < Pushmo.BitmapSize; y++)
-                    Buffer.BlockCopy(gridControl.Bitmap[y], 0, gridControl.Bitmap[y - 1], 0, Pushmo.BitmapSize);
-                Buffer.BlockCopy(tempArray, 0, gridControl.Bitmap[Pushmo.BitmapSize - 1], 0, Pushmo.BitmapSize);
+                var tempArray = new byte[Crashmo.BitmapSize];
+                Buffer.BlockCopy(gridControl.Bitmap[0], 0, tempArray, 0, Crashmo.BitmapSize);
+                for (var y = 1; y < Crashmo.BitmapSize; y++)
+                    Buffer.BlockCopy(gridControl.Bitmap[y], 0, gridControl.Bitmap[y - 1], 0, Crashmo.BitmapSize);
+                Buffer.BlockCopy(tempArray, 0, gridControl.Bitmap[Crashmo.BitmapSize - 1], 0, Crashmo.BitmapSize);
                 //Objects
                 var flag = gridControl.Flag;
                 if (flag.X != 0xFF)
                 {
                     if (flag.Y == 0)
-                        flag.Y = Pushmo.BitmapSize - 1;
+                        flag.Y = Crashmo.BitmapSize - 1;
                     else
                         flag.Y--;
                 }
                 gridControl.Flag = flag;
-                for (var i = 0; i < gridControl.PulloutSwitches.Length; i++)
+                for (var i = 0; i < gridControl.Switches.Count; i++)
                 {
-                    if (gridControl.PulloutSwitches[i].X != 0xFF)
+                    if (gridControl.Switches[i].X != 0xFF)
                     {
-                        if (gridControl.PulloutSwitches[i].Y == 0)
-                            gridControl.PulloutSwitches[i].Y = Pushmo.BitmapSize - 1;
+                        if (gridControl.Switches[i].Y == 0)
+                            gridControl.Switches[i].Y = Crashmo.BitmapSize - 1;
                         else
-                            gridControl.PulloutSwitches[i].Y--;
+                            gridControl.Switches[i].Y--;
                     }
                     if (gridControl.Manholes[i].X != 0xFF)
                     {
                         if (gridControl.Manholes[i].Y == 0)
-                            gridControl.Manholes[i].Y = Pushmo.BitmapSize - 1;
+                            gridControl.Manholes[i].Y = Crashmo.BitmapSize - 1;
                         else
                             gridControl.Manholes[i].Y--;
 
@@ -410,35 +417,35 @@ namespace IntelligentLevelEditor.Games.Pushmo
             else if (sender == btnShiftLeft) //thanks caitsith2
             {
                 //Data
-                for (var y = 0; y < Pushmo.BitmapSize; y++)
+                for (var y = 0; y < Crashmo.BitmapSize; y++)
                 {
                     byte tempbyte = gridControl.Bitmap[y][0];
-                    Buffer.BlockCopy(gridControl.Bitmap[y], 1, gridControl.Bitmap[y], 0, Pushmo.BitmapSize - 1);
-                    gridControl.Bitmap[y][Pushmo.BitmapSize - 1] = tempbyte;
+                    Buffer.BlockCopy(gridControl.Bitmap[y], 1, gridControl.Bitmap[y], 0, Crashmo.BitmapSize - 1);
+                    gridControl.Bitmap[y][Crashmo.BitmapSize - 1] = tempbyte;
                 }
                 //Objects
                 var flag = gridControl.Flag;
                 if (flag.X != 0xFF)
                 {
                     if (flag.X == 0)
-                        flag.X = Pushmo.BitmapSize - 1;
+                        flag.X = Crashmo.BitmapSize - 1;
                     else
                         flag.X--;
                 }
                 gridControl.Flag = flag;
-                for (var i = 0; i < gridControl.PulloutSwitches.Length; i++)
+                for (var i = 0; i < gridControl.Switches.Count; i++)
                 {
-                    if (gridControl.PulloutSwitches[i].X != 0xFF)
+                    if (gridControl.Switches[i].X != 0xFF)
                     {
-                        if (gridControl.PulloutSwitches[i].X == 0)
-                            gridControl.PulloutSwitches[i].X = Pushmo.BitmapSize - 1;
+                        if (gridControl.Switches[i].X == 0)
+                            gridControl.Switches[i].X = Crashmo.BitmapSize - 1;
                         else
-                            gridControl.PulloutSwitches[i].X--;
+                            gridControl.Switches[i].X--;
                     }
                     if (gridControl.Manholes[i].X != 0xFF)
                     {
                         if (gridControl.Manholes[i].X == 0)
-                            gridControl.Manholes[i].X = Pushmo.BitmapSize - 1;
+                            gridControl.Manholes[i].X = Crashmo.BitmapSize - 1;
                         else
                             gridControl.Manholes[i].X--;
 
@@ -448,35 +455,35 @@ namespace IntelligentLevelEditor.Games.Pushmo
             else if (sender == btnShiftRight) //thanks caitsith2
             {
                 //Data
-                for (var y = 0; y < Pushmo.BitmapSize; y++)
+                for (var y = 0; y < Crashmo.BitmapSize; y++)
                 {
-                    var tempArray = new byte[Pushmo.BitmapSize];
-                    Buffer.BlockCopy(gridControl.Bitmap[y], 0, tempArray, 0, Pushmo.BitmapSize);
-                    Buffer.BlockCopy(tempArray, 0, gridControl.Bitmap[y], 1, Pushmo.BitmapSize - 1);
-                    gridControl.Bitmap[y][0] = tempArray[Pushmo.BitmapSize - 1];
+                    var tempArray = new byte[Crashmo.BitmapSize];
+                    Buffer.BlockCopy(gridControl.Bitmap[y], 0, tempArray, 0, Crashmo.BitmapSize);
+                    Buffer.BlockCopy(tempArray, 0, gridControl.Bitmap[y], 1, Crashmo.BitmapSize - 1);
+                    gridControl.Bitmap[y][0] = tempArray[Crashmo.BitmapSize - 1];
                 }
                 //Objects
                 var flag = gridControl.Flag;
                 if (flag.X != 0xFF)
                 {
-                    if (flag.X == Pushmo.BitmapSize - 1)
+                    if (flag.X == Crashmo.BitmapSize - 1)
                         flag.X = 0;
                     else
                         flag.X++;
                 }
                 gridControl.Flag = flag;
-                for (var i = 0; i < gridControl.PulloutSwitches.Length; i++)
+                for (var i = 0; i < gridControl.Switches.Count; i++)
                 {
-                    if (gridControl.PulloutSwitches[i].X != 0xFF)
+                    if (gridControl.Switches[i].X != 0xFF)
                     {
-                        if (gridControl.PulloutSwitches[i].X == Pushmo.BitmapSize - 1)
-                            gridControl.PulloutSwitches[i].X = 0;
+                        if (gridControl.Switches[i].X == Crashmo.BitmapSize - 1)
+                            gridControl.Switches[i].X = 0;
                         else
-                            gridControl.PulloutSwitches[i].X++;
+                            gridControl.Switches[i].X++;
                     }
                     if (gridControl.Manholes[i].X != 0xFF)
                     {
-                        if (gridControl.Manholes[i].X == Pushmo.BitmapSize - 1)
+                        if (gridControl.Manholes[i].X == Crashmo.BitmapSize - 1)
                             gridControl.Manholes[i].X = 0;
                         else
                             gridControl.Manholes[i].X++;
@@ -487,33 +494,33 @@ namespace IntelligentLevelEditor.Games.Pushmo
             else if (sender == btnShiftDown)
             {
                 //Data
-                var tempArray = new byte[Pushmo.BitmapSize];
-                Buffer.BlockCopy(gridControl.Bitmap[Pushmo.BitmapSize - 1], 0, tempArray, 0, Pushmo.BitmapSize);
-                for (var y = Pushmo.BitmapSize - 2; y >= 0; y--)
-                    Buffer.BlockCopy(gridControl.Bitmap[y], 0, gridControl.Bitmap[y + 1], 0, Pushmo.BitmapSize);
-                Buffer.BlockCopy(tempArray, 0, gridControl.Bitmap[0], 0, Pushmo.BitmapSize);
+                var tempArray = new byte[Crashmo.BitmapSize];
+                Buffer.BlockCopy(gridControl.Bitmap[Crashmo.BitmapSize - 1], 0, tempArray, 0, Crashmo.BitmapSize);
+                for (var y = Crashmo.BitmapSize - 2; y >= 0; y--)
+                    Buffer.BlockCopy(gridControl.Bitmap[y], 0, gridControl.Bitmap[y + 1], 0, Crashmo.BitmapSize);
+                Buffer.BlockCopy(tempArray, 0, gridControl.Bitmap[0], 0, Crashmo.BitmapSize);
                 //Objects
                 var flag = gridControl.Flag;
                 if (flag.X != 0xFF)
                 {
-                    if (flag.Y == Pushmo.BitmapSize - 1)
+                    if (flag.Y == Crashmo.BitmapSize - 1)
                         flag.Y = 0;
                     else
                         flag.Y++;
                 }
                 gridControl.Flag = flag;
-                for (var i = 0; i < gridControl.PulloutSwitches.Length; i++)
+                for (var i = 0; i < gridControl.Switches.Count; i++)
                 {
-                    if (gridControl.PulloutSwitches[i].X != 0xFF)
+                    if (gridControl.Switches[i].X != 0xFF)
                     {
-                        if (gridControl.PulloutSwitches[i].Y == Pushmo.BitmapSize - 1)
-                            gridControl.PulloutSwitches[i].Y = 0;
+                        if (gridControl.Switches[i].Y == Crashmo.BitmapSize - 1)
+                            gridControl.Switches[i].Y = 0;
                         else
-                            gridControl.PulloutSwitches[i].Y++;
+                            gridControl.Switches[i].Y++;
                     }
                     if (gridControl.Manholes[i].X != 0xFF)
                     {
-                        if (gridControl.Manholes[i].Y == Pushmo.BitmapSize - 1)
+                        if (gridControl.Manholes[i].Y == Crashmo.BitmapSize - 1)
                             gridControl.Manholes[i].Y = 0;
                         else
                             gridControl.Manholes[i].Y++;
