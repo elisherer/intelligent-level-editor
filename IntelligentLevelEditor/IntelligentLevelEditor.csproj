@@ -127,6 +127,12 @@
     <Compile Include="Games\Crashmo\CrashmoGridControl.Designer.cs">
       <DependentUpon>CrashmoGridControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Games\Crashmo\CrashmoStudio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Games\Crashmo\CrashmoStudio.Designer.cs">
+      <DependentUpon>CrashmoStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games\IStudio.cs" />
     <Compile Include="Games\ImageImporter.cs" />
     <Compile Include="Games\Pushmo\PushmoStudio.cs">
@@ -141,7 +147,6 @@
     <Compile Include="ImageBox.designer.cs">
       <DependentUpon>ImageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Localization.cs" />
     <Compile Include="Games\Pushmo\PushmoGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -185,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Games\Crashmo\CrashmoGridControl.resx">
       <DependentUpon>CrashmoGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\Crashmo\CrashmoStudio.resx">
+      <DependentUpon>CrashmoStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games\Pushmo\PushmoStudio.resx">
       <DependentUpon>PushmoStudio.cs</DependentUpon>
@@ -231,24 +239,32 @@
     <None Include="Resources\cloud_small.png" />
     <None Include="Resources\tool_fill.png" />
     <None Include="Resources\burger.png" />
+    <None Include="Resources\sprite_door_blue.png" />
+    <None Include="Resources\sprite_door_green.png" />
+    <None Include="Resources\sprite_door_purple.png" />
+    <None Include="Resources\sprite_door_red.png" />
+    <None Include="Resources\sprite_door_yellow.png" />
+    <None Include="Resources\tool_door.png" />
+    <None Include="Resources\tool_manhole.png" />
+    <None Include="Resources\tool_switch.png" />
+    <None Include="Resources\ico_disk.png" />
+    <None Include="Resources\ico_page_white_copy.png" />
+    <None Include="Resources\ico_magnifier.png" />
+    <None Include="Resources\ico_arrow_left.png" />
+    <None Include="Resources\ico_arrow_up.png" />
+    <None Include="Resources\ico_arrow_right.png" />
+    <None Include="Resources\ico_arrow_down.png" />
+    <None Include="Resources\ico_folder_picture.png" />
+    <None Include="Resources\ico_barcode-2d.png" />
+    <None Include="Resources\ico_layout_content.png" />
+    <None Include="Resources\ico_page_white.png" />
+    <None Include="Resources\ico_folder.png" />
+    <None Include="Resources\ico_door_in.png" />
+    <None Include="Resources\ico_palette.png" />
+    <None Include="Resources\ico_bin_closed.png" />
     <Content Include="strawberry.ico" />
-    <None Include="Resources\barcode-2d.png" />
     <None Include="Resources\strawberry.png" />
     <None Include="Resources\ico_grid.png" />
-    <None Include="Resources\layout_content.png" />
-    <None Include="Resources\folder_picture.png" />
-    <None Include="Resources\folder.png" />
-    <None Include="Resources\door_in.png" />
-    <None Include="Resources\page_white_copy.png" />
-    <None Include="Resources\page_white.png" />
-    <None Include="Resources\magnifier.png" />
-    <None Include="Resources\disk.png" />
-    <None Include="Resources\ladder_red_ud.png" />
-    <None Include="Resources\bin_closed.png" />
-    <None Include="Resources\arrow_up.png" />
-    <None Include="Resources\arrow_down.png" />
-    <None Include="Resources\arrow_right.png" />
-    <None Include="Resources\arrow_left.png" />
     <None Include="Resources\flag_icon.png" />
     <None Include="Resources\switch_trans.png" />
     <None Include="Resources\ladder_yellow.png" />
@@ -256,13 +272,6 @@
     <None Include="Resources\ladder_purple.png" />
     <None Include="Resources\ladder_green.png" />
     <None Include="Resources\ladder_blue.png" />
-    <None Include="Resources\pipette-icon.png" />
-    <None Include="Resources\ladder.png" />
-    <None Include="Resources\ruby.png" />
-    <None Include="Resources\flag_blue.png" />
-    <None Include="Resources\palette.png" />
-    <None Include="Resources\paintcan.png" />
-    <None Include="Resources\pencil.png" />
     <None Include="Resources\pushmoPalette.gif" />
     <None Include="Resources\transparentBackground.gif" />
   </ItemGroup>

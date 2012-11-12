@@ -13,7 +13,6 @@ namespace IntelligentLevelEditor
         public PaletteEditor(byte[] paletteData)
         {
             InitializeComponent();
-            Localization.ApplyToContainer(this, "PaletteEditor");
             Buffer.BlockCopy(paletteData, 0, _palette, 0, 10);
             radColor0.BackColor = Pushmo.PushmoColorPalette.Entries[_palette[0]];
             radColor1.BackColor = Pushmo.PushmoColorPalette.Entries[_palette[1]];

@@ -33,16 +33,22 @@ namespace IntelligentLevelEditor
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditor));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFileNew = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFileSave = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileSep0 = new System.Windows.Forms.ToolStripSeparator();
             this.menuFileImport = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileSep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQRCode = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQRCodeRead = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQRCodeSep0 = new System.Windows.Forms.ToolStripSeparator();
+            this.menuQRCodeMake = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQRCodeMakeCard = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelpCheckUpdates = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelpCheckNow = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuHelpLanguage = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelpSep0 = new System.Windows.Forms.ToolStripSeparator();
             this.menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,13 +57,6 @@ namespace IntelligentLevelEditor
             this.stripPosition = new System.Windows.Forms.ToolStripStatusLabel();
             this.bwCheckForUpdates = new System.ComponentModel.BackgroundWorker();
             this.pnlEditor = new System.Windows.Forms.Panel();
-            this.menuFileNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQRCodeRead = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQRCodeMake = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQRCodeMakeCard = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +70,7 @@ namespace IntelligentLevelEditor
             this.testToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(803, 24);
+            this.menuStrip.Size = new System.Drawing.Size(744, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -89,6 +88,34 @@ namespace IntelligentLevelEditor
             this.menuFile.Name = "menuFile";
             this.menuFile.Size = new System.Drawing.Size(36, 20);
             this.menuFile.Text = "&File";
+            // 
+            // menuFileNew
+            // 
+            this.menuFileNew.Image = global::IntelligentLevelEditor.Properties.Resources.ico_page_white;
+            this.menuFileNew.Name = "menuFileNew";
+            this.menuFileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.menuFileNew.Size = new System.Drawing.Size(188, 22);
+            this.menuFileNew.Text = "&New...";
+            this.menuFileNew.Click += new System.EventHandler(this.menuFileNew_Click);
+            // 
+            // menuFileOpen
+            // 
+            this.menuFileOpen.Image = global::IntelligentLevelEditor.Properties.Resources.ico_folder;
+            this.menuFileOpen.Name = "menuFileOpen";
+            this.menuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.menuFileOpen.Size = new System.Drawing.Size(188, 22);
+            this.menuFileOpen.Text = "&Open bin...";
+            this.menuFileOpen.Click += new System.EventHandler(this.menuFileOpen_Click);
+            // 
+            // menuFileSave
+            // 
+            this.menuFileSave.Enabled = false;
+            this.menuFileSave.Image = global::IntelligentLevelEditor.Properties.Resources.ico_disk;
+            this.menuFileSave.Name = "menuFileSave";
+            this.menuFileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.menuFileSave.Size = new System.Drawing.Size(188, 22);
+            this.menuFileSave.Text = "&Save bin";
+            this.menuFileSave.Click += new System.EventHandler(this.menuFileSave_Click);
             // 
             // menuFileSaveAs
             // 
@@ -116,6 +143,15 @@ namespace IntelligentLevelEditor
             this.menuFileSep1.Name = "menuFileSep1";
             this.menuFileSep1.Size = new System.Drawing.Size(185, 6);
             // 
+            // menuFileExit
+            // 
+            this.menuFileExit.Image = global::IntelligentLevelEditor.Properties.Resources.ico_door_in;
+            this.menuFileExit.Name = "menuFileExit";
+            this.menuFileExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.menuFileExit.Size = new System.Drawing.Size(188, 22);
+            this.menuFileExit.Text = "E&xit";
+            this.menuFileExit.Click += new System.EventHandler(this.menuFileExit_Click);
+            // 
             // menuQRCode
             // 
             this.menuQRCode.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -127,17 +163,43 @@ namespace IntelligentLevelEditor
             this.menuQRCode.Size = new System.Drawing.Size(67, 20);
             this.menuQRCode.Text = "&QR Code";
             // 
+            // menuQRCodeRead
+            // 
+            this.menuQRCodeRead.Image = global::IntelligentLevelEditor.Properties.Resources.ico_folder_picture;
+            this.menuQRCodeRead.Name = "menuQRCodeRead";
+            this.menuQRCodeRead.Size = new System.Drawing.Size(208, 22);
+            this.menuQRCodeRead.Text = "&Read from image...";
+            this.menuQRCodeRead.Click += new System.EventHandler(this.menuQRCodeRead_Click);
+            // 
             // menuQRCodeSep0
             // 
             this.menuQRCodeSep0.Name = "menuQRCodeSep0";
             this.menuQRCodeSep0.Size = new System.Drawing.Size(205, 6);
+            // 
+            // menuQRCodeMake
+            // 
+            this.menuQRCodeMake.Enabled = false;
+            this.menuQRCodeMake.Image = global::IntelligentLevelEditor.Properties.Resources.ico_barcode2d;
+            this.menuQRCodeMake.Name = "menuQRCodeMake";
+            this.menuQRCodeMake.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.menuQRCodeMake.Size = new System.Drawing.Size(208, 22);
+            this.menuQRCodeMake.Text = "Make &QR Code...";
+            this.menuQRCodeMake.Click += new System.EventHandler(this.menuQRCodeMake_Click);
+            // 
+            // menuQRCodeMakeCard
+            // 
+            this.menuQRCodeMakeCard.Enabled = false;
+            this.menuQRCodeMakeCard.Image = global::IntelligentLevelEditor.Properties.Resources.ico_layout_content;
+            this.menuQRCodeMakeCard.Name = "menuQRCodeMakeCard";
+            this.menuQRCodeMakeCard.Size = new System.Drawing.Size(208, 22);
+            this.menuQRCodeMakeCard.Text = "&Make a QR Card...";
+            this.menuQRCodeMakeCard.Click += new System.EventHandler(this.menuQRCodeMakeCard_Click);
             // 
             // menuHelp
             // 
             this.menuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuHelpCheckUpdates,
             this.menuHelpCheckNow,
-            this.menuHelpLanguage,
             this.menuHelpSep0,
             this.menuHelpAbout});
             this.menuHelp.Name = "menuHelp";
@@ -154,16 +216,11 @@ namespace IntelligentLevelEditor
             // 
             // menuHelpCheckNow
             // 
+            this.menuHelpCheckNow.Image = global::IntelligentLevelEditor.Properties.Resources.ico_magnifier;
             this.menuHelpCheckNow.Name = "menuHelpCheckNow";
             this.menuHelpCheckNow.Size = new System.Drawing.Size(235, 22);
             this.menuHelpCheckNow.Text = "&Check for updates now...";
             this.menuHelpCheckNow.Click += new System.EventHandler(this.menuHelpCheckNow_Click);
-            // 
-            // menuHelpLanguage
-            // 
-            this.menuHelpLanguage.Name = "menuHelpLanguage";
-            this.menuHelpLanguage.Size = new System.Drawing.Size(235, 22);
-            this.menuHelpLanguage.Text = "Change &Language...";
             // 
             // menuHelpSep0
             // 
@@ -189,9 +246,9 @@ namespace IntelligentLevelEditor
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stripColor,
             this.stripPosition});
-            this.statusStrip.Location = new System.Drawing.Point(0, 481);
+            this.statusStrip.Location = new System.Drawing.Point(0, 480);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(803, 22);
+            this.statusStrip.Size = new System.Drawing.Size(744, 22);
             this.statusStrip.TabIndex = 3;
             // 
             // stripColor
@@ -202,7 +259,7 @@ namespace IntelligentLevelEditor
             // stripPosition
             // 
             this.stripPosition.Name = "stripPosition";
-            this.stripPosition.Size = new System.Drawing.Size(788, 17);
+            this.stripPosition.Size = new System.Drawing.Size(729, 17);
             this.stripPosition.Spring = true;
             this.stripPosition.Text = "Position: (0,0)";
             this.stripPosition.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -214,87 +271,24 @@ namespace IntelligentLevelEditor
             // 
             // pnlEditor
             // 
+            this.pnlEditor.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pnlEditor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEditor.Location = new System.Drawing.Point(0, 24);
             this.pnlEditor.Name = "pnlEditor";
-            this.pnlEditor.Size = new System.Drawing.Size(803, 457);
+            this.pnlEditor.Size = new System.Drawing.Size(744, 456);
             this.pnlEditor.TabIndex = 4;
-            // 
-            // menuFileNew
-            // 
-            this.menuFileNew.Image = global::IntelligentLevelEditor.Properties.Resources.page_white;
-            this.menuFileNew.Name = "menuFileNew";
-            this.menuFileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuFileNew.Size = new System.Drawing.Size(188, 22);
-            this.menuFileNew.Text = "&New...";
-            this.menuFileNew.Click += new System.EventHandler(this.menuFileNew_Click);
-            // 
-            // menuFileOpen
-            // 
-            this.menuFileOpen.Image = global::IntelligentLevelEditor.Properties.Resources.folder;
-            this.menuFileOpen.Name = "menuFileOpen";
-            this.menuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.menuFileOpen.Size = new System.Drawing.Size(188, 22);
-            this.menuFileOpen.Text = "&Open bin...";
-            this.menuFileOpen.Click += new System.EventHandler(this.menuFileOpen_Click);
-            // 
-            // menuFileSave
-            // 
-            this.menuFileSave.Enabled = false;
-            this.menuFileSave.Image = global::IntelligentLevelEditor.Properties.Resources.disk;
-            this.menuFileSave.Name = "menuFileSave";
-            this.menuFileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.menuFileSave.Size = new System.Drawing.Size(188, 22);
-            this.menuFileSave.Text = "&Save bin";
-            this.menuFileSave.Click += new System.EventHandler(this.menuFileSave_Click);
-            // 
-            // menuFileExit
-            // 
-            this.menuFileExit.Image = global::IntelligentLevelEditor.Properties.Resources.door_in;
-            this.menuFileExit.Name = "menuFileExit";
-            this.menuFileExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.menuFileExit.Size = new System.Drawing.Size(188, 22);
-            this.menuFileExit.Text = "E&xit";
-            this.menuFileExit.Click += new System.EventHandler(this.menuFileExit_Click);
-            // 
-            // menuQRCodeRead
-            // 
-            this.menuQRCodeRead.Image = global::IntelligentLevelEditor.Properties.Resources.folder_picture;
-            this.menuQRCodeRead.Name = "menuQRCodeRead";
-            this.menuQRCodeRead.Size = new System.Drawing.Size(208, 22);
-            this.menuQRCodeRead.Text = "&Read from image...";
-            this.menuQRCodeRead.Click += new System.EventHandler(this.menuQRCodeRead_Click);
-            // 
-            // menuQRCodeMake
-            // 
-            this.menuQRCodeMake.Enabled = false;
-            this.menuQRCodeMake.Image = global::IntelligentLevelEditor.Properties.Resources.barcode2d;
-            this.menuQRCodeMake.Name = "menuQRCodeMake";
-            this.menuQRCodeMake.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.menuQRCodeMake.Size = new System.Drawing.Size(208, 22);
-            this.menuQRCodeMake.Text = "Make &QR Code...";
-            this.menuQRCodeMake.Click += new System.EventHandler(this.menuQRCodeMake_Click);
-            // 
-            // menuQRCodeMakeCard
-            // 
-            this.menuQRCodeMakeCard.Enabled = false;
-            this.menuQRCodeMakeCard.Image = global::IntelligentLevelEditor.Properties.Resources.layout_content;
-            this.menuQRCodeMakeCard.Name = "menuQRCodeMakeCard";
-            this.menuQRCodeMakeCard.Size = new System.Drawing.Size(208, 22);
-            this.menuQRCodeMakeCard.Text = "&Make a QR Card...";
-            this.menuQRCodeMakeCard.Click += new System.EventHandler(this.menuQRCodeMakeCard_Click);
             // 
             // FormEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 503);
+            this.ClientSize = new System.Drawing.Size(744, 502);
             this.Controls.Add(this.pnlEditor);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
-            this.MinimumSize = new System.Drawing.Size(730, 541);
+            this.MinimumSize = new System.Drawing.Size(760, 540);
             this.Name = "FormEditor";
             this.Text = "Intelligent Level Editor";
             this.menuStrip.ResumeLayout(false);
@@ -328,7 +322,6 @@ namespace IntelligentLevelEditor
         private System.Windows.Forms.ToolStripMenuItem menuFileImport;
         private System.Windows.Forms.ToolStripSeparator menuFileSep1;
         private System.Windows.Forms.ToolStripMenuItem menuFileSave;
-        private System.Windows.Forms.ToolStripMenuItem menuHelpLanguage;
         private System.ComponentModel.BackgroundWorker bwCheckForUpdates;
         private System.Windows.Forms.ToolStripMenuItem menuHelpCheckUpdates;
         private System.Windows.Forms.ToolStripMenuItem menuHelpCheckNow;

@@ -60,48 +60,6 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap arrow_down {
-            get {
-                object obj = ResourceManager.GetObject("arrow_down", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap arrow_left {
-            get {
-                object obj = ResourceManager.GetObject("arrow_left", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap arrow_right {
-            get {
-                object obj = ResourceManager.GetObject("arrow_right", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap arrow_up {
-            get {
-                object obj = ResourceManager.GetObject("arrow_up", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap barcode2d {
-            get {
-                object obj = ResourceManager.GetObject("barcode2d", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap bin_closed {
-            get {
-                object obj = ResourceManager.GetObject("bin_closed", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap burger {
             get {
                 object obj = ResourceManager.GetObject("burger", resourceCulture);
@@ -116,27 +74,6 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap disk {
-            get {
-                object obj = ResourceManager.GetObject("disk", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap door_in {
-            get {
-                object obj = ResourceManager.GetObject("door_in", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap flag_blue {
-            get {
-                object obj = ResourceManager.GetObject("flag_blue", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap flag_icon {
             get {
                 object obj = ResourceManager.GetObject("flag_icon", resourceCulture);
@@ -144,16 +81,72 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap folder {
+        internal static System.Drawing.Bitmap ico_arrow_down {
             get {
-                object obj = ResourceManager.GetObject("folder", resourceCulture);
+                object obj = ResourceManager.GetObject("ico_arrow_down", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap folder_picture {
+        internal static System.Drawing.Bitmap ico_arrow_left {
             get {
-                object obj = ResourceManager.GetObject("folder_picture", resourceCulture);
+                object obj = ResourceManager.GetObject("ico_arrow_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_arrow_right {
+            get {
+                object obj = ResourceManager.GetObject("ico_arrow_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_arrow_up {
+            get {
+                object obj = ResourceManager.GetObject("ico_arrow_up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_barcode2d {
+            get {
+                object obj = ResourceManager.GetObject("ico_barcode2d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_bin_closed {
+            get {
+                object obj = ResourceManager.GetObject("ico_bin_closed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_disk {
+            get {
+                object obj = ResourceManager.GetObject("ico_disk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_door_in {
+            get {
+                object obj = ResourceManager.GetObject("ico_door_in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_folder {
+            get {
+                object obj = ResourceManager.GetObject("ico_folder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_folder_picture {
+            get {
+                object obj = ResourceManager.GetObject("ico_folder_picture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -165,9 +158,37 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap ladder {
+        internal static System.Drawing.Bitmap ico_layout_content {
             get {
-                object obj = ResourceManager.GetObject("ladder", resourceCulture);
+                object obj = ResourceManager.GetObject("ico_layout_content", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_magnifier {
+            get {
+                object obj = ResourceManager.GetObject("ico_magnifier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_page_white {
+            get {
+                object obj = ResourceManager.GetObject("ico_page_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_page_white_copy {
+            get {
+                object obj = ResourceManager.GetObject("ico_page_white_copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ico_palette {
+            get {
+                object obj = ResourceManager.GetObject("ico_palette", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -200,72 +221,9 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap ladder_red_ud {
-            get {
-                object obj = ResourceManager.GetObject("ladder_red_ud", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap ladder_yellow {
             get {
                 object obj = ResourceManager.GetObject("ladder_yellow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap layout_content {
-            get {
-                object obj = ResourceManager.GetObject("layout_content", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap magnifier {
-            get {
-                object obj = ResourceManager.GetObject("magnifier", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap page_white {
-            get {
-                object obj = ResourceManager.GetObject("page_white", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap page_white_copy {
-            get {
-                object obj = ResourceManager.GetObject("page_white_copy", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap paintcan {
-            get {
-                object obj = ResourceManager.GetObject("paintcan", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap palette {
-            get {
-                object obj = ResourceManager.GetObject("palette", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap pencil {
-            get {
-                object obj = ResourceManager.GetObject("pencil", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap pipette_icon {
-            get {
-                object obj = ResourceManager.GetObject("pipette_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -277,9 +235,37 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap ruby {
+        internal static System.Drawing.Bitmap sprite_door_blue {
             get {
-                object obj = ResourceManager.GetObject("ruby", resourceCulture);
+                object obj = ResourceManager.GetObject("sprite_door_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap sprite_door_green {
+            get {
+                object obj = ResourceManager.GetObject("sprite_door_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap sprite_door_purple {
+            get {
+                object obj = ResourceManager.GetObject("sprite_door_purple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap sprite_door_red {
+            get {
+                object obj = ResourceManager.GetObject("sprite_door_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap sprite_door_yellow {
+            get {
+                object obj = ResourceManager.GetObject("sprite_door_yellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -305,6 +291,13 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap tool_door {
+            get {
+                object obj = ResourceManager.GetObject("tool_door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap tool_fill {
             get {
                 object obj = ResourceManager.GetObject("tool_fill", resourceCulture);
@@ -319,6 +312,13 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap tool_manhole {
+            get {
+                object obj = ResourceManager.GetObject("tool_manhole", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap tool_pencil {
             get {
                 object obj = ResourceManager.GetObject("tool_pencil", resourceCulture);
@@ -329,6 +329,13 @@ namespace IntelligentLevelEditor.Properties {
         internal static System.Drawing.Bitmap tool_pipette {
             get {
                 object obj = ResourceManager.GetObject("tool_pipette", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tool_switch {
+            get {
+                object obj = ResourceManager.GetObject("tool_switch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

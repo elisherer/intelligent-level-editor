@@ -8,7 +8,6 @@ namespace IntelligentLevelEditor
         public AboutBox()
         {
             InitializeComponent();
-            Localization.ApplyToContainer(this, "AboutBox");
             lblTitle.Text = Application.ProductName + @" v." + Application.ProductVersion;
         }
     }

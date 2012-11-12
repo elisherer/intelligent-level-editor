@@ -18,8 +18,7 @@ using com.google.zxing.common;
  * Todolist:
  * 
  * TODO: (1) add undo/redo
- * TODO: (2) figure out the rest of the flags of the pushmo...
- * TODO: (3) make drawing even faster by using draw-per-change instead of draw-the-all-thing-on-every-change
+ * TODO: (2) make drawing even faster by using draw-per-change instead of draw-the-all-thing-on-every-change
  */
 
 namespace IntelligentLevelEditor
@@ -40,24 +39,6 @@ namespace IntelligentLevelEditor
         public FormEditor()
         {
             InitializeComponent();
-            Localization.ApplyToContainer(this, "FormEditor");
-            //make language menu
-            var current = Localization.getCurrentDescriptor();
-            var langList = Localization.GetLanguages(Path.GetDirectoryName(Application.ExecutablePath));
-            if (langList.Count == 0)
-            {
-                menuHelpLanguage.DropDownItems.Add(new ToolStripMenuItem(@"No languages found") {Enabled = false});
-                MessageBox.Show("Error: The selected language file wasn't found.");
-            }
-            else foreach (var desc in langList)
-            {
-                var menuItem = new ToolStripMenuItem(desc.Name + " (" + desc.Author + ")");
-                if (current!= null && current.Culture.Equals(desc.Culture))
-                    menuItem.Checked = true;
-                menuItem.Tag = desc.Culture;
-                menuItem.Click += menuHelpLanguage_Click;
-                menuHelpLanguage.DropDownItems.Add(menuItem);
-            }
             
             menuHelpCheckUpdates.Checked = Settings.Default.CheckForUpdatesOnStartup;
             if (Settings.Default.CheckForUpdatesOnStartup)
@@ -86,14 +67,17 @@ namespace IntelligentLevelEditor
             }
             else if (Crashmo.IsMatchingData(data))
             {
-                /* TODO: enable crashmo loading
                 CleanStudio();
                 var crashmoStudio = new CrashmoStudio { Dock = DockStyle.Fill };
                 crashmoStudio.LoadData(data);
                 pnlEditor.Controls.Add(crashmoStudio);
                 _studio = crashmoStudio;
-                _gameMode = GameMode.Pushmo;
-                EnableAfterOpen();*/
+                _gameMode = GameMode.Crashmo;
+                EnableAfterOpen();
+            }
+            else
+            {
+                MessageBox.Show("Unknown data.");
             }
         }
 
@@ -108,16 +92,13 @@ namespace IntelligentLevelEditor
                     EnableAfterOpen();
                     break;
                 case GameMode.Crashmo:
-                    /*TODO: enable crashmo new
                     CleanStudio();
                     _studio = new CrashmoStudio { Dock = DockStyle.Fill };
                     pnlEditor.Controls.Add((CrashmoStudio)_studio);
                     EnableAfterOpen();
-                     */
                     break;
             }            
         }
-
         
         #region Menu -> File
 
@@ -128,11 +109,12 @@ namespace IntelligentLevelEditor
             menuFileImport.Enabled = true;
             menuQRCodeMake.Enabled = true;
             menuQRCodeMakeCard.Enabled = true;
+            pnlEditor.BackColor = SystemColors.Control;
         }
 
         private void menuFileNew_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(Localization.GetString("AreYouSureNew"), Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.No)
+            if (menuFileSave.Enabled && MessageBox.Show(@"Are you sure you want to discard the current level and create a new one?", Application.ProductName, MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
             var gameSelect = new GameSelect();
             if (gameSelect.ShowDialog() == DialogResult.Cancel)
@@ -143,18 +125,18 @@ namespace IntelligentLevelEditor
 
         private void menuFileOpen_Click(object sender, EventArgs e)
         {
-            var ofd = new OpenFileDialog { Filter = Localization.GetString("FileFilterBinary") };
+            var ofd = new OpenFileDialog { Filter = @"Binary Files|*.bin" };
             if (ofd.ShowDialog() != DialogResult.OK) return;
-            try
-            {
+            //try
+            //{
                 var data = File.ReadAllBytes(ofd.FileName);
                 ReadByteArray(data);
-            }
+            /*}
             catch (Exception ex)
             {
-                MessageBox.Show(Localization.GetString("ErrorLoading") + Environment.NewLine + ex.Message);
-            }
-            
+                MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message);
+            }*/
+
         }
 
         private void SaveLevel()
@@ -169,7 +151,7 @@ namespace IntelligentLevelEditor
         {
             if (string.IsNullOrEmpty(_filePath))
             {
-                var sfd = new SaveFileDialog { Filter = Localization.GetString("FileFilterBinary") };
+                var sfd = new SaveFileDialog { Filter = @"Binary Files|*.bin" };
                 if (sfd.ShowDialog() != DialogResult.OK) return;
                 _filePath = sfd.FileName;
             }
@@ -179,7 +161,7 @@ namespace IntelligentLevelEditor
 
         private void menuFileSaveAs_Click(object sender, EventArgs e)
         {
-            var sfd = new SaveFileDialog { Filter = Localization.GetString("FileFilterBinary") };
+            var sfd = new SaveFileDialog { Filter = @"Binary Files|*.bin" };
             if (sfd.ShowDialog() != DialogResult.OK) return;
             _filePath = sfd.FileName;
             SaveLevel();
@@ -187,11 +169,16 @@ namespace IntelligentLevelEditor
 
         private void menuFileImport_Click(object sender, EventArgs e)
         {
-            var ofd = new OpenFileDialog { Filter = Localization.GetString("FileFilterImagesOpen") };
+            var ofd = new OpenFileDialog { Filter = @"All Supported|*.png;*.jpg;*.bmp;*.gif|PNG Files|*.png|Jpeg Files|*.jpg|Bitmap Files|*.bmp|GIF Files|*.gif" };
             if (ofd.ShowDialog() != DialogResult.OK) return;
             var image = Image.FromFile(ofd.FileName);
-            //TODO: import get the correct palette in general
-            ImageImporter.Import(new Bitmap(image),Pushmo.PushmoColorPalette,Pushmo.PushmoColorPaletteSize,_studio.GetBitmap(),_studio.GetPalette());
+            ImageImporter.Import(
+                new Bitmap(image),
+                _studio.GetAvailableColorPalette(),
+                _studio.GetAvailableColorPaletteSize(),
+                _studio.GetBitmap(),
+                _studio.GetPalette()
+            );
             _studio.RefreshUI();
         }
 
@@ -206,7 +193,7 @@ namespace IntelligentLevelEditor
 
         private void menuQRCodeRead_Click(object sender, EventArgs e)
         {
-            var ofd = new OpenFileDialog { Filter = Localization.GetString("FileFilterImagesOpen") };
+            var ofd = new OpenFileDialog { Filter = @"All Supported|*.png;*.jpg;*.bmp;*.gif|PNG Files|*.png|Jpeg Files|*.jpg|Bitmap Files|*.bmp|GIF Files|*.gif" };
             if (ofd.ShowDialog() != DialogResult.OK) return;
             try
             {
@@ -215,13 +202,13 @@ namespace IntelligentLevelEditor
                 var reader = new QRCodeReader();
                 var result = reader.decode(binary);
                 if ((result.RawBytes[0] & 0xf0) != 0x40)
-                    throw new Exception(Localization.GetString("ErrorQRLevel"));
+                    throw new Exception(@"This code is not for this game");
                 var byteArray = (byte[]) ((ArrayList) result.ResultMetadata[ResultMetadataType.BYTE_SEGMENTS])[0];
                 ReadByteArray(byteArray);
             }
             catch (ReaderException ex)
             {
-                MessageBox.Show(Localization.GetString("ErrorLoading") + Environment.NewLine + ex.Message);
+                MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message);
             }
         }
 
@@ -276,20 +263,6 @@ namespace IntelligentLevelEditor
             (new AboutBox()).ShowDialog();
         }
 
-        private void menuHelpLanguage_Click(object sender, EventArgs e)
-        {
-            var item = (ToolStripMenuItem)sender;
-            if (Settings.Default.Culture.Equals(item.Tag)) return;
-            Settings.Default.Culture = (string)item.Tag;
-            Settings.Default.Save();
-            foreach (var langMenuItem in menuHelpLanguage.DropDownItems)
-                if (langMenuItem is ToolStripMenuItem)
-                    (langMenuItem as ToolStripMenuItem).Checked = false;
-            item.Checked = true;
-            Localization.Load(Settings.Default.Culture);
-            Localization.ApplyToContainer(this,"FormEditor");
-        }
-
         #endregion
 
         #region Check for updates
@@ -297,7 +270,7 @@ namespace IntelligentLevelEditor
         {
             try
             {
-                _remoteVer = Localization.GetString("ErrorVersion");
+                _remoteVer = @"<Error: Couldn't parse the version number>";
                 var request = (HttpWebRequest)WebRequest.Create("http://pushmoleveleditor.googlecode.com/svn/trunk/PushmoLevelEditor/Properties/AssemblyInfo.cs");
                 var responseStream = request.GetResponse().GetResponseStream();
                 if (responseStream == null) return;
@@ -328,15 +301,15 @@ namespace IntelligentLevelEditor
         private void bwCheckForUpdates_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (IsNewerAvailable(_remoteVer))
-                MessageBox.Show(string.Format(Localization.GetString("UpdatesOld"), Application.ProductVersion, _remoteVer));
+                MessageBox.Show(string.Format(@"This version is v{0}\nThe version on the server is v{1}\nYou might want to download a newer version.", Application.ProductVersion, _remoteVer));
             else if (_checkNow)
-                MessageBox.Show(string.Format(Localization.GetString("UpdatesNew"), Application.ProductVersion));
+                MessageBox.Show(string.Format(@"v{0} is the latest version.", Application.ProductVersion));
         }
         #endregion
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var ofd = new OpenFileDialog { Filter = Localization.GetString("FileFilterBinary") };
+            var ofd = new OpenFileDialog { Filter = @"Binary Files|*.bin" };
             if (ofd.ShowDialog() != DialogResult.OK) return;
             try
             {
@@ -360,7 +333,7 @@ namespace IntelligentLevelEditor
             }
             catch (Exception ex)
             {
-                MessageBox.Show(Localization.GetString("ErrorLoading") + Environment.NewLine + ex.Message);
+                MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message);
             }
             
         }
