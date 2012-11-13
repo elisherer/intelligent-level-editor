@@ -15,5 +15,6 @@ namespace IntelligentLevelEditor.Games
         Image MakeQrCard(ByteMatrix qrMatrix);
         ColorPalette GetAvailableColorPalette();
         int GetAvailableColorPaletteSize();
+        byte GetTransparentIndex();
     }
 }

@@ -23,13 +23,13 @@ namespace IntelligentLevelEditor.Games.Pushmo
         private Pushmo.PushmoQrData _pData;
         private readonly PushmoLevelData _data = new PushmoLevelData();
         private ToolMode _mode;
-        private byte _color;
-        private byte _manhole;
-        private byte _switch;
+        private byte _color = 1, _manhole, _switch;
+        private readonly StatusStrip _statusStrip;
 
-        public PushmoStudio()
+        public PushmoStudio(StatusStrip statusStrip)
         {
             InitializeComponent();
+            _statusStrip = statusStrip;
             propertyGrid.SelectedObject = _data;
             _pData = Pushmo.EmptyPushmoData();
             UpdateGui();
@@ -133,6 +133,11 @@ namespace IntelligentLevelEditor.Games.Pushmo
             return Pushmo.PushmoColorPaletteSize;
         }
 
+        public byte GetTransparentIndex()
+        {
+            return 0xA;
+        }
+
         #endregion
 
         private void RefreshRadioButton()
@@ -168,7 +173,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
             _data.Locked = (_pData.Flags & (uint)Pushmo.PushmoFlags.Protected) > 0;
             _data.Large = (_pData.Flags & (uint)Pushmo.PushmoFlags.Large) > 0;
 
-            gridControl.SetData(Pushmo.DecodeTiled(_pData.LevelData), _pData);
+            gridControl.SetData(_pData);
             RefreshGui();
             RefreshRadioButton();
             if (!radColor0.Checked)
@@ -244,10 +249,18 @@ namespace IntelligentLevelEditor.Games.Pushmo
             switch (mode)
             {
                 case ToolMode.Flag:
-                    lblToolMessage.Text = @"Click on the\nmap to place\nthe flag.\n\nClick on it\nagain to delete.";
+                    lblToolMessage.Text =
+                        @"Click on the" + Environment.NewLine +
+                        @"map to place" + Environment.NewLine + 
+                        @"the flag." + Environment.NewLine + 
+                        Environment.NewLine + 
+                        @"Click on it" + Environment.NewLine + 
+                        @"again to delete.";
                     break;
                 case ToolMode.Pipette:
-                    lblToolMessage.Text = @"Click on a pixel\nto get its color";
+                    lblToolMessage.Text = 
+                        @"Click on a pixel" + Environment.NewLine + 
+                        @"to get its color";
                     break;
             }
 
@@ -315,7 +328,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         private void GridControlGridCellHover(int x, int y)
         {
-            //stripPosition.Text = @"Position: (" + x + @"," + y + @")";
+            _statusStrip.Text = @"Position: (" + x + @"," + y + @")";
         }
 
         #endregion
@@ -334,13 +347,11 @@ namespace IntelligentLevelEditor.Games.Pushmo
         private void btnEditPalette_Click(object sender, EventArgs e)
         {
             var pe = new PaletteEditor(_pData.PaletteData);
-            if (pe.ShowDialog() == DialogResult.OK)
-            {
-                var result = pe.GetResult();
-                Buffer.BlockCopy(result, 0, gridControl.Palette, 0, result.Length);
-                RefreshRadioButton();
-                RefreshGui();
-            }
+            if (pe.ShowDialog() != DialogResult.OK) return;
+            var result = pe.GetResult();
+            Buffer.BlockCopy(result, 0, gridControl.Palette, 0, result.Length);
+            RefreshRadioButton();
+            RefreshGui();
         }
 
         private void btnDeleteSwitch_Click(object sender, EventArgs e)
