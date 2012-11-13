@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -13,18 +12,15 @@ namespace IntelligentLevelEditor.Games.Crashmo
         {
             public byte X;
             public byte Y;
-            public byte Type;
+            public readonly byte Type;
             public byte Flags;
 
-            public CrashmoFixedPosition()
-            {
-                
-            }
-
-            public CrashmoFixedPosition(byte x, byte y)
+            public CrashmoFixedPosition(byte x, byte y, byte type, byte flags)
             {
                 X = x;
                 Y = y;
+                Type = type;
+                Flags = flags;
             }
 
             public CrashmoFixedPosition(Crashmo.CrashmoPosition src)
@@ -47,15 +43,14 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         public byte[] Palette;
         public byte[][] Bitmap;
-        public bool[][] Cloudy;
-        public CrashmoFixedPosition Flag = new CrashmoFixedPosition {Type = 1};
-        public List<CrashmoFixedPosition> Manholes;
-        public List<CrashmoFixedPosition> Switches;
-        public List<CrashmoFixedPosition> Doors;
-        public List<CrashmoFixedPosition> Clouds;
+        private readonly bool[][] _cloudy;
+        public CrashmoFixedPosition Flag;
+        public CrashmoFixedPosition[] Manholes;
+        public CrashmoFixedPosition[] Switches;
+        public CrashmoFixedPosition[] Doors;
+        public CrashmoFixedPosition[] Clouds;
         private bool _grid = true;
         private readonly Bitmap _thumb = new Bitmap(Crashmo.BitmapSize, Crashmo.BitmapSize);
-        public readonly Bitmap[] SwitchBitmaps = new Bitmap[10];
 
         public delegate void GridCellHandler(int x, int y);
 
@@ -75,19 +70,19 @@ namespace IntelligentLevelEditor.Games.Crashmo
         {
             InitializeComponent();
 
-            Cloudy = new bool[Crashmo.BitmapSize][];
-            for (var i =0; i< Cloudy.Length; i++)
-                Cloudy[i] = new bool[Crashmo.BitmapSize];
+            _cloudy = new bool[Crashmo.BitmapSize][];
+            for (var i =0; i< _cloudy.Length; i++)
+                _cloudy[i] = new bool[Crashmo.BitmapSize];
         }
 
-        public void SetData(byte[][] data, Crashmo.CrashmoQrData cData)
+        public void SetData(Crashmo.CrashmoQrData cData)
         {
-            Bitmap = data;
+            Bitmap = Crashmo.Decode(cData.LevelData);
             Palette = cData.PaletteData;
-            Manholes = new List<CrashmoFixedPosition>();
-            Switches = new List<CrashmoFixedPosition>();
-            Doors = new List<CrashmoFixedPosition>();
-            Clouds = new List<CrashmoFixedPosition>();
+            Switches = new CrashmoFixedPosition[4];
+            Manholes = new CrashmoFixedPosition[6];
+            Doors = new CrashmoFixedPosition[6];
+            Clouds = new CrashmoFixedPosition[5];
             for (var i = 0; i < cData.Utilities.Length; i++ )
             {
                 switch (cData.Utilities[i].Type)
@@ -96,65 +91,48 @@ namespace IntelligentLevelEditor.Games.Crashmo
                         Flag = new CrashmoFixedPosition(cData.Utilities[i]);
                         break;
                     case 2:
-                        Manholes.Add(new CrashmoFixedPosition(cData.Utilities[i]));
+                        var mhidx = cData.Utilities[i].Flags*2;
+                        if (Manholes[mhidx] != null) //written the first one already
+                            mhidx++;
+                        Manholes[mhidx] = new CrashmoFixedPosition(cData.Utilities[i]);
                         break;
                     case 3:
-                        Switches.Add(new CrashmoFixedPosition(cData.Utilities[i]));
+                        var swidx = cData.Utilities[i].Flags == 4 ? 3 : cData.Utilities[i].Flags;
+                        Switches[swidx] = new CrashmoFixedPosition(cData.Utilities[i]);
                         break;
                     case 4:
-                        Doors.Add(new CrashmoFixedPosition(cData.Utilities[i]));
+                        var dridx = cData.Utilities[i].Flags*2;
+                        if (Doors[dridx] != null) //written the first one already
+                            dridx++;
+                        Doors[dridx] = new CrashmoFixedPosition(cData.Utilities[i]);
                         break;
                     case 5:
-                        Clouds.Add(new CrashmoFixedPosition(cData.Utilities[i]));
+                        var clidx = 0;
+                        while (Clouds[clidx] != null && clidx < 5) clidx++;
+                        if (clidx == 5) clidx = 4; //overwrite the last one, clearly an error
+                        Clouds[clidx] = new CrashmoFixedPosition(cData.Utilities[i]);
                         break;
                 }
             }
-            InitializeSwitches();
         }
 
         public void SetGrid(bool grid)
         {
             _grid = grid;
         }
-
-        public void InitializeSwitches()
-        {
-            var srcColor = Color.FromArgb(255, 255, 0, 255);
-            for (var i = 0; i < SwitchBitmaps.Length; i++)
-            {
-                var bmp = new Bitmap(11, 11);
-                var clr = Crashmo.CrashmoColorPalette.Entries[Palette[i]];
-                var g = Graphics.FromImage(bmp);
-                g.DrawImage(Resources.switch_trans,0,0);
-                g.Dispose();
-                for (var y=0; y<11; y++)
-                    for (var x=0;x<11;x++)
-                        if (bmp.GetPixel(x,y).Equals(srcColor))
-                            bmp.SetPixel(x,y,clr);
-                SwitchBitmaps[i] = bmp;
-            }
-        }
         
         private void DrawManhole(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
         {
-
-            if (pos.X == 0xFF) return;
-            Image toDraw = Resources.ladder_red; //if it's 0
+            if (pos == null) return;
+            Image toDraw = Resources.sprite_ladder_red; //if it's 0
             var flipped = pos.Y > 0 && Bitmap[pos.Y - 1][pos.X] == Bitmap[pos.Y][pos.X];
-            //pos.Flags = (byte)((pos.Flags & 0xF0) + 1 * (flipped ? 1 : 0));
             switch (pos.Flags)
             {
                 case 1:
-                    toDraw = Resources.ladder_yellow;
+                    toDraw = Resources.sprite_ladder_yellow;
                     break;
                 case 2:
-                    toDraw = Resources.ladder_blue;
-                    break;
-                case 3:
-                    toDraw = Resources.ladder_green;
-                    break;
-                case 4:
-                    toDraw = Resources.ladder_purple;
+                    toDraw = Resources.sprite_ladder_blue;
                     break;
             }
             g.DrawImage(toDraw, 1 + pos.X * pixWidth, 1 + pos.Y * pixHeight + (flipped ? pixHeight - 2 : 0), pixWidth - 2, flipped ? -pixHeight : pixHeight);
@@ -162,7 +140,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         private void DrawDoor(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
         {
-            if (pos.X == 0xFF) return;
+            if (pos == null) return;
             Image toDraw = Resources.sprite_door_red; //if it's 0
             switch (pos.Flags)
             {
@@ -172,56 +150,49 @@ namespace IntelligentLevelEditor.Games.Crashmo
                 case 2:
                     toDraw = Resources.sprite_door_blue;
                     break;
-                case 3:
-                    toDraw = Resources.sprite_door_green;
-                    break;
-                case 4:
-                    toDraw = Resources.sprite_door_purple;
-                    break;
             }
             g.DrawImage(toDraw, 1 + pos.X * pixWidth, 1 + pos.Y * pixHeight , pixWidth - 2, pixHeight);
         }
 
         private void DrawSwitch(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
         {
-            if (pos.X == 0xFF) return;
-            g.DrawImage(SwitchBitmaps[pos.Flags >> 4], pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
+            if (pos == null) return; //TODO: new sprites for angles
+            g.DrawImage(Resources.sprite_switch_trans, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
         }
 
-        private void RecursiveDrawCloud(Graphics g, CrashmoFixedPosition pos, byte baseColor, int pixWidth, int pixHeight)
+        private void RecursiveDrawCloud(Graphics g, int x, int y, byte baseColor, int pixWidth, int pixHeight)
         {
-            Cloudy[pos.Y][pos.X] = true; //mark
-            g.FillRectangle(Brushes.White, (pos.X + 0.3f) * pixWidth, (pos.Y + 0.3f) * pixHeight, pixWidth*0.3f, pixHeight*0.3f);
+            _cloudy[y][x] = true; //mark
+            g.FillRectangle(Brushes.White, (x + 0.3f) * pixWidth, (y + 0.3f) * pixHeight, pixWidth*0.3f, pixHeight*0.3f);
             // <            
-            if (pos.X > 0 && Bitmap[pos.Y][pos.X - 1] == baseColor && !Cloudy[pos.Y][pos.X - 1])
-                RecursiveDrawCloud(g, new CrashmoFixedPosition((byte)(pos.X - 1), pos.Y), baseColor, pixWidth, pixHeight);
+            if (x > 0 && Bitmap[y][x - 1] == baseColor && !_cloudy[y][x - 1])
+                RecursiveDrawCloud(g, x - 1, y, baseColor, pixWidth, pixHeight);
             // >
-            if (pos.X < Bitmap[0].Length - 1 && Bitmap[pos.Y][pos.X + 1] == baseColor && !Cloudy[pos.Y][pos.X + 1])
-                RecursiveDrawCloud(g, new CrashmoFixedPosition((byte)(pos.X + 1), pos.Y), baseColor, pixWidth, pixHeight);
+            if (x < Bitmap[0].Length - 1 && Bitmap[y][x + 1] == baseColor && !_cloudy[y][x + 1])
+                RecursiveDrawCloud(g, x + 1, y, baseColor, pixWidth, pixHeight);
             // ^
-            if (pos.Y > 0 && Bitmap[pos.Y - 1][pos.X] == baseColor && !Cloudy[pos.Y - 1][pos.X])
-                RecursiveDrawCloud(g, new CrashmoFixedPosition(pos.X, (byte)(pos.Y - 1)), baseColor, pixWidth, pixHeight);
+            if (y > 0 && Bitmap[y - 1][x] == baseColor && !_cloudy[y - 1][x])
+                RecursiveDrawCloud(g, x, y - 1, baseColor, pixWidth, pixHeight);
             // v
-            if (pos.Y < Bitmap.Length - 1 && Bitmap[pos.Y + 1][pos.X] == baseColor && !Cloudy[pos.Y + 1][pos.X])
-                RecursiveDrawCloud(g, new CrashmoFixedPosition(pos.X, (byte)(pos.Y + 1)), baseColor, pixWidth, pixHeight);
+            if (y < Bitmap.Length - 1 && Bitmap[y + 1][x] == baseColor && !_cloudy[y + 1][x])
+                RecursiveDrawCloud(g, x, y + 1, baseColor, pixWidth, pixHeight);
         }
 
         private void DrawCloud(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
         {
-            if (pos.X == 0xFF) return;
+            if (pos == null) return;
 
             if (Bitmap[pos.Y][pos.X] > 0) //not transparent
             {
-                RecursiveDrawCloud(g, pos, Bitmap[pos.Y][pos.X], pixWidth, pixHeight);
-                g.DrawImage(Resources.cloud_small, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
+                RecursiveDrawCloud(g, pos.X, pos.Y, Bitmap[pos.Y][pos.X], pixWidth, pixHeight);
+                g.DrawImage(Resources.sprite_cloud, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
             }
             else
-                g.DrawImage(Resources.cloud_small, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
+                g.DrawImage(Resources.sprite_cloud, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
         }
 
         private void RecursiveFloodFill(int x, int y, byte baseColor, byte withColor)
         {
-            
             Bitmap[y][x] = withColor;
             if (x > 0 && Bitmap[y][x - 1] == baseColor)
                 RecursiveFloodFill(x-1, y, baseColor,withColor);
@@ -265,7 +236,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
                         g.DrawLine(Pens.DimGray, 0, i * pixHeight, pixWidth * Crashmo.BitmapSize, i * pixHeight);
                 }
                 //reset clouds
-                foreach (var cl in Cloudy)
+                foreach (var cl in _cloudy)
                     for (var x = 0; x < cl.Length; x++)
                         cl[x] = false;
                 foreach (var cloud in Clouds)
@@ -276,21 +247,19 @@ namespace IntelligentLevelEditor.Games.Crashmo
                     DrawDoor(g, door, pixWidth, pixHeight);
                 foreach (var swtch in Switches)
                     DrawSwitch(g, swtch, pixWidth, pixHeight);
-                if (Flag.Type != (byte)Crashmo.PosType.Flag)
-                    g.DrawImage(Resources.flag_icon, Flag.X * pixWidth, Flag.Y * pixHeight, pixWidth, pixHeight);
+                if (Flag != null)
+                    g.DrawImage(Resources.sprite_flag, Flag.X * pixWidth, Flag.Y * pixHeight, pixWidth, pixHeight);
             }
             g.Dispose();
         }
 
         public void Redraw()
         {
-            if (!DesignMode)
-            {
-                if (Height != Image.Height || Width != Image.Width)
-                    Image = new Bitmap(Width, Height);
-                DrawCrashmoToImage(Image, Width, Height, _grid, true);
-                Invalidate();
-            }
+            if (DesignMode) return;
+            if (Height != Image.Height || Width != Image.Width)
+                Image = new Bitmap(Width, Height);
+            DrawCrashmoToImage(Image, Width, Height, _grid, true);
+            Invalidate();
         }
 
         public Bitmap CreatePreview(int width, int height)
@@ -315,8 +284,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         private void OnPaint(object sender, PaintEventArgs e)
         {
-            if (DesignMode) return;
-            if (Height != Image.Height && Width != Image.Width)
+            if (Image != null && Height != Image.Height && Width != Image.Width)
                 Redraw();
         }
 
@@ -334,13 +302,10 @@ namespace IntelligentLevelEditor.Games.Crashmo
             if (GridCellHover == null || GridCellHoverDown == null) return;
             var x = e.X / (Width / Crashmo.BitmapSize);
             var y = e.Y / (Height / Crashmo.BitmapSize);
-            if (x >= 0 && y >= 0 && x < Crashmo.BitmapSize && y < Crashmo.BitmapSize)
-            {
-                GridCellHover(x, y);
-                if (e.Button == MouseButtons.Left)
-                    GridCellHoverDown(x, y);
-            }
-        
+            if (x < 0 || y < 0 || x >= Crashmo.BitmapSize || y >= Crashmo.BitmapSize) return;
+            GridCellHover(x, y);
+            if (e.Button == MouseButtons.Left)
+                GridCellHoverDown(x, y);
         }
     }
 }

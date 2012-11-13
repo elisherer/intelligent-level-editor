@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>burger.ico</ApplicationIcon>
+    <ApplicationIcon>ile.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -236,12 +236,9 @@
     <None Include="Resources\tool_pipette.png" />
     <None Include="Resources\tool_flag.png" />
     <Content Include="burger.ico" />
-    <None Include="Resources\cloud_small.png" />
     <None Include="Resources\tool_fill.png" />
     <None Include="Resources\burger.png" />
     <None Include="Resources\sprite_door_blue.png" />
-    <None Include="Resources\sprite_door_green.png" />
-    <None Include="Resources\sprite_door_purple.png" />
     <None Include="Resources\sprite_door_red.png" />
     <None Include="Resources\sprite_door_yellow.png" />
     <None Include="Resources\tool_door.png" />
@@ -262,18 +259,32 @@
     <None Include="Resources\ico_door_in.png" />
     <None Include="Resources\ico_palette.png" />
     <None Include="Resources\ico_bin_closed.png" />
+    <None Include="Resources\ico_switch_up.png" />
+    <None Include="Resources\ico_switch_right.png" />
+    <None Include="Resources\ico_switch_left.png" />
+    <None Include="Resources\ico_switch_down.png" />
+    <None Include="Resources\ico_ladder_red.png" />
+    <None Include="Resources\ico_ladder_yellow.png" />
+    <None Include="Resources\ico_ladder_blue.png" />
+    <None Include="Resources\ico_door_red.png" />
+    <None Include="Resources\ico_door_blue.png" />
+    <None Include="Resources\ico_door_yellow.png" />
+    <None Include="Resources\sprite_switch_trans.png" />
+    <None Include="Resources\ico_transparent.png" />
+    <None Include="Resources\sprite_cloud.png" />
+    <None Include="Resources\sprite_flag.png" />
+    <None Include="Resources\ico_ladder_green.png" />
+    <None Include="Resources\ico_ladder_purple.png" />
+    <None Include="Resources\sprite_ladder_blue.png" />
+    <None Include="Resources\sprite_ladder_green.png" />
+    <None Include="Resources\sprite_ladder_purple.png" />
+    <None Include="Resources\sprite_ladder_red.png" />
+    <None Include="Resources\sprite_ladder_yellow.png" />
+    <Content Include="ile.ico" />
     <Content Include="strawberry.ico" />
     <None Include="Resources\strawberry.png" />
     <None Include="Resources\ico_grid.png" />
-    <None Include="Resources\flag_icon.png" />
-    <None Include="Resources\switch_trans.png" />
-    <None Include="Resources\ladder_yellow.png" />
-    <None Include="Resources\ladder_red.png" />
-    <None Include="Resources\ladder_purple.png" />
-    <None Include="Resources\ladder_green.png" />
-    <None Include="Resources\ladder_blue.png" />
     <None Include="Resources\pushmoPalette.gif" />
-    <None Include="Resources\transparentBackground.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

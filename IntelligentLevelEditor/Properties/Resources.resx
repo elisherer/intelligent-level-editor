@@ -121,29 +121,23 @@
   <data name="tool_fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tool_fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ico_door_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_door_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ico_magnifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_magnifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ico_barcode2d" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico_barcode-2d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico_ladder_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_ladder_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ico_grid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_grid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sprite_door_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sprite_door_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ico_arrow_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="transparentBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\transparentBackground.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="pushmoPalette" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pushmoPalette.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cloud_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cloud_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="strawberry" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strawberry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -153,9 +147,6 @@
   </data>
   <data name="ico_layout_content" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_layout_content.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ladder_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ladder_purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ico_page_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_page_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +166,17 @@
   <data name="tool_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tool_flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ico_ladder_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_ladder_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ico_arrow_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_arrow_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_barcode2d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_barcode-2d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_switch_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_switch_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ico_folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_folder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,20 +184,23 @@
   <data name="ico_page_white_copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_page_white_copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ladder_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ladder_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico_ladder_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_ladder_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_switch_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_switch_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ico_arrow_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_arrow_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ladder_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ladder_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico_bin_closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_bin_closed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ico_disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ico_palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico_palette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico_switch_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_switch_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tool_manhole" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tool_manhole.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,23 +214,20 @@
   <data name="sprite_door_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sprite_door_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flag_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flag_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="switch_trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\switch_trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ladder_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ladder_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ico_door_in" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ico_door_in.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ico_palette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_palette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_switch_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_switch_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_door_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_door_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sprite_door_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sprite_door_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sprite_door_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sprite_door_purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tool_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tool_door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,10 +235,40 @@
   <data name="tool_pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tool_pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ladder_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ladder_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico_door_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_door_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ico_bin_closed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ico_bin_closed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ico_ladder_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_ladder_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_ladder_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_ladder_purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_flag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_flag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_ladder_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_ladder_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_ladder_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_ladder_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_ladder_purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_ladder_purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_ladder_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_ladder_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_ladder_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_ladder_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_switch_trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_switch_trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -36,24 +36,28 @@
             // btnPushmo
             // 
             this.btnPushmo.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnPushmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnPushmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPushmo.Image = global::IntelligentLevelEditor.Properties.Resources.strawberry;
             this.btnPushmo.Location = new System.Drawing.Point(10, 12);
             this.btnPushmo.Name = "btnPushmo";
             this.btnPushmo.Size = new System.Drawing.Size(137, 64);
             this.btnPushmo.TabIndex = 0;
             this.btnPushmo.Text = "Pushmo / Pullblox";
+            this.btnPushmo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPushmo.UseVisualStyleBackColor = true;
             this.btnPushmo.Click += new System.EventHandler(this.btnPushmo_Click);
             // 
             // btnCrashmo
             // 
             this.btnCrashmo.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnCrashmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnCrashmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnCrashmo.Image = global::IntelligentLevelEditor.Properties.Resources.burger;
             this.btnCrashmo.Location = new System.Drawing.Point(163, 13);
             this.btnCrashmo.Name = "btnCrashmo";
             this.btnCrashmo.Size = new System.Drawing.Size(137, 63);
             this.btnCrashmo.TabIndex = 1;
             this.btnCrashmo.Text = "Crashmo / Fallblox";
+            this.btnCrashmo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCrashmo.UseVisualStyleBackColor = true;
             this.btnCrashmo.Click += new System.EventHandler(this.btnCrashmo_Click);
             // 

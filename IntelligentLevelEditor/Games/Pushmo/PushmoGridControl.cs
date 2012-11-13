@@ -36,9 +36,9 @@ namespace IntelligentLevelEditor.Games.Pushmo
             InitializeComponent();
         }
 
-        public void SetData(byte[][] data, Pushmo.PushmoQrData pData)
+        public void SetData(Pushmo.PushmoQrData pData)
         {
-            Bitmap = data;
+            Bitmap = Pushmo.DecodeTiled(pData.LevelData);
             Palette = pData.PaletteData;
             Flag = pData.FlagPosition;
             Manholes = pData.Manholes;
@@ -59,7 +59,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
                 var bmp = new Bitmap(11, 11);
                 var clr = Pushmo.PushmoColorPalette.Entries[Palette[i]];
                 var g = Graphics.FromImage(bmp);
-                g.DrawImage(Resources.switch_trans,0,0);
+                g.DrawImage(Resources.sprite_switch_trans,0,0);
                 g.Dispose();
                 for (var y=0; y<11; y++)
                     for (var x=0;x<11;x++)
@@ -73,22 +73,22 @@ namespace IntelligentLevelEditor.Games.Pushmo
         {
 
             if (Manholes[i].X == 0xFF) return;
-            Image toDraw = Resources.ladder_red; //if it's 0
+            Image toDraw = Resources.sprite_ladder_red; //if it's 0
             var flipped = Manholes[i].Y > 0 && Bitmap[Manholes[i].Y - 1][Manholes[i].X] != 0xa && Bitmap[Manholes[i].Y][Manholes[i].X] != 0xa;
             Manholes[i].Flags = (byte)((Manholes[i].Flags & 0xF0) + 1 * (flipped ? 1 : 0));
             switch (Manholes[i].Flags >> 4)
             {
                 case 1:
-                    toDraw = Resources.ladder_blue;
+                    toDraw = Resources.sprite_ladder_blue;
                     break;
                 case 2:
-                    toDraw = Resources.ladder_yellow;
+                    toDraw = Resources.sprite_ladder_yellow;
                     break;
                 case 3:
-                    toDraw = Resources.ladder_green;
+                    toDraw = Resources.sprite_ladder_green;
                     break;
                 case 4:
-                    toDraw = Resources.ladder_purple;
+                    toDraw = Resources.sprite_ladder_purple;
                     break;
             }
             g.DrawImage(toDraw, 1 + Manholes[i].X * pixWidth, 1 + Manholes[i].Y * pixHeight + (flipped ? pixHeight - 2 : 0), pixWidth - 2, flipped ? -pixHeight : pixHeight);
@@ -146,7 +146,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
                         g.DrawLine(Pens.DimGray, 0, i * pixHeight, pixWidth * Pushmo.BitmapSize, i * pixHeight);
                 }
                 if (Flag.X != 0xFF)
-                    g.DrawImage(Resources.flag_icon, Flag.X * pixWidth, Flag.Y * pixHeight, pixWidth, pixHeight);
+                    g.DrawImage(Resources.sprite_flag, Flag.X * pixWidth, Flag.Y * pixHeight, pixWidth, pixHeight);
                 for (var i = 0; i < 10; i++)
                 {
                     DrawManhole(g, i, pixWidth, pixHeight);

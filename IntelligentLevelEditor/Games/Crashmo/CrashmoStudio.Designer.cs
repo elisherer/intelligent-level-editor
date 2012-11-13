@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrashmoStudio));
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.gridControl = new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl();
             this.tbEditor = new System.Windows.Forms.ToolStrip();
             this.tbtnPencilTool = new System.Windows.Forms.ToolStripButton();
             this.tbtnPipetteTool = new System.Windows.Forms.ToolStripButton();
@@ -54,9 +55,10 @@
             this.lblToolMessage = new System.Windows.Forms.Label();
             this.pnlColors = new System.Windows.Forms.Panel();
             this.lblSelectedColor = new System.Windows.Forms.Label();
+            this.radColor0 = new System.Windows.Forms.RadioButton();
             this.radColorA = new System.Windows.Forms.RadioButton();
-            this.radColor9 = new System.Windows.Forms.RadioButton();
             this.btnEditPalette = new System.Windows.Forms.Button();
+            this.radColor9 = new System.Windows.Forms.RadioButton();
             this.radColor8 = new System.Windows.Forms.RadioButton();
             this.radColor7 = new System.Windows.Forms.RadioButton();
             this.radColor6 = new System.Windows.Forms.RadioButton();
@@ -65,40 +67,45 @@
             this.radColor3 = new System.Windows.Forms.RadioButton();
             this.radColor2 = new System.Windows.Forms.RadioButton();
             this.radColor1 = new System.Windows.Forms.RadioButton();
-            this.radColor0 = new System.Windows.Forms.RadioButton();
             this.pnlSwitches = new System.Windows.Forms.Panel();
             this.btnDeleteSwitch = new System.Windows.Forms.Button();
-            this.radSwitch9 = new System.Windows.Forms.RadioButton();
-            this.radSwitch8 = new System.Windows.Forms.RadioButton();
-            this.radSwitch7 = new System.Windows.Forms.RadioButton();
-            this.radSwitch6 = new System.Windows.Forms.RadioButton();
-            this.radSwitch5 = new System.Windows.Forms.RadioButton();
-            this.radSwitch4 = new System.Windows.Forms.RadioButton();
             this.radSwitch3 = new System.Windows.Forms.RadioButton();
-            this.radSwitch2 = new System.Windows.Forms.RadioButton();
             this.radSwitch1 = new System.Windows.Forms.RadioButton();
             this.radSwitch0 = new System.Windows.Forms.RadioButton();
+            this.radSwitch2 = new System.Windows.Forms.RadioButton();
+            this.pnlClouds = new System.Windows.Forms.Panel();
+            this.radCloud4 = new System.Windows.Forms.RadioButton();
+            this.btnDeleteCloud = new System.Windows.Forms.Button();
+            this.radCloud3 = new System.Windows.Forms.RadioButton();
+            this.radCloud2 = new System.Windows.Forms.RadioButton();
+            this.radCloud1 = new System.Windows.Forms.RadioButton();
+            this.radCloud0 = new System.Windows.Forms.RadioButton();
             this.pnlManholes = new System.Windows.Forms.Panel();
             this.chkManholeSelect = new System.Windows.Forms.CheckBox();
             this.btnDeleteManhole = new System.Windows.Forms.Button();
-            this.radManhole4 = new System.Windows.Forms.RadioButton();
-            this.radManhole3 = new System.Windows.Forms.RadioButton();
             this.radManhole2 = new System.Windows.Forms.RadioButton();
             this.radManhole1 = new System.Windows.Forms.RadioButton();
             this.radManhole0 = new System.Windows.Forms.RadioButton();
-            this.gridControl = new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl();
+            this.pnlDoors = new System.Windows.Forms.Panel();
+            this.chkDoorSelect = new System.Windows.Forms.CheckBox();
+            this.btnDeleteDoor = new System.Windows.Forms.Button();
+            this.radDoor2 = new System.Windows.Forms.RadioButton();
+            this.radDoor1 = new System.Windows.Forms.RadioButton();
+            this.radDoor0 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             this.tbEditor.SuspendLayout();
             this.grpThumb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             this.grpOptions.SuspendLayout();
             this.pnlColors.SuspendLayout();
             this.pnlSwitches.SuspendLayout();
+            this.pnlClouds.SuspendLayout();
             this.pnlManholes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            this.pnlDoors.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer
@@ -129,6 +136,22 @@
             this.splitContainer.Size = new System.Drawing.Size(707, 447);
             this.splitContainer.SplitterDistance = 491;
             this.splitContainer.TabIndex = 3;
+            // 
+            // gridControl
+            // 
+            this.gridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridControl.BackColor = System.Drawing.Color.Transparent;
+            this.gridControl.Image = ((System.Drawing.Image)(resources.GetObject("gridControl.Image")));
+            this.gridControl.Location = new System.Drawing.Point(43, 4);
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(445, 440);
+            this.gridControl.TabIndex = 3;
+            this.gridControl.TabStop = false;
+            this.gridControl.GridCellClick += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellClick);
+            this.gridControl.GridCellHover += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHover);
+            this.gridControl.GridCellHoverDown += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHoverDown);
             // 
             // tbEditor
             // 
@@ -375,7 +398,9 @@
             this.grpOptions.Controls.Add(this.lblToolMessage);
             this.grpOptions.Controls.Add(this.pnlColors);
             this.grpOptions.Controls.Add(this.pnlSwitches);
+            this.grpOptions.Controls.Add(this.pnlClouds);
             this.grpOptions.Controls.Add(this.pnlManholes);
+            this.grpOptions.Controls.Add(this.pnlDoors);
             this.grpOptions.Location = new System.Drawing.Point(3, 4);
             this.grpOptions.Name = "grpOptions";
             this.grpOptions.Size = new System.Drawing.Size(100, 239);
@@ -396,9 +421,10 @@
             // pnlColors
             // 
             this.pnlColors.Controls.Add(this.lblSelectedColor);
+            this.pnlColors.Controls.Add(this.radColor0);
             this.pnlColors.Controls.Add(this.radColorA);
-            this.pnlColors.Controls.Add(this.radColor9);
             this.pnlColors.Controls.Add(this.btnEditPalette);
+            this.pnlColors.Controls.Add(this.radColor9);
             this.pnlColors.Controls.Add(this.radColor8);
             this.pnlColors.Controls.Add(this.radColor7);
             this.pnlColors.Controls.Add(this.radColor6);
@@ -407,7 +433,6 @@
             this.pnlColors.Controls.Add(this.radColor3);
             this.pnlColors.Controls.Add(this.radColor2);
             this.pnlColors.Controls.Add(this.radColor1);
-            this.pnlColors.Controls.Add(this.radColor0);
             this.pnlColors.Location = new System.Drawing.Point(6, 16);
             this.pnlColors.Name = "pnlColors";
             this.pnlColors.Size = new System.Drawing.Size(70, 210);
@@ -422,31 +447,31 @@
             this.lblSelectedColor.Size = new System.Drawing.Size(54, 24);
             this.lblSelectedColor.TabIndex = 4;
             // 
+            // radColor0
+            // 
+            this.radColor0.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radColor0.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_transparent;
+            this.radColor0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radColor0.Location = new System.Drawing.Point(8, 186);
+            this.radColor0.Name = "radColor0";
+            this.radColor0.Size = new System.Drawing.Size(24, 24);
+            this.radColor0.TabIndex = 3;
+            this.radColor0.Tag = "0";
+            this.radColor0.UseVisualStyleBackColor = false;
+            this.radColor0.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
+            // 
             // radColorA
             // 
             this.radColorA.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColorA.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.transparentBackground;
+            this.radColorA.BackColor = System.Drawing.Color.SeaGreen;
             this.radColorA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColorA.Location = new System.Drawing.Point(8, 186);
+            this.radColorA.Location = new System.Drawing.Point(38, 156);
             this.radColorA.Name = "radColorA";
             this.radColorA.Size = new System.Drawing.Size(24, 24);
-            this.radColorA.TabIndex = 3;
+            this.radColorA.TabIndex = 2;
             this.radColorA.Tag = "10";
             this.radColorA.UseVisualStyleBackColor = false;
             this.radColorA.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
-            // 
-            // radColor9
-            // 
-            this.radColor9.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor9.BackColor = System.Drawing.Color.SeaGreen;
-            this.radColor9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor9.Location = new System.Drawing.Point(38, 156);
-            this.radColor9.Name = "radColor9";
-            this.radColor9.Size = new System.Drawing.Size(24, 24);
-            this.radColor9.TabIndex = 2;
-            this.radColor9.Tag = "9";
-            this.radColor9.UseVisualStyleBackColor = false;
-            this.radColor9.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
             // 
             // btnEditPalette
             // 
@@ -463,12 +488,25 @@
             this.btnEditPalette.UseVisualStyleBackColor = true;
             this.btnEditPalette.Click += new System.EventHandler(this.btnEditPalette_Click);
             // 
+            // radColor9
+            // 
+            this.radColor9.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radColor9.BackColor = System.Drawing.Color.MediumPurple;
+            this.radColor9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radColor9.Location = new System.Drawing.Point(8, 156);
+            this.radColor9.Name = "radColor9";
+            this.radColor9.Size = new System.Drawing.Size(24, 24);
+            this.radColor9.TabIndex = 2;
+            this.radColor9.Tag = "9";
+            this.radColor9.UseVisualStyleBackColor = false;
+            this.radColor9.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
+            // 
             // radColor8
             // 
             this.radColor8.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor8.BackColor = System.Drawing.Color.MediumPurple;
+            this.radColor8.BackColor = System.Drawing.Color.YellowGreen;
             this.radColor8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor8.Location = new System.Drawing.Point(8, 156);
+            this.radColor8.Location = new System.Drawing.Point(38, 126);
             this.radColor8.Name = "radColor8";
             this.radColor8.Size = new System.Drawing.Size(24, 24);
             this.radColor8.TabIndex = 2;
@@ -479,9 +517,9 @@
             // radColor7
             // 
             this.radColor7.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor7.BackColor = System.Drawing.Color.YellowGreen;
+            this.radColor7.BackColor = System.Drawing.Color.CornflowerBlue;
             this.radColor7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor7.Location = new System.Drawing.Point(38, 126);
+            this.radColor7.Location = new System.Drawing.Point(8, 126);
             this.radColor7.Name = "radColor7";
             this.radColor7.Size = new System.Drawing.Size(24, 24);
             this.radColor7.TabIndex = 2;
@@ -492,9 +530,9 @@
             // radColor6
             // 
             this.radColor6.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor6.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.radColor6.BackColor = System.Drawing.Color.Gold;
             this.radColor6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor6.Location = new System.Drawing.Point(8, 126);
+            this.radColor6.Location = new System.Drawing.Point(38, 96);
             this.radColor6.Name = "radColor6";
             this.radColor6.Size = new System.Drawing.Size(24, 24);
             this.radColor6.TabIndex = 2;
@@ -505,9 +543,9 @@
             // radColor5
             // 
             this.radColor5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor5.BackColor = System.Drawing.Color.Gold;
+            this.radColor5.BackColor = System.Drawing.Color.LightSkyBlue;
             this.radColor5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor5.Location = new System.Drawing.Point(38, 96);
+            this.radColor5.Location = new System.Drawing.Point(8, 96);
             this.radColor5.Name = "radColor5";
             this.radColor5.Size = new System.Drawing.Size(24, 24);
             this.radColor5.TabIndex = 2;
@@ -518,9 +556,9 @@
             // radColor4
             // 
             this.radColor4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor4.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.radColor4.BackColor = System.Drawing.Color.OrangeRed;
             this.radColor4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor4.Location = new System.Drawing.Point(8, 96);
+            this.radColor4.Location = new System.Drawing.Point(38, 66);
             this.radColor4.Name = "radColor4";
             this.radColor4.Size = new System.Drawing.Size(24, 24);
             this.radColor4.TabIndex = 2;
@@ -531,9 +569,9 @@
             // radColor3
             // 
             this.radColor3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor3.BackColor = System.Drawing.Color.OrangeRed;
+            this.radColor3.BackColor = System.Drawing.Color.White;
             this.radColor3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor3.Location = new System.Drawing.Point(38, 66);
+            this.radColor3.Location = new System.Drawing.Point(8, 66);
             this.radColor3.Name = "radColor3";
             this.radColor3.Size = new System.Drawing.Size(24, 24);
             this.radColor3.TabIndex = 2;
@@ -544,9 +582,9 @@
             // radColor2
             // 
             this.radColor2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor2.BackColor = System.Drawing.Color.White;
+            this.radColor2.BackColor = System.Drawing.Color.Red;
             this.radColor2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor2.Location = new System.Drawing.Point(8, 66);
+            this.radColor2.Location = new System.Drawing.Point(38, 36);
             this.radColor2.Name = "radColor2";
             this.radColor2.Size = new System.Drawing.Size(24, 24);
             this.radColor2.TabIndex = 2;
@@ -557,44 +595,25 @@
             // radColor1
             // 
             this.radColor1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor1.BackColor = System.Drawing.Color.Red;
+            this.radColor1.BackColor = System.Drawing.Color.Black;
+            this.radColor1.Checked = true;
             this.radColor1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor1.Location = new System.Drawing.Point(38, 36);
+            this.radColor1.Location = new System.Drawing.Point(8, 36);
             this.radColor1.Name = "radColor1";
             this.radColor1.Size = new System.Drawing.Size(24, 24);
             this.radColor1.TabIndex = 2;
+            this.radColor1.TabStop = true;
             this.radColor1.Tag = "1";
             this.radColor1.UseVisualStyleBackColor = false;
             this.radColor1.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
             // 
-            // radColor0
-            // 
-            this.radColor0.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor0.BackColor = System.Drawing.Color.Black;
-            this.radColor0.Checked = true;
-            this.radColor0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor0.Location = new System.Drawing.Point(8, 36);
-            this.radColor0.Name = "radColor0";
-            this.radColor0.Size = new System.Drawing.Size(24, 24);
-            this.radColor0.TabIndex = 2;
-            this.radColor0.TabStop = true;
-            this.radColor0.Tag = "0";
-            this.radColor0.UseVisualStyleBackColor = false;
-            this.radColor0.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
-            // 
             // pnlSwitches
             // 
             this.pnlSwitches.Controls.Add(this.btnDeleteSwitch);
-            this.pnlSwitches.Controls.Add(this.radSwitch9);
-            this.pnlSwitches.Controls.Add(this.radSwitch8);
-            this.pnlSwitches.Controls.Add(this.radSwitch7);
-            this.pnlSwitches.Controls.Add(this.radSwitch6);
-            this.pnlSwitches.Controls.Add(this.radSwitch5);
-            this.pnlSwitches.Controls.Add(this.radSwitch4);
             this.pnlSwitches.Controls.Add(this.radSwitch3);
-            this.pnlSwitches.Controls.Add(this.radSwitch2);
             this.pnlSwitches.Controls.Add(this.radSwitch1);
             this.pnlSwitches.Controls.Add(this.radSwitch0);
+            this.pnlSwitches.Controls.Add(this.radSwitch2);
             this.pnlSwitches.Location = new System.Drawing.Point(6, 19);
             this.pnlSwitches.Name = "pnlSwitches";
             this.pnlSwitches.Size = new System.Drawing.Size(81, 210);
@@ -605,96 +624,12 @@
             // 
             this.btnDeleteSwitch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteSwitch.Image = global::IntelligentLevelEditor.Properties.Resources.ico_bin_closed;
-            this.btnDeleteSwitch.Location = new System.Drawing.Point(22, 168);
+            this.btnDeleteSwitch.Location = new System.Drawing.Point(30, 158);
             this.btnDeleteSwitch.Name = "btnDeleteSwitch";
             this.btnDeleteSwitch.Size = new System.Drawing.Size(24, 24);
             this.btnDeleteSwitch.TabIndex = 3;
             this.btnDeleteSwitch.UseVisualStyleBackColor = true;
             this.btnDeleteSwitch.Click += new System.EventHandler(this.btnDeleteSwitch_Click);
-            // 
-            // radSwitch9
-            // 
-            this.radSwitch9.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSwitch9.BackColor = System.Drawing.SystemColors.Control;
-            this.radSwitch9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch9.Location = new System.Drawing.Point(38, 124);
-            this.radSwitch9.Name = "radSwitch9";
-            this.radSwitch9.Size = new System.Drawing.Size(24, 24);
-            this.radSwitch9.TabIndex = 2;
-            this.radSwitch9.Tag = "9";
-            this.radSwitch9.UseVisualStyleBackColor = false;
-            this.radSwitch9.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
-            // 
-            // radSwitch8
-            // 
-            this.radSwitch8.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSwitch8.BackColor = System.Drawing.SystemColors.Control;
-            this.radSwitch8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch8.Location = new System.Drawing.Point(8, 124);
-            this.radSwitch8.Name = "radSwitch8";
-            this.radSwitch8.Size = new System.Drawing.Size(24, 24);
-            this.radSwitch8.TabIndex = 2;
-            this.radSwitch8.Tag = "8";
-            this.radSwitch8.UseVisualStyleBackColor = false;
-            this.radSwitch8.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
-            // 
-            // radSwitch7
-            // 
-            this.radSwitch7.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSwitch7.BackColor = System.Drawing.SystemColors.Control;
-            this.radSwitch7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch7.Location = new System.Drawing.Point(38, 94);
-            this.radSwitch7.Name = "radSwitch7";
-            this.radSwitch7.Size = new System.Drawing.Size(24, 24);
-            this.radSwitch7.TabIndex = 2;
-            this.radSwitch7.Tag = "7";
-            this.radSwitch7.UseVisualStyleBackColor = false;
-            this.radSwitch7.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
-            // 
-            // radSwitch6
-            // 
-            this.radSwitch6.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSwitch6.BackColor = System.Drawing.SystemColors.Control;
-            this.radSwitch6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch6.Location = new System.Drawing.Point(8, 94);
-            this.radSwitch6.Name = "radSwitch6";
-            this.radSwitch6.Size = new System.Drawing.Size(24, 24);
-            this.radSwitch6.TabIndex = 2;
-            this.radSwitch6.Tag = "6";
-            this.radSwitch6.UseVisualStyleBackColor = false;
-            this.radSwitch6.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
-            // 
-            // radSwitch5
-            // 
-            this.radSwitch5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSwitch5.BackColor = System.Drawing.SystemColors.Control;
-            this.radSwitch5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch5.Location = new System.Drawing.Point(38, 64);
-            this.radSwitch5.Name = "radSwitch5";
-            this.radSwitch5.Size = new System.Drawing.Size(24, 24);
-            this.radSwitch5.TabIndex = 2;
-            this.radSwitch5.Tag = "5";
-            this.radSwitch5.UseVisualStyleBackColor = false;
-            this.radSwitch5.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
-            // 
-            // radSwitch4
-            // 
-            this.radSwitch4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSwitch4.BackColor = System.Drawing.SystemColors.Control;
-            this.radSwitch4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch4.Location = new System.Drawing.Point(8, 64);
-            this.radSwitch4.Name = "radSwitch4";
-            this.radSwitch4.Size = new System.Drawing.Size(24, 24);
-            this.radSwitch4.TabIndex = 2;
-            this.radSwitch4.Tag = "4";
-            this.radSwitch4.UseVisualStyleBackColor = false;
-            this.radSwitch4.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
             // 
             // radSwitch3
             // 
@@ -702,7 +637,8 @@
             this.radSwitch3.BackColor = System.Drawing.SystemColors.Control;
             this.radSwitch3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radSwitch3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch3.Location = new System.Drawing.Point(38, 34);
+            this.radSwitch3.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_down;
+            this.radSwitch3.Location = new System.Drawing.Point(30, 75);
             this.radSwitch3.Name = "radSwitch3";
             this.radSwitch3.Size = new System.Drawing.Size(24, 24);
             this.radSwitch3.TabIndex = 2;
@@ -710,27 +646,14 @@
             this.radSwitch3.UseVisualStyleBackColor = false;
             this.radSwitch3.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
             // 
-            // radSwitch2
-            // 
-            this.radSwitch2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSwitch2.BackColor = System.Drawing.SystemColors.Control;
-            this.radSwitch2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch2.Location = new System.Drawing.Point(8, 34);
-            this.radSwitch2.Name = "radSwitch2";
-            this.radSwitch2.Size = new System.Drawing.Size(24, 24);
-            this.radSwitch2.TabIndex = 2;
-            this.radSwitch2.Tag = "2";
-            this.radSwitch2.UseVisualStyleBackColor = false;
-            this.radSwitch2.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
-            // 
             // radSwitch1
             // 
             this.radSwitch1.Appearance = System.Windows.Forms.Appearance.Button;
             this.radSwitch1.BackColor = System.Drawing.SystemColors.Control;
             this.radSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radSwitch1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch1.Location = new System.Drawing.Point(38, 4);
+            this.radSwitch1.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_right;
+            this.radSwitch1.Location = new System.Drawing.Point(54, 45);
             this.radSwitch1.Name = "radSwitch1";
             this.radSwitch1.Size = new System.Drawing.Size(24, 24);
             this.radSwitch1.TabIndex = 2;
@@ -743,23 +666,139 @@
             this.radSwitch0.Appearance = System.Windows.Forms.Appearance.Button;
             this.radSwitch0.BackColor = System.Drawing.SystemColors.Control;
             this.radSwitch0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch0.Checked = true;
             this.radSwitch0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch0.Location = new System.Drawing.Point(8, 4);
+            this.radSwitch0.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_left;
+            this.radSwitch0.Location = new System.Drawing.Point(5, 45);
             this.radSwitch0.Name = "radSwitch0";
             this.radSwitch0.Size = new System.Drawing.Size(24, 24);
             this.radSwitch0.TabIndex = 2;
-            this.radSwitch0.TabStop = true;
             this.radSwitch0.Tag = "0";
             this.radSwitch0.UseVisualStyleBackColor = false;
             this.radSwitch0.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
+            // 
+            // radSwitch2
+            // 
+            this.radSwitch2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radSwitch2.BackColor = System.Drawing.SystemColors.Control;
+            this.radSwitch2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radSwitch2.Checked = true;
+            this.radSwitch2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radSwitch2.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_up;
+            this.radSwitch2.Location = new System.Drawing.Point(30, 15);
+            this.radSwitch2.Name = "radSwitch2";
+            this.radSwitch2.Size = new System.Drawing.Size(24, 24);
+            this.radSwitch2.TabIndex = 2;
+            this.radSwitch2.TabStop = true;
+            this.radSwitch2.Tag = "2";
+            this.radSwitch2.UseVisualStyleBackColor = false;
+            this.radSwitch2.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
+            // 
+            // pnlClouds
+            // 
+            this.pnlClouds.Controls.Add(this.radCloud4);
+            this.pnlClouds.Controls.Add(this.btnDeleteCloud);
+            this.pnlClouds.Controls.Add(this.radCloud3);
+            this.pnlClouds.Controls.Add(this.radCloud2);
+            this.pnlClouds.Controls.Add(this.radCloud1);
+            this.pnlClouds.Controls.Add(this.radCloud0);
+            this.pnlClouds.Location = new System.Drawing.Point(6, 16);
+            this.pnlClouds.Name = "pnlClouds";
+            this.pnlClouds.Size = new System.Drawing.Size(86, 210);
+            this.pnlClouds.TabIndex = 4;
+            this.pnlClouds.Visible = false;
+            // 
+            // radCloud4
+            // 
+            this.radCloud4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radCloud4.BackColor = System.Drawing.SystemColors.Control;
+            this.radCloud4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("radCloud4.BackgroundImage")));
+            this.radCloud4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radCloud4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radCloud4.Location = new System.Drawing.Point(5, 135);
+            this.radCloud4.Name = "radCloud4";
+            this.radCloud4.Size = new System.Drawing.Size(24, 24);
+            this.radCloud4.TabIndex = 4;
+            this.radCloud4.Tag = "4";
+            this.radCloud4.UseVisualStyleBackColor = false;
+            this.radCloud4.CheckedChanged += new System.EventHandler(this.RadioCloudCheckedChanged);
+            // 
+            // btnDeleteCloud
+            // 
+            this.btnDeleteCloud.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteCloud.Image = global::IntelligentLevelEditor.Properties.Resources.ico_bin_closed;
+            this.btnDeleteCloud.Location = new System.Drawing.Point(5, 171);
+            this.btnDeleteCloud.Name = "btnDeleteCloud";
+            this.btnDeleteCloud.Size = new System.Drawing.Size(24, 24);
+            this.btnDeleteCloud.TabIndex = 3;
+            this.btnDeleteCloud.UseVisualStyleBackColor = true;
+            this.btnDeleteCloud.Click += new System.EventHandler(this.btnDeleteCloud_Click);
+            // 
+            // radCloud3
+            // 
+            this.radCloud3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radCloud3.BackColor = System.Drawing.SystemColors.Control;
+            this.radCloud3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("radCloud3.BackgroundImage")));
+            this.radCloud3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radCloud3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radCloud3.Location = new System.Drawing.Point(5, 105);
+            this.radCloud3.Name = "radCloud3";
+            this.radCloud3.Size = new System.Drawing.Size(24, 24);
+            this.radCloud3.TabIndex = 2;
+            this.radCloud3.Tag = "3";
+            this.radCloud3.UseVisualStyleBackColor = false;
+            this.radCloud3.CheckedChanged += new System.EventHandler(this.RadioCloudCheckedChanged);
+            // 
+            // radCloud2
+            // 
+            this.radCloud2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radCloud2.BackColor = System.Drawing.SystemColors.Control;
+            this.radCloud2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("radCloud2.BackgroundImage")));
+            this.radCloud2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radCloud2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radCloud2.Location = new System.Drawing.Point(5, 75);
+            this.radCloud2.Name = "radCloud2";
+            this.radCloud2.Size = new System.Drawing.Size(24, 24);
+            this.radCloud2.TabIndex = 2;
+            this.radCloud2.Tag = "2";
+            this.radCloud2.UseVisualStyleBackColor = false;
+            this.radCloud2.CheckedChanged += new System.EventHandler(this.RadioCloudCheckedChanged);
+            // 
+            // radCloud1
+            // 
+            this.radCloud1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radCloud1.BackColor = System.Drawing.SystemColors.Control;
+            this.radCloud1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("radCloud1.BackgroundImage")));
+            this.radCloud1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radCloud1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radCloud1.Location = new System.Drawing.Point(5, 45);
+            this.radCloud1.Name = "radCloud1";
+            this.radCloud1.Size = new System.Drawing.Size(24, 24);
+            this.radCloud1.TabIndex = 2;
+            this.radCloud1.Tag = "1";
+            this.radCloud1.UseVisualStyleBackColor = false;
+            this.radCloud1.CheckedChanged += new System.EventHandler(this.RadioCloudCheckedChanged);
+            // 
+            // radCloud0
+            // 
+            this.radCloud0.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radCloud0.BackColor = System.Drawing.SystemColors.Control;
+            this.radCloud0.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.tool_cloud;
+            this.radCloud0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radCloud0.Checked = true;
+            this.radCloud0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radCloud0.Location = new System.Drawing.Point(5, 15);
+            this.radCloud0.Name = "radCloud0";
+            this.radCloud0.Size = new System.Drawing.Size(24, 24);
+            this.radCloud0.TabIndex = 2;
+            this.radCloud0.TabStop = true;
+            this.radCloud0.Tag = "0";
+            this.radCloud0.UseVisualStyleBackColor = false;
+            this.radCloud0.CheckedChanged += new System.EventHandler(this.RadioCloudCheckedChanged);
             // 
             // pnlManholes
             // 
             this.pnlManholes.Controls.Add(this.chkManholeSelect);
             this.pnlManholes.Controls.Add(this.btnDeleteManhole);
-            this.pnlManholes.Controls.Add(this.radManhole4);
-            this.pnlManholes.Controls.Add(this.radManhole3);
             this.pnlManholes.Controls.Add(this.radManhole2);
             this.pnlManholes.Controls.Add(this.radManhole1);
             this.pnlManholes.Controls.Add(this.radManhole0);
@@ -792,44 +831,14 @@
             this.btnDeleteManhole.UseVisualStyleBackColor = true;
             this.btnDeleteManhole.Click += new System.EventHandler(this.btnDeleteManhole_Click);
             // 
-            // radManhole4
-            // 
-            this.radManhole4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radManhole4.BackColor = System.Drawing.SystemColors.Control;
-            this.radManhole4.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ladder_purple;
-            this.radManhole4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radManhole4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radManhole4.Location = new System.Drawing.Point(8, 124);
-            this.radManhole4.Name = "radManhole4";
-            this.radManhole4.Size = new System.Drawing.Size(24, 24);
-            this.radManhole4.TabIndex = 2;
-            this.radManhole4.Tag = "4";
-            this.radManhole4.UseVisualStyleBackColor = false;
-            this.radManhole4.CheckedChanged += new System.EventHandler(this.RadioManholeCheckedChanged);
-            // 
-            // radManhole3
-            // 
-            this.radManhole3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radManhole3.BackColor = System.Drawing.SystemColors.Control;
-            this.radManhole3.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ladder_green;
-            this.radManhole3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radManhole3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radManhole3.Location = new System.Drawing.Point(8, 94);
-            this.radManhole3.Name = "radManhole3";
-            this.radManhole3.Size = new System.Drawing.Size(24, 24);
-            this.radManhole3.TabIndex = 2;
-            this.radManhole3.Tag = "3";
-            this.radManhole3.UseVisualStyleBackColor = false;
-            this.radManhole3.CheckedChanged += new System.EventHandler(this.RadioManholeCheckedChanged);
-            // 
             // radManhole2
             // 
             this.radManhole2.Appearance = System.Windows.Forms.Appearance.Button;
             this.radManhole2.BackColor = System.Drawing.SystemColors.Control;
-            this.radManhole2.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ladder_yellow;
+            this.radManhole2.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_ladder_blue;
             this.radManhole2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radManhole2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radManhole2.Location = new System.Drawing.Point(8, 64);
+            this.radManhole2.Location = new System.Drawing.Point(9, 93);
             this.radManhole2.Name = "radManhole2";
             this.radManhole2.Size = new System.Drawing.Size(24, 24);
             this.radManhole2.TabIndex = 2;
@@ -841,10 +850,10 @@
             // 
             this.radManhole1.Appearance = System.Windows.Forms.Appearance.Button;
             this.radManhole1.BackColor = System.Drawing.SystemColors.Control;
-            this.radManhole1.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ladder_blue;
+            this.radManhole1.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_ladder_yellow;
             this.radManhole1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radManhole1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radManhole1.Location = new System.Drawing.Point(8, 34);
+            this.radManhole1.Location = new System.Drawing.Point(9, 63);
             this.radManhole1.Name = "radManhole1";
             this.radManhole1.Size = new System.Drawing.Size(24, 24);
             this.radManhole1.TabIndex = 2;
@@ -856,11 +865,11 @@
             // 
             this.radManhole0.Appearance = System.Windows.Forms.Appearance.Button;
             this.radManhole0.BackColor = System.Drawing.SystemColors.Control;
-            this.radManhole0.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ladder_red;
+            this.radManhole0.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_ladder_red;
             this.radManhole0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radManhole0.Checked = true;
             this.radManhole0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radManhole0.Location = new System.Drawing.Point(8, 4);
+            this.radManhole0.Location = new System.Drawing.Point(9, 33);
             this.radManhole0.Name = "radManhole0";
             this.radManhole0.Size = new System.Drawing.Size(24, 24);
             this.radManhole0.TabIndex = 2;
@@ -869,21 +878,88 @@
             this.radManhole0.UseVisualStyleBackColor = false;
             this.radManhole0.CheckedChanged += new System.EventHandler(this.RadioManholeCheckedChanged);
             // 
-            // gridControl
+            // pnlDoors
             // 
-            this.gridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl.BackColor = System.Drawing.Color.Transparent;
-            this.gridControl.Image = ((System.Drawing.Image)(resources.GetObject("gridControl.Image")));
-            this.gridControl.Location = new System.Drawing.Point(43, 4);
-            this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(445, 440);
-            this.gridControl.TabIndex = 3;
-            this.gridControl.TabStop = false;
-            this.gridControl.GridCellClick += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellClick);
-            this.gridControl.GridCellHover += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHover);
-            this.gridControl.GridCellHoverDown += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHoverDown);
+            this.pnlDoors.Controls.Add(this.chkDoorSelect);
+            this.pnlDoors.Controls.Add(this.btnDeleteDoor);
+            this.pnlDoors.Controls.Add(this.radDoor2);
+            this.pnlDoors.Controls.Add(this.radDoor1);
+            this.pnlDoors.Controls.Add(this.radDoor0);
+            this.pnlDoors.Location = new System.Drawing.Point(6, 19);
+            this.pnlDoors.Name = "pnlDoors";
+            this.pnlDoors.Size = new System.Drawing.Size(94, 210);
+            this.pnlDoors.TabIndex = 3;
+            this.pnlDoors.Visible = false;
+            // 
+            // chkDoorSelect
+            // 
+            this.chkDoorSelect.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkDoorSelect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.chkDoorSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.chkDoorSelect.Location = new System.Drawing.Point(38, 168);
+            this.chkDoorSelect.Name = "chkDoorSelect";
+            this.chkDoorSelect.Size = new System.Drawing.Size(24, 24);
+            this.chkDoorSelect.TabIndex = 5;
+            this.chkDoorSelect.Text = "1/2";
+            this.chkDoorSelect.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteDoor
+            // 
+            this.btnDeleteDoor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteDoor.Image = global::IntelligentLevelEditor.Properties.Resources.ico_bin_closed;
+            this.btnDeleteDoor.Location = new System.Drawing.Point(8, 168);
+            this.btnDeleteDoor.Name = "btnDeleteDoor";
+            this.btnDeleteDoor.Size = new System.Drawing.Size(24, 24);
+            this.btnDeleteDoor.TabIndex = 3;
+            this.btnDeleteDoor.UseVisualStyleBackColor = true;
+            this.btnDeleteDoor.Click += new System.EventHandler(this.btnDeleteDoor_Click);
+            // 
+            // radDoor2
+            // 
+            this.radDoor2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radDoor2.BackColor = System.Drawing.SystemColors.Control;
+            this.radDoor2.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_door_blue;
+            this.radDoor2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.radDoor2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radDoor2.Location = new System.Drawing.Point(9, 93);
+            this.radDoor2.Name = "radDoor2";
+            this.radDoor2.Size = new System.Drawing.Size(24, 24);
+            this.radDoor2.TabIndex = 2;
+            this.radDoor2.Tag = "2";
+            this.radDoor2.UseVisualStyleBackColor = false;
+            this.radDoor2.CheckedChanged += new System.EventHandler(this.RadioDoorCheckedChanged);
+            // 
+            // radDoor1
+            // 
+            this.radDoor1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radDoor1.BackColor = System.Drawing.SystemColors.Control;
+            this.radDoor1.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_door_yellow;
+            this.radDoor1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radDoor1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radDoor1.Location = new System.Drawing.Point(9, 63);
+            this.radDoor1.Name = "radDoor1";
+            this.radDoor1.Size = new System.Drawing.Size(24, 24);
+            this.radDoor1.TabIndex = 2;
+            this.radDoor1.Tag = "1";
+            this.radDoor1.UseVisualStyleBackColor = false;
+            this.radDoor1.CheckedChanged += new System.EventHandler(this.RadioDoorCheckedChanged);
+            // 
+            // radDoor0
+            // 
+            this.radDoor0.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radDoor0.BackColor = System.Drawing.SystemColors.Control;
+            this.radDoor0.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_door_red;
+            this.radDoor0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radDoor0.Checked = true;
+            this.radDoor0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radDoor0.Location = new System.Drawing.Point(9, 33);
+            this.radDoor0.Name = "radDoor0";
+            this.radDoor0.Size = new System.Drawing.Size(24, 24);
+            this.radDoor0.TabIndex = 2;
+            this.radDoor0.TabStop = true;
+            this.radDoor0.Tag = "0";
+            this.radDoor0.UseVisualStyleBackColor = false;
+            this.radDoor0.CheckedChanged += new System.EventHandler(this.RadioDoorCheckedChanged);
             // 
             // CrashmoStudio
             // 
@@ -897,6 +973,7 @@
             this.splitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             this.tbEditor.ResumeLayout(false);
             this.tbEditor.PerformLayout();
             this.grpThumb.ResumeLayout(false);
@@ -905,8 +982,9 @@
             this.grpOptions.PerformLayout();
             this.pnlColors.ResumeLayout(false);
             this.pnlSwitches.ResumeLayout(false);
+            this.pnlClouds.ResumeLayout(false);
             this.pnlManholes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            this.pnlDoors.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -936,9 +1014,10 @@
         private System.Windows.Forms.Label lblToolMessage;
         private System.Windows.Forms.Panel pnlColors;
         private System.Windows.Forms.Label lblSelectedColor;
+        private System.Windows.Forms.RadioButton radColor0;
         private System.Windows.Forms.RadioButton radColorA;
-        private System.Windows.Forms.RadioButton radColor9;
         private System.Windows.Forms.Button btnEditPalette;
+        private System.Windows.Forms.RadioButton radColor9;
         private System.Windows.Forms.RadioButton radColor8;
         private System.Windows.Forms.RadioButton radColor7;
         private System.Windows.Forms.RadioButton radColor6;
@@ -947,29 +1026,33 @@
         private System.Windows.Forms.RadioButton radColor3;
         private System.Windows.Forms.RadioButton radColor2;
         private System.Windows.Forms.RadioButton radColor1;
-        private System.Windows.Forms.RadioButton radColor0;
-        private System.Windows.Forms.Panel pnlSwitches;
-        private System.Windows.Forms.Button btnDeleteSwitch;
-        private System.Windows.Forms.RadioButton radSwitch9;
-        private System.Windows.Forms.RadioButton radSwitch8;
-        private System.Windows.Forms.RadioButton radSwitch7;
-        private System.Windows.Forms.RadioButton radSwitch6;
-        private System.Windows.Forms.RadioButton radSwitch5;
-        private System.Windows.Forms.RadioButton radSwitch4;
-        private System.Windows.Forms.RadioButton radSwitch3;
-        private System.Windows.Forms.RadioButton radSwitch2;
-        private System.Windows.Forms.RadioButton radSwitch1;
-        private System.Windows.Forms.RadioButton radSwitch0;
         private System.Windows.Forms.Panel pnlManholes;
         private System.Windows.Forms.CheckBox chkManholeSelect;
         private System.Windows.Forms.Button btnDeleteManhole;
-        private System.Windows.Forms.RadioButton radManhole4;
-        private System.Windows.Forms.RadioButton radManhole3;
         private System.Windows.Forms.RadioButton radManhole2;
         private System.Windows.Forms.RadioButton radManhole1;
         private System.Windows.Forms.RadioButton radManhole0;
         private System.Windows.Forms.ToolStripButton tbtnDoorTool;
         private System.Windows.Forms.ToolStripButton tbtnCloudTool;
         private System.Windows.Forms.ToolStripSeparator tbEditorSep0;
+        private System.Windows.Forms.Panel pnlDoors;
+        private System.Windows.Forms.CheckBox chkDoorSelect;
+        private System.Windows.Forms.Button btnDeleteDoor;
+        private System.Windows.Forms.RadioButton radDoor2;
+        private System.Windows.Forms.RadioButton radDoor1;
+        private System.Windows.Forms.RadioButton radDoor0;
+        private System.Windows.Forms.Panel pnlClouds;
+        private System.Windows.Forms.RadioButton radCloud4;
+        private System.Windows.Forms.Button btnDeleteCloud;
+        private System.Windows.Forms.RadioButton radCloud3;
+        private System.Windows.Forms.RadioButton radCloud2;
+        private System.Windows.Forms.RadioButton radCloud1;
+        private System.Windows.Forms.RadioButton radCloud0;
+        private System.Windows.Forms.Panel pnlSwitches;
+        private System.Windows.Forms.Button btnDeleteSwitch;
+        private System.Windows.Forms.RadioButton radSwitch3;
+        private System.Windows.Forms.RadioButton radSwitch1;
+        private System.Windows.Forms.RadioButton radSwitch0;
+        private System.Windows.Forms.RadioButton radSwitch2;
     }
 }

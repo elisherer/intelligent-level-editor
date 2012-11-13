@@ -8,9 +8,9 @@ using SimplePaletteQuantizer.Quantizers.XiaolinWu;
 
 namespace IntelligentLevelEditor.Games
 {
-    class ImageImporter
+    static class ImageImporter
     {
-        public static void Import(Bitmap srcBitmap, ColorPalette srcPalette, int srcPaletteSize, byte[][] dstBitmap, byte[] dstPalette)
+        public static void Import(Bitmap srcBitmap, ColorPalette srcPalette, int srcPaletteSize, byte[][] dstBitmap, byte[] dstPalette, byte transparentIndex)
         {
             if (srcBitmap.Width > dstBitmap[0].Length || srcBitmap.Height > dstBitmap.Length)
             {
@@ -33,13 +33,13 @@ namespace IntelligentLevelEditor.Games
             //var pltImage = (Image)Resources.pushmoPalette.Clone();
             for (var i = 0; i < dstPalette.Length; i++) //translate palette
                 dstPalette[i] = GetColorMatch(plt.Entries[i], srcPalette, srcPaletteSize);
-            for (var y = 0; y < dstBitmap.Length; y++)
-                for (var x = 0; x < dstBitmap[y].Length; x++)
-                    dstBitmap[y][x] = 0xA;
+            foreach (var cell in dstBitmap)
+                for (var x = 0; x < cell.Length; x++)
+                    cell[x] = transparentIndex;
             for (var y = 0; y < srcBitmap.Height; y++)
                 for (var x = 0; x < srcBitmap.Width; x++)
                     if (srcBitmap.GetPixel(x, y).A > 0x7F)
-                        dstBitmap[y][x] = ByteIndexOf(bmp.GetPixel(x, y), plt);
+                        dstBitmap[y][x] = (byte)(ByteIndexOf(bmp.GetPixel(x, y), plt) + (transparentIndex == 0 ? 1 : 0));
         }
 
         private static byte ByteIndexOf(Color clr, ColorPalette palette)

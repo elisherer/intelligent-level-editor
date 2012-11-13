@@ -58,7 +58,7 @@ namespace IntelligentLevelEditor
             if (Pushmo.IsMatchingData(data))
             {
                 CleanStudio();
-                var pushmoStudio = new PushmoStudio { Dock = DockStyle.Fill };
+                var pushmoStudio = new PushmoStudio(statusStrip) { Dock = DockStyle.Fill };
                 pushmoStudio.LoadData(data);
                 pnlEditor.Controls.Add(pushmoStudio);
                 _studio = pushmoStudio;
@@ -68,7 +68,7 @@ namespace IntelligentLevelEditor
             else if (Crashmo.IsMatchingData(data))
             {
                 CleanStudio();
-                var crashmoStudio = new CrashmoStudio { Dock = DockStyle.Fill };
+                var crashmoStudio = new CrashmoStudio(statusStrip) { Dock = DockStyle.Fill };
                 crashmoStudio.LoadData(data);
                 pnlEditor.Controls.Add(crashmoStudio);
                 _studio = crashmoStudio;
@@ -87,13 +87,13 @@ namespace IntelligentLevelEditor
             {
                 case GameMode.Pushmo:
                     CleanStudio();
-                    _studio = new PushmoStudio { Dock = DockStyle.Fill };
+                    _studio = new PushmoStudio(statusStrip) { Dock = DockStyle.Fill };
                     pnlEditor.Controls.Add((PushmoStudio)_studio);
                     EnableAfterOpen();
                     break;
                 case GameMode.Crashmo:
                     CleanStudio();
-                    _studio = new CrashmoStudio { Dock = DockStyle.Fill };
+                    _studio = new CrashmoStudio(statusStrip) { Dock = DockStyle.Fill };
                     pnlEditor.Controls.Add((CrashmoStudio)_studio);
                     EnableAfterOpen();
                     break;
@@ -177,7 +177,8 @@ namespace IntelligentLevelEditor
                 _studio.GetAvailableColorPalette(),
                 _studio.GetAvailableColorPaletteSize(),
                 _studio.GetBitmap(),
-                _studio.GetPalette()
+                _studio.GetPalette(),
+                _studio.GetTransparentIndex()
             );
             _studio.RefreshUI();
         }
@@ -260,7 +261,7 @@ namespace IntelligentLevelEditor
 
         private void menuHelpAbout_Click(object sender, EventArgs e)
         {
-            (new AboutBox()).ShowDialog();
+            (new AboutBox(Icon.ToBitmap())).ShowDialog();
         }
 
         #endregion
