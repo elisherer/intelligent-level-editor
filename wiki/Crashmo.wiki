@@ -13,8 +13,8 @@ QR Version: 18 (L) - 89x89, 718 bytes
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
 || 0x000 || 4 || `uint32` || Magic number (=0x00000AAD) ||
 || 0x004 || 4 || `uint32` || Might be version (=0x00000001) ||
-|| 0x008 || 4 || `uint32` || Compressed data length ||
-|| 0x00C || `[]` || `byte[]` || Compressed data ||
+|| 0x008 || 4 || `uint32` || LZ-10 Compressed data length ||
+|| 0x00C || `[]` || `byte[]` || LZ-10 Compressed data ||
 
 = Level Data =
 
