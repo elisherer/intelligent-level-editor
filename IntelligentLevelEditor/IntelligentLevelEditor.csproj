@@ -281,6 +281,13 @@
     <None Include="Resources\sprite_ladder_red.png" />
     <None Include="Resources\sprite_ladder_yellow.png" />
     <Content Include="ile.ico" />
+    <None Include="Resources\sprite_switch_down.png" />
+    <None Include="Resources\sprite_switch_left.png" />
+    <None Include="Resources\sprite_switch_right.png" />
+    <None Include="Resources\sprite_switch_up.png" />
+    <None Include="Resources\icon_star_light.png" />
+    <None Include="Resources\icon_star_yellow.png" />
+    <None Include="Resources\ico_lock.png" />
     <Content Include="strawberry.ico" />
     <None Include="Resources\strawberry.png" />
     <None Include="Resources\ico_grid.png" />

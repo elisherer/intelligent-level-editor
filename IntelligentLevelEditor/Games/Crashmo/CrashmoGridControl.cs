@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -8,6 +9,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
 {
     public partial class CrashmoGridControl : PictureBox
     {
+
         public class CrashmoFixedPosition
         {
             public byte X;
@@ -156,8 +158,22 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         private void DrawSwitch(Graphics g, CrashmoFixedPosition pos, int pixWidth, int pixHeight)
         {
-            if (pos == null) return; //TODO: new sprites for angles
-            g.DrawImage(Resources.sprite_switch_trans, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
+            if (pos == null) return;
+            var image = Resources.sprite_switch_left;
+            switch ((Crashmo.SwitchDirection)pos.Flags)
+            {
+                case Crashmo.SwitchDirection.Right:
+                    image = Resources.sprite_switch_right;
+                    break;
+                case Crashmo.SwitchDirection.Up:
+                    image = Resources.sprite_switch_up;
+                    break;
+                case Crashmo.SwitchDirection.Down:
+                    image = Resources.sprite_switch_down;
+                    break;
+
+            }
+            g.DrawImage(image, pos.X * pixWidth, pos.Y * pixHeight, pixWidth, pixHeight);
         }
 
         private void RecursiveDrawCloud(Graphics g, int x, int y, byte baseColor, int pixWidth, int pixHeight)
