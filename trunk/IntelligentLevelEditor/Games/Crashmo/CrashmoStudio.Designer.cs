@@ -30,34 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrashmoStudio));
             this.splitContainer = new System.Windows.Forms.SplitContainer();
-            this.gridControl = new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl();
             this.tbEditor = new System.Windows.Forms.ToolStrip();
-            this.tbtnPencilTool = new System.Windows.Forms.ToolStripButton();
-            this.tbtnPipetteTool = new System.Windows.Forms.ToolStripButton();
-            this.tbtnFillTool = new System.Windows.Forms.ToolStripButton();
             this.tbEditorSep0 = new System.Windows.Forms.ToolStripSeparator();
-            this.tbtnFlagTool = new System.Windows.Forms.ToolStripButton();
             this.tbEditorSep1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tbtnSwitchTool = new System.Windows.Forms.ToolStripButton();
-            this.tbtnManholeTool = new System.Windows.Forms.ToolStripButton();
-            this.tbtnDoorTool = new System.Windows.Forms.ToolStripButton();
-            this.tbtnCloudTool = new System.Windows.Forms.ToolStripButton();
-            this.chkGrid = new System.Windows.Forms.CheckBox();
             this.lblShift = new System.Windows.Forms.Label();
-            this.btnShiftRight = new System.Windows.Forms.Button();
-            this.btnShiftUp = new System.Windows.Forms.Button();
-            this.btnShiftDown = new System.Windows.Forms.Button();
-            this.btnShiftLeft = new System.Windows.Forms.Button();
             this.grpThumb = new System.Windows.Forms.GroupBox();
-            this.picShow = new System.Windows.Forms.PictureBox();
             this.propertyGrid = new System.Windows.Forms.PropertyGrid();
             this.grpOptions = new System.Windows.Forms.GroupBox();
             this.lblToolMessage = new System.Windows.Forms.Label();
             this.pnlColors = new System.Windows.Forms.Panel();
             this.lblSelectedColor = new System.Windows.Forms.Label();
-            this.radColor0 = new System.Windows.Forms.RadioButton();
             this.radColorA = new System.Windows.Forms.RadioButton();
-            this.btnEditPalette = new System.Windows.Forms.Button();
             this.radColor9 = new System.Windows.Forms.RadioButton();
             this.radColor8 = new System.Windows.Forms.RadioButton();
             this.radColor7 = new System.Windows.Forms.RadioButton();
@@ -68,44 +51,61 @@
             this.radColor2 = new System.Windows.Forms.RadioButton();
             this.radColor1 = new System.Windows.Forms.RadioButton();
             this.pnlSwitches = new System.Windows.Forms.Panel();
+            this.pnlClouds = new System.Windows.Forms.Panel();
+            this.pnlManholes = new System.Windows.Forms.Panel();
+            this.chkManholeSelect = new System.Windows.Forms.CheckBox();
+            this.pnlDoors = new System.Windows.Forms.Panel();
+            this.chkDoorSelect = new System.Windows.Forms.CheckBox();
+            this.tbtnPencilTool = new System.Windows.Forms.ToolStripButton();
+            this.tbtnPipetteTool = new System.Windows.Forms.ToolStripButton();
+            this.tbtnFillTool = new System.Windows.Forms.ToolStripButton();
+            this.tbtnFlagTool = new System.Windows.Forms.ToolStripButton();
+            this.tbtnSwitchTool = new System.Windows.Forms.ToolStripButton();
+            this.tbtnManholeTool = new System.Windows.Forms.ToolStripButton();
+            this.tbtnDoorTool = new System.Windows.Forms.ToolStripButton();
+            this.tbtnCloudTool = new System.Windows.Forms.ToolStripButton();
+            this.chkGrid = new System.Windows.Forms.CheckBox();
+            this.btnShiftRight = new System.Windows.Forms.Button();
+            this.btnShiftUp = new System.Windows.Forms.Button();
+            this.btnShiftDown = new System.Windows.Forms.Button();
+            this.btnShiftLeft = new System.Windows.Forms.Button();
+            this.picShow = new System.Windows.Forms.PictureBox();
+            this.radColor0 = new System.Windows.Forms.RadioButton();
+            this.btnEditPalette = new System.Windows.Forms.Button();
             this.btnDeleteSwitch = new System.Windows.Forms.Button();
             this.radSwitch3 = new System.Windows.Forms.RadioButton();
-            this.radSwitch1 = new System.Windows.Forms.RadioButton();
             this.radSwitch0 = new System.Windows.Forms.RadioButton();
+            this.radSwitch1 = new System.Windows.Forms.RadioButton();
             this.radSwitch2 = new System.Windows.Forms.RadioButton();
-            this.pnlClouds = new System.Windows.Forms.Panel();
             this.radCloud4 = new System.Windows.Forms.RadioButton();
             this.btnDeleteCloud = new System.Windows.Forms.Button();
             this.radCloud3 = new System.Windows.Forms.RadioButton();
             this.radCloud2 = new System.Windows.Forms.RadioButton();
             this.radCloud1 = new System.Windows.Forms.RadioButton();
             this.radCloud0 = new System.Windows.Forms.RadioButton();
-            this.pnlManholes = new System.Windows.Forms.Panel();
-            this.chkManholeSelect = new System.Windows.Forms.CheckBox();
             this.btnDeleteManhole = new System.Windows.Forms.Button();
             this.radManhole2 = new System.Windows.Forms.RadioButton();
             this.radManhole1 = new System.Windows.Forms.RadioButton();
             this.radManhole0 = new System.Windows.Forms.RadioButton();
-            this.pnlDoors = new System.Windows.Forms.Panel();
-            this.chkDoorSelect = new System.Windows.Forms.CheckBox();
             this.btnDeleteDoor = new System.Windows.Forms.Button();
             this.radDoor2 = new System.Windows.Forms.RadioButton();
             this.radDoor1 = new System.Windows.Forms.RadioButton();
             this.radDoor0 = new System.Windows.Forms.RadioButton();
+            this.gridControl = new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             this.tbEditor.SuspendLayout();
             this.grpThumb.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
             this.grpOptions.SuspendLayout();
             this.pnlColors.SuspendLayout();
             this.pnlSwitches.SuspendLayout();
             this.pnlClouds.SuspendLayout();
             this.pnlManholes.SuspendLayout();
             this.pnlDoors.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer
@@ -137,22 +137,6 @@
             this.splitContainer.SplitterDistance = 491;
             this.splitContainer.TabIndex = 3;
             // 
-            // gridControl
-            // 
-            this.gridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl.BackColor = System.Drawing.Color.Transparent;
-            this.gridControl.Image = ((System.Drawing.Image)(resources.GetObject("gridControl.Image")));
-            this.gridControl.Location = new System.Drawing.Point(43, 4);
-            this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(445, 440);
-            this.gridControl.TabIndex = 3;
-            this.gridControl.TabStop = false;
-            this.gridControl.GridCellClick += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellClick);
-            this.gridControl.GridCellHover += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHover);
-            this.gridControl.GridCellHoverDown += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHoverDown);
-            // 
             // tbEditor
             // 
             this.tbEditor.AutoSize = false;
@@ -176,124 +160,15 @@
             this.tbEditor.Size = new System.Drawing.Size(39, 447);
             this.tbEditor.TabIndex = 4;
             // 
-            // tbtnPencilTool
-            // 
-            this.tbtnPencilTool.Checked = true;
-            this.tbtnPencilTool.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.tbtnPencilTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnPencilTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_pencil;
-            this.tbtnPencilTool.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tbtnPencilTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnPencilTool.Name = "tbtnPencilTool";
-            this.tbtnPencilTool.Size = new System.Drawing.Size(37, 36);
-            this.tbtnPencilTool.Tag = "0";
-            this.tbtnPencilTool.Text = "Pencil";
-            this.tbtnPencilTool.Click += new System.EventHandler(this.TbtnToolClick);
-            // 
-            // tbtnPipetteTool
-            // 
-            this.tbtnPipetteTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnPipetteTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_pipette;
-            this.tbtnPipetteTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnPipetteTool.Name = "tbtnPipetteTool";
-            this.tbtnPipetteTool.Size = new System.Drawing.Size(37, 36);
-            this.tbtnPipetteTool.Tag = "1";
-            this.tbtnPipetteTool.Text = "Pipette";
-            this.tbtnPipetteTool.Click += new System.EventHandler(this.TbtnToolClick);
-            // 
-            // tbtnFillTool
-            // 
-            this.tbtnFillTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnFillTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_fill;
-            this.tbtnFillTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnFillTool.Name = "tbtnFillTool";
-            this.tbtnFillTool.Size = new System.Drawing.Size(37, 36);
-            this.tbtnFillTool.Tag = "2";
-            this.tbtnFillTool.Text = "Flood Fill";
-            this.tbtnFillTool.Click += new System.EventHandler(this.TbtnToolClick);
-            // 
             // tbEditorSep0
             // 
             this.tbEditorSep0.Name = "tbEditorSep0";
             this.tbEditorSep0.Size = new System.Drawing.Size(37, 6);
             // 
-            // tbtnFlagTool
-            // 
-            this.tbtnFlagTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnFlagTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_flag;
-            this.tbtnFlagTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnFlagTool.Name = "tbtnFlagTool";
-            this.tbtnFlagTool.Size = new System.Drawing.Size(37, 36);
-            this.tbtnFlagTool.Tag = "3";
-            this.tbtnFlagTool.Text = "Flag";
-            this.tbtnFlagTool.Click += new System.EventHandler(this.TbtnToolClick);
-            // 
             // tbEditorSep1
             // 
             this.tbEditorSep1.Name = "tbEditorSep1";
             this.tbEditorSep1.Size = new System.Drawing.Size(37, 6);
-            // 
-            // tbtnSwitchTool
-            // 
-            this.tbtnSwitchTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnSwitchTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_switch;
-            this.tbtnSwitchTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnSwitchTool.Name = "tbtnSwitchTool";
-            this.tbtnSwitchTool.Size = new System.Drawing.Size(37, 36);
-            this.tbtnSwitchTool.Tag = "4";
-            this.tbtnSwitchTool.Text = "Switch";
-            this.tbtnSwitchTool.Click += new System.EventHandler(this.TbtnToolClick);
-            // 
-            // tbtnManholeTool
-            // 
-            this.tbtnManholeTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnManholeTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_manhole;
-            this.tbtnManholeTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnManholeTool.Name = "tbtnManholeTool";
-            this.tbtnManholeTool.Size = new System.Drawing.Size(37, 36);
-            this.tbtnManholeTool.Tag = "5";
-            this.tbtnManholeTool.Text = "Manhole";
-            this.tbtnManholeTool.Click += new System.EventHandler(this.TbtnToolClick);
-            // 
-            // tbtnDoorTool
-            // 
-            this.tbtnDoorTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnDoorTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_door;
-            this.tbtnDoorTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnDoorTool.Name = "tbtnDoorTool";
-            this.tbtnDoorTool.Size = new System.Drawing.Size(37, 36);
-            this.tbtnDoorTool.Tag = "6";
-            this.tbtnDoorTool.Text = "Door";
-            this.tbtnDoorTool.Click += new System.EventHandler(this.TbtnToolClick);
-            // 
-            // tbtnCloudTool
-            // 
-            this.tbtnCloudTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbtnCloudTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_cloud;
-            this.tbtnCloudTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbtnCloudTool.Name = "tbtnCloudTool";
-            this.tbtnCloudTool.Size = new System.Drawing.Size(37, 36);
-            this.tbtnCloudTool.Tag = "7";
-            this.tbtnCloudTool.Text = "Cloud";
-            this.tbtnCloudTool.Click += new System.EventHandler(this.TbtnToolClick);
-            // 
-            // chkGrid
-            // 
-            this.chkGrid.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkGrid.AutoSize = true;
-            this.chkGrid.Checked = true;
-            this.chkGrid.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkGrid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.chkGrid.Image = global::IntelligentLevelEditor.Properties.Resources.ico_grid;
-            this.chkGrid.Location = new System.Drawing.Point(109, 181);
-            this.chkGrid.Name = "chkGrid";
-            this.chkGrid.Size = new System.Drawing.Size(82, 23);
-            this.chkGrid.TabIndex = 10;
-            this.chkGrid.Text = "Show Grid";
-            this.chkGrid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkGrid.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.chkGrid.UseVisualStyleBackColor = true;
-            this.chkGrid.CheckedChanged += new System.EventHandler(this.chkGrid_CheckedChanged);
             // 
             // lblShift
             // 
@@ -304,66 +179,6 @@
             this.lblShift.TabIndex = 9;
             this.lblShift.Text = "Shift image:";
             // 
-            // btnShiftRight
-            // 
-            this.btnShiftRight.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_arrow_right;
-            this.btnShiftRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnShiftRight.FlatAppearance.BorderSize = 0;
-            this.btnShiftRight.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnShiftRight.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnShiftRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShiftRight.Location = new System.Drawing.Point(157, 127);
-            this.btnShiftRight.Name = "btnShiftRight";
-            this.btnShiftRight.Size = new System.Drawing.Size(24, 24);
-            this.btnShiftRight.TabIndex = 8;
-            this.btnShiftRight.UseVisualStyleBackColor = true;
-            this.btnShiftRight.Click += new System.EventHandler(this.ShiftButtonClick);
-            // 
-            // btnShiftUp
-            // 
-            this.btnShiftUp.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_arrow_up;
-            this.btnShiftUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnShiftUp.FlatAppearance.BorderSize = 0;
-            this.btnShiftUp.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnShiftUp.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnShiftUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShiftUp.Location = new System.Drawing.Point(136, 103);
-            this.btnShiftUp.Name = "btnShiftUp";
-            this.btnShiftUp.Size = new System.Drawing.Size(24, 24);
-            this.btnShiftUp.TabIndex = 8;
-            this.btnShiftUp.UseVisualStyleBackColor = true;
-            this.btnShiftUp.Click += new System.EventHandler(this.ShiftButtonClick);
-            // 
-            // btnShiftDown
-            // 
-            this.btnShiftDown.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_arrow_down;
-            this.btnShiftDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnShiftDown.FlatAppearance.BorderSize = 0;
-            this.btnShiftDown.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnShiftDown.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnShiftDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShiftDown.Location = new System.Drawing.Point(136, 151);
-            this.btnShiftDown.Name = "btnShiftDown";
-            this.btnShiftDown.Size = new System.Drawing.Size(24, 24);
-            this.btnShiftDown.TabIndex = 8;
-            this.btnShiftDown.UseVisualStyleBackColor = true;
-            this.btnShiftDown.Click += new System.EventHandler(this.ShiftButtonClick);
-            // 
-            // btnShiftLeft
-            // 
-            this.btnShiftLeft.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_arrow_left;
-            this.btnShiftLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnShiftLeft.FlatAppearance.BorderSize = 0;
-            this.btnShiftLeft.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnShiftLeft.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnShiftLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShiftLeft.Location = new System.Drawing.Point(115, 127);
-            this.btnShiftLeft.Name = "btnShiftLeft";
-            this.btnShiftLeft.Size = new System.Drawing.Size(24, 24);
-            this.btnShiftLeft.TabIndex = 8;
-            this.btnShiftLeft.UseVisualStyleBackColor = true;
-            this.btnShiftLeft.Click += new System.EventHandler(this.ShiftButtonClick);
-            // 
             // grpThumb
             // 
             this.grpThumb.Controls.Add(this.picShow);
@@ -373,15 +188,6 @@
             this.grpThumb.TabIndex = 7;
             this.grpThumb.TabStop = false;
             this.grpThumb.Text = "Thumbnail:";
-            // 
-            // picShow
-            // 
-            this.picShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picShow.Location = new System.Drawing.Point(20, 24);
-            this.picShow.Name = "picShow";
-            this.picShow.Size = new System.Drawing.Size(34, 34);
-            this.picShow.TabIndex = 4;
-            this.picShow.TabStop = false;
             // 
             // propertyGrid
             // 
@@ -447,19 +253,6 @@
             this.lblSelectedColor.Size = new System.Drawing.Size(54, 24);
             this.lblSelectedColor.TabIndex = 4;
             // 
-            // radColor0
-            // 
-            this.radColor0.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radColor0.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_transparent;
-            this.radColor0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radColor0.Location = new System.Drawing.Point(8, 186);
-            this.radColor0.Name = "radColor0";
-            this.radColor0.Size = new System.Drawing.Size(24, 24);
-            this.radColor0.TabIndex = 3;
-            this.radColor0.Tag = "0";
-            this.radColor0.UseVisualStyleBackColor = false;
-            this.radColor0.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
-            // 
             // radColorA
             // 
             this.radColorA.Appearance = System.Windows.Forms.Appearance.Button;
@@ -472,21 +265,6 @@
             this.radColorA.Tag = "10";
             this.radColorA.UseVisualStyleBackColor = false;
             this.radColorA.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
-            // 
-            // btnEditPalette
-            // 
-            this.btnEditPalette.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_palette;
-            this.btnEditPalette.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnEditPalette.FlatAppearance.BorderSize = 0;
-            this.btnEditPalette.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnEditPalette.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnEditPalette.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEditPalette.Location = new System.Drawing.Point(38, 186);
-            this.btnEditPalette.Name = "btnEditPalette";
-            this.btnEditPalette.Size = new System.Drawing.Size(24, 24);
-            this.btnEditPalette.TabIndex = 8;
-            this.btnEditPalette.UseVisualStyleBackColor = true;
-            this.btnEditPalette.Click += new System.EventHandler(this.btnEditPalette_Click);
             // 
             // radColor9
             // 
@@ -611,14 +389,284 @@
             // 
             this.pnlSwitches.Controls.Add(this.btnDeleteSwitch);
             this.pnlSwitches.Controls.Add(this.radSwitch3);
-            this.pnlSwitches.Controls.Add(this.radSwitch1);
             this.pnlSwitches.Controls.Add(this.radSwitch0);
+            this.pnlSwitches.Controls.Add(this.radSwitch1);
             this.pnlSwitches.Controls.Add(this.radSwitch2);
             this.pnlSwitches.Location = new System.Drawing.Point(6, 19);
             this.pnlSwitches.Name = "pnlSwitches";
             this.pnlSwitches.Size = new System.Drawing.Size(81, 210);
             this.pnlSwitches.TabIndex = 2;
             this.pnlSwitches.Visible = false;
+            // 
+            // pnlClouds
+            // 
+            this.pnlClouds.Controls.Add(this.radCloud4);
+            this.pnlClouds.Controls.Add(this.btnDeleteCloud);
+            this.pnlClouds.Controls.Add(this.radCloud3);
+            this.pnlClouds.Controls.Add(this.radCloud2);
+            this.pnlClouds.Controls.Add(this.radCloud1);
+            this.pnlClouds.Controls.Add(this.radCloud0);
+            this.pnlClouds.Location = new System.Drawing.Point(6, 16);
+            this.pnlClouds.Name = "pnlClouds";
+            this.pnlClouds.Size = new System.Drawing.Size(86, 210);
+            this.pnlClouds.TabIndex = 4;
+            this.pnlClouds.Visible = false;
+            // 
+            // pnlManholes
+            // 
+            this.pnlManholes.Controls.Add(this.chkManholeSelect);
+            this.pnlManholes.Controls.Add(this.btnDeleteManhole);
+            this.pnlManholes.Controls.Add(this.radManhole2);
+            this.pnlManholes.Controls.Add(this.radManhole1);
+            this.pnlManholes.Controls.Add(this.radManhole0);
+            this.pnlManholes.Location = new System.Drawing.Point(6, 19);
+            this.pnlManholes.Name = "pnlManholes";
+            this.pnlManholes.Size = new System.Drawing.Size(90, 210);
+            this.pnlManholes.TabIndex = 2;
+            this.pnlManholes.Visible = false;
+            // 
+            // chkManholeSelect
+            // 
+            this.chkManholeSelect.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkManholeSelect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.chkManholeSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.chkManholeSelect.Location = new System.Drawing.Point(38, 168);
+            this.chkManholeSelect.Name = "chkManholeSelect";
+            this.chkManholeSelect.Size = new System.Drawing.Size(24, 24);
+            this.chkManholeSelect.TabIndex = 5;
+            this.chkManholeSelect.Text = "1/2";
+            this.chkManholeSelect.UseVisualStyleBackColor = true;
+            // 
+            // pnlDoors
+            // 
+            this.pnlDoors.Controls.Add(this.chkDoorSelect);
+            this.pnlDoors.Controls.Add(this.btnDeleteDoor);
+            this.pnlDoors.Controls.Add(this.radDoor2);
+            this.pnlDoors.Controls.Add(this.radDoor1);
+            this.pnlDoors.Controls.Add(this.radDoor0);
+            this.pnlDoors.Location = new System.Drawing.Point(6, 19);
+            this.pnlDoors.Name = "pnlDoors";
+            this.pnlDoors.Size = new System.Drawing.Size(94, 210);
+            this.pnlDoors.TabIndex = 3;
+            this.pnlDoors.Visible = false;
+            // 
+            // chkDoorSelect
+            // 
+            this.chkDoorSelect.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkDoorSelect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.chkDoorSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            this.chkDoorSelect.Location = new System.Drawing.Point(38, 168);
+            this.chkDoorSelect.Name = "chkDoorSelect";
+            this.chkDoorSelect.Size = new System.Drawing.Size(24, 24);
+            this.chkDoorSelect.TabIndex = 5;
+            this.chkDoorSelect.Text = "1/2";
+            this.chkDoorSelect.UseVisualStyleBackColor = true;
+            // 
+            // tbtnPencilTool
+            // 
+            this.tbtnPencilTool.Checked = true;
+            this.tbtnPencilTool.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tbtnPencilTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnPencilTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_pencil;
+            this.tbtnPencilTool.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tbtnPencilTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnPencilTool.Name = "tbtnPencilTool";
+            this.tbtnPencilTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnPencilTool.Tag = "0";
+            this.tbtnPencilTool.Text = "Pencil";
+            this.tbtnPencilTool.Click += new System.EventHandler(this.TbtnToolClick);
+            // 
+            // tbtnPipetteTool
+            // 
+            this.tbtnPipetteTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnPipetteTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_pipette;
+            this.tbtnPipetteTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnPipetteTool.Name = "tbtnPipetteTool";
+            this.tbtnPipetteTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnPipetteTool.Tag = "1";
+            this.tbtnPipetteTool.Text = "Pipette";
+            this.tbtnPipetteTool.Click += new System.EventHandler(this.TbtnToolClick);
+            // 
+            // tbtnFillTool
+            // 
+            this.tbtnFillTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnFillTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_fill;
+            this.tbtnFillTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnFillTool.Name = "tbtnFillTool";
+            this.tbtnFillTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnFillTool.Tag = "2";
+            this.tbtnFillTool.Text = "Flood Fill";
+            this.tbtnFillTool.Click += new System.EventHandler(this.TbtnToolClick);
+            // 
+            // tbtnFlagTool
+            // 
+            this.tbtnFlagTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnFlagTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_flag;
+            this.tbtnFlagTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnFlagTool.Name = "tbtnFlagTool";
+            this.tbtnFlagTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnFlagTool.Tag = "3";
+            this.tbtnFlagTool.Text = "Flag";
+            this.tbtnFlagTool.Click += new System.EventHandler(this.TbtnToolClick);
+            // 
+            // tbtnSwitchTool
+            // 
+            this.tbtnSwitchTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnSwitchTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_switch;
+            this.tbtnSwitchTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnSwitchTool.Name = "tbtnSwitchTool";
+            this.tbtnSwitchTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnSwitchTool.Tag = "4";
+            this.tbtnSwitchTool.Text = "Switch";
+            this.tbtnSwitchTool.Click += new System.EventHandler(this.TbtnToolClick);
+            // 
+            // tbtnManholeTool
+            // 
+            this.tbtnManholeTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnManholeTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_manhole;
+            this.tbtnManholeTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnManholeTool.Name = "tbtnManholeTool";
+            this.tbtnManholeTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnManholeTool.Tag = "5";
+            this.tbtnManholeTool.Text = "Manhole";
+            this.tbtnManholeTool.Click += new System.EventHandler(this.TbtnToolClick);
+            // 
+            // tbtnDoorTool
+            // 
+            this.tbtnDoorTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnDoorTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_door;
+            this.tbtnDoorTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnDoorTool.Name = "tbtnDoorTool";
+            this.tbtnDoorTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnDoorTool.Tag = "6";
+            this.tbtnDoorTool.Text = "Door";
+            this.tbtnDoorTool.Click += new System.EventHandler(this.TbtnToolClick);
+            // 
+            // tbtnCloudTool
+            // 
+            this.tbtnCloudTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnCloudTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_cloud;
+            this.tbtnCloudTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnCloudTool.Name = "tbtnCloudTool";
+            this.tbtnCloudTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnCloudTool.Tag = "7";
+            this.tbtnCloudTool.Text = "Cloud";
+            this.tbtnCloudTool.Click += new System.EventHandler(this.TbtnToolClick);
+            // 
+            // chkGrid
+            // 
+            this.chkGrid.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkGrid.AutoSize = true;
+            this.chkGrid.Checked = true;
+            this.chkGrid.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkGrid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.chkGrid.Image = global::IntelligentLevelEditor.Properties.Resources.ico_grid;
+            this.chkGrid.Location = new System.Drawing.Point(109, 181);
+            this.chkGrid.Name = "chkGrid";
+            this.chkGrid.Size = new System.Drawing.Size(82, 23);
+            this.chkGrid.TabIndex = 10;
+            this.chkGrid.Text = "Show Grid";
+            this.chkGrid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkGrid.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.chkGrid.UseVisualStyleBackColor = true;
+            this.chkGrid.CheckedChanged += new System.EventHandler(this.chkGrid_CheckedChanged);
+            // 
+            // btnShiftRight
+            // 
+            this.btnShiftRight.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_arrow_right;
+            this.btnShiftRight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnShiftRight.FlatAppearance.BorderSize = 0;
+            this.btnShiftRight.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnShiftRight.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnShiftRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShiftRight.Location = new System.Drawing.Point(157, 127);
+            this.btnShiftRight.Name = "btnShiftRight";
+            this.btnShiftRight.Size = new System.Drawing.Size(24, 24);
+            this.btnShiftRight.TabIndex = 8;
+            this.btnShiftRight.UseVisualStyleBackColor = true;
+            this.btnShiftRight.Click += new System.EventHandler(this.ShiftButtonClick);
+            // 
+            // btnShiftUp
+            // 
+            this.btnShiftUp.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_arrow_up;
+            this.btnShiftUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnShiftUp.FlatAppearance.BorderSize = 0;
+            this.btnShiftUp.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnShiftUp.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnShiftUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShiftUp.Location = new System.Drawing.Point(136, 103);
+            this.btnShiftUp.Name = "btnShiftUp";
+            this.btnShiftUp.Size = new System.Drawing.Size(24, 24);
+            this.btnShiftUp.TabIndex = 8;
+            this.btnShiftUp.UseVisualStyleBackColor = true;
+            this.btnShiftUp.Click += new System.EventHandler(this.ShiftButtonClick);
+            // 
+            // btnShiftDown
+            // 
+            this.btnShiftDown.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_arrow_down;
+            this.btnShiftDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnShiftDown.FlatAppearance.BorderSize = 0;
+            this.btnShiftDown.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnShiftDown.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnShiftDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShiftDown.Location = new System.Drawing.Point(136, 151);
+            this.btnShiftDown.Name = "btnShiftDown";
+            this.btnShiftDown.Size = new System.Drawing.Size(24, 24);
+            this.btnShiftDown.TabIndex = 8;
+            this.btnShiftDown.UseVisualStyleBackColor = true;
+            this.btnShiftDown.Click += new System.EventHandler(this.ShiftButtonClick);
+            // 
+            // btnShiftLeft
+            // 
+            this.btnShiftLeft.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_arrow_left;
+            this.btnShiftLeft.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnShiftLeft.FlatAppearance.BorderSize = 0;
+            this.btnShiftLeft.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnShiftLeft.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnShiftLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShiftLeft.Location = new System.Drawing.Point(115, 127);
+            this.btnShiftLeft.Name = "btnShiftLeft";
+            this.btnShiftLeft.Size = new System.Drawing.Size(24, 24);
+            this.btnShiftLeft.TabIndex = 8;
+            this.btnShiftLeft.UseVisualStyleBackColor = true;
+            this.btnShiftLeft.Click += new System.EventHandler(this.ShiftButtonClick);
+            // 
+            // picShow
+            // 
+            this.picShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picShow.Location = new System.Drawing.Point(20, 24);
+            this.picShow.Name = "picShow";
+            this.picShow.Size = new System.Drawing.Size(34, 34);
+            this.picShow.TabIndex = 4;
+            this.picShow.TabStop = false;
+            // 
+            // radColor0
+            // 
+            this.radColor0.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radColor0.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_transparent;
+            this.radColor0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radColor0.Location = new System.Drawing.Point(8, 186);
+            this.radColor0.Name = "radColor0";
+            this.radColor0.Size = new System.Drawing.Size(24, 24);
+            this.radColor0.TabIndex = 3;
+            this.radColor0.Tag = "0";
+            this.radColor0.UseVisualStyleBackColor = false;
+            this.radColor0.CheckedChanged += new System.EventHandler(this.RadioColorCheckedChange);
+            // 
+            // btnEditPalette
+            // 
+            this.btnEditPalette.BackgroundImage = global::IntelligentLevelEditor.Properties.Resources.ico_palette;
+            this.btnEditPalette.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEditPalette.FlatAppearance.BorderSize = 0;
+            this.btnEditPalette.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnEditPalette.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnEditPalette.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditPalette.Location = new System.Drawing.Point(38, 186);
+            this.btnEditPalette.Name = "btnEditPalette";
+            this.btnEditPalette.Size = new System.Drawing.Size(24, 24);
+            this.btnEditPalette.TabIndex = 8;
+            this.btnEditPalette.UseVisualStyleBackColor = true;
+            this.btnEditPalette.Click += new System.EventHandler(this.btnEditPalette_Click);
             // 
             // btnDeleteSwitch
             // 
@@ -646,29 +694,14 @@
             this.radSwitch3.UseVisualStyleBackColor = false;
             this.radSwitch3.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
             // 
-            // radSwitch1
-            // 
-            this.radSwitch1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.radSwitch1.BackColor = System.Drawing.SystemColors.Control;
-            this.radSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch1.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_right;
-            this.radSwitch1.Location = new System.Drawing.Point(54, 45);
-            this.radSwitch1.Name = "radSwitch1";
-            this.radSwitch1.Size = new System.Drawing.Size(24, 24);
-            this.radSwitch1.TabIndex = 2;
-            this.radSwitch1.Tag = "1";
-            this.radSwitch1.UseVisualStyleBackColor = false;
-            this.radSwitch1.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
-            // 
             // radSwitch0
             // 
             this.radSwitch0.Appearance = System.Windows.Forms.Appearance.Button;
             this.radSwitch0.BackColor = System.Drawing.SystemColors.Control;
             this.radSwitch0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.radSwitch0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.radSwitch0.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_left;
-            this.radSwitch0.Location = new System.Drawing.Point(5, 45);
+            this.radSwitch0.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_right;
+            this.radSwitch0.Location = new System.Drawing.Point(54, 45);
             this.radSwitch0.Name = "radSwitch0";
             this.radSwitch0.Size = new System.Drawing.Size(24, 24);
             this.radSwitch0.TabIndex = 2;
@@ -676,36 +709,37 @@
             this.radSwitch0.UseVisualStyleBackColor = false;
             this.radSwitch0.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
             // 
+            // radSwitch1
+            // 
+            this.radSwitch1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radSwitch1.BackColor = System.Drawing.SystemColors.Control;
+            this.radSwitch1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radSwitch1.Checked = true;
+            this.radSwitch1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.radSwitch1.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_left;
+            this.radSwitch1.Location = new System.Drawing.Point(5, 45);
+            this.radSwitch1.Name = "radSwitch1";
+            this.radSwitch1.Size = new System.Drawing.Size(24, 24);
+            this.radSwitch1.TabIndex = 2;
+            this.radSwitch1.TabStop = true;
+            this.radSwitch1.Tag = "1";
+            this.radSwitch1.UseVisualStyleBackColor = false;
+            this.radSwitch1.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
+            // 
             // radSwitch2
             // 
             this.radSwitch2.Appearance = System.Windows.Forms.Appearance.Button;
             this.radSwitch2.BackColor = System.Drawing.SystemColors.Control;
             this.radSwitch2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.radSwitch2.Checked = true;
             this.radSwitch2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.radSwitch2.Image = global::IntelligentLevelEditor.Properties.Resources.ico_switch_up;
             this.radSwitch2.Location = new System.Drawing.Point(30, 15);
             this.radSwitch2.Name = "radSwitch2";
             this.radSwitch2.Size = new System.Drawing.Size(24, 24);
             this.radSwitch2.TabIndex = 2;
-            this.radSwitch2.TabStop = true;
             this.radSwitch2.Tag = "2";
             this.radSwitch2.UseVisualStyleBackColor = false;
             this.radSwitch2.CheckedChanged += new System.EventHandler(this.RadioSwitchCheckedChanged);
-            // 
-            // pnlClouds
-            // 
-            this.pnlClouds.Controls.Add(this.radCloud4);
-            this.pnlClouds.Controls.Add(this.btnDeleteCloud);
-            this.pnlClouds.Controls.Add(this.radCloud3);
-            this.pnlClouds.Controls.Add(this.radCloud2);
-            this.pnlClouds.Controls.Add(this.radCloud1);
-            this.pnlClouds.Controls.Add(this.radCloud0);
-            this.pnlClouds.Location = new System.Drawing.Point(6, 16);
-            this.pnlClouds.Name = "pnlClouds";
-            this.pnlClouds.Size = new System.Drawing.Size(86, 210);
-            this.pnlClouds.TabIndex = 4;
-            this.pnlClouds.Visible = false;
             // 
             // radCloud4
             // 
@@ -795,31 +829,6 @@
             this.radCloud0.UseVisualStyleBackColor = false;
             this.radCloud0.CheckedChanged += new System.EventHandler(this.RadioCloudCheckedChanged);
             // 
-            // pnlManholes
-            // 
-            this.pnlManholes.Controls.Add(this.chkManholeSelect);
-            this.pnlManholes.Controls.Add(this.btnDeleteManhole);
-            this.pnlManholes.Controls.Add(this.radManhole2);
-            this.pnlManholes.Controls.Add(this.radManhole1);
-            this.pnlManholes.Controls.Add(this.radManhole0);
-            this.pnlManholes.Location = new System.Drawing.Point(6, 19);
-            this.pnlManholes.Name = "pnlManholes";
-            this.pnlManholes.Size = new System.Drawing.Size(90, 210);
-            this.pnlManholes.TabIndex = 2;
-            this.pnlManholes.Visible = false;
-            // 
-            // chkManholeSelect
-            // 
-            this.chkManholeSelect.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkManholeSelect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.chkManholeSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.chkManholeSelect.Location = new System.Drawing.Point(38, 168);
-            this.chkManholeSelect.Name = "chkManholeSelect";
-            this.chkManholeSelect.Size = new System.Drawing.Size(24, 24);
-            this.chkManholeSelect.TabIndex = 5;
-            this.chkManholeSelect.Text = "1/2";
-            this.chkManholeSelect.UseVisualStyleBackColor = true;
-            // 
             // btnDeleteManhole
             // 
             this.btnDeleteManhole.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -877,31 +886,6 @@
             this.radManhole0.Tag = "0";
             this.radManhole0.UseVisualStyleBackColor = false;
             this.radManhole0.CheckedChanged += new System.EventHandler(this.RadioManholeCheckedChanged);
-            // 
-            // pnlDoors
-            // 
-            this.pnlDoors.Controls.Add(this.chkDoorSelect);
-            this.pnlDoors.Controls.Add(this.btnDeleteDoor);
-            this.pnlDoors.Controls.Add(this.radDoor2);
-            this.pnlDoors.Controls.Add(this.radDoor1);
-            this.pnlDoors.Controls.Add(this.radDoor0);
-            this.pnlDoors.Location = new System.Drawing.Point(6, 19);
-            this.pnlDoors.Name = "pnlDoors";
-            this.pnlDoors.Size = new System.Drawing.Size(94, 210);
-            this.pnlDoors.TabIndex = 3;
-            this.pnlDoors.Visible = false;
-            // 
-            // chkDoorSelect
-            // 
-            this.chkDoorSelect.Appearance = System.Windows.Forms.Appearance.Button;
-            this.chkDoorSelect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.chkDoorSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            this.chkDoorSelect.Location = new System.Drawing.Point(38, 168);
-            this.chkDoorSelect.Name = "chkDoorSelect";
-            this.chkDoorSelect.Size = new System.Drawing.Size(24, 24);
-            this.chkDoorSelect.TabIndex = 5;
-            this.chkDoorSelect.Text = "1/2";
-            this.chkDoorSelect.UseVisualStyleBackColor = true;
             // 
             // btnDeleteDoor
             // 
@@ -961,6 +945,22 @@
             this.radDoor0.UseVisualStyleBackColor = false;
             this.radDoor0.CheckedChanged += new System.EventHandler(this.RadioDoorCheckedChanged);
             // 
+            // gridControl
+            // 
+            this.gridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridControl.BackColor = System.Drawing.Color.Transparent;
+            this.gridControl.Image = ((System.Drawing.Image)(resources.GetObject("gridControl.Image")));
+            this.gridControl.Location = new System.Drawing.Point(43, 4);
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(445, 440);
+            this.gridControl.TabIndex = 3;
+            this.gridControl.TabStop = false;
+            this.gridControl.GridCellClick += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellClick);
+            this.gridControl.GridCellHover += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHover);
+            this.gridControl.GridCellHoverDown += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHoverDown);
+            // 
             // CrashmoStudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -973,11 +973,9 @@
             this.splitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             this.tbEditor.ResumeLayout(false);
             this.tbEditor.PerformLayout();
             this.grpThumb.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
             this.grpOptions.ResumeLayout(false);
             this.grpOptions.PerformLayout();
             this.pnlColors.ResumeLayout(false);
@@ -985,6 +983,8 @@
             this.pnlClouds.ResumeLayout(false);
             this.pnlManholes.ResumeLayout(false);
             this.pnlDoors.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picShow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1051,8 +1051,8 @@
         private System.Windows.Forms.Panel pnlSwitches;
         private System.Windows.Forms.Button btnDeleteSwitch;
         private System.Windows.Forms.RadioButton radSwitch3;
-        private System.Windows.Forms.RadioButton radSwitch1;
         private System.Windows.Forms.RadioButton radSwitch0;
+        private System.Windows.Forms.RadioButton radSwitch1;
         private System.Windows.Forms.RadioButton radSwitch2;
     }
 }

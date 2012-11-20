@@ -207,6 +207,13 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ico_lock {
+            get {
+                object obj = ResourceManager.GetObject("ico_lock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_magnifier {
             get {
                 object obj = ResourceManager.GetObject("ico_magnifier", resourceCulture);
@@ -266,6 +273,20 @@ namespace IntelligentLevelEditor.Properties {
         internal static System.Drawing.Bitmap ico_transparent {
             get {
                 object obj = ResourceManager.GetObject("ico_transparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_star_light {
+            get {
+                object obj = ResourceManager.GetObject("icon_star_light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_star_yellow {
+            get {
+                object obj = ResourceManager.GetObject("icon_star_yellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -347,9 +368,37 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap sprite_switch_down {
+            get {
+                object obj = ResourceManager.GetObject("sprite_switch_down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap sprite_switch_left {
+            get {
+                object obj = ResourceManager.GetObject("sprite_switch_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap sprite_switch_right {
+            get {
+                object obj = ResourceManager.GetObject("sprite_switch_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap sprite_switch_trans {
             get {
                 object obj = ResourceManager.GetObject("sprite_switch_trans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap sprite_switch_up {
+            get {
+                object obj = ResourceManager.GetObject("sprite_switch_up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

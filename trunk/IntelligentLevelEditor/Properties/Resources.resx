@@ -271,4 +271,25 @@
   <data name="sprite_switch_trans" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sprite_switch_trans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sprite_switch_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_switch_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_switch_left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_switch_left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_switch_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_switch_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sprite_switch_up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sprite_switch_up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_star_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_star_light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_star_yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_star_yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ico_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ico_lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

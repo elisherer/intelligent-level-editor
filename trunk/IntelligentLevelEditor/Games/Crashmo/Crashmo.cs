@@ -18,6 +18,15 @@ namespace IntelligentLevelEditor.Games.Crashmo
             Cloud = 5
         }
 
+        public enum SwitchDirection : byte
+        {
+            Right = 0,
+            Left = 1,
+            Up = 2,
+            Down = 4
+
+        }
+
         public enum CrashmoFlags : uint //TODO: Flags
         {
             Constant = 0x001,

@@ -97,6 +97,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
             const int qrPositionY = 34;
             const int crashmoPositionX = 4;
             const int crashmoPositionY = 34;
+            const int difficultyPositionX = cardWidth * 25 / 32;
+            const int difficultyPositionY = 3;
             var cardColor = new SolidBrush(Color.LightGoldenrodYellow);
 
             var img = new Bitmap(cardWidth, cardHeight);
@@ -117,14 +119,22 @@ namespace IntelligentLevelEditor.Games.Crashmo
             g.DrawLine(Pens.Black, cardRadius/2, cardHeight - 1, cardWidth - cardRadius/2, cardHeight - 1);
             g.DrawLine(Pens.Black, 0, cardRadius/2, 0, cardHeight - cardRadius/2);
             g.DrawLine(Pens.Black, cardWidth - 1, cardRadius/2, cardWidth - 1, cardHeight - cardRadius/2);
-            //draw strawberry
-            g.DrawImage(Resources.burger,cardWidth-80,qrPositionY-28);
+            //draw burger
+            g.DrawImage(Resources.burger,cardWidth*5/8,qrPositionY-28);
             //frames for the data
             g.DrawRectangle(Pens.Black, qrPositionX, qrPositionY, 193, 193);
             g.DrawRectangle(Pens.Black, crashmoPositionX, crashmoPositionY, 193, 193);
             //write name of crashmo
             var font = new Font("Arial", 18.0f, FontStyle.Bold);
-            g.DrawString(_data.Name, font, Brushes.Black, cardWidth / 2, crashmoPositionY / 2, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            g.DrawString(_data.Name, font, Brushes.Black, cardWidth * 11 / 32, crashmoPositionY / 2, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            //write name of author
+            font = new Font("Arial", 12.0f, FontStyle.Regular);
+            g.DrawString(_data.Author, font, Brushes.Black, cardWidth * 55 / 64, crashmoPositionY * 3 / 4, new StringFormat { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
+            //draw difficulty
+            for (var i = 0; i < 5; i++ )
+                g.DrawImage(i < (byte)_data.Difficulty ? Resources.icon_star_yellow : Resources.icon_star_light, difficultyPositionX + i * 13, difficultyPositionY);
+            if (_data.Locked)
+                g.DrawImage(Resources.ico_lock, 4, 4);
             //draw crashmo
             g.FillRectangle(Brushes.White, crashmoPositionX + 1, crashmoPositionY + 1, 192, 192);
             g.DrawImage(gridControl.CreatePreview(192, 192), crashmoPositionX+1, crashmoPositionY+1);
