@@ -27,7 +27,7 @@ todo
 || 0x06A || 6 || `byte[6]` || Zero padding ||
 || 0x070 || 4 || uint32 || Number of gadgets ||
 || 0x074 || 88 || `gadget[22]` || Gadgets array`**` ||
-|| 0x0CC || 512 || `byte[512]` || Level data (Rastered, bottom to top) ||
+|| 0x0CC || 512 || `byte[512]` || Level data (Rastered, Nibble-per-pixel, bottom to top) ||
 || 0x2CC || 1 || byte || Protection (4=locked, 3=open) ||
 || 0x2CD || 3 || `byte[3]` || Footer (=0xFAFF0f) ||
 || *0x2D0* || *720* || || *Summary* ||
@@ -35,3 +35,15 @@ todo
 `*`All strings are nullified so last wchar equals 0.
 
 `**`All gadgets are sorted by type (The flag will always be first).
+
+== Gadget struct ==
+
+|| *Offset* || *Size (bytes)* || *Type* || *Description* ||
+|| 0x000 || 2 || `uint16` || Position (x = bits 12..16 , y = bits 7..11 *negated*) ||
+|| 0x002 || 1 || `byte` || Type (1 = Flag, 2 = Manhole, 3 = Shift switches, 4 = Doors, 5 = Cloud)||
+|| 0x003 || 1 || `byte` || Flag`*` ||
+
+`*`Flag:
+  * For Manholes & Doors it's the color: 0=red, 1=yellow, 2=blue
+  * For Shift switches it's the direction: 0=right, 1=left, 2=up, 4=down
+  * Flag and clouds don't use the flag field 
