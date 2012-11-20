@@ -15,23 +15,23 @@ todo
 
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
 || 0x000 || 4 || <pre>char[4]</pre> || Magic (="MTUA") ||
-|| 0x004 || 4 || <nowiki>byte[4]</nowiki> || Custom CRC-32 (Still unknown) ||
+|| 0x004 || 4 || <pre>byte[4]</pre> || Custom CRC-32 (Still unknown) ||
 || 0x008 || 4 || uint32 || Always equals 7 ||
-|| 0x00C || 16 || <nowiki>byte[16]</nowiki> || Zeros ||
-|| 0x01C || 22 || <nowiki>wchar[11]</nowiki> || Author's name&#42; (UTF-16) ||
-|| 0x032 || 34 || <nowiki>wchar[17]</nowiki> || Level's name&#42; (UTF-16) ||
+|| 0x00C || 16 || <pre>byte[16]</pre> || Zeros ||
+|| 0x01C || 22 || <pre>wchar[11]</pre> || Author's name<pre>*</pre> (UTF-16) ||
+|| 0x032 || 34 || <pre>wchar[17]</pre> || Level's name<pre>*</pre> (UTF-16) ||
 || 0x054 || 1 || byte || Zero ||
 || 0x055 || 4 || uint32 || Difficulty ||
-|| 0x059 || 7 || <nowiki>byte[7]</nowiki> || Some signature (=0x042C0920010000)||
-|| 0x060 || 10 || <nowiki>byte[10]</nowiki> || Palette data ||
-|| 0x06A || 6 || <nowiki>byte[6]</nowiki> || Zero padding ||
+|| 0x059 || 7 || <pre>byte[7]</pre> || Some signature (=0x042C0920010000)||
+|| 0x060 || 10 || <pre>byte[10]</pre> || Palette data ||
+|| 0x06A || 6 || <pre>byte[6]</pre> || Zero padding ||
 || 0x070 || 4 || uint32 || Number of gadgets ||
-|| 0x074 || 88 || <nowiki>gadget[22]</nowiki> || Gadgets array** ||
-|| 0x0CC || 512 || <nowiki>byte[512]</nowiki> || Level data (Rastered, bottom to top) ||
+|| 0x074 || 88 || <pre>gadget[22]</pre> || Gadgets array** ||
+|| 0x0CC || 512 || <pre>byte[512]</pre> || Level data (Rastered, bottom to top) ||
 || 0x2CC || 1 || byte || Protection (4=locked, 3=open) ||
-|| 0x2CD || 3 || <nowiki>byte[3]</nowiki> || Footer (=0xFAFF0f) ||
+|| 0x2CD || 3 || <pre>byte[3]</pre> || Footer (=0xFAFF0f) ||
 || *0x2D0* || *720* || || *Summary* ||
 
-&#42;All strings are nullified so last wchar equals 0.
+<pre>*</pre>All strings are nullified so last wchar equals 0.
 
-&#42;&#42;All gadgets are sorted by type (The flag will always be first).
+<pre>**</pre>All gadgets are sorted by type (The flag will always be first).
