@@ -54,3 +54,7 @@ QR Version: 18 (L) - 89x89, 718 bytes
   * For Manholes & Doors it's the color: 0=red, 1=yellow, 2=blue
   * For Shift switches it's the direction: 0=right, 1=left, 2=up, 4=down
   * Flag and clouds don't use the flag field 
+
+== CRC-32 ==
+
+TBD
