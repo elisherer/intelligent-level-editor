@@ -1,4 +1,5 @@
 #summary Overview of the level editor
+#labels Featured
 
 = Introduction =
 
