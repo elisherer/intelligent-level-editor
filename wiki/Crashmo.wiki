@@ -14,23 +14,24 @@ todo
 *Endianess*: Little endian, Intel, Lowest byte first.
 
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
-|| 0x000 || 4 || char[4] || Magic (="MTUA") ||
-|| 0x004 || 4 || byte[4] || Custom CRC-32 (Still unknown) ||
+|| 0x000 || 4 || <nowiki>char[4]</nowiki> || Magic (="MTUA") ||
+|| 0x004 || 4 || <nowiki>byte[4]</nowiki> || Custom CRC-32 (Still unknown) ||
 || 0x008 || 4 || uint32 || Always equals 7 ||
-|| 0x00C || 16 || byte[16] || Zeros ||
-|| 0x01C || 22 || wchar[11] || Author's name* (UTF-16) ||
-|| 0x032 || 34 || wchar[17] || Level's name* (UTF-16) ||
+|| 0x00C || 16 || <nowiki>byte[16]</nowiki> || Zeros ||
+|| 0x01C || 22 || <nowiki>wchar[11]</nowiki> || Author's name&#42; (UTF-16) ||
+|| 0x032 || 34 || <nowiki>wchar[17]</nowiki> || Level's name&#42; (UTF-16) ||
 || 0x054 || 1 || byte || Zero ||
 || 0x055 || 4 || uint32 || Difficulty ||
-|| 0x059 || 7 || byte[7] || Some signature (=0x042C0920010000)||
-|| 0x060 || 10 || byte[10] || Palette data ||
-|| 0x06A || 6 || byte[6] || Zero padding ||
+|| 0x059 || 7 || <nowiki>byte[7]</nowiki> || Some signature (=0x042C0920010000)||
+|| 0x060 || 10 || <nowiki>byte[10]</nowiki> || Palette data ||
+|| 0x06A || 6 || <nowiki>byte[6]</nowiki> || Zero padding ||
 || 0x070 || 4 || uint32 || Number of gadgets ||
-|| 0x074 || 88 || gadget[22] || Gadgets array** ||
-|| 0x0CC || 512 || byte[512] || Level data (Rastered, bottom to top) ||
+|| 0x074 || 88 || <nowiki>gadget[22]</nowiki> || Gadgets array** ||
+|| 0x0CC || 512 || <nowiki>byte[512]</nowiki> || Level data (Rastered, bottom to top) ||
 || 0x2CC || 1 || byte || Protection (4=locked, 3=open) ||
-|| 0x2CD || 3 || byte[3] || Footer (=0xFAFF0f) ||
+|| 0x2CD || 3 || <nowiki>byte[3]</nowiki> || Footer (=0xFAFF0f) ||
 || *0x2D0* || *720* || || *Summary* ||
 
-*All strings are nullified so last wchar equals 0.
-**All gadgets are sorted by type (The flag will always be first).
+&#42;All strings are nullified so last wchar equals 0.
+
+&#42;&#42;All gadgets are sorted by type (The flag will always be first).
