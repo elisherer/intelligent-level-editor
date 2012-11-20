@@ -11,5 +11,5 @@ todo
 
 = Level Data =
 
-||* Offset *||* Size (bytes) *||* Description *||
+|| *Offset* || *Size (bytes)* || *Description* ||
 || 0x000 || 4 || Magic (="MTUA") ||
