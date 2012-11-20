@@ -33,8 +33,8 @@ QR Version: 18 (L) - 89x89, 718 bytes
 `**`Flags (Bit masks):
   * Protected = 0x002
   * Constant = 0x004
-  * UsesManholes = 0x100
-  * UsesSwitches = 0x200
+  * Uses Manholes = 0x100
+  * Uses Switches = 0x200
   * Large = 0x400
 
 == Gadget struct ==
@@ -47,7 +47,7 @@ QR Version: 18 (L) - 89x89, 718 bytes
 
 `*`Flag (Two nibbles `[first:second]`):
   * Flag: `[none:none]`
-  * PulloutSwitches: `[color_num:none]` (color from palette)
+  * Pullout Switches: `[color_num:none]` (color from palette)
   * Manholes: `[color:upsidedown]` (colors: 0-red, 1-blue. 2-yellow, 3-green, 4-purple)
 
 == CRC-32 ==
