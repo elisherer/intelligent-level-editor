@@ -14,7 +14,7 @@ todo
 *Endianess*: Little endian, Intel, Lowest byte first.
 
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
-|| 0x000 || 4 || <nowiki>char[4]</nowiki> || Magic (="MTUA") ||
+|| 0x000 || 4 || <pre>char[4]</pre> || Magic (="MTUA") ||
 || 0x004 || 4 || <nowiki>byte[4]</nowiki> || Custom CRC-32 (Still unknown) ||
 || 0x008 || 4 || uint32 || Always equals 7 ||
 || 0x00C || 16 || <nowiki>byte[16]</nowiki> || Zeros ||
