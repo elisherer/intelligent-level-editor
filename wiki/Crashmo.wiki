@@ -26,12 +26,12 @@ todo
 || 0x060 || 10 || <pre>byte[10]</pre> || Palette data ||
 || 0x06A || 6 || <pre>byte[6]</pre> || Zero padding ||
 || 0x070 || 4 || uint32 || Number of gadgets ||
-|| 0x074 || 88 || <pre>gadget[22]</pre> || Gadgets array** ||
+|| 0x074 || 88 || <pre>gadget[22]</pre> || Gadgets array`**` ||
 || 0x0CC || 512 || <pre>byte[512]</pre> || Level data (Rastered, bottom to top) ||
 || 0x2CC || 1 || byte || Protection (4=locked, 3=open) ||
-|| 0x2CD || 3 || <pre>byte[3]</pre> || Footer (=0xFAFF0f) ||
+|| 0x2CD || 3 || `byte[3]` || Footer (=0xFAFF0f) ||
 || *0x2D0* || *720* || || *Summary* ||
 
-<pre>*</pre>All strings are nullified so last wchar equals 0.
+`*`All strings are nullified so last wchar equals 0.
 
-<pre>**</pre>All gadgets are sorted by type (The flag will always be first).
+`**`All gadgets are sorted by type (The flag will always be first).
