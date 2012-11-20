@@ -18,8 +18,8 @@ todo
 || 0x004 || 4 || <pre>byte[4]</pre> || Custom CRC-32 (Still unknown) ||
 || 0x008 || 4 || uint32 || Always equals 7 ||
 || 0x00C || 16 || <pre>byte[16]</pre> || Zeros ||
-|| 0x01C || 22 || <pre>wchar[11]</pre> || Author's name<pre>*</pre> (UTF-16) ||
-|| 0x032 || 34 || <pre>wchar[17]</pre> || Level's name<pre>*</pre> (UTF-16) ||
+|| 0x01C || 22 || <pre>wchar[11]</pre> || Author's name`*` (UTF-16) ||
+|| 0x032 || 34 || <pre>wchar[17]</pre> || Level's name`*` (UTF-16) ||
 || 0x054 || 1 || byte || Zero ||
 || 0x055 || 4 || uint32 || Difficulty ||
 || 0x059 || 7 || <pre>byte[7]</pre> || Some signature (=0x042C0920010000)||
