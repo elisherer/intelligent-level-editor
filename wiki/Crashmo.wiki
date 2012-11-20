@@ -14,20 +14,20 @@ todo
 *Endianess*: Little endian, Intel, Lowest byte first.
 
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
-|| 0x000 || 4 || <pre>char[4]</pre> || Magic (="MTUA") ||
-|| 0x004 || 4 || <pre>byte[4]</pre> || Custom CRC-32 (Still unknown) ||
+|| 0x000 || 4 || `char[4]` || Magic (="MTUA") ||
+|| 0x004 || 4 || `byte[4]` || Custom CRC-32 (Still unknown) ||
 || 0x008 || 4 || uint32 || Always equals 7 ||
-|| 0x00C || 16 || <pre>byte[16]</pre> || Zeros ||
-|| 0x01C || 22 || <pre>wchar[11]</pre> || Author's name`*` (UTF-16) ||
-|| 0x032 || 34 || <pre>wchar[17]</pre> || Level's name`*` (UTF-16) ||
+|| 0x00C || 16 || `byte[16]` || Zeros ||
+|| 0x01C || 22 || `wchar[11]` || Author's name`*` (UTF-16) ||
+|| 0x032 || 34 || `wchar[17]` || Level's name`*` (UTF-16) ||
 || 0x054 || 1 || byte || Zero ||
 || 0x055 || 4 || uint32 || Difficulty ||
-|| 0x059 || 7 || <pre>byte[7]</pre> || Some signature (=0x042C0920010000)||
-|| 0x060 || 10 || <pre>byte[10]</pre> || Palette data ||
-|| 0x06A || 6 || <pre>byte[6]</pre> || Zero padding ||
+|| 0x059 || 7 || `byte[7]` || Some signature (=0x042C0920010000)||
+|| 0x060 || 10 || `byte[10]` || Palette data ||
+|| 0x06A || 6 || `byte[6]` || Zero padding ||
 || 0x070 || 4 || uint32 || Number of gadgets ||
-|| 0x074 || 88 || <pre>gadget[22]</pre> || Gadgets array`**` ||
-|| 0x0CC || 512 || <pre>byte[512]</pre> || Level data (Rastered, bottom to top) ||
+|| 0x074 || 88 || `gadget[22]` || Gadgets array`**` ||
+|| 0x0CC || 512 || `byte[512]` || Level data (Rastered, bottom to top) ||
 || 0x2CC || 1 || byte || Protection (4=locked, 3=open) ||
 || 0x2CD || 3 || `byte[3]` || Footer (=0xFAFF0f) ||
 || *0x2D0* || *720* || || *Summary* ||
