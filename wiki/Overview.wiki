@@ -1,5 +1,4 @@
 #summary Overview of the level editor
-#sidebar TableOfContents
 
 = Introduction =
 
