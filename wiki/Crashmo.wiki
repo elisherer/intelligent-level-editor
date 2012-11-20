@@ -55,6 +55,8 @@ QR Version: 18 (L) - 89x89, 718 bytes
   * For Shift switches it's the direction: 0=right, 1=left, 2=up, 4=down
   * Flag and clouds don't use the flag field 
 
+Note: There can be only 22 gadgets (1 flag, 6 manholes, 6 doors, 4 switches & 5 clouds).
+
 == CRC-32 ==
 
 TBD
