@@ -6,6 +6,10 @@ Crashmo the sequel to pushmo continues with almost the same structure as Pushmo 
 
 = QR Data =
 
+*Endianess*: Little endian, Intel, Lowest byte first.
+
+QR Version: 18 (L) - 89x89, 718 bytes
+
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
 || 0x000 || 4 || `uint32` || Magic number (=0x00000AAD) ||
 || 0x004 || 4 || `uint32` || Might be version (=0x00000001) ||
