@@ -8,3 +8,8 @@ todo
 = Details =
 
 todo
+
+= Level Data =
+
+!! Offset !! Size !! Description
+|| 0 || 4 || MTUA
