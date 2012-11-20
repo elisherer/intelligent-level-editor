@@ -25,7 +25,7 @@ QR Version: 18 (L) - 89x89, 718 bytes
 || 0x09C || 20 || `byte[20]` || Garbage ||
 || 0x0B0 ||  4 || `uint32` || Flags`**` ||
 || 0x0B4 || 26 || `byte[26]` || FFs (0xFFFF...) ||
-|| 0x0CE || 512 || `byte[512]` || Level data (MipMaped, Nibble-per-pixel) ||
+|| 0x0CE || 512 || `byte[512]` || Level data (Mip-Mapped, Nibble-per-pixel) ||
 || *0x2CE* || *718* || || *Summary* ||
 
 `*`All strings are nullified so last wchar equals 0.
