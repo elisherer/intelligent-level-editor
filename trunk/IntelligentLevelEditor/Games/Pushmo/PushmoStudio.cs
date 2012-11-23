@@ -353,7 +353,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         private void btnEditPalette_Click(object sender, EventArgs e)
         {
-            var pe = new PaletteEditor(_pData.PaletteData);
+            var pe = new PaletteEditor(_pData.PaletteData,_color);
             if (pe.ShowDialog() != DialogResult.OK) return;
             var result = pe.GetResult();
             Buffer.BlockCopy(result, 0, gridControl.Palette, 0, result.Length);

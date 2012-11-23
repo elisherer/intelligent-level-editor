@@ -53,3 +53,5 @@ d:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\GenerateRes
 d:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.resources
 D:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.Crashmo.CrashmoStudio.resources
+D:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.resources
+D:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.Crashmo.CrashmoStudio.resources

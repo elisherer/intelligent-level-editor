@@ -10,7 +10,7 @@ namespace IntelligentLevelEditor
         private readonly byte[] _palette = new byte[10];
         private RadioButton _selectedRadio;
 
-        public PaletteEditor(byte[] paletteData)
+        public PaletteEditor(byte[] paletteData, int selectedIndex = 0)
         {
             InitializeComponent();
             Buffer.BlockCopy(paletteData, 0, _palette, 0, 10);
@@ -25,7 +25,52 @@ namespace IntelligentLevelEditor
             radColor8.BackColor = Pushmo.PushmoColorPalette.Entries[_palette[8]];
             radColor9.BackColor = Pushmo.PushmoColorPalette.Entries[_palette[9]];
 
-            _selectedRadio = radColor0;
+            switch (selectedIndex)
+            {
+                case 0:
+                    _selectedRadio = radColor0;
+                    radColor0.Checked = true;
+                    break;
+                case 1:
+                    _selectedRadio = radColor1;
+                    radColor1.Checked = true;
+                    break;
+                case 2:
+                    _selectedRadio = radColor2;
+                    radColor2.Checked = true;
+                    break;
+                case 3:
+                    _selectedRadio = radColor3;
+                    radColor3.Checked = true;
+                    break;
+                case 4:
+                    _selectedRadio = radColor4;
+                    radColor4.Checked = true;
+                    break;
+                case 5:
+                    _selectedRadio = radColor5;
+                    radColor5.Checked = true;
+                    break;
+                case 6:
+                    _selectedRadio = radColor6;
+                    radColor6.Checked = true;
+                    break;
+                case 7:
+                    _selectedRadio = radColor7;
+                    radColor7.Checked = true;
+                    break;
+                case 8:
+                    _selectedRadio = radColor8;
+                    radColor8.Checked = true;
+                    break;
+                case 9:
+                    _selectedRadio = radColor9;
+                    radColor9.Checked = true;
+                    break;
+
+            }
+
+            
 
             DrawPalettes(_palette[_selectedRadio.TabIndex]);
         }
