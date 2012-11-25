@@ -59,4 +59,7 @@ Note: There can be only 22 gadgets (1 flag, 6 manholes, 6 doors, 4 switches & 5 
 
 == CRC-32 ==
 
-TBD
+  * Poly: 0x04C11DB7
+  * XOR in: 0x00000000
+  * XOR out: 0x45B54367
+  * No reflection
