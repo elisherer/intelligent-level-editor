@@ -22,7 +22,7 @@ QR Version: 18 (L) - 89x89, 718 bytes
 
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
 || 0x000 ||  4 || `char[4]` || Magic (="MTUA") ||
-|| 0x004 ||  4 || `byte[4]` || Custom CRC-32 (Still unknown) ||
+|| 0x004 ||  4 || `byte[4]` || Custom CRC-32 (over 0x0008-0x02CC) ||
 || 0x008 ||  4 || `uint32` || Always equals 7 ||
 || 0x00C || 16 || `byte[16]` || Zeros ||
 || 0x01C || 22 || `wchar[11]` || Author's name`*` (UTF-16) ||
