@@ -57,6 +57,7 @@ namespace IntelligentLevelEditor
             this.stripPosition = new System.Windows.Forms.ToolStripStatusLabel();
             this.bwCheckForUpdates = new System.ComponentModel.BackgroundWorker();
             this.pnlEditor = new System.Windows.Forms.Panel();
+            this.menuQRCodeCapture = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -156,6 +157,7 @@ namespace IntelligentLevelEditor
             // 
             this.menuQRCode.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuQRCodeRead,
+            this.menuQRCodeCapture,
             this.menuQRCodeSep0,
             this.menuQRCodeMake,
             this.menuQRCodeMakeCard});
@@ -167,14 +169,14 @@ namespace IntelligentLevelEditor
             // 
             this.menuQRCodeRead.Image = global::IntelligentLevelEditor.Properties.Resources.ico_folder_picture;
             this.menuQRCodeRead.Name = "menuQRCodeRead";
-            this.menuQRCodeRead.Size = new System.Drawing.Size(208, 22);
+            this.menuQRCodeRead.Size = new System.Drawing.Size(210, 22);
             this.menuQRCodeRead.Text = "&Read from image...";
             this.menuQRCodeRead.Click += new System.EventHandler(this.menuQRCodeRead_Click);
             // 
             // menuQRCodeSep0
             // 
             this.menuQRCodeSep0.Name = "menuQRCodeSep0";
-            this.menuQRCodeSep0.Size = new System.Drawing.Size(205, 6);
+            this.menuQRCodeSep0.Size = new System.Drawing.Size(207, 6);
             // 
             // menuQRCodeMake
             // 
@@ -182,7 +184,7 @@ namespace IntelligentLevelEditor
             this.menuQRCodeMake.Image = global::IntelligentLevelEditor.Properties.Resources.ico_barcode2d;
             this.menuQRCodeMake.Name = "menuQRCodeMake";
             this.menuQRCodeMake.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.menuQRCodeMake.Size = new System.Drawing.Size(208, 22);
+            this.menuQRCodeMake.Size = new System.Drawing.Size(210, 22);
             this.menuQRCodeMake.Text = "Make &QR Code...";
             this.menuQRCodeMake.Click += new System.EventHandler(this.menuQRCodeMake_Click);
             // 
@@ -191,7 +193,7 @@ namespace IntelligentLevelEditor
             this.menuQRCodeMakeCard.Enabled = false;
             this.menuQRCodeMakeCard.Image = global::IntelligentLevelEditor.Properties.Resources.ico_layout_content;
             this.menuQRCodeMakeCard.Name = "menuQRCodeMakeCard";
-            this.menuQRCodeMakeCard.Size = new System.Drawing.Size(208, 22);
+            this.menuQRCodeMakeCard.Size = new System.Drawing.Size(210, 22);
             this.menuQRCodeMakeCard.Text = "&Make a QR Card...";
             this.menuQRCodeMakeCard.Click += new System.EventHandler(this.menuQRCodeMakeCard_Click);
             // 
@@ -278,6 +280,13 @@ namespace IntelligentLevelEditor
             this.pnlEditor.Size = new System.Drawing.Size(744, 456);
             this.pnlEditor.TabIndex = 4;
             // 
+            // menuQRCodeCapture
+            // 
+            this.menuQRCodeCapture.Name = "menuQRCodeCapture";
+            this.menuQRCodeCapture.Size = new System.Drawing.Size(210, 22);
+            this.menuQRCodeCapture.Text = "&Capture from Webcam...";
+            this.menuQRCodeCapture.Click += new System.EventHandler(this.menuQRCodeCapture_Click);
+            // 
             // FormEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,6 +337,7 @@ namespace IntelligentLevelEditor
         private System.Windows.Forms.ToolStripSeparator menuHelpSep0;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.Panel pnlEditor;
+        private System.Windows.Forms.ToolStripMenuItem menuQRCodeCapture;
 
     }
 }

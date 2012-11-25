@@ -213,6 +213,15 @@ namespace IntelligentLevelEditor
             }
         }
 
+        private void menuQRCodeCapture_Click(object sender, EventArgs e)
+        {
+            var byteArray = CameraCapture.GetByteArray();
+            if (byteArray != null)
+            {
+                ReadByteArray(byteArray);
+            }
+        }
+
         private ByteMatrix GetQRMatrix(int size)
         {
             
