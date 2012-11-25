@@ -1,7 +1,7 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.Designer.cs" caret="16090" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.Designer.cs" caret="16590" fromTop="15" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.Designer.cs" caret="0" fromTop="0" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="15" fromTop="1" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.Designer.cs" caret="75" fromTop="2" />
@@ -22,42 +22,47 @@
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoLevelData.cs" caret="1981" fromTop="58" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="526" fromTop="4" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="11979" fromTop="4" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="4891" fromTop="145" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="15578" fromTop="20" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="16767" fromTop="15" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="379" fromTop="10" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.resx" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebcamEventArgs.cs" caret="200" fromTop="7" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.Designer.cs" caret="4994" fromTop="64" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="4894" fromTop="20" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="7969" fromTop="38" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="1433" fromTop="15" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="587" fromTop="18" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="574" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="6726" fromTop="22" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="6697" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="57955" fromTop="49" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="6295" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="4889" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="526" fromTop="19" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="24326" fromTop="128" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="5441" fromTop="17" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="6085" fromTop="25" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="3162" fromTop="11" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="4125" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="4966" fromTop="26" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="2420" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="6041" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="4952" fromTop="15" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2897" fromTop="39" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2788" fromTop="40" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2639" fromTop="36" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2490" fromTop="32" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2341" fromTop="28" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2192" fromTop="24" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2043" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="1894" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="1745" fromTop="12" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="1596" fromTop="8" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="379" fromTop="10" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="15578" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="16911" fromTop="19" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="25" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="20" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="24" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="30" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="12" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="28" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="34" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="7795" fromTop="297" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebcamEventArgs.cs" caret="39" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebcamEventArgs.cs" caret="241" fromTop="8" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="1714" fromTop="22" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="2186" fromTop="21" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="1884" fromTop="19" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="4894" fromTop="20" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="2429" fromTop="30" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="5814" fromTop="20" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="391" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="1612" fromTop="31" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="1107" fromTop="26" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="509" fromTop="20" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="2604" fromTop="20" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="13001" fromTop="33" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="11932" fromTop="4" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="7969" fromTop="31" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="7941" fromTop="35" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="1541" fromTop="26" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="2518" fromTop="20" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="1915" fromTop="24" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -65,10 +70,10 @@
       <Item value="Pushmo" priority="71" />
       <Item value="static" priority="63" />
       <Item value="int" priority="319" />
-      <Item value="if" priority="511" />
+      <Item value="if" priority="543" />
       <Item value="DesignMode" priority="95" />
-      <Item value="return" priority="351" />
-      <Item value="public" priority="703" />
+      <Item value="return" priority="383" />
+      <Item value="public" priority="735" />
       <Item value="struct" priority="31" />
       <Item value="byte" priority="1431" />
       <Item value="IntelligentPosition`0" priority="58" />
@@ -76,7 +81,7 @@
       <Item value="clouds" priority="31" />
       <Item value="Doors" priority="95" />
       <Item value="doors" priority="31" />
-      <Item value="bool" priority="63" />
+      <Item value="bool" priority="95" />
       <Item value="intelligentPalette" priority="90" />
       <Item value="IntelligentLevelSize" priority="31" />
       <Item value="string" priority="191" />
@@ -85,8 +90,8 @@
       <Item value="private" priority="319" />
       <Item value="_game" priority="127" />
       <Item value="value" priority="63" />
-      <Item value="var" priority="831" />
-      <Item value="new" priority="703" />
+      <Item value="var" priority="863" />
+      <Item value="new" priority="736" />
       <Item value="GameSelect" priority="29" />
       <Item value="gameSelect" priority="63" />
       <Item value="OK" priority="16" />
@@ -230,6 +235,20 @@
       <Item value="difficultyPositionY" priority="31" />
       <Item value="selectedIndex" priority="31" />
       <Item value="radColor0" priority="31" />
+      <Item value="WebCam" priority="31" />
+      <Item value="WebCamCapture`0" priority="26" />
+      <Item value="WebCamCapture" priority="29" />
+      <Item value="CameraCapture" priority="29" />
+      <Item value="webcamCapture" priority="112" />
+      <Item value="System" priority="31" />
+      <Item value="Console`0" priority="26" />
+      <Item value="excep" priority="31" />
+      <Item value="MessageBoxButtons`0" priority="26" />
+      <Item value="MessageBoxIcon`0" priority="26" />
+      <Item value="MessageBoxDefaultButton`0" priority="26" />
+      <Item value="DialogResult" priority="80" />
+      <Item value="CameraCapture`0" priority="31" />
+      <Item value="byteArray" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
       <Item value="Image" priority="80" />
@@ -408,6 +427,31 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.RadioButton">
       <Item value="Checked" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IntelligentLevelEditor.CameraCapture">
+      <Item value="Show`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IntelligentLevelEditor.WebCam.WebCamCapture">
+      <Item value="Start`0" priority="26" />
+      <Item value="CaptureWidth" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxButtons">
+      <Item value="YesNo" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxIcon">
+      <Item value="Question" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBoxDefaultButton">
+      <Item value="Button1" priority="22" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@IntelligentLevelEditor.CameraCapture">
+      <Item value="GetByteArray`0" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>
