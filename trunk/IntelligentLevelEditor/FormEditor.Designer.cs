@@ -43,6 +43,7 @@ namespace IntelligentLevelEditor
             this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQRCode = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQRCodeRead = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQRCodeCapture = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQRCodeSep0 = new System.Windows.Forms.ToolStripSeparator();
             this.menuQRCodeMake = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQRCodeMakeCard = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +58,6 @@ namespace IntelligentLevelEditor
             this.stripPosition = new System.Windows.Forms.ToolStripStatusLabel();
             this.bwCheckForUpdates = new System.ComponentModel.BackgroundWorker();
             this.pnlEditor = new System.Windows.Forms.Panel();
-            this.menuQRCodeCapture = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -173,6 +173,13 @@ namespace IntelligentLevelEditor
             this.menuQRCodeRead.Text = "&Read from image...";
             this.menuQRCodeRead.Click += new System.EventHandler(this.menuQRCodeRead_Click);
             // 
+            // menuQRCodeCapture
+            // 
+            this.menuQRCodeCapture.Name = "menuQRCodeCapture";
+            this.menuQRCodeCapture.Size = new System.Drawing.Size(210, 22);
+            this.menuQRCodeCapture.Text = "&Capture from Webcam...";
+            this.menuQRCodeCapture.Click += new System.EventHandler(this.menuQRCodeCapture_Click);
+            // 
             // menuQRCodeSep0
             // 
             this.menuQRCodeSep0.Name = "menuQRCodeSep0";
@@ -241,6 +248,7 @@ namespace IntelligentLevelEditor
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
             this.testToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.testToolStripMenuItem.Text = "Test";
+            this.testToolStripMenuItem.Visible = false;
             this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // statusStrip
@@ -279,13 +287,6 @@ namespace IntelligentLevelEditor
             this.pnlEditor.Name = "pnlEditor";
             this.pnlEditor.Size = new System.Drawing.Size(744, 456);
             this.pnlEditor.TabIndex = 4;
-            // 
-            // menuQRCodeCapture
-            // 
-            this.menuQRCodeCapture.Name = "menuQRCodeCapture";
-            this.menuQRCodeCapture.Size = new System.Drawing.Size(210, 22);
-            this.menuQRCodeCapture.Text = "&Capture from Webcam...";
-            this.menuQRCodeCapture.Click += new System.EventHandler(this.menuQRCodeCapture_Click);
             // 
             // FormEditor
             // 

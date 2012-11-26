@@ -224,14 +224,16 @@ namespace IntelligentLevelEditor.Games.Crashmo
                 _pData.Utilities[i++] = utility.UnFix();
             foreach (var utility in gridControl.Clouds.Where(utility => utility != null))
                 _pData.Utilities[i++] = utility.UnFix();
-            while (i < _pData.Utilities.Length)
-                _pData.Utilities[i++] = new Crashmo.CrashmoPosition();
 
             _pData.UtilitiesLength = i;
 
+            //fill the rest
+            while (i < _pData.Utilities.Length)
+                _pData.Utilities[i++] = new Crashmo.CrashmoPosition();
+
             //wrapping up
             var data = MarshalUtil.StructureToByteArray(_pData);
-            var crc = Crashmo.CustomCrc32(data, 0x8, 0x2C8);
+            var crc = Crashmo.CustomCrc32(data, 0x8, 0x2C4);
             Buffer.BlockCopy(crc, 0, _pData.CustomCrc32, 0, 4);
         }
 
@@ -320,7 +322,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
                         }
                     break;
                 case ToolMode.Switch:
-                    var flag = (byte) (_switch == 3 ? 4 : _switch);
+                    var flag = (byte) (_switch == 3 ? 4 : _switch == 2 ? 5 : _switch);
                     gridControl.Switches[_switch] = new CrashmoGridControl.CrashmoFixedPosition((byte)x, (byte)y, (byte)Crashmo.PosType.Switch, flag);
                     break;
                 case ToolMode.Door:

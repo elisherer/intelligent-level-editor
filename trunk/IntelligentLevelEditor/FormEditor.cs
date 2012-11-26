@@ -281,7 +281,7 @@ namespace IntelligentLevelEditor
             try
             {
                 _remoteVer = @"<Error: Couldn't parse the version number>";
-                var request = (HttpWebRequest)WebRequest.Create("http://pushmoleveleditor.googlecode.com/svn/trunk/PushmoLevelEditor/Properties/AssemblyInfo.cs");
+                var request = (HttpWebRequest)WebRequest.Create("http://intelligent-level-editor.googlecode.com/svn/trunk/IntelligentLevelEditor/Properties/AssemblyInfo.cs");
                 var responseStream = request.GetResponse().GetResponseStream();
                 if (responseStream == null) return;
                 var reader = new StreamReader(responseStream);
@@ -311,7 +311,7 @@ namespace IntelligentLevelEditor
         private void bwCheckForUpdates_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (IsNewerAvailable(_remoteVer))
-                MessageBox.Show(string.Format(@"This version is v{0}\nThe version on the server is v{1}\nYou might want to download a newer version.", Application.ProductVersion, _remoteVer));
+                MessageBox.Show(string.Format(@"This version is v{0}" + Environment.NewLine + "The version on the server is v{1}" + Environment.NewLine + "You might want to download a newer version.", Application.ProductVersion, _remoteVer));
             else if (_checkNow)
                 MessageBox.Show(string.Format(@"v{0} is the latest version.", Application.ProductVersion));
         }
