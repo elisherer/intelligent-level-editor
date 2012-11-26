@@ -23,9 +23,9 @@ QR Version: Not specific
 = Level Data =
 
 It ends with a block starting with 0x05 of 3 strings. Each string starts with a size byte and then the string in UTF-16 encoding (not nulled).
-  1. Name of formee
-  2. Catchphrase
-  3. Author
+  # Name of formee
+  # Catchphrase
+  # Author
 
 What we should find out:
 
