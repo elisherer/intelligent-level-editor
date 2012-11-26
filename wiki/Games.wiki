@@ -1,6 +1,0 @@
-#summary Games
-
-== The list of supported games ==
-
-  # Pushmo / Pullblox
-  # Crashmo / Fallblox 
