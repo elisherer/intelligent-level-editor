@@ -27,7 +27,6 @@ D:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Prope
 D:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.PaletteEditor.resources
 D:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\GenerateResource.write.1.tlog
-D:\dev\3DS\ile\IntelligentLevelEditor\bin\Debug\en-US.ini
 D:\dev\3DS\ile\IntelligentLevelEditor\bin\Debug\ile.exe
 D:\dev\3DS\ile\IntelligentLevelEditor\bin\Debug\ile.pdb
 D:\dev\3DS\ile\IntelligentLevelEditor\bin\Debug\zxing.dll
@@ -57,3 +56,5 @@ D:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\Intelligent
 D:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.Crashmo.CrashmoStudio.resources
 d:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.CameraCapture.resources
 d:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.WebCam.WebCamCapture.resources
+d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.CameraCapture.resources
+d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.WebCam.WebCamCapture.resources

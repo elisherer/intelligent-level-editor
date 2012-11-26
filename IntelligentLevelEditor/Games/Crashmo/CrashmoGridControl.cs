@@ -99,7 +99,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
                         Manholes[mhidx] = new CrashmoFixedPosition(cData.Utilities[i]);
                         break;
                     case 3:
-                        var swidx = cData.Utilities[i].Flags == 4 ? 3 : cData.Utilities[i].Flags;
+                        var swidx = cData.Utilities[i].Flags == 4 ? 3 : cData.Utilities[i].Flags == 5 ? 2 : cData.Utilities[i].Flags;
                         Switches[swidx] = new CrashmoFixedPosition(cData.Utilities[i]);
                         break;
                     case 4:

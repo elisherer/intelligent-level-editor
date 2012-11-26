@@ -22,9 +22,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
         {
             Right = 0,
             Left = 1,
-            Up = 2,
-            Down = 4
-
+            Down = 4,
+            Up = 5
         }
 
         public enum CrashmoFlags : uint //TODO: Flags
@@ -40,7 +39,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
             public byte Type; // 1 = flag, 2 = manhole, 3 = switch, 4 = door, 5 = cloud
             public byte Flags;
             // for manholes & doors it's the color 0=red, 1=yellow...
-            // for shiftswitches it's the color (1st nibble) from the palette, 2nd nibble = direction (push, pull, left, right).
+            // for switches it's the direction (0=right, 1=left, 4=down, 5=up).
             // for flag & clouds it's nothing
         }
 
@@ -193,11 +192,11 @@ namespace IntelligentLevelEditor.Games.Crashmo
             return pd;
         }
 
-        //todo: crashmo crc32 
+        //Found by me: elisherer :)
         public static byte[] CustomCrc32(byte[] data, int start, int len)
         {
             const ulong poly = 0x04C11DB7;
-            const ulong xorout = 0xD87A2314;
+            const ulong xorout = 0x45B54367;
             ulong crc = 0;
 
             for (var i = start; i < start + len; i++)
