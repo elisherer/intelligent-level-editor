@@ -10,7 +10,7 @@
 
 *Endianess*: Little endian, Intel, Lowest byte first.
 
-QR Version: 18 (L) - 89x89, 718 bytes
+QR Version: Not specific
 
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
 || 0x000 || 4 || `char[4]` || Magic (='3DCT') ||
