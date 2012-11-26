@@ -1,5 +1,5 @@
 #summary Pushmo / Pullblox
-
+<wiki:toc />
 = Introduction =
 
 Pushmo, the 3D puzzle made by Intelligent Systems (with Nintendo) is a great puzzle using QR codes to import/export levels.
