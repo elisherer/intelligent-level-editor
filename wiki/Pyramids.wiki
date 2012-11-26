@@ -18,7 +18,7 @@ QR Version: Not specific
 
 || *Offset* || *Size (bytes)* || *Type* || *Description* ||
 || 0x000 ||  1 || `byte` || Magic (=1, any other value will freeze the game) ||
-|| 0x001 ||  1 || `byte` || Background (between 0 and 4, over 5 will freeze the game) ||
+|| 0x001 ||  1 || `byte` || Background (between 0 and 4, over 4 will freeze the game) ||
 || 0x002 ||  160 || `byte[160]` || Level data ||
 || 0x0A2 ||  4 || `uint32` || Par time ||
 || 0x0A6 ||  4 || `uint32` || Custom CRC-32 (CCITT, over 0x00-0xA6) ||
