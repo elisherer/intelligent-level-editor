@@ -1,4 +1,5 @@
 #summary Crashmo / Fallblox
+<wiki:toc />
 
 = Introduction =
 
