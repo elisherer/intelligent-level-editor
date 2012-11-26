@@ -1,9 +1,9 @@
 #summary Sidebar
 
   * [Overview Overview]
-  * [Games Games]
+  * Games
     * [Pushmo Pushmo]
     * [Crashmo Crashmo]
-  * Not Published yet
+  * Games - Not in the editor
     * [FreakyForms]
     * [Pyramids]
