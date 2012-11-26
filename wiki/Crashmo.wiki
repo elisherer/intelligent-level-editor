@@ -1,9 +1,9 @@
 #summary Crashmo / Fallblox
-<wiki:toc />
-
 = Introduction =
 
 Crashmo, the sequel to Pushmo continues with almost the same structure as Pushmo with some changes, introducing compression of LZ-10, typical to Nintendo's games.
+
+<wiki:toc />
 
 = QR Data =
 
