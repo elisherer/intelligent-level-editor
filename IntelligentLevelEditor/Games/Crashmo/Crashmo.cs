@@ -32,6 +32,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
             Large = 0x002
         }
 
+        public const int TransparentIndex = 0x0;
+
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
         public struct CrashmoPosition
         {
