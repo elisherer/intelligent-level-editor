@@ -43,7 +43,6 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         public void NewData()
         {
-            Parent.Text = Application.ProductName + @" v." + Application.ProductVersion;
             _pData = Crashmo.EmptyCrashmoData();
             UpdateGui();
         }
@@ -70,16 +69,6 @@ namespace IntelligentLevelEditor.Games.Crashmo
             var compressedSizeBytes = BitConverter.GetBytes(compressedSize);
             Buffer.BlockCopy(compressedSizeBytes, 0, qrData, 8, 4);
             return qrData;
-        }
-
-        public byte[] GetPalette()
-        {
-            return gridControl.Palette;
-        }
-
-        public byte[][] GetBitmap()
-        {
-            return gridControl.Bitmap;
         }
 
         public void RefreshUI()
@@ -147,21 +136,6 @@ namespace IntelligentLevelEditor.Games.Crashmo
                         g.FillRectangle(Brushes.Black, qrPositionX - 3 + x * 2, qrPositionY - 3 + y * 2, 2, 2);
             g.Dispose();
             return img;
-        }
-
-        public ColorPalette GetAvailableColorPalette()
-        {
-            return Crashmo.CrashmoColorPalette;
-        }
-
-        public int GetAvailableColorPaletteSize()
-        {
-            return Crashmo.CrashmoColorPaletteSize;
-        }
-
-        public byte GetTransparentIndex()
-        {
-            return 0;
         }
 
         #endregion
@@ -341,7 +315,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         private void GridControlGridCellHover(int x, int y)
         {
-            _statusStrip.Text = @"Position: (" + x + @"," + y + @")";
+            _statusStrip.Items[1].Text = @"Position: (" + x + @"," + y + @")";
         }
 
         #endregion
@@ -507,6 +481,19 @@ namespace IntelligentLevelEditor.Games.Crashmo
                     utility.Y = (byte)(utility.Y == Crashmo.BitmapSize - 1 ? 0 : utility.Y + 1);
             }
             RefreshGui();
+        }
+
+        private void tbtnImportTool_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog { Filter = ImageImporter.SupportedFiles };
+            if (ofd.ShowDialog() != DialogResult.OK) return;
+            var image = Image.FromFile(ofd.FileName);
+            ImageImporter.Import(
+                new Bitmap(image),
+                Crashmo.CrashmoColorPalette, Crashmo.CrashmoColorPaletteSize,
+                gridControl.Bitmap, gridControl.Palette, Crashmo.TransparentIndex
+            );
+            RefreshUI();
         }
 
 

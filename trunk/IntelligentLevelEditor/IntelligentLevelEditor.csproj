@@ -147,6 +147,26 @@
     <Compile Include="Games\Pushmo\PushmoStudio.Designer.cs">
       <DependentUpon>PushmoStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Games\Pyramids\FormEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Games\Pyramids\FormEditor.Designer.cs">
+      <DependentUpon>FormEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Games\Pyramids\PyramidsGridControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Games\Pyramids\PyramidsGridControl.Designer.cs">
+      <DependentUpon>PyramidsGridControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Games\Pyramids\MakeQRCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Games\Pyramids\MakeQRCardForm.Designer.cs">
+      <DependentUpon>MakeQRCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Games\Pyramids\Pyramids.cs" />
+    <Compile Include="Games\StudioManager.cs" />
     <Compile Include="ImageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +230,15 @@
     <EmbeddedResource Include="Games\Pushmo\PushmoStudio.resx">
       <DependentUpon>PushmoStudio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Games\Pyramids\FormEditor.resx">
+      <DependentUpon>FormEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\Pyramids\PyramidsGridControl.resx">
+      <DependentUpon>PyramidsGridControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\Pyramids\MakeQRCardForm.resx">
+      <DependentUpon>MakeQRCardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageBox.resx">
       <DependentUpon>ImageBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,7 +278,6 @@
     <None Include="Resources\tool_pencil.png" />
     <None Include="Resources\tool_pipette.png" />
     <None Include="Resources\tool_flag.png" />
-    <Content Include="burger.ico" />
     <None Include="Resources\tool_fill.png" />
     <None Include="Resources\burger.png" />
     <None Include="Resources\sprite_door_blue.png" />
@@ -302,11 +330,70 @@
     <None Include="Resources\icon_star_light.png" />
     <None Include="Resources\icon_star_yellow.png" />
     <None Include="Resources\ico_lock.png" />
-    <Content Include="strawberry.ico" />
+    <None Include="Resources\tool_import.png" />
+    <None Include="Resources\Pyramids\pyramids_back1.jpg" />
+    <None Include="Resources\Pyramids\pyramids_back2.jpg" />
+    <None Include="Resources\Pyramids\pyramids_back3.jpg" />
+    <None Include="Resources\Pyramids\pyramids_back4.jpg" />
+    <None Include="Resources\Pyramids\pyramids_back5.jpg" />
+    <None Include="Resources\Pyramids\pyramids_logo.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_00.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_0A.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_0B.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_0C.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_0D.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_0E.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_0F.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_01.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_1A.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_1B.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_1C.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_1D.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_1E.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_1F.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_02.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_2A.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_2B.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_2C.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_2D.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_2E.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_2F.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_03.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_04.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_05.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_06.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_07.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_08.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_09.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_10.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_11.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_12.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_13.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_14.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_15.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_16.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_17.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_18.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_19.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_20.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_21.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_22.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_23.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_24.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_25.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_26.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_27.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_28.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_29.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_30.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_31.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_32.png" />
+    <None Include="Resources\Pyramids\pyramids_sprite_33.png" />
     <None Include="Resources\strawberry.png" />
     <None Include="Resources\ico_grid.png" />
     <None Include="Resources\pushmoPalette.gif" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

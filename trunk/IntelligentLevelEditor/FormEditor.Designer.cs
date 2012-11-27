@@ -38,8 +38,6 @@ namespace IntelligentLevelEditor
             this.menuFileSave = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFileSep0 = new System.Windows.Forms.ToolStripSeparator();
-            this.menuFileImport = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileSep1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQRCode = new System.Windows.Forms.ToolStripMenuItem();
             this.menuQRCodeRead = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,8 +81,6 @@ namespace IntelligentLevelEditor
             this.menuFileSave,
             this.menuFileSaveAs,
             this.menuFileSep0,
-            this.menuFileImport,
-            this.menuFileSep1,
             this.menuFileExit});
             this.menuFile.Name = "menuFile";
             this.menuFile.Size = new System.Drawing.Size(36, 20);
@@ -95,7 +91,7 @@ namespace IntelligentLevelEditor
             this.menuFileNew.Image = global::IntelligentLevelEditor.Properties.Resources.ico_page_white;
             this.menuFileNew.Name = "menuFileNew";
             this.menuFileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuFileNew.Size = new System.Drawing.Size(188, 22);
+            this.menuFileNew.Size = new System.Drawing.Size(178, 22);
             this.menuFileNew.Text = "&New...";
             this.menuFileNew.Click += new System.EventHandler(this.menuFileNew_Click);
             // 
@@ -104,7 +100,7 @@ namespace IntelligentLevelEditor
             this.menuFileOpen.Image = global::IntelligentLevelEditor.Properties.Resources.ico_folder;
             this.menuFileOpen.Name = "menuFileOpen";
             this.menuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.menuFileOpen.Size = new System.Drawing.Size(188, 22);
+            this.menuFileOpen.Size = new System.Drawing.Size(178, 22);
             this.menuFileOpen.Text = "&Open bin...";
             this.menuFileOpen.Click += new System.EventHandler(this.menuFileOpen_Click);
             // 
@@ -114,7 +110,7 @@ namespace IntelligentLevelEditor
             this.menuFileSave.Image = global::IntelligentLevelEditor.Properties.Resources.ico_disk;
             this.menuFileSave.Name = "menuFileSave";
             this.menuFileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.menuFileSave.Size = new System.Drawing.Size(188, 22);
+            this.menuFileSave.Size = new System.Drawing.Size(178, 22);
             this.menuFileSave.Text = "&Save bin";
             this.menuFileSave.Click += new System.EventHandler(this.menuFileSave_Click);
             // 
@@ -122,34 +118,21 @@ namespace IntelligentLevelEditor
             // 
             this.menuFileSaveAs.Enabled = false;
             this.menuFileSaveAs.Name = "menuFileSaveAs";
-            this.menuFileSaveAs.Size = new System.Drawing.Size(188, 22);
+            this.menuFileSaveAs.Size = new System.Drawing.Size(178, 22);
             this.menuFileSaveAs.Text = "Save bin &As...";
             this.menuFileSaveAs.Click += new System.EventHandler(this.menuFileSaveAs_Click);
             // 
             // menuFileSep0
             // 
             this.menuFileSep0.Name = "menuFileSep0";
-            this.menuFileSep0.Size = new System.Drawing.Size(185, 6);
-            // 
-            // menuFileImport
-            // 
-            this.menuFileImport.Enabled = false;
-            this.menuFileImport.Name = "menuFileImport";
-            this.menuFileImport.Size = new System.Drawing.Size(188, 22);
-            this.menuFileImport.Text = "&Import from image...";
-            this.menuFileImport.Click += new System.EventHandler(this.menuFileImport_Click);
-            // 
-            // menuFileSep1
-            // 
-            this.menuFileSep1.Name = "menuFileSep1";
-            this.menuFileSep1.Size = new System.Drawing.Size(185, 6);
+            this.menuFileSep0.Size = new System.Drawing.Size(175, 6);
             // 
             // menuFileExit
             // 
             this.menuFileExit.Image = global::IntelligentLevelEditor.Properties.Resources.ico_door_in;
             this.menuFileExit.Name = "menuFileExit";
             this.menuFileExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.menuFileExit.Size = new System.Drawing.Size(188, 22);
+            this.menuFileExit.Size = new System.Drawing.Size(178, 22);
             this.menuFileExit.Text = "E&xit";
             this.menuFileExit.Click += new System.EventHandler(this.menuFileExit_Click);
             // 
@@ -329,8 +312,6 @@ namespace IntelligentLevelEditor
         private System.Windows.Forms.ToolStripMenuItem menuQRCodeMake;
         private System.Windows.Forms.ToolStripMenuItem menuHelp;
         private System.Windows.Forms.ToolStripMenuItem menuHelpAbout;
-        private System.Windows.Forms.ToolStripMenuItem menuFileImport;
-        private System.Windows.Forms.ToolStripSeparator menuFileSep1;
         private System.Windows.Forms.ToolStripMenuItem menuFileSave;
         private System.ComponentModel.BackgroundWorker bwCheckForUpdates;
         private System.Windows.Forms.ToolStripMenuItem menuHelpCheckUpdates;

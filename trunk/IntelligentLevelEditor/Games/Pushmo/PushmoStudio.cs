@@ -39,7 +39,6 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         public void NewData()
         {
-            Parent.Text = Application.ProductName + @" v." + Application.ProductVersion;
             _pData = Pushmo.EmptyPushmoData();
             UpdateGui();
         }
@@ -54,22 +53,6 @@ namespace IntelligentLevelEditor.Games.Pushmo
         {
             UpdatePushmoDataFromGui();
             return MarshalUtil.StructureToByteArray(_pData);
-        }
-
-        public byte[] GetPalette()
-        {
-            return gridControl.Palette;
-        }
-
-        public byte[][] GetBitmap()
-        {
-            return gridControl.Bitmap;
-        }
-
-        public void RefreshUI()
-        {
-            RefreshGui();
-            RefreshRadioButton();
         }
 
         public Image MakeQrCard(ByteMatrix qrMatrix)
@@ -130,22 +113,13 @@ namespace IntelligentLevelEditor.Games.Pushmo
             return img;
         }
 
-        public ColorPalette GetAvailableColorPalette()
-        {
-            return Pushmo.PushmoColorPalette;
-        }
-
-        public int GetAvailableColorPaletteSize()
-        {
-            return Pushmo.PushmoColorPaletteSize;
-        }
-
-        public byte GetTransparentIndex()
-        {
-            return 0xA;
-        }
-
         #endregion
+
+        private void RefreshUI()
+        {
+            RefreshGui();
+            RefreshRadioButton();
+        }
 
         private void RefreshRadioButton()
         {
@@ -274,7 +248,6 @@ namespace IntelligentLevelEditor.Games.Pushmo
             _mode = mode;
         }
 
-
         #region Grid Events
 
         private void GridControlGridCellHoverDown(int x, int y)
@@ -335,7 +308,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         private void GridControlGridCellHover(int x, int y)
         {
-            _statusStrip.Text = @"Position: (" + x + @"," + y + @")";
+            _statusStrip.Items[1].Text = @"Position: (" + x + @"," + y + @")";
         }
 
         #endregion
@@ -546,6 +519,19 @@ namespace IntelligentLevelEditor.Games.Pushmo
         {
             gridControl.SetGrid(chkGrid.Checked);
             gridControl.Redraw();
+        }
+
+        private void tbtnImportTool_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog { Filter = ImageImporter.SupportedFiles };
+            if (ofd.ShowDialog() != DialogResult.OK) return;
+            var image = Image.FromFile(ofd.FileName);
+            ImageImporter.Import(
+                new Bitmap(image),
+                Pushmo.PushmoColorPalette, Pushmo.PushmoColorPaletteSize,
+                gridControl.Bitmap, gridControl.Palette, Pushmo.TransparentIndex
+            );
+            RefreshUI();
         }
     }
 }

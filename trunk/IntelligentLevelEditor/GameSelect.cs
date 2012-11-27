@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
+using IntelligentLevelEditor.Games;
 
 namespace IntelligentLevelEditor
 {
     public partial class GameSelect : Form
     {
-        private FormEditor.GameMode _game;
+        private StudioManager.GameMode _game;
 
-        public FormEditor.GameMode SelectedGame { 
+        public StudioManager.GameMode SelectedGame
+        { 
             set { _game = value; }
             get { return _game; }
         }
@@ -19,12 +21,12 @@ namespace IntelligentLevelEditor
 
         private void btnPushmo_Click(object sender, EventArgs e)
         {
-            _game = FormEditor.GameMode.Pushmo;
+            _game = StudioManager.GameMode.Pushmo;
         }
 
         private void btnCrashmo_Click(object sender, EventArgs e)
         {
-            _game = FormEditor.GameMode.Crashmo;
+            _game = StudioManager.GameMode.Crashmo;
         }
     }
 }

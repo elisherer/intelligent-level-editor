@@ -58,3 +58,5 @@ d:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\Intelligent
 d:\dev\intelligent-level-editor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.WebCam.WebCamCapture.resources
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.CameraCapture.resources
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.WebCam.WebCamCapture.resources
+d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.Pyramids.PyramidsGridControl.resources
+d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.Pyramids.MakeQRCardForm.resources

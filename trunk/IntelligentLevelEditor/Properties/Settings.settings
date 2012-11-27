@@ -1,9 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PushmoLevelEditor.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IntelligentLevelEditor.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Culture" Type="System.String" Scope="User">
-      <Value Profile="(Default)">en-US</Value>
+    <Setting Name="DefaultCreator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NoName</Value>
     </Setting>
     <Setting Name="CheckForUpdatesOnStartup" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

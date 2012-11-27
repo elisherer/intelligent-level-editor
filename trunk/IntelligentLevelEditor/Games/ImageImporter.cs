@@ -10,6 +10,9 @@ namespace IntelligentLevelEditor.Games
 {
     static class ImageImporter
     {
+        public const string SupportedFiles =
+            @"All Supported|*.png;*.jpg;*.bmp;*.gif|PNG Files|*.png|Jpeg Files|*.jpg|Bitmap Files|*.bmp|GIF Files|*.gif";
+
         public static void Import(Bitmap srcBitmap, ColorPalette srcPalette, int srcPaletteSize, byte[][] dstBitmap, byte[] dstPalette, byte transparentIndex)
         {
             if (srcBitmap.Width > dstBitmap[0].Length || srcBitmap.Height > dstBitmap.Length)

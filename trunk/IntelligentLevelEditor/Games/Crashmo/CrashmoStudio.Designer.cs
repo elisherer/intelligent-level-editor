@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrashmoStudio));
             this.splitContainer = new System.Windows.Forms.SplitContainer();
+            this.gridControl = new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl();
             this.tbEditor = new System.Windows.Forms.ToolStrip();
             this.tbtnPencilTool = new System.Windows.Forms.ToolStripButton();
             this.tbtnPipetteTool = new System.Windows.Forms.ToolStripButton();
@@ -91,11 +92,13 @@
             this.radDoor2 = new System.Windows.Forms.RadioButton();
             this.radDoor1 = new System.Windows.Forms.RadioButton();
             this.radDoor0 = new System.Windows.Forms.RadioButton();
-            this.gridControl = new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl();
+            this.tbtnImportTool = new System.Windows.Forms.ToolStripButton();
+            this.tbEditorSep2 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             this.tbEditor.SuspendLayout();
             this.grpThumb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picShow)).BeginInit();
@@ -105,7 +108,6 @@
             this.pnlClouds.SuspendLayout();
             this.pnlManholes.SuspendLayout();
             this.pnlDoors.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer
@@ -137,6 +139,22 @@
             this.splitContainer.SplitterDistance = 491;
             this.splitContainer.TabIndex = 3;
             // 
+            // gridControl
+            // 
+            this.gridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridControl.BackColor = System.Drawing.Color.Transparent;
+            this.gridControl.Image = ((System.Drawing.Image)(resources.GetObject("gridControl.Image")));
+            this.gridControl.Location = new System.Drawing.Point(43, 4);
+            this.gridControl.Name = "gridControl";
+            this.gridControl.Size = new System.Drawing.Size(445, 440);
+            this.gridControl.TabIndex = 3;
+            this.gridControl.TabStop = false;
+            this.gridControl.GridCellClick += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellClick);
+            this.gridControl.GridCellHover += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHover);
+            this.gridControl.GridCellHoverDown += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHoverDown);
+            // 
             // tbEditor
             // 
             this.tbEditor.AutoSize = false;
@@ -148,8 +166,10 @@
             this.tbtnPipetteTool,
             this.tbtnFillTool,
             this.tbEditorSep0,
-            this.tbtnFlagTool,
+            this.tbtnImportTool,
             this.tbEditorSep1,
+            this.tbtnFlagTool,
+            this.tbEditorSep2,
             this.tbtnSwitchTool,
             this.tbtnManholeTool,
             this.tbtnDoorTool,
@@ -945,21 +965,21 @@
             this.radDoor0.UseVisualStyleBackColor = false;
             this.radDoor0.CheckedChanged += new System.EventHandler(this.RadioDoorCheckedChanged);
             // 
-            // gridControl
+            // tbtnImportTool
             // 
-            this.gridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl.BackColor = System.Drawing.Color.Transparent;
-            this.gridControl.Image = ((System.Drawing.Image)(resources.GetObject("gridControl.Image")));
-            this.gridControl.Location = new System.Drawing.Point(43, 4);
-            this.gridControl.Name = "gridControl";
-            this.gridControl.Size = new System.Drawing.Size(445, 440);
-            this.gridControl.TabIndex = 3;
-            this.gridControl.TabStop = false;
-            this.gridControl.GridCellClick += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellClick);
-            this.gridControl.GridCellHover += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHover);
-            this.gridControl.GridCellHoverDown += new IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl.GridCellHandler(this.GridControlGridCellHoverDown);
+            this.tbtnImportTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tbtnImportTool.Image = global::IntelligentLevelEditor.Properties.Resources.tool_import;
+            this.tbtnImportTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbtnImportTool.Name = "tbtnImportTool";
+            this.tbtnImportTool.Size = new System.Drawing.Size(37, 36);
+            this.tbtnImportTool.Text = "Import";
+            this.tbtnImportTool.ToolTipText = "Import from a Picture...";
+            this.tbtnImportTool.Click += new System.EventHandler(this.tbtnImportTool_Click);
+            // 
+            // tbEditorSep2
+            // 
+            this.tbEditorSep2.Name = "tbEditorSep2";
+            this.tbEditorSep2.Size = new System.Drawing.Size(37, 6);
             // 
             // CrashmoStudio
             // 
@@ -973,6 +993,7 @@
             this.splitContainer.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             this.tbEditor.ResumeLayout(false);
             this.tbEditor.PerformLayout();
             this.grpThumb.ResumeLayout(false);
@@ -984,7 +1005,6 @@
             this.pnlClouds.ResumeLayout(false);
             this.pnlManholes.ResumeLayout(false);
             this.pnlDoors.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1054,5 +1074,7 @@
         private System.Windows.Forms.RadioButton radSwitch0;
         private System.Windows.Forms.RadioButton radSwitch1;
         private System.Windows.Forms.RadioButton radSwitch2;
+        private System.Windows.Forms.ToolStripButton tbtnImportTool;
+        private System.Windows.Forms.ToolStripSeparator tbEditorSep2;
     }
 }

@@ -63,7 +63,7 @@
             this.lblCred.AutoSize = true;
             this.lblCred.Location = new System.Drawing.Point(12, 78);
             this.lblCred.Name = "lblCred";
-            this.lblCred.Size = new System.Drawing.Size(341, 169);
+            this.lblCred.Size = new System.Drawing.Size(341, 130);
             this.lblCred.TabIndex = 3;
             this.lblCred.Text = resources.GetString("lblCred.Text");
             // 

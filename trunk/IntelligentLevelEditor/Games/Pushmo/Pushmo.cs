@@ -19,6 +19,8 @@ namespace IntelligentLevelEditor.Games.Pushmo
             Large = 0x400
         }
 
+        public const int TransparentIndex = 0xA;
+
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
         public struct PushmoPosition
         {

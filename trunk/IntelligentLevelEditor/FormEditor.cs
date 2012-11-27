@@ -25,16 +25,10 @@ namespace IntelligentLevelEditor
 {
     public partial class FormEditor : Form
     {
-        public enum GameMode
-        {
-            Pushmo,
-            Crashmo
-        }
-
         private string _filePath, _remoteVer;
         private bool _checkNow;
         private IStudio _studio;
-        private GameMode _gameMode;
+        private StudioManager.GameMode _gameMode;
 
         public FormEditor()
         {
@@ -55,49 +49,28 @@ namespace IntelligentLevelEditor
 
         private void ReadByteArray(byte[] data)
         {
-            if (Pushmo.IsMatchingData(data))
+            _gameMode = StudioManager.DetectGame(data);
+
+            if (_gameMode == StudioManager.GameMode.Unknown)
             {
-                CleanStudio();
-                var pushmoStudio = new PushmoStudio(statusStrip) { Dock = DockStyle.Fill };
-                pushmoStudio.LoadData(data);
-                pnlEditor.Controls.Add(pushmoStudio);
-                _studio = pushmoStudio;
-                _gameMode = GameMode.Pushmo;
-                EnableAfterOpen();
+                MessageBox.Show(@"Unknown data.");
+                return;
             }
-            else if (Crashmo.IsMatchingData(data))
-            {
-                CleanStudio();
-                var crashmoStudio = new CrashmoStudio(statusStrip) { Dock = DockStyle.Fill };
-                crashmoStudio.LoadData(data);
-                pnlEditor.Controls.Add(crashmoStudio);
-                _studio = crashmoStudio;
-                _gameMode = GameMode.Crashmo;
-                EnableAfterOpen();
-            }
-            else
-            {
-                MessageBox.Show("Unknown data.");
-            }
+
+            CleanStudio();
+            _studio = StudioManager.GetStudio(_gameMode, statusStrip);
+            _studio.LoadData(data);
+            pnlEditor.Controls.Add((UserControl)_studio);
+            EnableAfterOpen();
         }
 
         private void NewFile()
         {
-            switch (_gameMode)
-            {
-                case GameMode.Pushmo:
-                    CleanStudio();
-                    _studio = new PushmoStudio(statusStrip) { Dock = DockStyle.Fill };
-                    pnlEditor.Controls.Add((PushmoStudio)_studio);
-                    EnableAfterOpen();
-                    break;
-                case GameMode.Crashmo:
-                    CleanStudio();
-                    _studio = new CrashmoStudio(statusStrip) { Dock = DockStyle.Fill };
-                    pnlEditor.Controls.Add((CrashmoStudio)_studio);
-                    EnableAfterOpen();
-                    break;
-            }            
+            CleanStudio();
+            _studio = StudioManager.GetStudio(_gameMode, statusStrip);
+            _studio.NewData();
+            pnlEditor.Controls.Add((UserControl)_studio);
+            EnableAfterOpen();
         }
         
         #region Menu -> File
@@ -106,10 +79,10 @@ namespace IntelligentLevelEditor
         {
             menuFileSave.Enabled = true;
             menuFileSaveAs.Enabled = true;
-            menuFileImport.Enabled = true;
             menuQRCodeMake.Enabled = true;
             menuQRCodeMakeCard.Enabled = true;
             pnlEditor.BackColor = SystemColors.Control;
+            Text = Application.ProductName + @" (" + _gameMode + @")";
         }
 
         private void menuFileNew_Click(object sender, EventArgs e)
@@ -127,16 +100,15 @@ namespace IntelligentLevelEditor
         {
             var ofd = new OpenFileDialog { Filter = @"Binary Files|*.bin" };
             if (ofd.ShowDialog() != DialogResult.OK) return;
-            //try
-            //{
+            try
+            {
                 var data = File.ReadAllBytes(ofd.FileName);
                 ReadByteArray(data);
-            /*}
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message);
-            }*/
-
+            }
         }
 
         private void SaveLevel()
@@ -165,22 +137,6 @@ namespace IntelligentLevelEditor
             if (sfd.ShowDialog() != DialogResult.OK) return;
             _filePath = sfd.FileName;
             SaveLevel();
-        }
-
-        private void menuFileImport_Click(object sender, EventArgs e)
-        {
-            var ofd = new OpenFileDialog { Filter = @"All Supported|*.png;*.jpg;*.bmp;*.gif|PNG Files|*.png|Jpeg Files|*.jpg|Bitmap Files|*.bmp|GIF Files|*.gif" };
-            if (ofd.ShowDialog() != DialogResult.OK) return;
-            var image = Image.FromFile(ofd.FileName);
-            ImageImporter.Import(
-                new Bitmap(image),
-                _studio.GetAvailableColorPalette(),
-                _studio.GetAvailableColorPaletteSize(),
-                _studio.GetBitmap(),
-                _studio.GetPalette(),
-                _studio.GetTransparentIndex()
-            );
-            _studio.RefreshUI();
         }
 
         private void menuFileExit_Click(object sender, EventArgs e)
@@ -249,7 +205,8 @@ namespace IntelligentLevelEditor
         private void menuQRCodeMakeCard_Click(object sender, EventArgs e)
         {
             var card = _studio.MakeQrCard(GetQRMatrix(100));
-            ImageBox.ShowDialog(card);
+            if (card != null)
+                ImageBox.ShowDialog(card);
         }
 
         #endregion
