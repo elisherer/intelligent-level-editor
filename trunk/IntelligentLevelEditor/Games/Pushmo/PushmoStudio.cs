@@ -31,8 +31,8 @@ namespace IntelligentLevelEditor.Games.Pushmo
             InitializeComponent();
             _statusStrip = statusStrip;
             propertyGrid.SelectedObject = _data;
-            _pData = Pushmo.EmptyPushmoData();
-            UpdateGui();
+            /*_pData = Pushmo.EmptyPushmoData();
+            UpdateGui();*/
         }
 
         #region IStudio methods
@@ -359,6 +359,8 @@ namespace IntelligentLevelEditor.Games.Pushmo
             _manhole = Byte.Parse((string)((RadioButton)sender).Tag);
         }
 
+        #region Shift routines
+
         private void ShiftButtonClick(object sender, EventArgs e)
         {
             if (sender == btnShiftUp)
@@ -514,6 +516,8 @@ namespace IntelligentLevelEditor.Games.Pushmo
             }
             RefreshGui();
         }
+
+        #endregion
 
         private void chkGrid_CheckedChanged(object sender, EventArgs e)
         {

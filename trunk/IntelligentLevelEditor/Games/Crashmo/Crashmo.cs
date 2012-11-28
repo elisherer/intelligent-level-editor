@@ -7,7 +7,7 @@ using IntelligentLevelEditor.Properties;
 
 namespace IntelligentLevelEditor.Games.Crashmo
 {
-    public class Crashmo
+    public static class Crashmo
     {
         public enum PosType : byte
         {
@@ -24,12 +24,6 @@ namespace IntelligentLevelEditor.Games.Crashmo
             Left = 1,
             Down = 4,
             Up = 5
-        }
-
-        public enum CrashmoFlags : uint //TODO: Flags
-        {
-            Constant = 0x001,
-            Large = 0x002
         }
 
         public const int TransparentIndex = 0x0;
@@ -102,7 +96,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         public static bool IsMatchingData(byte[] data)
         {
-            return (data[0] == 0xAD && data[1] == 0x0A);
+            return (data[0] == 0xAD && data[1] == 0x0A && data[2] == 0 && data[3] == 0);
         }
 
         public static byte[][] Decode(byte[] levelData)
@@ -176,7 +170,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
                 0, pd.Magic, 0, 4);
             pd.Unknown1 = 0x07; //Always 7
 
-            var authorBytes = Encoding.Unicode.GetBytes("NoBody");
+            var authorBytes = Encoding.Unicode.GetBytes(Settings.Default.DefaultCreator);
             Buffer.BlockCopy(authorBytes, 0, pd.Author, 0, authorBytes.Length);
             var nameBytes = Encoding.Unicode.GetBytes("NoName");
             Buffer.BlockCopy(nameBytes, 0, pd.LevelName, 0, nameBytes.Length);

@@ -35,8 +35,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
             InitializeComponent();
             _statusStrip = statusStrip;
             propertyGrid.SelectedObject = _data;
-            _pData = Crashmo.EmptyCrashmoData();
-            UpdateGui();
+            /*_pData = Crashmo.EmptyCrashmoData();
+            UpdateGui();*/
         }
 
         #region IStudio methods
@@ -391,6 +391,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
             gridControl.Redraw();
         }
 
+        #region Shift routines
+
         private void ShiftButtonClick(object sender, EventArgs e)
         {
             if (sender == btnShiftUp)
@@ -482,6 +484,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
             }
             RefreshGui();
         }
+
+        #endregion
 
         private void tbtnImportTool_Click(object sender, EventArgs e)
         {

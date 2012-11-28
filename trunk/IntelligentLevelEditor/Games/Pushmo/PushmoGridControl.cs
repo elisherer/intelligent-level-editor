@@ -194,6 +194,8 @@ namespace IntelligentLevelEditor.Games.Pushmo
                 Redraw();
         }
 
+        private bool _mouseDown ;
+
         private void CellClicked(object sender, MouseEventArgs e)
         {
             if (GridCellClick == null) return;
@@ -205,16 +207,24 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         private void CellHovered(object sender, MouseEventArgs e)
         {
-            if (GridCellHover == null || GridCellHoverDown == null) return;
+            if (GridCellHover == null && GridCellHoverDown == null) return;
             var x = e.X/(Width/Pushmo.BitmapSize);
             var y = e.Y/(Height/Pushmo.BitmapSize);
-            if (x >= 0 && y >= 0 && x < Pushmo.BitmapSize && y < Pushmo.BitmapSize)
-            {
+            if (x < 0 || y < 0 || x >= Pushmo.BitmapSize || y >= Pushmo.BitmapSize) return;
+            if (GridCellHover != null)
                 GridCellHover(x, y);
-                if (e.Button == MouseButtons.Left)
-                    GridCellHoverDown(x, y);
-            }
-        
+            if (e.Button == MouseButtons.Left && _mouseDown && GridCellHoverDown != null)
+                GridCellHoverDown(x, y);
+        }
+
+        private void PushmoGridControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseDown = true;
+        }
+
+        private void PushmoGridControl_MouseUp(object sender, MouseEventArgs e)
+        {
+            _mouseDown = false;
         }
     }
 }

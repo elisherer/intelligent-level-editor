@@ -147,12 +147,6 @@
     <Compile Include="Games\Pushmo\PushmoStudio.Designer.cs">
       <DependentUpon>PushmoStudio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Games\Pyramids\FormEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Games\Pyramids\FormEditor.Designer.cs">
-      <DependentUpon>FormEditor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Games\Pyramids\PyramidsGridControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -166,7 +160,12 @@
       <DependentUpon>MakeQRCardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Games\Pyramids\Pyramids.cs" />
-    <Compile Include="Games\StudioManager.cs" />
+    <Compile Include="Games\Pyramids\PyramidsStudio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Games\Pyramids\PyramidsStudio.Designer.cs">
+      <DependentUpon>PyramidsStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImageBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,14 +229,14 @@
     <EmbeddedResource Include="Games\Pushmo\PushmoStudio.resx">
       <DependentUpon>PushmoStudio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Games\Pyramids\FormEditor.resx">
-      <DependentUpon>FormEditor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Games\Pyramids\PyramidsGridControl.resx">
       <DependentUpon>PyramidsGridControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games\Pyramids\MakeQRCardForm.resx">
       <DependentUpon>MakeQRCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\Pyramids\PyramidsStudio.resx">
+      <DependentUpon>PyramidsStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageBox.resx">
       <DependentUpon>ImageBox.cs</DependentUpon>

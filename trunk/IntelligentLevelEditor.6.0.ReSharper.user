@@ -1,9 +1,6 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoGridControl.cs" caret="1360" fromTop="38" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:AboutBox.designer.cs" caret="0" fromTop="0" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:AboutBox.cs" caret="348" fromTop="11" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Properties/f:Resources.Designer.cs" caret="10859" fromTop="24" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.Designer.cs" caret="59076" fromTop="13" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoLevelData.cs" caret="1981" fromTop="58" />
@@ -12,57 +9,58 @@
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.Designer.cs" caret="4994" fromTop="64" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="4894" fromTop="20" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="1433" fromTop="15" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="3748" fromTop="13" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:ImageImporter.cs" caret="379" fromTop="13" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2817" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:Pushmo.cs" caret="547" fromTop="0" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="734" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="710" fromTop="28" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:IStudio.cs" caret="111" fromTop="5" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="13765" fromTop="7" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="15014" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="7432" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.Designer.cs" caret="1662" fromTop="47" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="4580" fromTop="130" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="3186" fromTop="18" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.Designer.cs" caret="1880" fromTop="47" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Properties/f:Settings.Designer.cs" caret="0" fromTop="0" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.cs" caret="180" fromTop="7" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.Designer.cs" caret="5207" fromTop="124" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:StudioManager.cs" caret="524" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="86732" fromTop="0" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.cs" caret="404" fromTop="3" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.Designer.cs" caret="5231" fromTop="46" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="1491" fromTop="48" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="17582" fromTop="18" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="14273" fromTop="13" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.Designer.cs" caret="69361" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1019" fromTop="11" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13878" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoGridControl.cs" caret="8815" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="3919" fromTop="36" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="826" fromTop="28" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.cs" caret="248" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="236" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:Pushmo.cs" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="0" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="4580" fromTop="130" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="4067" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="8026" fromTop="26" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="7760" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="2855" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.cs" caret="909" fromTop="2" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.cs" caret="62" fromTop="2" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:StudioManager.cs" caret="181" fromTop="6" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:StudioManager.cs" caret="314" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.cs" caret="14944" fromTop="385" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.cs" caret="902" fromTop="17" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="7333" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="93053" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="21508" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="22730" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="23994" fromTop="17" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="80138" fromTop="19" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="80668" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="81136" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="81613" fromTop="11" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="82087" fromTop="19" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="82754" fromTop="12" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="83259" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="83613" fromTop="12" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="84114" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.Designer.cs" caret="86732" fromTop="22" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.cs" caret="10130" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.cs" caret="11126" fromTop="17" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.cs" caret="12116" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:FormEditor.cs" caret="12341" fromTop="13" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13074" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoGridControl.cs" caret="8659" fromTop="12" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13575" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13878" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoGridControl.cs" caret="8815" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="4141" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="126" fromTop="6" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1949" fromTop="12" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="575" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="333" fromTop="11" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1334" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="2263" fromTop="18" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1825" fromTop="4" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="2504" fromTop="23" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="927" fromTop="21" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="1153" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="1337" fromTop="24" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="1501" fromTop="24" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="2278" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="4145" fromTop="25" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="4561" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="7844" fromTop="21" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="8014" fromTop="12" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="54" fromTop="2" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1107" fromTop="13" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1239" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="826" fromTop="7" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="6090" fromTop="6" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="236" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="0" fromTop="0" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -70,33 +68,33 @@
       <Item value="Pushmo" priority="88" />
       <Item value="static" priority="127" />
       <Item value="int" priority="351" />
-      <Item value="if" priority="607" />
+      <Item value="if" priority="831" />
       <Item value="DesignMode" priority="95" />
-      <Item value="return" priority="479" />
+      <Item value="return" priority="607" />
       <Item value="public" priority="831" />
       <Item value="struct" priority="31" />
-      <Item value="byte" priority="1463" />
+      <Item value="byte" priority="1527" />
       <Item value="IntelligentPosition`0" priority="58" />
       <Item value="Clouds" priority="95" />
       <Item value="clouds" priority="31" />
       <Item value="Doors" priority="95" />
       <Item value="doors" priority="31" />
-      <Item value="bool" priority="95" />
+      <Item value="bool" priority="127" />
       <Item value="intelligentPalette" priority="90" />
       <Item value="IntelligentLevelSize" priority="31" />
       <Item value="string" priority="223" />
       <Item value="void" priority="319" />
       <Item value="array" priority="95" />
-      <Item value="private" priority="319" />
+      <Item value="private" priority="447" />
       <Item value="_game" priority="127" />
       <Item value="value" priority="63" />
-      <Item value="var" priority="863" />
-      <Item value="new" priority="768" />
+      <Item value="var" priority="895" />
+      <Item value="new" priority="832" />
       <Item value="GameSelect" priority="29" />
       <Item value="gameSelect" priority="63" />
       <Item value="OK" priority="16" />
       <Item value="switch" priority="159" />
-      <Item value="case" priority="383" />
+      <Item value="case" priority="415" />
       <Item value="break" priority="127" />
       <Item value="PushmoStudio" priority="57" />
       <Item value="MessageBox`0" priority="63" />
@@ -111,7 +109,7 @@
       <Item value="ReadByteArray`0" priority="31" />
       <Item value="NewFile`0" priority="31" />
       <Item value="menuFileSave" priority="31" />
-      <Item value="true" priority="255" />
+      <Item value="true" priority="383" />
       <Item value="menuFileSaveAs" priority="31" />
       <Item value="menuFileImport" priority="31" />
       <Item value="menuQRCode" priority="31" />
@@ -132,7 +130,7 @@
       <Item value="GameMode`0" priority="63" />
       <Item value="FormEditor`0" priority="64" />
       <Item value="_gameMode" priority="127" />
-      <Item value="gridControl" priority="95" />
+      <Item value="gridControl" priority="127" />
       <Item value="RefreshGui`0" priority="31" />
       <Item value="RefreshRadioButton`0" priority="31" />
       <Item value="ImageBox`0" priority="31" />
@@ -198,7 +196,7 @@
       <Item value="FileDialog`0" priority="31" />
       <Item value="OpenFileDialog`0" priority="31" />
       <Item value="o" priority="31" />
-      <Item value="MemoryStream" priority="28" />
+      <Item value="MemoryStream" priority="57" />
       <Item value="outs" priority="63" />
       <Item value="compressedSize" priority="31" />
       <Item value="compressedSizeBytes" priority="31" />
@@ -253,9 +251,21 @@
       <Item value="Text" priority="31" />
       <Item value="GameSelect`0" priority="31" />
       <Item value="Unknown" priority="16" />
-      <Item value="IStudio`0" priority="31" />
+      <Item value="IStudio`0" priority="63" />
       <Item value="StudioManager`0" priority="31" />
       <Item value="card" priority="31" />
+      <Item value="Properties" priority="22" />
+      <Item value="mems" priority="31" />
+      <Item value="Pyramids" priority="16" />
+      <Item value="data" priority="127" />
+      <Item value="#endregion" priority="63" />
+      <Item value="false" priority="95" />
+      <Item value="_mouseDown" priority="63" />
+      <Item value="ofd" priority="31" />
+      <Item value="_filePath" priority="31" />
+      <Item value="CrashmoGridControl_MouseDown`0" priority="31" />
+      <Item value="_levelData" priority="63" />
+      <Item value="Pyramids`0" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
       <Item value="Image" priority="80" />
@@ -358,6 +368,7 @@
       <Item value="WriteByte`0" priority="26" />
       <Item value="Write`0" priority="26" />
       <Item value="Seek`0" priority="26" />
+      <Item value="ToArray`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@IntelligentLevelEditor.Properties.Resources">
       <Item value="cloud_small" priority="26" />
@@ -476,6 +487,15 @@
       <Item value="GameMode`0" priority="27" />
       <Item value="DetectGame`0" priority="27" />
       <Item value="GetStudio`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@IntelligentLevelEditor.GameSelect+GameMode">
+      <Item value="Pyramids" priority="55" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
+      <Item value="FileName" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IntelligentLevelEditor.Games.Pyramids.PyramidsGridControl">
+      <Item value="SetData`0" priority="53" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>

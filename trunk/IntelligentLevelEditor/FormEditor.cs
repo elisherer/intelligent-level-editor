@@ -7,8 +7,6 @@ using System.Net;
 using System.Text;
 using System.Windows.Forms;
 using IntelligentLevelEditor.Games;
-using IntelligentLevelEditor.Games.Crashmo;
-using IntelligentLevelEditor.Games.Pushmo;
 using IntelligentLevelEditor.Properties;
 using com.google.zxing;
 using com.google.zxing.qrcode;
@@ -18,7 +16,7 @@ using com.google.zxing.common;
  * Todolist:
  * 
  * TODO: (1) add undo/redo
- * TODO: (2) make drawing even faster by using draw-per-change instead of draw-the-all-thing-on-every-change
+ * TODO: (2) try fix the catching of the click after opening a file from read image or open
  */
 
 namespace IntelligentLevelEditor
@@ -28,7 +26,7 @@ namespace IntelligentLevelEditor
         private string _filePath, _remoteVer;
         private bool _checkNow;
         private IStudio _studio;
-        private StudioManager.GameMode _gameMode;
+        private GameSelect.GameMode _gameMode;
 
         public FormEditor()
         {
@@ -49,16 +47,16 @@ namespace IntelligentLevelEditor
 
         private void ReadByteArray(byte[] data)
         {
-            _gameMode = StudioManager.DetectGame(data);
+            _gameMode = GameSelect.DetectGame(data);
 
-            if (_gameMode == StudioManager.GameMode.Unknown)
+            if (_gameMode == GameSelect.GameMode.Unknown)
             {
                 MessageBox.Show(@"Unknown data.");
                 return;
             }
 
             CleanStudio();
-            _studio = StudioManager.GetStudio(_gameMode, statusStrip);
+            _studio = GameSelect.GetStudio(_gameMode, statusStrip);
             _studio.LoadData(data);
             pnlEditor.Controls.Add((UserControl)_studio);
             EnableAfterOpen();
@@ -67,7 +65,7 @@ namespace IntelligentLevelEditor
         private void NewFile()
         {
             CleanStudio();
-            _studio = StudioManager.GetStudio(_gameMode, statusStrip);
+            _studio = GameSelect.GetStudio(_gameMode, statusStrip);
             _studio.NewData();
             pnlEditor.Controls.Add((UserControl)_studio);
             EnableAfterOpen();
@@ -94,6 +92,7 @@ namespace IntelligentLevelEditor
                 return;
             _gameMode = gameSelect.SelectedGame;
             NewFile();
+            _filePath = null;
         }
 
         private void menuFileOpen_Click(object sender, EventArgs e)
@@ -104,6 +103,7 @@ namespace IntelligentLevelEditor
             {
                 var data = File.ReadAllBytes(ofd.FileName);
                 ReadByteArray(data);
+                _filePath = ofd.FileName;
             }
             catch (Exception ex)
             {
@@ -113,8 +113,10 @@ namespace IntelligentLevelEditor
 
         private void SaveLevel()
         {
-            var fs = File.OpenWrite(_filePath);
             var data = _studio.SaveData();
+            if (data == null)
+                return; //do nothing
+            var fs = File.OpenWrite(_filePath);
             fs.Write(data, 0, data.Length);
             fs.Close();
         }
@@ -178,12 +180,10 @@ namespace IntelligentLevelEditor
             }
         }
 
-        private ByteMatrix GetQRMatrix(int size)
-        {
-            
+        private ByteMatrix GetQRMatrix(int size, byte[] data)
+        {  
             var writer = new QRCodeWriter();
             const string encoding = "ISO-8859-1";
-            var data = _studio.SaveData();
             var str = Encoding.GetEncoding(encoding).GetString(data);
             var hints = new Hashtable { { EncodeHintType.CHARACTER_SET, encoding } };
             return writer.encode(str, BarcodeFormat.QR_CODE, size, size, hints); 
@@ -191,7 +191,10 @@ namespace IntelligentLevelEditor
 
         private void menuQRCodeMake_Click(object sender, EventArgs e)
         {
-            var matrix = GetQRMatrix(100);
+            var data = _studio.SaveData();
+            if (data == null)
+                return; //do nothing
+            var matrix = GetQRMatrix(100, data);
             var img = new Bitmap(200, 200);
             var g = Graphics.FromImage(img);
             g.Clear(Color.White);
@@ -204,7 +207,10 @@ namespace IntelligentLevelEditor
 
         private void menuQRCodeMakeCard_Click(object sender, EventArgs e)
         {
-            var card = _studio.MakeQrCard(GetQRMatrix(100));
+            var data = _studio.SaveData();
+            if (data == null)
+                return; //do nothing
+            var card = _studio.MakeQrCard(GetQRMatrix(100, data));
             if (card != null)
                 ImageBox.ShowDialog(card);
         }
@@ -274,35 +280,5 @@ namespace IntelligentLevelEditor
         }
         #endregion
 
-        private void testToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var ofd = new OpenFileDialog { Filter = @"Binary Files|*.bin" };
-            if (ofd.ShowDialog() != DialogResult.OK) return;
-            try
-            {
-                var array = File.ReadAllBytes(ofd.FileName);
-                var ins = new MemoryStream(array);
-                var decompressed = new byte[System.Runtime.InteropServices.Marshal.SizeOf(typeof(Crashmo.CrashmoQrData))];
-                var ms = new MemoryStream(decompressed);
-
-                ins.Read(new byte[12], 0, 12);//drop 12 bytes
-
-                var lz10 = new DSDecmp.Formats.Nitro.LZ10();
-                try
-                {
-                    lz10.Decompress(ins, decompressed.Length, ms);
-                }
-                catch//(Exception ex)
-                { }
-
-                ms.Close();
-                File.WriteAllBytes(ofd.FileName + ".dec",ms.ToArray());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message);
-            }
-            
-        }
     }
 }
