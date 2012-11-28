@@ -112,7 +112,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
 
         public static bool IsMatchingData(byte[] data)
         {
-            return (data[0] == 0x8D && data[1] == 0x06);
+            return (data[0] == 0x8D && data[1] == 0x06 && data[2] == 0 && data[3] == 0);
         }
 
         public static byte[][] DecodeTiled(byte[] levelData)

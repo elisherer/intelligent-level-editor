@@ -50,7 +50,6 @@ namespace IntelligentLevelEditor
             this.menuHelpCheckNow = new System.Windows.Forms.ToolStripMenuItem();
             this.menuHelpSep0 = new System.Windows.Forms.ToolStripSeparator();
             this.menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.stripColor = new System.Windows.Forms.ToolStripStatusLabel();
             this.stripPosition = new System.Windows.Forms.ToolStripStatusLabel();
@@ -65,8 +64,7 @@ namespace IntelligentLevelEditor
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuFile,
             this.menuQRCode,
-            this.menuHelp,
-            this.testToolStripMenuItem});
+            this.menuHelp});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(744, 24);
@@ -226,14 +224,6 @@ namespace IntelligentLevelEditor
             this.menuHelpAbout.Text = "&About";
             this.menuHelpAbout.Click += new System.EventHandler(this.menuHelpAbout_Click);
             // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Visible = false;
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
-            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -317,7 +307,6 @@ namespace IntelligentLevelEditor
         private System.Windows.Forms.ToolStripMenuItem menuHelpCheckUpdates;
         private System.Windows.Forms.ToolStripMenuItem menuHelpCheckNow;
         private System.Windows.Forms.ToolStripSeparator menuHelpSep0;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.Panel pnlEditor;
         private System.Windows.Forms.ToolStripMenuItem menuQRCodeCapture;
 

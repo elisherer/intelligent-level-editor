@@ -1,11 +1,20 @@
-﻿namespace IntelligentLevelEditor
+﻿using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
+using IntelligentLevelEditor.Games;
+using IntelligentLevelEditor.Games.Crashmo;
+using IntelligentLevelEditor.Games.Pushmo;
+using IntelligentLevelEditor.Properties;
+
+namespace IntelligentLevelEditor
 {
     partial class GameSelect
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,24 +37,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnPushmo = new System.Windows.Forms.Button();
-            this.btnCrashmo = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnPyramids = new System.Windows.Forms.Button();
+            this.btnCrashmo = new System.Windows.Forms.Button();
+            this.btnPushmo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnPushmo
+            // btnCancel
             // 
-            this.btnPushmo.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnPushmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnPushmo.Image = global::IntelligentLevelEditor.Properties.Resources.strawberry;
-            this.btnPushmo.Location = new System.Drawing.Point(10, 12);
-            this.btnPushmo.Name = "btnPushmo";
-            this.btnPushmo.Size = new System.Drawing.Size(137, 64);
-            this.btnPushmo.TabIndex = 0;
-            this.btnPushmo.Text = "Pushmo / Pullblox";
-            this.btnPushmo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPushmo.UseVisualStyleBackColor = true;
-            this.btnPushmo.Click += new System.EventHandler(this.btnPushmo_Click);
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(107, 173);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(96, 26);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // btnPyramids
+            // 
+            this.btnPyramids.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnPyramids.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPyramids.Image = global::IntelligentLevelEditor.Properties.Resources.pyramids_logo;
+            this.btnPyramids.Location = new System.Drawing.Point(85, 82);
+            this.btnPyramids.Name = "btnPyramids";
+            this.btnPyramids.Size = new System.Drawing.Size(137, 64);
+            this.btnPyramids.TabIndex = 3;
+            this.btnPyramids.Text = "Pyramids";
+            this.btnPyramids.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPyramids.UseVisualStyleBackColor = true;
+            this.btnPyramids.Click += new System.EventHandler(this.btnPyramids_Click);
             // 
             // btnCrashmo
             // 
@@ -61,22 +81,25 @@
             this.btnCrashmo.UseVisualStyleBackColor = true;
             this.btnCrashmo.Click += new System.EventHandler(this.btnCrashmo_Click);
             // 
-            // btnCancel
+            // btnPushmo
             // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(109, 130);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(96, 26);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnPushmo.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnPushmo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnPushmo.Image = global::IntelligentLevelEditor.Properties.Resources.strawberry;
+            this.btnPushmo.Location = new System.Drawing.Point(10, 12);
+            this.btnPushmo.Name = "btnPushmo";
+            this.btnPushmo.Size = new System.Drawing.Size(137, 64);
+            this.btnPushmo.TabIndex = 0;
+            this.btnPushmo.Text = "Pushmo / Pullblox";
+            this.btnPushmo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPushmo.UseVisualStyleBackColor = true;
+            this.btnPushmo.Click += new System.EventHandler(this.btnPushmo_Click);
             // 
             // GameSelect
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(310, 166);
+            this.ClientSize = new System.Drawing.Size(310, 206);
             this.ControlBox = false;
+            this.Controls.Add(this.btnPyramids);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCrashmo);
             this.Controls.Add(this.btnPushmo);
@@ -90,8 +113,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnPushmo;
-        private System.Windows.Forms.Button btnCrashmo;
-        private System.Windows.Forms.Button btnCancel;
+        private Button btnPushmo;
+        private Button btnCrashmo;
+        private Button btnCancel;
+        private Button btnPyramids;
     }
 }

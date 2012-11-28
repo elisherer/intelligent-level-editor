@@ -1,13 +1,13 @@
 ﻿namespace IntelligentLevelEditor.Games.Pyramids
 {
-    partial class FormEditor
+    partial class PyramidsStudio
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,37 +20,20 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditor));
-            this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileSaveAs = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileSep0 = new System.Windows.Forms.ToolStripSeparator();
-            this.menuQRCode = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQRCodeSep0 = new System.Windows.Forms.ToolStripSeparator();
-            this.menuHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblParTime = new System.Windows.Forms.Label();
-            this.lblBackground = new System.Windows.Forms.Label();
-            this.numPar = new System.Windows.Forms.NumericUpDown();
-            this.cmbBackground = new System.Windows.Forms.ComboBox();
-            this.pnlLevel = new System.Windows.Forms.Panel();
             this.pnlToolbar = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.menuView = new System.Windows.Forms.ToolStripMenuItem();
             this.radTool01 = new System.Windows.Forms.RadioButton();
             this.radTool00 = new System.Windows.Forms.RadioButton();
             this.radTool02 = new System.Windows.Forms.RadioButton();
@@ -103,165 +86,18 @@
             this.radTool20 = new System.Windows.Forms.RadioButton();
             this.radTool25 = new System.Windows.Forms.RadioButton();
             this.radTool45 = new System.Windows.Forms.RadioButton();
-            this.menuFileNew = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuViewShowGrid = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQRCodeRead = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQRCodeMake = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuQRCodeMakeCard = new System.Windows.Forms.ToolStripMenuItem();
-            this.bwCheckForUpdates = new System.ComponentModel.BackgroundWorker();
-            this.menuHelpCheckUpdates = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuHelpSep0 = new System.Windows.Forms.ToolStripSeparator();
-            this.menuHelpCheckNow = new System.Windows.Forms.ToolStripMenuItem();
-            this.gridControl = new PyramidsGridControl();
-            this.menuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPar)).BeginInit();
-            this.pnlLevel.SuspendLayout();
+            this.pnlLevel = new System.Windows.Forms.Panel();
+            this.gridControl = new IntelligentLevelEditor.Games.Pyramids.PyramidsGridControl();
+            this.cmbBackground = new System.Windows.Forms.ComboBox();
+            this.numPar = new System.Windows.Forms.NumericUpDown();
+            this.lblBackground = new System.Windows.Forms.Label();
+            this.lblParTime = new System.Windows.Forms.Label();
+            this.chkGrid = new System.Windows.Forms.CheckBox();
             this.pnlToolbar.SuspendLayout();
+            this.pnlLevel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip
-            // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuFile,
-            this.menuView,
-            this.menuQRCode,
-            this.menuHelp});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(809, 24);
-            this.menuStrip.TabIndex = 1;
-            this.menuStrip.Text = "menuStrip";
-            // 
-            // menuFile
-            // 
-            this.menuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuFileNew,
-            this.menuFileOpen,
-            this.menuFileSave,
-            this.menuFileSaveAs,
-            this.menuFileSep0,
-            this.menuFileExit});
-            this.menuFile.Name = "menuFile";
-            this.menuFile.Size = new System.Drawing.Size(36, 20);
-            this.menuFile.Text = "&File";
-            // 
-            // menuFileSaveAs
-            // 
-            this.menuFileSaveAs.Name = "menuFileSaveAs";
-            this.menuFileSaveAs.Size = new System.Drawing.Size(178, 22);
-            this.menuFileSaveAs.Text = "Save bin &As...";
-            this.menuFileSaveAs.Click += new System.EventHandler(this.menuFileSaveAs_Click);
-            // 
-            // menuFileSep0
-            // 
-            this.menuFileSep0.Name = "menuFileSep0";
-            this.menuFileSep0.Size = new System.Drawing.Size(175, 6);
-            // 
-            // menuQRCode
-            // 
-            this.menuQRCode.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuQRCodeRead,
-            this.menuQRCodeSep0,
-            this.menuQRCodeMake,
-            this.menuQRCodeMakeCard});
-            this.menuQRCode.Name = "menuQRCode";
-            this.menuQRCode.Size = new System.Drawing.Size(67, 20);
-            this.menuQRCode.Text = "&QR Code";
-            // 
-            // menuQRCodeSep0
-            // 
-            this.menuQRCodeSep0.Name = "menuQRCodeSep0";
-            this.menuQRCodeSep0.Size = new System.Drawing.Size(205, 6);
-            // 
-            // menuHelp
-            // 
-            this.menuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuHelpCheckUpdates,
-            this.menuHelpCheckNow,
-            this.menuHelpSep0,
-            this.menuHelpAbout});
-            this.menuHelp.Name = "menuHelp";
-            this.menuHelp.Size = new System.Drawing.Size(43, 20);
-            this.menuHelp.Text = "&Help";
-            // 
-            // menuHelpAbout
-            // 
-            this.menuHelpAbout.Name = "menuHelpAbout";
-            this.menuHelpAbout.Size = new System.Drawing.Size(235, 22);
-            this.menuHelpAbout.Text = "&About";
-            this.menuHelpAbout.Click += new System.EventHandler(this.menuHelpAbout_Click);
-            // 
-            // lblParTime
-            // 
-            this.lblParTime.AutoSize = true;
-            this.lblParTime.Location = new System.Drawing.Point(179, 35);
-            this.lblParTime.Name = "lblParTime";
-            this.lblParTime.Size = new System.Drawing.Size(49, 13);
-            this.lblParTime.TabIndex = 5;
-            this.lblParTime.Text = "Par Time";
-            // 
-            // lblBackground
-            // 
-            this.lblBackground.AutoSize = true;
-            this.lblBackground.Location = new System.Drawing.Point(341, 35);
-            this.lblBackground.Name = "lblBackground";
-            this.lblBackground.Size = new System.Drawing.Size(65, 13);
-            this.lblBackground.TabIndex = 7;
-            this.lblBackground.Text = "Background";
-            // 
-            // numPar
-            // 
-            this.numPar.Location = new System.Drawing.Point(234, 33);
-            this.numPar.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.numPar.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numPar.Name = "numPar";
-            this.numPar.Size = new System.Drawing.Size(76, 20);
-            this.numPar.TabIndex = 100;
-            this.numPar.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // cmbBackground
-            // 
-            this.cmbBackground.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBackground.FormattingEnabled = true;
-            this.cmbBackground.Items.AddRange(new object[] {
-            "Level 1",
-            "Level 2",
-            "Level 3",
-            "Level 4",
-            "Level 5"});
-            this.cmbBackground.Location = new System.Drawing.Point(411, 32);
-            this.cmbBackground.Name = "cmbBackground";
-            this.cmbBackground.Size = new System.Drawing.Size(86, 21);
-            this.cmbBackground.TabIndex = 101;
-            this.cmbBackground.SelectedIndexChanged += new System.EventHandler(this.cmbBackground_SelectedIndexChanged);
-            // 
-            // pnlLevel
-            // 
-            this.pnlLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlLevel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnlLevel.Controls.Add(this.gridControl);
-            this.pnlLevel.Location = new System.Drawing.Point(182, 60);
-            this.pnlLevel.Name = "pnlLevel";
-            this.pnlLevel.Size = new System.Drawing.Size(627, 385);
-            this.pnlLevel.TabIndex = 12;
             // 
             // pnlToolbar
             // 
@@ -325,10 +161,10 @@
             this.pnlToolbar.Controls.Add(this.radTool25);
             this.pnlToolbar.Controls.Add(this.radTool45);
             this.pnlToolbar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlToolbar.Location = new System.Drawing.Point(0, 24);
+            this.pnlToolbar.Location = new System.Drawing.Point(0, 0);
             this.pnlToolbar.Name = "pnlToolbar";
-            this.pnlToolbar.Size = new System.Drawing.Size(176, 421);
-            this.pnlToolbar.TabIndex = 103;
+            this.pnlToolbar.Size = new System.Drawing.Size(176, 432);
+            this.pnlToolbar.TabIndex = 109;
             // 
             // label5
             // 
@@ -385,19 +221,6 @@
             this.label1.Text = "Basic Objects:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // toolTip
-            // 
-            this.toolTip.UseAnimation = false;
-            this.toolTip.UseFading = false;
-            // 
-            // menuView
-            // 
-            this.menuView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuViewShowGrid});
-            this.menuView.Name = "menuView";
-            this.menuView.Size = new System.Drawing.Size(46, 20);
-            this.menuView.Text = "&View";
-            // 
             // radTool01
             // 
             this.radTool01.Appearance = System.Windows.Forms.Appearance.Button;
@@ -411,7 +234,6 @@
             this.radTool01.Name = "radTool01";
             this.radTool01.Size = new System.Drawing.Size(32, 32);
             this.radTool01.TabIndex = 1;
-            this.toolTip.SetToolTip(this.radTool01, "Sand Block");
             this.radTool01.UseVisualStyleBackColor = true;
             this.radTool01.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -431,7 +253,6 @@
             this.radTool00.TabIndex = 0;
             this.radTool00.TabStop = true;
             this.radTool00.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip.SetToolTip(this.radTool00, "Blank");
             this.radTool00.UseVisualStyleBackColor = true;
             this.radTool00.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -448,7 +269,6 @@
             this.radTool02.Name = "radTool02";
             this.radTool02.Size = new System.Drawing.Size(32, 32);
             this.radTool02.TabIndex = 2;
-            this.toolTip.SetToolTip(this.radTool02, "Bullet");
             this.radTool02.UseVisualStyleBackColor = true;
             this.radTool02.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -465,7 +285,6 @@
             this.radTool03.Name = "radTool03";
             this.radTool03.Size = new System.Drawing.Size(32, 32);
             this.radTool03.TabIndex = 3;
-            this.toolTip.SetToolTip(this.radTool03, "Bullet (In sand)");
             this.radTool03.UseVisualStyleBackColor = true;
             this.radTool03.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -482,7 +301,6 @@
             this.radTool04.Name = "radTool04";
             this.radTool04.Size = new System.Drawing.Size(32, 32);
             this.radTool04.TabIndex = 4;
-            this.toolTip.SetToolTip(this.radTool04, "Spike Ball");
             this.radTool04.UseVisualStyleBackColor = true;
             this.radTool04.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -499,7 +317,6 @@
             this.radTool51.Name = "radTool51";
             this.radTool51.Size = new System.Drawing.Size(32, 32);
             this.radTool51.TabIndex = 51;
-            this.toolTip.SetToolTip(this.radTool51, "Pillar Tile");
             this.radTool51.UseVisualStyleBackColor = true;
             this.radTool51.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -516,7 +333,6 @@
             this.radTool05.Name = "radTool05";
             this.radTool05.Size = new System.Drawing.Size(32, 32);
             this.radTool05.TabIndex = 5;
-            this.toolTip.SetToolTip(this.radTool05, "Regular Block");
             this.radTool05.UseVisualStyleBackColor = true;
             this.radTool05.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -533,7 +349,6 @@
             this.radTool50.Name = "radTool50";
             this.radTool50.Size = new System.Drawing.Size(32, 32);
             this.radTool50.TabIndex = 50;
-            this.toolTip.SetToolTip(this.radTool50, "Pillar Top");
             this.radTool50.UseVisualStyleBackColor = true;
             this.radTool50.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -550,7 +365,6 @@
             this.radTool07.Name = "radTool07";
             this.radTool07.Size = new System.Drawing.Size(32, 32);
             this.radTool07.TabIndex = 7;
-            this.toolTip.SetToolTip(this.radTool07, "4 Little Blocks");
             this.radTool07.UseVisualStyleBackColor = true;
             this.radTool07.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -567,7 +381,6 @@
             this.radTool43.Name = "radTool43";
             this.radTool43.Size = new System.Drawing.Size(32, 32);
             this.radTool43.TabIndex = 43;
-            this.toolTip.SetToolTip(this.radTool43, "Figure Block (Top-Left)");
             this.radTool43.UseVisualStyleBackColor = true;
             this.radTool43.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -584,7 +397,6 @@
             this.radTool06.Name = "radTool06";
             this.radTool06.Size = new System.Drawing.Size(32, 32);
             this.radTool06.TabIndex = 6;
-            this.toolTip.SetToolTip(this.radTool06, "Bird Block");
             this.radTool06.UseVisualStyleBackColor = true;
             this.radTool06.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -601,7 +413,6 @@
             this.radTool49.Name = "radTool49";
             this.radTool49.Size = new System.Drawing.Size(32, 32);
             this.radTool49.TabIndex = 49;
-            this.toolTip.SetToolTip(this.radTool49, "Spikes");
             this.radTool49.UseVisualStyleBackColor = true;
             this.radTool49.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -618,7 +429,6 @@
             this.radTool08.Name = "radTool08";
             this.radTool08.Size = new System.Drawing.Size(32, 32);
             this.radTool08.TabIndex = 8;
-            this.toolTip.SetToolTip(this.radTool08, "Tools Block");
             this.radTool08.UseVisualStyleBackColor = true;
             this.radTool08.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -635,7 +445,6 @@
             this.radTool36.Name = "radTool36";
             this.radTool36.Size = new System.Drawing.Size(32, 32);
             this.radTool36.TabIndex = 36;
-            this.toolTip.SetToolTip(this.radTool36, "Big Block (Top-Right)");
             this.radTool36.UseVisualStyleBackColor = true;
             this.radTool36.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -652,7 +461,6 @@
             this.radTool09.Name = "radTool09";
             this.radTool09.Size = new System.Drawing.Size(32, 32);
             this.radTool09.TabIndex = 9;
-            this.toolTip.SetToolTip(this.radTool09, "Amulet (Key)");
             this.radTool09.UseVisualStyleBackColor = true;
             this.radTool09.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -669,7 +477,6 @@
             this.radTool42.Name = "radTool42";
             this.radTool42.Size = new System.Drawing.Size(32, 32);
             this.radTool42.TabIndex = 42;
-            this.toolTip.SetToolTip(this.radTool42, "Cat Block (Bottom-Right)");
             this.radTool42.UseVisualStyleBackColor = true;
             this.radTool42.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -686,7 +493,6 @@
             this.radTool10.Name = "radTool10";
             this.radTool10.Size = new System.Drawing.Size(32, 32);
             this.radTool10.TabIndex = 10;
-            this.toolTip.SetToolTip(this.radTool10, "Snake");
             this.radTool10.UseVisualStyleBackColor = true;
             this.radTool10.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -703,7 +509,6 @@
             this.radTool35.Name = "radTool35";
             this.radTool35.Size = new System.Drawing.Size(32, 32);
             this.radTool35.TabIndex = 35;
-            this.toolTip.SetToolTip(this.radTool35, "Big Block (Top-Left)");
             this.radTool35.UseVisualStyleBackColor = true;
             this.radTool35.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -720,7 +525,6 @@
             this.radTool11.Name = "radTool11";
             this.radTool11.Size = new System.Drawing.Size(32, 32);
             this.radTool11.TabIndex = 11;
-            this.toolTip.SetToolTip(this.radTool11, "Horizontal Skull");
             this.radTool11.UseVisualStyleBackColor = true;
             this.radTool11.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -737,7 +541,6 @@
             this.radTool29.Name = "radTool29";
             this.radTool29.Size = new System.Drawing.Size(32, 32);
             this.radTool29.TabIndex = 29;
-            this.toolTip.SetToolTip(this.radTool29, "Bug Necklace");
             this.radTool29.UseVisualStyleBackColor = true;
             this.radTool29.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -754,7 +557,6 @@
             this.radTool12.Name = "radTool12";
             this.radTool12.Size = new System.Drawing.Size(32, 32);
             this.radTool12.TabIndex = 12;
-            this.toolTip.SetToolTip(this.radTool12, "Vertical Skull");
             this.radTool12.UseVisualStyleBackColor = true;
             this.radTool12.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -771,7 +573,6 @@
             this.radTool48.Name = "radTool48";
             this.radTool48.Size = new System.Drawing.Size(32, 32);
             this.radTool48.TabIndex = 48;
-            this.toolTip.SetToolTip(this.radTool48, "Detonator");
             this.radTool48.UseVisualStyleBackColor = true;
             this.radTool48.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -788,7 +589,6 @@
             this.radTool13.Name = "radTool13";
             this.radTool13.Size = new System.Drawing.Size(32, 32);
             this.radTool13.TabIndex = 13;
-            this.toolTip.SetToolTip(this.radTool13, "Fire");
             this.radTool13.UseVisualStyleBackColor = true;
             this.radTool13.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -805,7 +605,6 @@
             this.radTool28.Name = "radTool28";
             this.radTool28.Size = new System.Drawing.Size(32, 32);
             this.radTool28.TabIndex = 28;
-            this.toolTip.SetToolTip(this.radTool28, "Chalice (In sand)");
             this.radTool28.UseVisualStyleBackColor = true;
             this.radTool28.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -822,7 +621,6 @@
             this.radTool14.Name = "radTool14";
             this.radTool14.Size = new System.Drawing.Size(32, 32);
             this.radTool14.TabIndex = 14;
-            this.toolTip.SetToolTip(this.radTool14, "Dog (Facing up)");
             this.radTool14.UseVisualStyleBackColor = true;
             this.radTool14.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -839,7 +637,6 @@
             this.radTool41.Name = "radTool41";
             this.radTool41.Size = new System.Drawing.Size(32, 32);
             this.radTool41.TabIndex = 41;
-            this.toolTip.SetToolTip(this.radTool41, "Cat Block (Bottom-Left)");
             this.radTool41.UseVisualStyleBackColor = true;
             this.radTool41.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -856,7 +653,6 @@
             this.radTool15.Name = "radTool15";
             this.radTool15.Size = new System.Drawing.Size(32, 32);
             this.radTool15.TabIndex = 15;
-            this.toolTip.SetToolTip(this.radTool15, "Dog (Facing left)");
             this.radTool15.UseVisualStyleBackColor = true;
             this.radTool15.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -873,7 +669,6 @@
             this.radTool34.Name = "radTool34";
             this.radTool34.Size = new System.Drawing.Size(32, 32);
             this.radTool34.TabIndex = 34;
-            this.toolTip.SetToolTip(this.radTool34, "Wings (In sand)");
             this.radTool34.UseVisualStyleBackColor = true;
             this.radTool34.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -890,7 +685,6 @@
             this.radTool16.Name = "radTool16";
             this.radTool16.Size = new System.Drawing.Size(32, 32);
             this.radTool16.TabIndex = 16;
-            this.toolTip.SetToolTip(this.radTool16, "Dog (Facing right)");
             this.radTool16.UseVisualStyleBackColor = true;
             this.radTool16.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -907,7 +701,6 @@
             this.radTool22.Name = "radTool22";
             this.radTool22.Size = new System.Drawing.Size(32, 32);
             this.radTool22.TabIndex = 22;
-            this.toolTip.SetToolTip(this.radTool22, "Hourglass");
             this.radTool22.UseVisualStyleBackColor = true;
             this.radTool22.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -924,7 +717,6 @@
             this.radTool17.Name = "radTool17";
             this.radTool17.Size = new System.Drawing.Size(32, 32);
             this.radTool17.TabIndex = 17;
-            this.toolTip.SetToolTip(this.radTool17, "Dog (Facing down)");
             this.radTool17.UseVisualStyleBackColor = true;
             this.radTool17.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -941,7 +733,6 @@
             this.radTool47.Name = "radTool47";
             this.radTool47.Size = new System.Drawing.Size(32, 32);
             this.radTool47.TabIndex = 47;
-            this.toolTip.SetToolTip(this.radTool47, "TNT");
             this.radTool47.UseVisualStyleBackColor = true;
             this.radTool47.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -958,7 +749,6 @@
             this.radTool23.Name = "radTool23";
             this.radTool23.Size = new System.Drawing.Size(32, 32);
             this.radTool23.TabIndex = 23;
-            this.toolTip.SetToolTip(this.radTool23, "Hourglass (In sand)");
             this.radTool23.UseVisualStyleBackColor = true;
             this.radTool23.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -975,7 +765,6 @@
             this.radTool27.Name = "radTool27";
             this.radTool27.Size = new System.Drawing.Size(32, 32);
             this.radTool27.TabIndex = 27;
-            this.toolTip.SetToolTip(this.radTool27, "Chalice");
             this.radTool27.UseVisualStyleBackColor = true;
             this.radTool27.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -992,7 +781,6 @@
             this.radTool18.Name = "radTool18";
             this.radTool18.Size = new System.Drawing.Size(32, 32);
             this.radTool18.TabIndex = 18;
-            this.toolTip.SetToolTip(this.radTool18, "Player");
             this.radTool18.UseVisualStyleBackColor = true;
             this.radTool18.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1009,7 +797,6 @@
             this.radTool40.Name = "radTool40";
             this.radTool40.Size = new System.Drawing.Size(32, 32);
             this.radTool40.TabIndex = 40;
-            this.toolTip.SetToolTip(this.radTool40, "Cat Block (Top-Right)");
             this.radTool40.UseVisualStyleBackColor = true;
             this.radTool40.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1026,7 +813,6 @@
             this.radTool30.Name = "radTool30";
             this.radTool30.Size = new System.Drawing.Size(32, 32);
             this.radTool30.TabIndex = 30;
-            this.toolTip.SetToolTip(this.radTool30, "Bug Necklace (In sand)");
             this.radTool30.UseVisualStyleBackColor = true;
             this.radTool30.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1043,7 +829,6 @@
             this.radTool33.Name = "radTool33";
             this.radTool33.Size = new System.Drawing.Size(32, 32);
             this.radTool33.TabIndex = 33;
-            this.toolTip.SetToolTip(this.radTool33, "Wings");
             this.radTool33.UseVisualStyleBackColor = true;
             this.radTool33.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1060,7 +845,6 @@
             this.radTool37.Name = "radTool37";
             this.radTool37.Size = new System.Drawing.Size(32, 32);
             this.radTool37.TabIndex = 37;
-            this.toolTip.SetToolTip(this.radTool37, "Big Block (Bottom-Left)");
             this.radTool37.UseVisualStyleBackColor = true;
             this.radTool37.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1077,7 +861,6 @@
             this.radTool21.Name = "radTool21";
             this.radTool21.Size = new System.Drawing.Size(32, 32);
             this.radTool21.TabIndex = 21;
-            this.toolTip.SetToolTip(this.radTool21, "Fly (In sand)");
             this.radTool21.UseVisualStyleBackColor = true;
             this.radTool21.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1094,7 +877,6 @@
             this.radTool24.Name = "radTool24";
             this.radTool24.Size = new System.Drawing.Size(32, 32);
             this.radTool24.TabIndex = 24;
-            this.toolTip.SetToolTip(this.radTool24, "Rock Opening");
             this.radTool24.UseVisualStyleBackColor = true;
             this.radTool24.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1111,7 +893,6 @@
             this.radTool46.Name = "radTool46";
             this.radTool46.Size = new System.Drawing.Size(32, 32);
             this.radTool46.TabIndex = 46;
-            this.toolTip.SetToolTip(this.radTool46, "Figure Block (Bottom-Right)");
             this.radTool46.UseVisualStyleBackColor = true;
             this.radTool46.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1128,7 +909,6 @@
             this.radTool44.Name = "radTool44";
             this.radTool44.Size = new System.Drawing.Size(32, 32);
             this.radTool44.TabIndex = 44;
-            this.toolTip.SetToolTip(this.radTool44, "Figure Block (Top-Right)");
             this.radTool44.UseVisualStyleBackColor = true;
             this.radTool44.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1145,7 +925,6 @@
             this.radTool26.Name = "radTool26";
             this.radTool26.Size = new System.Drawing.Size(32, 32);
             this.radTool26.TabIndex = 26;
-            this.toolTip.SetToolTip(this.radTool26, "Coins (In sand)");
             this.radTool26.UseVisualStyleBackColor = true;
             this.radTool26.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1162,7 +941,6 @@
             this.radTool19.Name = "radTool19";
             this.radTool19.Size = new System.Drawing.Size(32, 32);
             this.radTool19.TabIndex = 19;
-            this.toolTip.SetToolTip(this.radTool19, "Door");
             this.radTool19.UseVisualStyleBackColor = true;
             this.radTool19.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1179,7 +957,6 @@
             this.radTool39.Name = "radTool39";
             this.radTool39.Size = new System.Drawing.Size(32, 32);
             this.radTool39.TabIndex = 39;
-            this.toolTip.SetToolTip(this.radTool39, "Cat Block (Top-Left)");
             this.radTool39.UseVisualStyleBackColor = true;
             this.radTool39.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1196,7 +973,6 @@
             this.radTool31.Name = "radTool31";
             this.radTool31.Size = new System.Drawing.Size(32, 32);
             this.radTool31.TabIndex = 31;
-            this.toolTip.SetToolTip(this.radTool31, "Pyramid Necklace");
             this.radTool31.UseVisualStyleBackColor = true;
             this.radTool31.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1213,7 +989,6 @@
             this.radTool32.Name = "radTool32";
             this.radTool32.Size = new System.Drawing.Size(32, 32);
             this.radTool32.TabIndex = 32;
-            this.toolTip.SetToolTip(this.radTool32, "Pyramid Necklace (In sand)");
             this.radTool32.UseVisualStyleBackColor = true;
             this.radTool32.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1230,7 +1005,6 @@
             this.radTool38.Name = "radTool38";
             this.radTool38.Size = new System.Drawing.Size(32, 32);
             this.radTool38.TabIndex = 38;
-            this.toolTip.SetToolTip(this.radTool38, "Big Block (Bottom-Right)");
             this.radTool38.UseVisualStyleBackColor = true;
             this.radTool38.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1247,7 +1021,6 @@
             this.radTool20.Name = "radTool20";
             this.radTool20.Size = new System.Drawing.Size(32, 32);
             this.radTool20.TabIndex = 20;
-            this.toolTip.SetToolTip(this.radTool20, "Fly");
             this.radTool20.UseVisualStyleBackColor = true;
             this.radTool20.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1264,7 +1037,6 @@
             this.radTool25.Name = "radTool25";
             this.radTool25.Size = new System.Drawing.Size(32, 32);
             this.radTool25.TabIndex = 25;
-            this.toolTip.SetToolTip(this.radTool25, "Coins");
             this.radTool25.UseVisualStyleBackColor = true;
             this.radTool25.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
@@ -1281,101 +1053,20 @@
             this.radTool45.Name = "radTool45";
             this.radTool45.Size = new System.Drawing.Size(32, 32);
             this.radTool45.TabIndex = 45;
-            this.toolTip.SetToolTip(this.radTool45, "Figure Block (Bottom-Left)");
             this.radTool45.UseVisualStyleBackColor = true;
             this.radTool45.Click += new System.EventHandler(this.ToolButtonClicked);
             // 
-            // menuFileNew
+            // pnlLevel
             // 
-            this.menuFileNew.Name = "menuFileNew";
-            this.menuFileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuFileNew.Size = new System.Drawing.Size(178, 22);
-            this.menuFileNew.Text = "&New level";
-            this.menuFileNew.Click += new System.EventHandler(this.menuFileNew_Click);
-            // 
-            // menuFileOpen
-            // 
-            this.menuFileOpen.Name = "menuFileOpen";
-            this.menuFileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.menuFileOpen.Size = new System.Drawing.Size(178, 22);
-            this.menuFileOpen.Text = "&Open bin...";
-            this.menuFileOpen.Click += new System.EventHandler(this.menuFileOpen_Click);
-            // 
-            // menuFileSave
-            // 
-            this.menuFileSave.Name = "menuFileSave";
-            this.menuFileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.menuFileSave.Size = new System.Drawing.Size(178, 22);
-            this.menuFileSave.Text = "&Save bin";
-            this.menuFileSave.Click += new System.EventHandler(this.menuFileSave_Click);
-            // 
-            // menuFileExit
-            // 
-            this.menuFileExit.Name = "menuFileExit";
-            this.menuFileExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.menuFileExit.Size = new System.Drawing.Size(178, 22);
-            this.menuFileExit.Text = "E&xit";
-            this.menuFileExit.Click += new System.EventHandler(this.menuFileExit_Click);
-            // 
-            // menuViewShowGrid
-            // 
-            this.menuViewShowGrid.Checked = true;
-            this.menuViewShowGrid.CheckOnClick = true;
-            this.menuViewShowGrid.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.menuViewShowGrid.Name = "menuViewShowGrid";
-            this.menuViewShowGrid.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.menuViewShowGrid.Size = new System.Drawing.Size(171, 22);
-            this.menuViewShowGrid.Text = "Show &Grid";
-            this.menuViewShowGrid.Click += new System.EventHandler(this.menuViewShowGrid_Click);
-            // 
-            // menuQRCodeRead
-            // 
-            this.menuQRCodeRead.Name = "menuQRCodeRead";
-            this.menuQRCodeRead.Size = new System.Drawing.Size(208, 22);
-            this.menuQRCodeRead.Text = "&Read from image...";
-            this.menuQRCodeRead.Click += new System.EventHandler(this.menuQRCodeRead_Click);
-            // 
-            // menuQRCodeMake
-            // 
-            this.menuQRCodeMake.Name = "menuQRCodeMake";
-            this.menuQRCodeMake.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.menuQRCodeMake.Size = new System.Drawing.Size(208, 22);
-            this.menuQRCodeMake.Text = "Make &QR Code...";
-            this.menuQRCodeMake.Click += new System.EventHandler(this.menuQRCodeMake_Click);
-            // 
-            // menuQRCodeMakeCard
-            // 
-            this.menuQRCodeMakeCard.Name = "menuQRCodeMakeCard";
-            this.menuQRCodeMakeCard.Size = new System.Drawing.Size(208, 22);
-            this.menuQRCodeMakeCard.Text = "&Make a QR Card...";
-            this.menuQRCodeMakeCard.Click += new System.EventHandler(this.menuQRCodeMakeCard_Click);
-            // 
-            // bwCheckForUpdates
-            // 
-            this.bwCheckForUpdates.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bwCheckForUpdates_DoWork);
-            this.bwCheckForUpdates.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bwCheckForUpdates_RunWorkerCompleted);
-            // 
-            // menuHelpCheckUpdates
-            // 
-            this.menuHelpCheckUpdates.Checked = true;
-            this.menuHelpCheckUpdates.CheckOnClick = true;
-            this.menuHelpCheckUpdates.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.menuHelpCheckUpdates.Name = "menuHelpCheckUpdates";
-            this.menuHelpCheckUpdates.Size = new System.Drawing.Size(235, 22);
-            this.menuHelpCheckUpdates.Text = "&Check for updates on startup";
-            this.menuHelpCheckUpdates.Click += new System.EventHandler(this.menuHelpCheckUpdates_Click);
-            // 
-            // menuHelpSep0
-            // 
-            this.menuHelpSep0.Name = "menuHelpSep0";
-            this.menuHelpSep0.Size = new System.Drawing.Size(232, 6);
-            // 
-            // menuHelpCheckNow
-            // 
-            this.menuHelpCheckNow.Name = "menuHelpCheckNow";
-            this.menuHelpCheckNow.Size = new System.Drawing.Size(235, 22);
-            this.menuHelpCheckNow.Text = "Check for updates &now...";
-            this.menuHelpCheckNow.Click += new System.EventHandler(this.menuHelpCheckNow_Click);
+            this.pnlLevel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlLevel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlLevel.Controls.Add(this.gridControl);
+            this.pnlLevel.Location = new System.Drawing.Point(182, 35);
+            this.pnlLevel.Name = "pnlLevel";
+            this.pnlLevel.Size = new System.Drawing.Size(563, 384);
+            this.pnlLevel.TabIndex = 106;
             // 
             // gridControl
             // 
@@ -1385,34 +1076,104 @@
             this.gridControl.Location = new System.Drawing.Point(0, 0);
             this.gridControl.Name = "gridControl";
             this.gridControl.Rows = 10;
-            this.gridControl.Size = new System.Drawing.Size(627, 385);
+            this.gridControl.Size = new System.Drawing.Size(563, 384);
             this.gridControl.TabIndex = 104;
             this.gridControl.TabStop = false;
-            this.gridControl.GridCellClick += new PyramidsGridControl.GridCellHandler(this.gridControl_GridCellClick);
-            this.gridControl.GridCellHoverDown += new PyramidsGridControl.GridCellHandler(this.gridControl_GridCellHoverDown);
+            this.gridControl.GridCellClick += new IntelligentLevelEditor.Games.Pyramids.PyramidsGridControl.GridCellHandler(this.GridControlGridCellClick);
+            this.gridControl.GridCellHover += new IntelligentLevelEditor.Games.Pyramids.PyramidsGridControl.GridCellHandler(this.GridControlGridCellHover);
+            this.gridControl.GridCellHoverDown += new IntelligentLevelEditor.Games.Pyramids.PyramidsGridControl.GridCellHandler(this.GridControlGridCellHoverDown);
             // 
-            // FormEditor
+            // cmbBackground
+            // 
+            this.cmbBackground.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBackground.FormattingEnabled = true;
+            this.cmbBackground.Items.AddRange(new object[] {
+            "Level 1",
+            "Level 2",
+            "Level 3",
+            "Level 4",
+            "Level 5"});
+            this.cmbBackground.Location = new System.Drawing.Point(387, 5);
+            this.cmbBackground.Name = "cmbBackground";
+            this.cmbBackground.Size = new System.Drawing.Size(86, 21);
+            this.cmbBackground.TabIndex = 108;
+            this.cmbBackground.SelectedIndexChanged += new System.EventHandler(this.cmbBackground_SelectedIndexChanged);
+            // 
+            // numPar
+            // 
+            this.numPar.Location = new System.Drawing.Point(234, 6);
+            this.numPar.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.numPar.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPar.Name = "numPar";
+            this.numPar.Size = new System.Drawing.Size(76, 20);
+            this.numPar.TabIndex = 107;
+            this.numPar.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblBackground
+            // 
+            this.lblBackground.AutoSize = true;
+            this.lblBackground.Location = new System.Drawing.Point(316, 8);
+            this.lblBackground.Name = "lblBackground";
+            this.lblBackground.Size = new System.Drawing.Size(68, 13);
+            this.lblBackground.TabIndex = 105;
+            this.lblBackground.Text = "Background:";
+            // 
+            // lblParTime
+            // 
+            this.lblParTime.AutoSize = true;
+            this.lblParTime.Location = new System.Drawing.Point(182, 8);
+            this.lblParTime.Name = "lblParTime";
+            this.lblParTime.Size = new System.Drawing.Size(52, 13);
+            this.lblParTime.TabIndex = 104;
+            this.lblParTime.Text = "Par Time:";
+            // 
+            // chkGrid
+            // 
+            this.chkGrid.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkGrid.AutoSize = true;
+            this.chkGrid.Checked = true;
+            this.chkGrid.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkGrid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.chkGrid.Image = global::IntelligentLevelEditor.Properties.Resources.ico_grid;
+            this.chkGrid.Location = new System.Drawing.Point(482, 5);
+            this.chkGrid.Name = "chkGrid";
+            this.chkGrid.Size = new System.Drawing.Size(82, 23);
+            this.chkGrid.TabIndex = 110;
+            this.chkGrid.Text = "Show Grid";
+            this.chkGrid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkGrid.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.chkGrid.UseVisualStyleBackColor = true;
+            this.chkGrid.CheckedChanged += new System.EventHandler(this.chkGrid_CheckedChanged);
+            // 
+            // PyramidsStudio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 445);
+            this.Controls.Add(this.chkGrid);
             this.Controls.Add(this.pnlToolbar);
             this.Controls.Add(this.pnlLevel);
             this.Controls.Add(this.cmbBackground);
             this.Controls.Add(this.numPar);
             this.Controls.Add(this.lblBackground);
             this.Controls.Add(this.lblParTime);
-            this.Controls.Add(this.menuStrip);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormEditor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pyramids Level Editor";
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPar)).EndInit();
-            this.pnlLevel.ResumeLayout(false);
+            this.Name = "PyramidsStudio";
+            this.Size = new System.Drawing.Size(749, 432);
             this.pnlToolbar.ResumeLayout(false);
+            this.pnlLevel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1420,92 +1181,70 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem menuFile;
-        private System.Windows.Forms.ToolStripMenuItem menuFileNew;
-        private System.Windows.Forms.ToolStripMenuItem menuFileOpen;
-        private System.Windows.Forms.ToolStripMenuItem menuFileSave;
-        private System.Windows.Forms.ToolStripMenuItem menuFileSaveAs;
-        private System.Windows.Forms.ToolStripSeparator menuFileSep0;
-        private System.Windows.Forms.ToolStripMenuItem menuFileExit;
-        private System.Windows.Forms.ToolStripMenuItem menuQRCode;
-        private System.Windows.Forms.ToolStripMenuItem menuQRCodeRead;
-        private System.Windows.Forms.ToolStripSeparator menuQRCodeSep0;
-        private System.Windows.Forms.ToolStripMenuItem menuQRCodeMake;
-        private System.Windows.Forms.ToolStripMenuItem menuQRCodeMakeCard;
-        private System.Windows.Forms.ToolStripMenuItem menuHelp;
-        private System.Windows.Forms.ToolStripMenuItem menuHelpAbout;
-        private System.Windows.Forms.Label lblParTime;
-        private System.Windows.Forms.Label lblBackground;
-        private System.Windows.Forms.NumericUpDown numPar;
-        private System.Windows.Forms.ComboBox cmbBackground;
-        private System.Windows.Forms.Panel pnlLevel;
-        private System.Windows.Forms.RadioButton radTool01;
-        private System.Windows.Forms.RadioButton radTool02;
-        private System.Windows.Forms.RadioButton radTool03;
-        private System.Windows.Forms.RadioButton radTool04;
-        private System.Windows.Forms.RadioButton radTool05;
-        private System.Windows.Forms.RadioButton radTool07;
-        private System.Windows.Forms.RadioButton radTool08;
-        private System.Windows.Forms.RadioButton radTool09;
-        private System.Windows.Forms.RadioButton radTool10;
-        private System.Windows.Forms.RadioButton radTool11;
-        private System.Windows.Forms.RadioButton radTool12;
-        private System.Windows.Forms.RadioButton radTool13;
-        private System.Windows.Forms.RadioButton radTool14;
-        private System.Windows.Forms.RadioButton radTool15;
-        private System.Windows.Forms.RadioButton radTool16;
-        private System.Windows.Forms.RadioButton radTool17;
-        private System.Windows.Forms.RadioButton radTool18;
-        private System.Windows.Forms.RadioButton radTool19;
-        private System.Windows.Forms.RadioButton radTool20;
-        private System.Windows.Forms.RadioButton radTool21;
-        private System.Windows.Forms.RadioButton radTool22;
-        private System.Windows.Forms.RadioButton radTool23;
-        private System.Windows.Forms.RadioButton radTool24;
-        private System.Windows.Forms.RadioButton radTool25;
-        private System.Windows.Forms.RadioButton radTool26;
-        private System.Windows.Forms.RadioButton radTool27;
-        private System.Windows.Forms.RadioButton radTool28;
-        private System.Windows.Forms.RadioButton radTool29;
-        private System.Windows.Forms.RadioButton radTool30;
-        private System.Windows.Forms.RadioButton radTool31;
-        private System.Windows.Forms.RadioButton radTool32;
-        private System.Windows.Forms.RadioButton radTool33;
-        private System.Windows.Forms.RadioButton radTool34;
-        private System.Windows.Forms.RadioButton radTool35;
-        private System.Windows.Forms.RadioButton radTool36;
-        private System.Windows.Forms.RadioButton radTool37;
-        private System.Windows.Forms.RadioButton radTool38;
-        private System.Windows.Forms.RadioButton radTool39;
-        private System.Windows.Forms.RadioButton radTool40;
-        private System.Windows.Forms.RadioButton radTool41;
-        private System.Windows.Forms.RadioButton radTool42;
-        private System.Windows.Forms.RadioButton radTool43;
-        private System.Windows.Forms.RadioButton radTool44;
-        private System.Windows.Forms.RadioButton radTool45;
-        private System.Windows.Forms.RadioButton radTool46;
-        private System.Windows.Forms.RadioButton radTool47;
-        private System.Windows.Forms.RadioButton radTool48;
-        private System.Windows.Forms.RadioButton radTool49;
-        private System.Windows.Forms.RadioButton radTool50;
-        private System.Windows.Forms.RadioButton radTool51;
-        private System.Windows.Forms.RadioButton radTool00;
-        private System.Windows.Forms.RadioButton radTool06;
         private System.Windows.Forms.Panel pnlToolbar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radTool01;
+        private System.Windows.Forms.RadioButton radTool00;
+        private System.Windows.Forms.RadioButton radTool02;
+        private System.Windows.Forms.RadioButton radTool03;
+        private System.Windows.Forms.RadioButton radTool04;
+        private System.Windows.Forms.RadioButton radTool51;
+        private System.Windows.Forms.RadioButton radTool05;
+        private System.Windows.Forms.RadioButton radTool50;
+        private System.Windows.Forms.RadioButton radTool07;
+        private System.Windows.Forms.RadioButton radTool43;
+        private System.Windows.Forms.RadioButton radTool06;
+        private System.Windows.Forms.RadioButton radTool49;
+        private System.Windows.Forms.RadioButton radTool08;
+        private System.Windows.Forms.RadioButton radTool36;
+        private System.Windows.Forms.RadioButton radTool09;
+        private System.Windows.Forms.RadioButton radTool42;
+        private System.Windows.Forms.RadioButton radTool10;
+        private System.Windows.Forms.RadioButton radTool35;
+        private System.Windows.Forms.RadioButton radTool11;
+        private System.Windows.Forms.RadioButton radTool29;
+        private System.Windows.Forms.RadioButton radTool12;
+        private System.Windows.Forms.RadioButton radTool48;
+        private System.Windows.Forms.RadioButton radTool13;
+        private System.Windows.Forms.RadioButton radTool28;
+        private System.Windows.Forms.RadioButton radTool14;
+        private System.Windows.Forms.RadioButton radTool41;
+        private System.Windows.Forms.RadioButton radTool15;
+        private System.Windows.Forms.RadioButton radTool34;
+        private System.Windows.Forms.RadioButton radTool16;
+        private System.Windows.Forms.RadioButton radTool22;
+        private System.Windows.Forms.RadioButton radTool17;
+        private System.Windows.Forms.RadioButton radTool47;
+        private System.Windows.Forms.RadioButton radTool23;
+        private System.Windows.Forms.RadioButton radTool27;
+        private System.Windows.Forms.RadioButton radTool18;
+        private System.Windows.Forms.RadioButton radTool40;
+        private System.Windows.Forms.RadioButton radTool30;
+        private System.Windows.Forms.RadioButton radTool33;
+        private System.Windows.Forms.RadioButton radTool37;
+        private System.Windows.Forms.RadioButton radTool21;
+        private System.Windows.Forms.RadioButton radTool24;
+        private System.Windows.Forms.RadioButton radTool46;
+        private System.Windows.Forms.RadioButton radTool44;
+        private System.Windows.Forms.RadioButton radTool26;
+        private System.Windows.Forms.RadioButton radTool19;
+        private System.Windows.Forms.RadioButton radTool39;
+        private System.Windows.Forms.RadioButton radTool31;
+        private System.Windows.Forms.RadioButton radTool32;
+        private System.Windows.Forms.RadioButton radTool38;
+        private System.Windows.Forms.RadioButton radTool20;
+        private System.Windows.Forms.RadioButton radTool25;
+        private System.Windows.Forms.RadioButton radTool45;
+        private System.Windows.Forms.Panel pnlLevel;
         private PyramidsGridControl gridControl;
-        private System.Windows.Forms.ToolStripMenuItem menuView;
-        private System.Windows.Forms.ToolStripMenuItem menuViewShowGrid;
-        private System.ComponentModel.BackgroundWorker bwCheckForUpdates;
-        private System.Windows.Forms.ToolStripMenuItem menuHelpCheckUpdates;
-        private System.Windows.Forms.ToolStripMenuItem menuHelpCheckNow;
-        private System.Windows.Forms.ToolStripSeparator menuHelpSep0;
+        private System.Windows.Forms.ComboBox cmbBackground;
+        private System.Windows.Forms.NumericUpDown numPar;
+        private System.Windows.Forms.Label lblBackground;
+        private System.Windows.Forms.Label lblParTime;
+        private System.Windows.Forms.CheckBox chkGrid;
     }
 }
-

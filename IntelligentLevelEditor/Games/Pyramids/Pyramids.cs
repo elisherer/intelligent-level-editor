@@ -4,12 +4,6 @@ using System.Runtime.InteropServices;
 
 namespace IntelligentLevelEditor.Games.Pyramids
 {
-    public struct Position
-    {
-        public int X;
-        public int Y;
-    }
-
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct LevelDataRow
     {
@@ -34,6 +28,11 @@ namespace IntelligentLevelEditor.Games.Pyramids
         public const int LevelWidth = 16;
 
         private LevelData _levelData;
+
+        public static bool IsMatchingData(byte[] data)
+        {
+            return (data[0] == 0x10 && data[1] == 0xAA && data[2] == 0x00 && data[3] == 0x00);
+        }
 
         private static T ByteArrayToStructure<T>(byte[] bytes) where T : struct
         {
@@ -65,8 +64,9 @@ namespace IntelligentLevelEditor.Games.Pyramids
             _levelData.Crc32 = 0;
         }
 
-        public void Read(Stream stream)
+        public void Read(byte[] data)
         {
+            var stream = new MemoryStream(data);
             var decompressed = new byte[Marshal.SizeOf(typeof(LevelData))];
             var ms = new MemoryStream(decompressed);
             var lz10 = new DSDecmp.Formats.Nitro.LZ10();

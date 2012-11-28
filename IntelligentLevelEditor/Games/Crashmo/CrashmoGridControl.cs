@@ -304,6 +304,8 @@ namespace IntelligentLevelEditor.Games.Crashmo
                 Redraw();
         }
 
+        private bool _mouseDown;
+
         private void CellClicked(object sender, MouseEventArgs e)
         {
             if (GridCellClick == null) return;
@@ -315,13 +317,24 @@ namespace IntelligentLevelEditor.Games.Crashmo
 
         private void CellHovered(object sender, MouseEventArgs e)
         {
-            if (GridCellHover == null || GridCellHoverDown == null) return;
+            if (GridCellHover == null && GridCellHoverDown == null) return;
             var x = e.X / (Width / Crashmo.BitmapSize);
             var y = e.Y / (Height / Crashmo.BitmapSize);
             if (x < 0 || y < 0 || x >= Crashmo.BitmapSize || y >= Crashmo.BitmapSize) return;
-            GridCellHover(x, y);
-            if (e.Button == MouseButtons.Left)
+            if (GridCellHover != null)
+                GridCellHover(x, y);
+            if (e.Button == MouseButtons.Left && _mouseDown && GridCellHoverDown != null)
                 GridCellHoverDown(x, y);
+        }
+
+        private void CrashmoGridControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseDown = true;
+        }
+
+        private void CrashmoGridControl_MouseUp(object sender, MouseEventArgs e)
+        {
+            _mouseDown = false;
         }
     }
 }

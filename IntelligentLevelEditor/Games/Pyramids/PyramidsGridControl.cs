@@ -9,10 +9,7 @@ namespace IntelligentLevelEditor.Games.Pyramids
     {
         private const int NumberOfObjects = 0x34;
 
-        public Pyramids LevelData = new Pyramids();
-        public Position PlayerPosition;
-        public Position KeyPosition;
-        public Position DoorPosition;
+        private Pyramids _levelData;
         private bool _grid = true;
         private readonly Image[] _images = new Image[NumberOfObjects];
 
@@ -41,7 +38,6 @@ namespace IntelligentLevelEditor.Games.Pyramids
         public PyramidsGridControl()
         {
             InitializeComponent();
-            LevelData.New();
             InitImages();
         }
 
@@ -58,7 +54,7 @@ namespace IntelligentLevelEditor.Games.Pyramids
 
         public void SetData(Pyramids data)
         {
-            LevelData = data;
+            _levelData = data;
         }
 
         public void SetGrid(bool grid)
@@ -66,18 +62,18 @@ namespace IntelligentLevelEditor.Games.Pyramids
             _grid = grid;
         }
 
-        public void DrawToImage(Image dstImage, int width, int height, bool gridLines, bool drawTrans)
+        private void DrawToImage(Image dstImage, int width, int height, bool gridLines, bool drawTrans)
         {
             var pixWidth = width / Columns;
             var pixHeight = height / Rows;
             var g = Graphics.FromImage(dstImage);
             g.Clear(Color.Transparent);
-            if (LevelData != null)
+            if (_levelData != null)
             {
                 for (var y = 0; y < Rows; y++)
                     for (var x = 0; x < Columns; x++)
-                        if (LevelData.Get(x,y) > 0)
-                            g.DrawImage(_images[LevelData.Get(x, y)], x * pixWidth, y * pixHeight, pixWidth+1, pixHeight+1);
+                        if (_levelData.Get(x, y) > 0)
+                            g.DrawImage(_images[_levelData.Get(x, y)], x * pixWidth, y * pixHeight, pixWidth + 1, pixHeight + 1);
                 if (gridLines)
                 {
                     for (var i = 0; i <= Columns; i++) //vertical lines
@@ -103,6 +99,8 @@ namespace IntelligentLevelEditor.Games.Pyramids
                 Redraw();
         }
 
+        private bool _mouseDown;
+
         private void CellClicked(object sender, MouseEventArgs e)
         {
             if (GridCellClick == null) return;
@@ -117,14 +115,21 @@ namespace IntelligentLevelEditor.Games.Pyramids
             if (GridCellHover == null && GridCellHoverDown == null) return;
             var x = e.X / (Width / Columns);
             var y = e.Y / (Height / Rows);
-            if (x >= 0 && y >= 0 && x < Columns && y < Rows)
-            {
-                if (GridCellHover != null)
-                    GridCellHover(x, y);
-                if (e.Button == MouseButtons.Left && GridCellHoverDown != null)
-                    GridCellHoverDown(x, y);
-            }
-        
+            if (x < 0 || y < 0 || x >= Columns || y >= Rows) return;
+            if (GridCellHover != null)
+                GridCellHover(x, y);
+            if (e.Button == MouseButtons.Left && _mouseDown && GridCellHoverDown != null)
+                GridCellHoverDown(x, y);
+        }
+
+        private void PyramidsGridControl_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseDown = true;
+        }
+
+        private void PyramidsGridControl_MouseUp(object sender, MouseEventArgs e)
+        {
+            _mouseDown = false;
         }
     }
 }

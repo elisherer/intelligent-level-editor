@@ -36,7 +36,9 @@
             this.Size = new System.Drawing.Size(288, 252);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.OnPaint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CellClicked);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CrashmoGridControl_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CellHovered);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CrashmoGridControl_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
