@@ -4,6 +4,6 @@
   * Games
     * [Pushmo Pushmo]
     * [Crashmo Crashmo]
+    * [Pyramids]
   * Games - Not in the editor
     * [FreakyForms]
-    * [Pyramids]
