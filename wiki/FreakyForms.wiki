@@ -29,19 +29,16 @@ QR Version: Not specific
 || 0x002 || 1 || `byte` || Magic (0xF0, FreakyForms :-) ) ||
 || 0x003 || 1 || `byte` || Version2? (1: Standard, 3: Deluxe) ||
 || 0x004 || 16 || `byte[16]` || Unknown, ID of somekind ||
-
-Standard:
-|| 0x014 || 4 || `uint32` || Counter (unknown) ||
+|| 0x014 (standard) || 4 || `uint32` || Counter (unknown) ||
+|| 0x014 (deluxe)|| 1 || `byte` || Counter (unknown) ||
+|| 0x015 (deluxe)|| 3 || `byte[3]` || Flags? ||
+|| 0x018 || 4 || `uint32` || Unknown ||
 || 0x01C || 4 || `uint32` || Zero padding ||
 || 0x020 || 5 || `byte[5]` || Zeros? ||
-
-Deluxe:
-|| 0x014 || 1 || `byte` || Counter (unknown) ||
-|| 0x015 || 3 || `byte[3]` || Flags? ||
-|| 0x01C || 4 || `uint32` || Zero padding ||
-|| 0x020 || 5 || `byte[5]` || Zeros? ||
-
+|| 0x025 || 11 || `byte[11]` || Unknown ||
 || 0x030 || 8 || `uint64` || Some number (length?) ||
+
+...Chunks...
 
 || ? || 1 || `byte` || Start of strings (=0x05) ||
 || ? || 1 || `byte` || Name of formee length ||
