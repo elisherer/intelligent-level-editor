@@ -8,6 +8,8 @@
 
 = QR Data =
 
+*This is true for both FreakyForms and FreakyForms Deluxe*
+
 *Endianess*: Little endian, Intel, Lowest byte first.
 
 QR Version: Not specific
