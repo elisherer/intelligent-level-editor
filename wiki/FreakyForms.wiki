@@ -24,10 +24,34 @@ QR Version: Not specific
 
 = Level Data =
 
-It ends with a block starting with 0x05 of 3 strings. Each string starts with a size byte and then the string in UTF-16 encoding (not nulled).
-  # Name of formee
-  # Catchphrase
-  # Author
+|| *Offset* || *Size (bytes)* || *Type* || *Description* ||
+|| 0x000 || 2 || `uint16` || Version (0: Standard, 1: Deluxe) ||
+|| 0x002 || 1 || `byte` || Magic (0xF0, FreakyForms :-) ) ||
+|| 0x003 || 1 || `byte` || Version2? (1: Standard, 3: Deluxe) ||
+|| 0x004 || 16 || `byte[16]` || Unknown, ID of somekind ||
+
+Standard:
+|| 0x014 || 4 || `uint32` || Counter (unknown) ||
+|| 0x01C || 4 || `uint32` || Zero padding ||
+|| 0x020 || 5 || `byte[5]` || Zeros? ||
+
+Deluxe:
+|| 0x014 || 1 || `byte` || Counter (unknown) ||
+|| 0x015 || 3 || `byte[3]` || Flags? ||
+|| 0x01C || 4 || `uint32` || Zero padding ||
+|| 0x020 || 5 || `byte[5]` || Zeros? ||
+
+|| 0x030 || 8 || `uint64` || Some number (length?) ||
+
+|| ? || 1 || `byte` || Start of strings (=0x05) ||
+|| ? || 1 || `byte` || Name of formee length ||
+|| ? || [] || `wchar[]` || Name of formee (UTF-16)||
+|| ? || 1 || `byte` || Catchphrase length ||
+|| ? || [] || `wchar[]` || Catchphrase (UTF-16)||
+|| ? || 1 || `byte` || Author length ||
+|| ? || [] || `wchar[]` || Author(UTF-16)||
+
+`*` No null at the end of the strings.
 
 What we should find out:
 
