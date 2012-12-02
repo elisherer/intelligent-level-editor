@@ -1,6 +1,7 @@
 #summary Sidebar
 
   * [Overview Overview]
+  * [CRCReverseEngineering CRC Reverse Engineering]
   * Games
     * [Pushmo Pushmo]
     * [Crashmo Crashmo]
