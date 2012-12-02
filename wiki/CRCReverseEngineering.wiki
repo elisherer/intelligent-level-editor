@@ -4,6 +4,8 @@
 
 This page is a cover of Gregory Ewing's article about [http://www.cosc.canterbury.ac.nz/greg.ewing/essays/CRC-Reverse-Engineering.html Reverse-Engineering a CRC Algorithm]
 
+<wiki:toc />
+
 = Getting started =
 
 So you have a data with CRC and you want to know how the CRC is created?
