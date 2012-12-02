@@ -84,8 +84,10 @@ You do this by rotating left the value and xor it with the next crc value, then 
 
 The polynomial should be one of the regular ones...
 
-= Getting a XorOut if used =
+= Getting a `XorOut` if used =
 
-Now you know the polynomial. Xoring the value you get with the crc on a regulat message will bring you the XorOut value.
+Now you know the polynomial. Xoring the value you get with the crc on a regulat message will bring you the `XorOut` value.
+
 If that doesn't work you could try running that polynomial with reflection (in & no out, no in & out, no in & no out, in & out), 4 variations over all..
+
 Initial value can also be a factor. Try using 0xffffffff (if crc32) and Zero.
