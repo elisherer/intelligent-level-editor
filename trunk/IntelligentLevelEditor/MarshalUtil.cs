@@ -1,9 +1,20 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
 
 namespace IntelligentLevelEditor
 {
     static class MarshalUtil
     {
+        public static string ByteArrayToString(byte[] array)
+        {
+            int i;
+            var arraystring = string.Empty;
+            for (i = 0; i < array.Length && i < 40; i++)
+                arraystring += String.Format("{0:X2} ", array[i]);
+            if (i == 40) return arraystring + "..."; //ellipsis
+            return arraystring;
+        }
+
         public static T ByteArrayToStructure<T>(byte[] bytes) where T : struct
         {
             var handle = GCHandle.Alloc(bytes, GCHandleType.Pinned);
