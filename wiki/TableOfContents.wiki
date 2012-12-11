@@ -8,3 +8,5 @@
     * [Pyramids]
   * Games - Not in the editor
     * [FreakyForms]
+    * [DenpaMen Denpa Men]
+    * [MarioTennisOpen Mario Tennis Open]
