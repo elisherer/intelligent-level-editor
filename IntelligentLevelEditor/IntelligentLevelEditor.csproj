@@ -139,6 +139,13 @@
     <Compile Include="Games\Crashmo\CrashmoStudio.Designer.cs">
       <DependentUpon>CrashmoStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Games\FreakyForms\FreakyForms.cs" />
+    <Compile Include="Games\FreakyForms\FreakyFormsStudio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Games\FreakyForms\FreakyFormsStudio.Designer.cs">
+      <DependentUpon>FreakyFormsStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games\IStudio.cs" />
     <Compile Include="Games\ImageImporter.cs" />
     <Compile Include="Games\Pushmo\PushmoStudio.cs">
@@ -225,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Games\Crashmo\CrashmoStudio.resx">
       <DependentUpon>CrashmoStudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\FreakyForms\FreakyFormsStudio.resx">
+      <DependentUpon>FreakyFormsStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games\Pushmo\PushmoStudio.resx">
       <DependentUpon>PushmoStudio.cs</DependentUpon>

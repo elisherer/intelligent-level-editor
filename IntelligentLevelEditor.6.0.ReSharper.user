@@ -1,8 +1,6 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Properties/f:Resources.Designer.cs" caret="10859" fromTop="24" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.Designer.cs" caret="59076" fromTop="13" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoLevelData.cs" caret="1981" fromTop="58" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.resx" caret="0" fromTop="0" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebcamEventArgs.cs" caret="200" fromTop="7" />
@@ -15,8 +13,6 @@
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.Designer.cs" caret="1880" fromTop="47" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Properties/f:Settings.Designer.cs" caret="0" fromTop="0" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.Designer.cs" caret="5207" fromTop="124" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.Designer.cs" caret="5231" fromTop="46" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="1491" fromTop="48" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoStudio.cs" caret="17582" fromTop="18" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoStudio.cs" caret="14273" fromTop="13" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.Designer.cs" caret="69361" fromTop="14" />
@@ -24,43 +20,49 @@
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13878" fromTop="14" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoGridControl.cs" caret="8815" fromTop="15" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="3919" fromTop="36" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="826" fromTop="28" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.cs" caret="248" fromTop="9" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="236" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:Pushmo.cs" caret="0" fromTop="0" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="928" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.Designer.cs" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.Designer.cs" caret="6180" fromTop="46" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="2360" fromTop="72" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="1854" fromTop="22" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:Pushmo.cs" caret="3760" fromTop="13" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:MarshalUtil.cs" caret="503" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="6296" fromTop="28" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="1040" fromTop="21" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13074" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoGridControl.cs" caret="8659" fromTop="12" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13575" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13878" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoGridControl.cs" caret="8815" fromTop="15" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="4141" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="126" fromTop="6" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1949" fromTop="12" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="575" fromTop="15" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="333" fromTop="11" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1334" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="2263" fromTop="18" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1825" fromTop="4" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="2504" fromTop="23" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="927" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="1153" fromTop="17" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="1337" fromTop="24" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="1501" fromTop="24" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="2278" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="4145" fromTop="25" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="4561" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="7844" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="8014" fromTop="12" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="54" fromTop="2" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1107" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1239" fromTop="17" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.cs" caret="826" fromTop="7" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="6090" fromTop="6" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="236" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:Pyramids.cs" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="1585" fromTop="24" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="2360" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="477" fromTop="18" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="1370" fromTop="31" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="1474" fromTop="25" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="288" fromTop="1" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="6036" fromTop="23" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="5842" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="5945" fromTop="18" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="650" fromTop="19" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="1833" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="1374" fromTop="18" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="1366" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="762" fromTop="11" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="2659" fromTop="33" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="2659" fromTop="21" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="3208" fromTop="31" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="1764" fromTop="8" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="1475" fromTop="26" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="3350" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="4729" fromTop="30" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="4924" fromTop="33" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="3829" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="3971" fromTop="21" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="1662" fromTop="13" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="6296" fromTop="28" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:MarshalUtil.cs" caret="130" fromTop="6" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="5818" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:MarshalUtil.cs" caret="379" fromTop="12" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="1040" fromTop="21" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -68,32 +70,32 @@
       <Item value="Pushmo" priority="88" />
       <Item value="static" priority="127" />
       <Item value="int" priority="351" />
-      <Item value="if" priority="831" />
+      <Item value="if" priority="927" />
       <Item value="DesignMode" priority="95" />
-      <Item value="return" priority="607" />
-      <Item value="public" priority="831" />
-      <Item value="struct" priority="31" />
-      <Item value="byte" priority="1527" />
+      <Item value="return" priority="735" />
+      <Item value="public" priority="991" />
+      <Item value="struct" priority="62" />
+      <Item value="byte" priority="1678" />
       <Item value="IntelligentPosition`0" priority="58" />
       <Item value="Clouds" priority="95" />
       <Item value="clouds" priority="31" />
       <Item value="Doors" priority="95" />
       <Item value="doors" priority="31" />
-      <Item value="bool" priority="127" />
+      <Item value="bool" priority="159" />
       <Item value="intelligentPalette" priority="90" />
       <Item value="IntelligentLevelSize" priority="31" />
-      <Item value="string" priority="223" />
-      <Item value="void" priority="319" />
+      <Item value="string" priority="351" />
+      <Item value="void" priority="351" />
       <Item value="array" priority="95" />
-      <Item value="private" priority="447" />
+      <Item value="private" priority="639" />
       <Item value="_game" priority="127" />
-      <Item value="value" priority="63" />
-      <Item value="var" priority="895" />
-      <Item value="new" priority="832" />
+      <Item value="value" priority="95" />
+      <Item value="var" priority="1087" />
+      <Item value="new" priority="1056" />
       <Item value="GameSelect" priority="29" />
       <Item value="gameSelect" priority="63" />
       <Item value="OK" priority="16" />
-      <Item value="switch" priority="159" />
+      <Item value="switch" priority="191" />
       <Item value="case" priority="415" />
       <Item value="break" priority="127" />
       <Item value="PushmoStudio" priority="57" />
@@ -101,7 +103,7 @@
       <Item value="this" priority="159" />
       <Item value="studio" priority="159" />
       <Item value="Fill" priority="16" />
-      <Item value="null" priority="127" />
+      <Item value="null" priority="159" />
       <Item value="Pushmo`0" priority="186" />
       <Item value="PushmoStudio`0" priority="31" />
       <Item value="pushmoStudio" priority="31" />
@@ -116,14 +118,14 @@
       <Item value="menuQRCodeMake" priority="26" />
       <Item value="menuQRCodeMakeCard" priority="31" />
       <Item value="EnableAfterOpen`0" priority="31" />
-      <Item value="else" priority="95" />
+      <Item value="else" priority="127" />
       <Item value="Crashmo`0" priority="479" />
       <Item value="Crashmo" priority="46" />
       <Item value="crashmoStudio" priority="31" />
       <Item value="PaletteEditor`0" priority="31" />
       <Item value="ColorPalette`0" priority="31" />
       <Item value="SetValue`0" priority="26" />
-      <Item value="Length" priority="298" />
+      <Item value="Length" priority="325" />
       <Item value="bitmap" priority="63" />
       <Item value="_studio" priority="159" />
       <Item value="enum" priority="95" />
@@ -147,8 +149,8 @@
       <Item value="Flags" priority="63" />
       <Item value="CrashmoFixedPosition" priority="231" />
       <Item value="List&lt;CrashmoFixedPosition&gt;" priority="115" />
-      <Item value="for" priority="159" />
-      <Item value="i" priority="416" />
+      <Item value="for" priority="223" />
+      <Item value="i" priority="544" />
       <Item value="cData" priority="94" />
       <Item value="Manholes" priority="63" />
       <Item value="Switches" priority="63" />
@@ -187,10 +189,10 @@
       <Item value="BitConverter`0" priority="63" />
       <Item value="fourBytes" priority="31" />
       <Item value="version" priority="31" />
-      <Item value="_data" priority="95" />
+      <Item value="_data" priority="159" />
       <Item value="foreach" priority="31" />
       <Item value="utility" priority="95" />
-      <Item value="while" priority="63" />
+      <Item value="while" priority="95" />
       <Item value="_pData" priority="62" />
       <Item value="CrashmoPosition" priority="28" />
       <Item value="FileDialog`0" priority="31" />
@@ -226,7 +228,7 @@
       <Item value="Parent" priority="31" />
       <Item value="Image`0" priority="31" />
       <Item value="Icon" priority="31" />
-      <Item value="SeekOrigin`0" priority="31" />
+      <Item value="SeekOrigin`0" priority="95" />
       <Item value="image" priority="31" />
       <Item value="const" priority="63" />
       <Item value="difficultyPositionX" priority="31" />
@@ -251,7 +253,7 @@
       <Item value="Text" priority="31" />
       <Item value="GameSelect`0" priority="31" />
       <Item value="Unknown" priority="16" />
-      <Item value="IStudio`0" priority="63" />
+      <Item value="IStudio`0" priority="95" />
       <Item value="StudioManager`0" priority="31" />
       <Item value="card" priority="31" />
       <Item value="Properties" priority="22" />
@@ -266,6 +268,28 @@
       <Item value="CrashmoGridControl_MouseDown`0" priority="31" />
       <Item value="_levelData" priority="63" />
       <Item value="Pyramids`0" priority="31" />
+      <Item value="IFileReaderService`0" priority="31" />
+      <Item value="FreakyForms`0" priority="31" />
+      <Item value="FreakyForms" priority="28" />
+      <Item value="_level" priority="95" />
+      <Item value="ms" priority="255" />
+      <Item value="textAuthor" priority="31" />
+      <Item value="_name" priority="95" />
+      <Item value="buffer" priority="95" />
+      <Item value="ComCompatibleVersionAttribute`0" priority="31" />
+      <Item value="_deluxe" priority="31" />
+      <Item value="chunks" priority="190" />
+      <Item value="FreakyFormsChunk`0" priority="95" />
+      <Item value="List&lt;FreakyFormsChunk&gt;" priority="28" />
+      <Item value="chunk" priority="159" />
+      <Item value="_chunks" priority="63" />
+      <Item value="FreakyFormsChunk" priority="28" />
+      <Item value="length" priority="31" />
+      <Item value="_catchphrase" priority="26" />
+      <Item value="List" priority="31" />
+      <Item value="listviewElements" priority="31" />
+      <Item value="item" priority="63" />
+      <Item value="MarshalUtil`0" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
       <Item value="Image" priority="80" />
@@ -359,7 +383,8 @@
       <Item value="Xy" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Add`0" priority="26" />
+      <Item value="Add`0" priority="53" />
+      <Item value="Count" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Buffer">
       <Item value="BlockCopy`0" priority="80" />
@@ -367,8 +392,10 @@
     <ItemStatistics item="Qualified:System.IO.MemoryStream">
       <Item value="WriteByte`0" priority="26" />
       <Item value="Write`0" priority="26" />
-      <Item value="Seek`0" priority="26" />
-      <Item value="ToArray`0" priority="26" />
+      <Item value="Seek`0" priority="80" />
+      <Item value="ToArray`0" priority="53" />
+      <Item value="Close`0" priority="26" />
+      <Item value="ReadByte`0" priority="107" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@IntelligentLevelEditor.Properties.Resources">
       <Item value="cloud_small" priority="26" />
@@ -437,7 +464,8 @@
       <Item value="ToBitmap`0" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.IO.SeekOrigin">
-      <Item value="Begin" priority="26" />
+      <Item value="Begin" priority="53" />
+      <Item value="Current" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@IntelligentLevelEditor.Games.Crashmo.Crashmo+SwitchDirection">
       <Item value="Left" priority="26" />
@@ -490,12 +518,55 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@IntelligentLevelEditor.GameSelect+GameMode">
       <Item value="Pyramids" priority="55" />
+      <Item value="FreakyForms" priority="55" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.OpenFileDialog">
       <Item value="FileName" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:IntelligentLevelEditor.Games.Pyramids.PyramidsGridControl">
       <Item value="SetData`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IntelligentLevelEditor.Games.FreakyForms.FreakyForms">
+      <Item value="New`0" priority="26" />
+      <Item value="Read`0" priority="26" />
+      <Item value="Write`0" priority="26" />
+      <Item value="GetChunks`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IntelligentLevelEditor.Games.FreakyForms.FreakyFormeeData">
+      <Item value="Version" priority="26" />
+      <Item value="Version2" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IntelligentLevelEditor.Games.FreakyForms.FreakyFormsChunk">
+      <Item value="Type" priority="134" />
+      <Item value="Data" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.Encoding">
+      <Item value="GetString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
+      <Item value="Items" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+ListViewItemCollection">
+      <Item value="Clear`0" priority="26" />
+      <Item value="Add`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem">
+      <Item value="SubItems" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem+ListViewSubItemCollection">
+      <Item value="Add`0" priority="49" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Byte">
+      <Item value="ToString`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@IntelligentLevelEditor.MarshalUtil">
+      <Item value="ByteArrayToString`0" priority="27" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>
