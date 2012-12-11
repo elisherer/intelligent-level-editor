@@ -1,0 +1,13 @@
+#summary Denpa Men
+
+= Introduction =
+
+(todo)
+
+<wiki:toc />
+
+= QR Data =
+
+All that is known is that the data size is constant 106 bytes
+
+And it's probably encrypted.
