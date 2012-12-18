@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using IntelligentLevelEditor.Properties;
+using IntelligentLevelEditor.Utils;
 
 namespace IntelligentLevelEditor.Games.Crashmo
 {

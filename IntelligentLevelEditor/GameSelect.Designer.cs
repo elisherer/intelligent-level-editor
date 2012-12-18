@@ -42,6 +42,7 @@ namespace IntelligentLevelEditor
             this.btnCrashmo = new System.Windows.Forms.Button();
             this.btnPushmo = new System.Windows.Forms.Button();
             this.btnFreakyForms = new System.Windows.Forms.Button();
+            this.btnDenpaMen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -109,10 +110,24 @@ namespace IntelligentLevelEditor
             this.btnFreakyForms.UseVisualStyleBackColor = true;
             this.btnFreakyForms.Click += new System.EventHandler(this.btnFreakyForms_Click);
             // 
+            // btnDenpaMen
+            // 
+            this.btnDenpaMen.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnDenpaMen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnDenpaMen.Location = new System.Drawing.Point(10, 82);
+            this.btnDenpaMen.Name = "btnDenpaMen";
+            this.btnDenpaMen.Size = new System.Drawing.Size(70, 64);
+            this.btnDenpaMen.TabIndex = 4;
+            this.btnDenpaMen.Text = "DenpaMen";
+            this.btnDenpaMen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDenpaMen.UseVisualStyleBackColor = true;
+            this.btnDenpaMen.Click += new System.EventHandler(this.btnDenpaMen_Click);
+            // 
             // GameSelect
             // 
             this.ClientSize = new System.Drawing.Size(310, 206);
             this.ControlBox = false;
+            this.Controls.Add(this.btnDenpaMen);
             this.Controls.Add(this.btnFreakyForms);
             this.Controls.Add(this.btnPyramids);
             this.Controls.Add(this.btnCancel);
@@ -133,5 +148,6 @@ namespace IntelligentLevelEditor
         private Button btnCancel;
         private Button btnPyramids;
         private Button btnFreakyForms;
+        private Button btnDenpaMen;
     }
 }

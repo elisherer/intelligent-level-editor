@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using IntelligentLevelEditor.Games;
 using IntelligentLevelEditor.Games.Crashmo;
+using IntelligentLevelEditor.Games.DenpaMen;
 using IntelligentLevelEditor.Games.FreakyForms;
 using IntelligentLevelEditor.Games.Pushmo;
 using IntelligentLevelEditor.Games.Pyramids;
@@ -16,6 +17,7 @@ namespace IntelligentLevelEditor
             Crashmo,
             Pyramids,
             FreakyForms,
+            DenpaMen,
             Unknown
         }
 
@@ -29,6 +31,7 @@ namespace IntelligentLevelEditor
                 return GameMode.Pyramids;
             if (FreakyForms.IsMatchingData(data))
                 return GameMode.FreakyForms;
+            //TODO: DenpaMen
             return GameMode.Unknown;
         }
 
@@ -44,6 +47,8 @@ namespace IntelligentLevelEditor
                     return new PyramidsStudio(strip) { Dock = DockStyle.Fill };
                 case GameMode.FreakyForms:
                     return new FreakyFormsStudio() { Dock = DockStyle.Fill };
+                case GameMode.DenpaMen:
+                    return new DenpaMenStudio() { Dock = DockStyle.Fill };
             }
             return null;
         }
@@ -73,6 +78,11 @@ namespace IntelligentLevelEditor
         private void btnFreakyForms_Click(object sender, EventArgs e)
         {
             SelectedGame = GameMode.FreakyForms;
+        }
+
+        private void btnDenpaMen_Click(object sender, EventArgs e)
+        {
+            SelectedGame = GameMode.DenpaMen;
         }
     }
 }
