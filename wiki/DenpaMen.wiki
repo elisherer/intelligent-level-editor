@@ -93,6 +93,7 @@ A solution would be to randomly select a value before reading.
 == Face Color ==
 == Hair Color ==
 == Eyes ==
+
 || *Value* || *Description* ||
 || 0x00 || Eyes 0 ||
 || 0x01 || Eyes 1 ||
@@ -126,7 +127,9 @@ A solution would be to randomly select a value before reading.
 || 0x1D || Eyes 29 ||
 || 0x1E || Eyes 30 ||
 || 0x1F || Eyes 31 ||
+
 == Nose ==
+
 || *Value* || *Description* ||
 || 0x0 || Nose 0 ||
 || 0x1 || Nose 1 ||
@@ -144,7 +147,9 @@ A solution would be to randomly select a value before reading.
 || 0xD || Nose 13 ||
 || 0xE || Nose 14 ||
 || 0xF || Nose 15 ||
+
 == Mouth ==
+
 || *Value* || *Description* ||
 || 0x00 || Mouth 0 ||
 || 0x01 || Mouth 1 ||
@@ -178,7 +183,9 @@ A solution would be to randomly select a value before reading.
 || 0x1D || Mouth 29 ||
 || 0x1E || Mouth 30 ||
 || 0x1F || Mouth 31 ||
+
 == Eyebrows ==
+
 || *Value* || *Description* ||
 || 0x0 || Eyebrows 0 ||
 || 0x1 || Eyebrows 1 ||
@@ -188,7 +195,9 @@ A solution would be to randomly select a value before reading.
 || 0x5 || Eyebrows 5 ||
 || 0x6 || Eyebrows 6 ||
 || 0x7 || Eyebrows 7 ||
+
 == Cheeks ==
+
 || *Value* || *Description* ||
 || 0x0 || No cheeks ||
 || 0x1 || Small cheeks ||
@@ -198,7 +207,9 @@ A solution would be to randomly select a value before reading.
 || 0x5 || Round cheeks ||
 || 0x6 || Whiskers 1 ||
 || 0x7 || Whiskers 2 ||
+
 == Glasses ==
+
 || *Value* || *Description* ||
 || 0x0 || No glasses ||
 || 0x1 || Green glasses ||
