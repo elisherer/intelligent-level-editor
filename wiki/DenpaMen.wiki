@@ -70,6 +70,11 @@ todo.
 
 == Region ==
 
+|| *Value* || *Description* ||
+|| `['A','h','4','3']` || North America ||
+|| `['b','X','8','0']` || Japan ||
+|| `['j','3','Z','w']` || Europe ||
+
 == ID ==
 
 == Antenna Power ==
