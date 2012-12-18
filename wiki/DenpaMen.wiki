@@ -4,10 +4,95 @@
 
 New characters like Miis ([http://s1323.beta.photobucket.com/user/majorjazzman/library/Denpa%20Men%20QR/ a collection])
 
+*Information found by CaitSith2*
+
 <wiki:toc />
 
 = QR Data =
 
-All that is known is that the data size is constant 106 bytes
+Data size is constant of 106 bytes
+  * Encrypted with an unknown algorithm but can be decrypted using a conversion table.
+  * Each 2 bytes translates into 1 byte. Making 256 pair combinations for each byte to be encoded to.
+  * On a QR Code, every byte is encrypted using a random pair of bytes.
 
-And it's probably encrypted.
+== Data ==
+
+The dechipred data:
+
+|| *Offset in bytes:bits* || *Size (bits)* || *Type* || *Description* ||
+|| 0x00:0 || 32 || `uint32` || Region ||
+|| 0x04:0 || 16 || `uint16` || Zeros ||
+|| 0x06:0 || 16 || `byte[2]` || ID Start ||
+|| 0x08:0 ||  6 || byte || Antenna Power ||
+|| 0x08:6 ||  5 || byte || Stats ||
+|| 0x09:3 ||  5 || byte || Color ||
+|| 0x0A:0 ||  5 || byte || Head Shape ||
+|| 0x0A:5 ||  6 || byte || Face Shape / Hair Style ||
+|| 0x0B:3 ||  2 || byte || Face Color ||
+|| 0x0B:5 ||  3 || byte || ||
+|| 0x0C:0 ||  5 || byte || Hair Color ||
+|| 0x0C:5 ||  5 || byte || Eyes ||
+|| 0x0D:2 ||  1 || byte || ||
+|| 0x0D:3 ||  4 || byte || Nose ||
+|| 0x0D:7 ||  1 || byte || ||
+|| 0x0E:0 ||  6 || byte || Mouth ||
+|| 0x0E:6 ||  3 || byte || Eyebrows ||
+|| 0x0F:1 ||  2 || byte || ||
+|| 0x0F:3 ||  5 || byte || Cheeks ||
+|| 0x10:0 ||  5 || byte || Glasses ||
+|| 0x10:5 ||  3 || byte || ||
+|| 0x11:0 ||  4 || byte || Stats Class ||
+|| 0x11:4 ||  4 || byte || ||
+|| 0x12:0 ||  7 || byte || Color Class ||
+|| 0x12:7 ||  7 || byte || Head Shape Class ||
+|| 0x13:6 ||  7 || byte || Antenna Power Class ||
+|| 0x14:5 ||  7 || byte || Face Shape / Hair Style Class ||
+|| 0x15:4 ||  4 || byte || ||
+|| 0x16:0 ||  7 || byte || Cheeks Class ||
+|| 0x16:7 ||  1 || byte || ||
+|| 0x17:0 ||  6 || byte || Glass Class ||
+|| 0x17:6 ||  2 || byte || ||
+|| 0x18:0 ||  5 || byte || Face Color Class ||
+|| 0x18:5 ||  3 || byte || ||
+|| 0x19:0 ||  8 || byte || ||
+|| 0x1A:0 || 192|| `wchar[12]=0x18` || Name (UTF-16) ||
+|| 0x32:0 || 24 || `byte[3]` || ID End ||
+|| *0x35=53 bytes* || *424* || || *Summary* ||
+
+== Conversion Table ==
+
+  * We would address the table as F.
+  * Would be 256x256, the rows would be the first byte and the columns would be the second byte.
+
+todo.
+
+= Values =
+
+== Region ==
+
+== ID ==
+
+== Antenna Power ==
+== Stats ==
+== Color ==
+== Head Shape ==
+== Face Shape / Hair Style ==
+== Face Color ==
+== Hair Color ==
+== Eyes ==
+== Nose ==
+== Mouth ==
+== Eyebrows ==
+== Cheeks ==
+
+== Classes ==
+=== Stats ===
+=== Color ===
+=== Anetanna Power ===
+=== Head Shape ===
+=== Face Shape / Hair Style ===
+=== Cheeks ===
+=== Glasses ===
+=== Face Color ===
+
+== Name ==
