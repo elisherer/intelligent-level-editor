@@ -77,6 +77,14 @@ todo.
 
 == ID ==
 
+|| *Value* || *Description* ||
+|| any value || ID Start (2 bytes) ||
+|| any value || ID End (3 bytes) ||
+
+This can be any number and determins if this DenpaMan can be read by the game (if not already in the device).
+
+A solution would be to randomly select a value before reading.
+
 == Antenna Power ==
 == Stats ==
 == Color ==
