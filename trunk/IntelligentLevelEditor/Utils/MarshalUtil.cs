@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace IntelligentLevelEditor
+namespace IntelligentLevelEditor.Utils
 {
     static class MarshalUtil
     {

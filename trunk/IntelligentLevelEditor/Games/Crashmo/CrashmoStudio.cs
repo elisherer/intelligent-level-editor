@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using IntelligentLevelEditor.Utils;
 using com.google.zxing.common;
 using IntelligentLevelEditor.Properties;
 

@@ -67,6 +67,13 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap denpamen_body {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_body", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_arrow_down {
             get {
                 object obj = ResourceManager.GetObject("ico_arrow_down", resourceCulture);

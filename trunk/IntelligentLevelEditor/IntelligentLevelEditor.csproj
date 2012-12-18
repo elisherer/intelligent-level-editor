@@ -139,6 +139,14 @@
     <Compile Include="Games\Crashmo\CrashmoStudio.Designer.cs">
       <DependentUpon>CrashmoStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Games\DenpaMen\Crypt.cs" />
+    <Compile Include="Games\DenpaMen\DenpaMen.cs" />
+    <Compile Include="Games\DenpaMen\DenpaMenStudio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Games\DenpaMen\DenpaMenStudio.Designer.cs">
+      <DependentUpon>DenpaMenStudio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games\FreakyForms\FreakyForms.cs" />
     <Compile Include="Games\FreakyForms\FreakyFormsStudio.cs">
       <SubType>UserControl</SubType>
@@ -185,7 +193,7 @@
     <Compile Include="Games\Pushmo\PushmoGridControl.Designer.cs">
       <DependentUpon>PushmoGridControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarshalUtil.cs" />
+    <Compile Include="Utils\MarshalUtil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Games\Pushmo\Pushmo.cs" />
@@ -211,6 +219,7 @@
     <Compile Include="SimplePaletteQuantizer\Quantizers\IColorQuantizer.cs" />
     <Compile Include="SimplePaletteQuantizer\Quantizers\XiaolinWu\WuColorCube.cs" />
     <Compile Include="SimplePaletteQuantizer\Quantizers\XiaolinWu\WuColorQuantizer.cs" />
+    <Compile Include="Utils\BitMarshal.cs" />
     <Compile Include="WebCam\WebCamCapture.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -232,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Games\Crashmo\CrashmoStudio.resx">
       <DependentUpon>CrashmoStudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\DenpaMen\DenpaMenStudio.resx">
+      <DependentUpon>DenpaMenStudio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games\FreakyForms\FreakyFormsStudio.resx">
       <DependentUpon>FreakyFormsStudio.cs</DependentUpon>
@@ -283,6 +295,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\DenpaMen\denpamen_body.png" />
     <None Include="Resources\tool_cloud.png" />
     <None Include="Resources\tool_pencil.png" />
     <None Include="Resources\tool_pipette.png" />

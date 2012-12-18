@@ -62,3 +62,4 @@ d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\GenerateResource.write.1.tlo
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\ile.exe
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\ile.pdb
 D:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.FreakyForms.FreakyFormsStudio.resources
+d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.DenpaMen.DenpaMenStudio.resources

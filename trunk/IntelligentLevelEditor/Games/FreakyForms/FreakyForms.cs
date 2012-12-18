@@ -2,6 +2,7 @@
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
+using IntelligentLevelEditor.Utils;
 
 namespace IntelligentLevelEditor.Games.FreakyForms
 {
