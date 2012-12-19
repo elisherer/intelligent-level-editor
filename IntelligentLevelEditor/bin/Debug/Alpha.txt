@@ -1,0 +1,256 @@
+*$|+O|IS|
+%X|*%|+H|-8|70|8A|F-|IP|M8|
++I|-5|71|8B|F.|IU|M5|
+%Z|+J|-:|72|8C|F/|IR|M:|
+*8|+C|:X|3S|73|8D|F |IW|ZX|
+*9|+L|.A|:Y|74|8E|IT|NA|ZY|
+%Y|*:|+M|-9|.B|:Z|75|8F|M9|NB|ZZ|
++N|.C|76|8G|IV|NC|
+.D|3W|8H|F4|GG|ND|
+*-|- |.E|3P|78|8I|F5|IX|M |NE|
+*.|.F|3Q|79|8J|F6|NF|
+*/|.G|3R|7:|8K|F7|IZ|NG|
+* |+K|.H|20|8L|NH|
+-$|.I|21|3T|8M|M$|NI|
+.J|22|3U|8N|F*|IQ|NJ|QQ|
+.K|23|3V|8O|F+|NK|
+*4|5+|8P|D |GO|U+|
+*5|+X|8Q|
+*6|+Y|8R|GA|
+*7|+Z|5*|8S|GB|U*|
++S|.P|5/|8T|D$|F0|GC|NP|U/|
+.Q|8U|D%|F1|GD|NQ|
+.R|8V|F2|GE|NR|
+.S|5.|8W|F3|GF|NS|U.|
++G|-3|.T|77|8X|GW|M3|NT|
+-0|.U|8Y|GH|M0|NU|
++A|.V|8Z|D*|GI|NV|
++B|-2|.W|D+|GJ|M2|NW|
+*0|-7|.X|B |F8|GK|M7|NX|
+*1|+D|-4|.Y|D-|F9|GL|M4|NY|
+*2|+E|-1|.Z|D.|F:|GM|M1|NZ|
+*3|+F|-6|D/|GN|M6|
+  |$0|0 |1C|6L|B$|D0|K/|P |QC|TP|Y3|ZD|
+$1|58|6M|B%|D1|GP|TQ|WP|Y0|ZE|
+$2|%E|1E|5%|6N|D2|EE|GQ|QE|TR|WQ|Y5|ZF|
+$3|1B|5:|6O|D3|GR|K*|QB|TS|WR|Y2|ZG|
+ $|$4|0$|1G|D4|GS|P$|QG|S3|TT|WS|Y7|
+ %|$5|0%|1D|6A|D5|GT|P%|QD|TU|WT|Y4|
+$6|1I|59|6B|B*|D6|GU|K-|QI|TV|WU|
+$7|1F|6C|B+|D7|GV|K.|QF|TW|WV|Y6|
+$8|%C|1K|D8|EC|QK|S7|TX|V4|WG|ZL|
+$9|1H|5 |B-|D9|GX|QH|S0|TY|V5|WX|Y8|ZM|
+ *|$:|%M|0*|1M|5-|B.|D:|EM|GY|P*|QM|S1|TZ|V6|WY|ZN|
+ +|%B|0+|1J|B/|EB|GZ|P+|QJ|S2|V7|WZ|Y:|ZO|
+%G|1O|6H|B0|EG|K+|QO|
+ -|%D|0-|1L|5$|6I|B1|ED|P-|QL|S4|ZA|
+ .|%A|0.|6J|B2|EA|P.|S5|Y1|ZB|
+ /|%F|0/|1N|6K|B3|EF|P/|QN|S6|ZC|
+ 0|%K|-+|.L|00|1S|B4|EK|P0|QS|ZT|
+ 1|%H|.M|01|1P|B5|EH|K8|LA|P1|QP|ZU|
+ 2|%U|-%|.N|02|1U|55|B6|EU|K9|LB|P2|QU|ZV|
+ 3|%J|-*|.O|03|1R|B7|EJ|K:|LC|P3|QR|ZW|
+ 4|%O|-/|04|1W|6P|B8|CC|EO|K3|LD|P4|QW|ZH|
+ 5|%L|05|1T|6Q|B9|EL|LE|P5|QT|ZI|
+ 6|%I|**|06|1Y|6R|B:|EI|LF|P6|QY|Y9|ZJ|
+ 7|%N|*+|-.|07|1V|6S|EN|LG|P7|QV|ZK|
+ 8|%S|08|53|6D|CG|ES|LH|P8|WW|
+ 9|%P|09|1X|50|6E|EP|K |LI|P9|QX|
+ :|--|0:|6F|CA|LJ|P:|
+%R|1Z|52|6G|CB|ER|LK|QZ|
+%W|57|6X|CK|EW|LL|ZP|
+%T|54|6Y|CD|ET|K$|LM|ZQ|
+%Q|1A|51|6Z|AA|CE|EQ|K%|LN|QA|ZR|
+%V|56|CF|EV|LO|ZS|
+$P|40|BD|DP|J$|KO|YS|
+ A|$Q|/ |0A|41|5X|BE|DQ|J%|KH|O |PA|YP|
+ B|$R|0B|42|5E|BF|DR|KI|PB|YU|
+ C|$S|0C|43|5Z|BG|DS|KJ|PC|YR|
+ D|$T|0D|44|BH|DT|J8|KC|PD|SS|YW|
+ E|$U|/$|0E|45|BI|DU|J9|KL|O$|PE|YT|
+ F|$V|/%|0F|46|5Y|BJ|DV|J:|KM|O%|PF|YI|
+ G|$W|0G|47|BK|DW|KN|PG|YV|
+ H|$X|0H|48|5C|BL|DX|PH|SW|VT|
+ I|$Y|0I|49|BM|DY|J-|PI|SP|VU|YX|
+ J|$Z|0J|4:|5M|BN|DZ|J.|PJ|SQ|VV|
+ K|/*|0K|5B|BO|J/|O*|PK|SR|VW|YZ|
+ L|/+|0L|5G|BP|J |KK|O+|PL|R0|
+ M|0M|5D|BQ|PM|R1|ST|
+ N|/-|0N|5A|BR|O-|PN|R2|SU|YQ|
+ O|/.|0O|5F|BS|O.|PO|R3|SV|
+ P|-K|0P|BT|J4|PP|
+ Q|-H|/0|0Q|9 |BU|J5|KX|O0|PQ|
+ R|-E|/1|0R|5U|9%|BV|J6|KY|O1|PR|
+ S|-J|/2|0S|BW|J7|KZ|O2|PS|
+ T|*H|-O|/3|0T|BX|KS|O3|PT|
+ U|*I|-L|/4|0U|9$|BY|O4|PU|
+ V|*J|-I|/5|0V|BZ|O5|PV|YY|
+ W|*K|-N|/6|0W|O6|PW|
+ X|/7|0X|5S|9+|KG|O7|PX|
+ Y|/8|0Y|5P|O8|PY|
+ Z|-M|/9|0Z|9-|KA|O9|PZ|
+/:|5R|9*|KB|O:|
+5W|9/|J0|
+5T|J1|KD|
+5Q|J2|KE|
+5V|9.|J3|KF|
+:D|2$|3O|93|H |R$|SO|VL|X |
+:E|2%|3H|90|R%|SH|U8|VM|
+:F|3I|95|SI|U%|VN|
+:G|3J|92|SJ|U:|VO|
+97|H$|X$|
+3L|94|H%|SL|VA|X%|
+2*|3M|II|R*|SM|U9|VB|
+2+|3N|96|R+|SN|VC|
++W|:L|KW|
++P|:M|2-|98|KP|R-|U |
++Q|:N|2.|H*|KQ|R.|U-|X*|
++R|:O|2/|9:|H+|KR|R/|X+|
+VH|
++T|:A|H-|KT|U$|VI|X-|
++U|:B|91|H.|KU|VJ|X.|
++V|:C|H/|KV|VK|X/|
+//|:T|24|7/|H0|IC|M+|NL|R4|X0|YC|
+$A|:U|25|3X|7 |H1|NM|R5|SX|X1|
+$B|:V|26|3Y|H2|IE|M%|NN|R6|SY|U5|X2|YE|
+$C|:W|27|3Z|H3|IB|M*|NO|R7|SZ|X3|YB|
+$D|:H|28|3C|H4|IG|M/|R8|SC|VP|X4|YG|
+$E|:I|29|7$|H5|ID|R9|VQ|X5|YD|
+$F|:J|2:|7%|99|H6|IY|R:|VR|X6|
+$G|:K|H7|IF|M.|VS|X7|YF|
+$H|3G|F$|H8|IK|SG|U3|VD|X8|YK|
+$I|F%|H9|IH|U0|VE|X9|YH|
+$J|3A|H:|IM|M-|SA|VF|X:|YM|
+$K|3B|7*|IJ|SB|U2|VG|YJ|
+$L|:P|2 |3K|7+|IO|R |SK|U7|VX|YO|
+$M|:Q|3D|IL|SD|U4|VY|YL|
+$N|:R|3E|7-|IA|SE|U1|VZ|YA|
+$O|:S|3F|7.|IN|SF|U6|YN|
+2D|9S|RD|T0|Z$|
+1 |2E|6-|9P|G0|HA|Q |RE|T1|UX|W0|XA|Z%|
+%%|1%|2F|6.|9U|E%|G1|HB|Q%|RF|T2|UE|W1|XB|
+2G|6/|9R|G2|HC|RG|T3|UZ|W2|XC|
+2H|6 |9W|G3|HD|RH|T4|W3|XD|
+1$|2I|9T|G4|HE|Q$|RI|T5|W4|XE|
+2J|9I|G5|HF|RJ|T6|UY|W5|XF|
+2K|9V|G6|HG|RK|T7|W6|XG|
+1+|2L|HH|Q+|RL|T8|UC|XH|
+% |2M|9X|E |G8|HI|RM|T9|W8|XI|Z-|
+%-|1-|2N|E-|G9|HJ|Q-|RN|T:|UM|W9|XJ|Z.|
+1*|2O|9Z|G:|HK|Q*|RO|UB|W:|XK|Z/|
+1/|HL|Q/|UG|XL|Z |
+%$|E$|HM|UD|XM|
+6*|9Q|HN|UA|XN|
+1.|6+|HO|Q.|UF|XO|
+%+|/O|13|2T|7O|E+|HP|L |MK|Q3|RT|XP|Z4|
+.-|10|2U|HQ|MH|Q0|RU|XQ|Z5|
+%5|..|15|2V|7A|E5|HR|ME|Q5|RV|UU|XR|Z6|
+%*|./|12|2W|7B|E*|HS|MJ|Q2|RW|XS|Z7|
+%/|17|2X|60|7C|E/|HT|L$|MO|Q7|RX|XT|
+14|2Y|61|7D|HU|L%|ML|Q4|RY|XU|
+19|2Z|62|7E|9Y|HV|MI|Q9|RZ|XV|Z*|
+%.|16|63|7F|E.|HW|MN|Q6|XW|Z+|
+%3|6$|E3|FD|HX|US|W7|XX|
+%0|18|6%|7H|C |E0|FE|HY|Q8|UP|XY|
+7I|FF|HZ|L*|MM|XZ|
+%2|1:|7J|E2|FG|L+|Q:|UR|
+%7|68|7K|C+|E7|UW|Z0|
+%4|2A|69|7L|C$|E4|L-|RA|UT|Z1|
+%1|2B|6:|7M|C%|E1|L.|RB|UQ|Z2|
+%6|2C|7N|E6|L/|RC|UV|Z3|
+*D|C/|FL|L0|
+*E|-X|7P|A |E8|FM|L1|MX|
+*F|-U|7Q|A%|FN|L2|MU|
+*G|-Z|7R|C*|E:|FO|L3|MZ|
+*X|7S|C3|L4|
+*Y|7T|A$|FA|L5|
+*Z|-Y|7U|C-|E9|FB|L6|MY|
+7V|C.|FC|L7|
+*L|-C|64|7G|A+|C7|FT|L8|MC|
+*M|65|7X|C0|FU|L9|
+*N|66|7Y|A-|C1|FV|L:|
+*O|-B|67|7Z|A*|C2|FW|MB|
+-G|2P|A/|FH|MG|
+*A|-D|2Q|C4|FI|MD|
+*B|-A|11|2R|A1|C5|FJ|MA|
+*C|-F|2S|A.|C6|FK|MF|
+*T|4 |5K|A3|O/|T |UK|W/|
+*U|5H|A0|C8|DA|UH|W |
+*V|A5|C9|DB|
+*W|5J|A2|C:|DC|UJ|
+4$|5O|A7|DD|FP|T$|UO|
+4%|5L|A4|DE|FQ|T%|UL|W$|
+5I|A9|DF|FR|J*|UI|W%|
+5N|A6|DG|FS|J+|UN|
+-S|7W|DH|MS|
+-P|A8|DI|MP|
+4*|DJ|T*|
+-R|4+|A:|DK|MR|T+|W*|
+*P|-W|DL|FX|MW|W+|
+*Q|-T|4-|BA|DM|FY|MT|T-|
+*R|-Q|4.|BB|DN|FZ|MQ|T.|W-|
+*S|-V|4/|BC|DO|MV|T/|W.|
+:$|3/|AC|CO|LP|S/|
+:%|CH|EX|LQ|V-|
+AE|CI|LR|V.|
+3*|AB|CJ|EZ|LS|S*|V/|
+AG|CS|LT|V |
+AD|CL|LU|
+3-|AI|CM|EY|LV|S-|
+3.|AF|CN|LW|S.|
++7|6T|AK|CW|K7|LX|
++0|:-|6U|AH|CP|K0|LY|
++1|:.|6V|AM|CQ|K1|LZ|
++2|:/|6W|AJ|CR|K2|
+: |AO|
++4|AL|CT|K4|
++5|1Q|AQ|CU|K5|V*|
++6|AN|CV|K6|V+|
+$ |:4|AS|OO|WO|
+:5|38|4A|AP|CX|I |N-|S8|TA|Y |
+:6|39|4B|AU|CY|I%|N.|S9|TB|WA|Y%|
+:7|3:|4C|AR|CZ|N/|S:|TC|WB|
+$$|4D|AW|JH|TD|V0|WC|
+$%|4E|AT|I$|JI|TE|V1|WD|Y$|
+:*|4F|AY|I9|JJ|TF|V2|WE|
+:+|4G|AV|JK|TG|V3|WF|
+4H|I+|TH|V$|Y+|
+3 |4I|AX|S |TI|V%|WH|
+$*|4J|I-|TJ|WI|Y-|
+$+|4K|AZ|I*|TK|WJ|Y*|
+:0|3+|4L|I/|S+|TL|V8|WK|Y/|
+$-|:1|3$|4M|S$|TM|V9|WL|
+$.|:2|3%|4N|S%|TN|V:|WM|
+$/|:3|4O|I.|TO|WN|Y.|
++/|4P|8 |I3|JD|
+%8|4Q|I0|JE|
+/A|4R|I5|JF|OA|
+%:|+*|/B|4S|I2|JG|OB|
+. |/C|:8|33|4T|8$|I7|JX|N |OC|Z8|
+/D|:9|4U|8%|I4|JY|OD|Z9|
+%9|+-|/E|::|4V|JZ|OE|Z:|
++.|/F|4W|I6|OF|
+.$|/G|37|4X|JL|N$|OG|
+.%|/H|30|4Y|I8|JM|N%|OH|
+/I|31|4Z|8*|JN|OI|
+/J|32|8+|I:|JO|OJ|
+++|/K|OK|RP|
+/L|34|8-|JA|OL|RQ|
+.*|/M|35|8.|I1|JB|N*|OM|Q1|RR|
+.+|/N|36|8/|JC|N+|ON|RS|
+80|9C|G/|JT|
++8|/P|81|G |JU|OP|
++9|/Q|82|9E|JV|OQ|
++:|/R|83|9B|JW|OR|
++3|.0|/S|84|9G|N0|OS|
+.1|/T|85|9D|G$|N1|OT|
+.2|/U|86|G%|N2|OU|
+.3|/V|87|9F|N3|OV|
+.4|/W|88|9K|G7|N4|OW|
++ |.5|/X|89|9H|N5|OX|
+.6|/Y|8:|9M|N6|OY|
+.7|/Z|9J|G*|N7|OZ|
+.8|9O|G+|JP|N8|
++$|.9|9L|JQ|N9|
++%|.:|9A|G-|JR|N:|
+9N|G.|JS|
