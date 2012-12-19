@@ -1,7 +1,6 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:WebCam/f:WebCamCapture.cs" caret="4894" fromTop="20" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:CameraCapture.cs" caret="1433" fromTop="15" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:ImageImporter.cs" caret="379" fromTop="13" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2817" fromTop="13" />
@@ -9,7 +8,6 @@
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Properties/f:Settings.Designer.cs" caret="0" fromTop="0" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.Designer.cs" caret="5207" fromTop="124" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsStudio.Designer.cs" caret="69361" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1019" fromTop="11" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:CrashmoGridControl.cs" caret="13878" fromTop="14" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pushmo/f:PushmoGridControl.cs" caret="8815" fromTop="15" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:FormEditor.cs" caret="3919" fromTop="36" />
@@ -24,58 +22,60 @@
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Crashmo/f:Crashmo.cs" caret="0" fromTop="0" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyForms.cs" caret="6333" fromTop="179" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Utils/f:MarshalUtil.cs" caret="127" fromTop="0" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="0" fromTop="0" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="2715" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:IStudio.cs" caret="0" fromTop="0" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="303" fromTop="8" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Utils/f:BitMarshal.cs" caret="33" fromTop="1" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:FreakyForms/f:FreakyFormsStudio.cs" caret="1077" fromTop="21" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:IStudio.cs" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:AboutBox.cs" caret="455" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1489" fromTop="8" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.Designer.cs" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="4210" fromTop="91" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="3083" fromTop="23" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Utils/f:BitMarshal.cs" caret="33" fromTop="1" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Utils/f:BitMarshal.cs" caret="3982" fromTop="1" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1488" fromTop="30" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1482" fromTop="7" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1482" fromTop="15" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1482" fromTop="11" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1482" fromTop="26" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1482" fromTop="26" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="2689" fromTop="19" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="2465" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1111" fromTop="5" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="914" fromTop="1" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="709" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="2580" fromTop="5" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="36" fromTop="1" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="257" fromTop="8" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1917" fromTop="24" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1566" fromTop="17" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="555" fromTop="18" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="1050" fromTop="18" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="1794" fromTop="25" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="2715" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:GameSelect.cs" caret="2739" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="3220" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="3438" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="2160" fromTop="29" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1717" fromTop="7" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1833" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="356" fromTop="7" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="3525" fromTop="8" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="1418" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="3826" fromTop="25" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="3761" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="2320" fromTop="23" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="5923" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="3431" fromTop="13" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="2945" fromTop="18" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="3532" fromTop="25" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="6995" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="6766" fromTop="21" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.cs" caret="9025" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:AboutBox.cs" caret="0" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:AboutBox.cs" caret="6240" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:AboutBox.cs" caret="554" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="4167" fromTop="29" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="631" fromTop="6" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="3242" fromTop="10" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="3448" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="7519" fromTop="0" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="5547" fromTop="13" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="5668" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="4937" fromTop="7" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="7519" fromTop="7" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="4099" fromTop="8" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="2934" fromTop="10" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="348" fromTop="11" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="3605" fromTop="20" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="3053" fromTop="10" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="4110" fromTop="19" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="61" fromTop="2" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
     <ItemStatistics item="CSharpCodeCompletionContext">
       <Item value="Pushmo" priority="88" />
-      <Item value="static" priority="127" />
-      <Item value="int" priority="383" />
-      <Item value="if" priority="991" />
+      <Item value="static" priority="191" />
+      <Item value="int" priority="415" />
+      <Item value="if" priority="1119" />
       <Item value="DesignMode" priority="95" />
-      <Item value="return" priority="863" />
-      <Item value="public" priority="1023" />
+      <Item value="return" priority="959" />
+      <Item value="public" priority="1119" />
       <Item value="struct" priority="62" />
-      <Item value="byte" priority="1707" />
+      <Item value="byte" priority="1800" />
       <Item value="IntelligentPosition`0" priority="58" />
       <Item value="Clouds" priority="95" />
       <Item value="clouds" priority="31" />
@@ -84,14 +84,14 @@
       <Item value="bool" priority="159" />
       <Item value="intelligentPalette" priority="90" />
       <Item value="IntelligentLevelSize" priority="31" />
-      <Item value="string" priority="351" />
+      <Item value="string" priority="384" />
       <Item value="void" priority="383" />
       <Item value="array" priority="95" />
-      <Item value="private" priority="767" />
+      <Item value="private" priority="831" />
       <Item value="_game" priority="127" />
       <Item value="value" priority="95" />
-      <Item value="var" priority="1279" />
-      <Item value="new" priority="1248" />
+      <Item value="var" priority="1727" />
+      <Item value="new" priority="1632" />
       <Item value="GameSelect" priority="29" />
       <Item value="gameSelect" priority="63" />
       <Item value="OK" priority="16" />
@@ -111,21 +111,21 @@
       <Item value="ReadByteArray`0" priority="31" />
       <Item value="NewFile`0" priority="31" />
       <Item value="menuFileSave" priority="31" />
-      <Item value="true" priority="383" />
+      <Item value="true" priority="447" />
       <Item value="menuFileSaveAs" priority="31" />
       <Item value="menuFileImport" priority="31" />
       <Item value="menuQRCode" priority="31" />
       <Item value="menuQRCodeMake" priority="26" />
       <Item value="menuQRCodeMakeCard" priority="31" />
       <Item value="EnableAfterOpen`0" priority="31" />
-      <Item value="else" priority="159" />
+      <Item value="else" priority="223" />
       <Item value="Crashmo`0" priority="479" />
       <Item value="Crashmo" priority="46" />
       <Item value="crashmoStudio" priority="31" />
       <Item value="PaletteEditor`0" priority="31" />
       <Item value="ColorPalette`0" priority="31" />
       <Item value="SetValue`0" priority="26" />
-      <Item value="Length" priority="325" />
+      <Item value="Length" priority="379" />
       <Item value="bitmap" priority="63" />
       <Item value="_studio" priority="159" />
       <Item value="enum" priority="95" />
@@ -149,8 +149,8 @@
       <Item value="Flags" priority="63" />
       <Item value="CrashmoFixedPosition" priority="231" />
       <Item value="List&lt;CrashmoFixedPosition&gt;" priority="115" />
-      <Item value="for" priority="287" />
-      <Item value="i" priority="544" />
+      <Item value="for" priority="383" />
+      <Item value="i" priority="800" />
       <Item value="cData" priority="94" />
       <Item value="Manholes" priority="63" />
       <Item value="Switches" priority="63" />
@@ -165,17 +165,17 @@
       <Item value="CrashmoFixedPosition`0" priority="31" />
       <Item value="CrashmoColorPalette" priority="31" />
       <Item value="two" priority="63" />
-      <Item value="bmp" priority="160" />
+      <Item value="bmp" priority="224" />
       <Item value="y" priority="415" />
       <Item value="x" priority="383" />
       <Item value="levelData" priority="32" />
       <Item value="BitmapSize" priority="95" />
       <Item value="mem" priority="31" />
-      <Item value="Resources`0" priority="159" />
-      <Item value="Bitmap" priority="189" />
+      <Item value="Resources`0" priority="191" />
+      <Item value="Bitmap" priority="219" />
       <Item value="pos" priority="255" />
       <Item value="RecursiveDrawCloud`0" priority="63" />
-      <Item value="g" priority="127" />
+      <Item value="g" priority="287" />
       <Item value="thisColor" priority="31" />
       <Item value="Cloudy" priority="63" />
       <Item value="cl" priority="31" />
@@ -189,7 +189,7 @@
       <Item value="BitConverter`0" priority="63" />
       <Item value="fourBytes" priority="31" />
       <Item value="version" priority="31" />
-      <Item value="_data" priority="319" />
+      <Item value="_data" priority="575" />
       <Item value="foreach" priority="31" />
       <Item value="utility" priority="95" />
       <Item value="while" priority="95" />
@@ -230,7 +230,7 @@
       <Item value="Icon" priority="31" />
       <Item value="SeekOrigin`0" priority="95" />
       <Item value="image" priority="31" />
-      <Item value="const" priority="95" />
+      <Item value="const" priority="127" />
       <Item value="difficultyPositionX" priority="31" />
       <Item value="difficultyPositionY" priority="31" />
       <Item value="selectedIndex" priority="31" />
@@ -272,7 +272,7 @@
       <Item value="FreakyForms`0" priority="31" />
       <Item value="FreakyForms" priority="28" />
       <Item value="_level" priority="95" />
-      <Item value="ms" priority="255" />
+      <Item value="ms" priority="287" />
       <Item value="textAuthor" priority="31" />
       <Item value="_name" priority="95" />
       <Item value="buffer" priority="95" />
@@ -291,24 +291,58 @@
       <Item value="item" priority="63" />
       <Item value="MarshalUtil`0" priority="31" />
       <Item value="ButtonRenderer`0" priority="31" />
-      <Item value="DenpaMen`0" priority="31" />
+      <Item value="DenpaMen`0" priority="63" />
       <Item value="DenpaMen" priority="28" />
-      <Item value="e" priority="31" />
+      <Item value="e" priority="63" />
       <Item value="cmbColor" priority="63" />
-      <Item value="RenderDenpa`0" priority="63" />
-      <Item value="Graphics`0" priority="31" />
-      <Item value="body" priority="95" />
+      <Item value="RenderDenpa`0" priority="95" />
+      <Item value="Graphics`0" priority="63" />
+      <Item value="body" priority="223" />
       <Item value="Color" priority="57" />
       <Item value="ProfessionalColors`0" priority="63" />
-      <Item value="Color`0" priority="159" />
-      <Item value="BodyColors" priority="31" />
+      <Item value="Color`0" priority="287" />
+      <Item value="BodyColors" priority="127" />
       <Item value="CreateParams" priority="31" />
       <Item value="color" priority="95" />
       <Item value="RendererBodyStartX" priority="31" />
       <Item value="RendererBodyStartY" priority="31" />
       <Item value="pnlDenpa" priority="31" />
       <Item value="DenapMenData" priority="28" />
-      <Item value="DataToGui`0" priority="31" />
+      <Item value="DataToGui`0" priority="63" />
+      <Item value="ImageList" priority="29" />
+      <Item value="lvwHeadShape" priority="159" />
+      <Item value="headShapesImageList" priority="95" />
+      <Item value="Size" priority="28" />
+      <Item value="readonly" priority="31" />
+      <Item value="Bitmap`0" priority="95" />
+      <Item value="HeadShapeBitmaps" priority="31" />
+      <Item value="coloredBitmap" priority="63" />
+      <Item value="ColorBitmapWith`0" priority="31" />
+      <Item value="color1" priority="63" />
+      <Item value="color2" priority="63" />
+      <Item value="RendererHeadStartX" priority="26" />
+      <Item value="RendererHeadStartY" priority="26" />
+      <Item value="head" priority="63" />
+      <Item value="bodyColor" priority="95" />
+      <Item value="bodyColorBitmap" priority="63" />
+      <Item value="Pens`0" priority="31" />
+      <Item value="Point" priority="58" />
+      <Item value="top" priority="31" />
+      <Item value="bottom" priority="31" />
+      <Item value="LinkLabel`0" priority="31" />
+      <Item value="link" priority="31" />
+      <Item value="txtName" priority="63" />
+      <Item value="radioRegioEU" priority="31" />
+      <Item value="Region" priority="31" />
+      <Item value="StreamReader" priority="28" />
+      <Item value="sr" priority="31" />
+      <Item value="BufferedStream" priority="28" />
+      <Item value="st" priority="31" />
+      <Item value="BinaryReader" priority="29" />
+      <Item value="br" priority="127" />
+      <Item value="IDStart" priority="31" />
+      <Item value="AntennaPower" priority="31" />
+      <Item value="b" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
       <Item value="Image" priority="80" />
@@ -324,7 +358,7 @@
       <Item value="LevelData" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
-      <Item value="Empty" priority="26" />
+      <Item value="Empty" priority="54" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:IntelligentLevelEditor.GameSelect">
       <Item value="ShowDialog`0" priority="26" />
@@ -413,7 +447,7 @@
       <Item value="Write`0" priority="26" />
       <Item value="Seek`0" priority="80" />
       <Item value="ToArray`0" priority="53" />
-      <Item value="Close`0" priority="26" />
+      <Item value="Close`0" priority="53" />
       <Item value="ReadByte`0" priority="107" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@IntelligentLevelEditor.Properties.Resources">
@@ -429,6 +463,7 @@
       <Item value="sprite_switch_right" priority="26" />
       <Item value="pyramids_logo" priority="27" />
       <Item value="denpamen_body" priority="27" />
+      <Item value="ResourceManager" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:IntelligentLevelEditor.Games.Crashmo.CrashmoGridControl+CrashmoFixedPosition">
       <Item value="Y" priority="53" />
@@ -439,7 +474,10 @@
       <Item value="Clear`0" priority="27" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Drawing.Graphics">
-      <Item value="FillRectangle`0" priority="26" />
+      <Item value="FillRectangle`0" priority="80" />
+      <Item value="DrawImage`0" priority="26" />
+      <Item value="Dispose`0" priority="53" />
+      <Item value="DrawRectangle`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Drawing.Brushes">
       <Item value="White" priority="26" />
@@ -495,7 +533,7 @@
       <Item value="Regular" priority="22" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.RadioButton">
-      <Item value="Checked" priority="26" />
+      <Item value="Checked" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:IntelligentLevelEditor.CameraCapture">
       <Item value="Show`0" priority="26" />
@@ -555,7 +593,7 @@
       <Item value="GetChunks`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
-      <Item value="Text" priority="26" />
+      <Item value="Text" priority="80" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:IntelligentLevelEditor.Games.FreakyForms.FreakyFormeeData">
       <Item value="Version" priority="26" />
@@ -569,17 +607,24 @@
       <Item value="GetString`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.ListView">
-      <Item value="Items" priority="53" />
+      <Item value="Items" priority="107" />
+      <Item value="LargeImageList" priority="26" />
+      <Item value="SelectedItems" priority="26" />
+      <Item value="SelectedIndices" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.ListView+ListViewItemCollection">
       <Item value="Clear`0" priority="26" />
-      <Item value="Add`0" priority="26" />
+      <Item value="Add`0" priority="53" />
+      <Item value="Indexer" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Int32">
-      <Item value="ToString`0" priority="26" />
+      <Item value="ToString`0" priority="80" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem">
       <Item value="SubItems" priority="49" />
+      <Item value="ImageList" priority="26" />
+      <Item value="ImageIndex" priority="26" />
+      <Item value="Selected" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.ListViewItem+ListViewSubItemCollection">
       <Item value="Add`0" priority="49" />
@@ -593,25 +638,29 @@
     <ItemStatistics item="Qualified:@IntelligentLevelEditor.Games.DenpaMen.DenpaMen">
       <Item value="DenapMenData`0" priority="26" />
       <Item value="DenapMenData" priority="25" />
+      <Item value="RegionUs" priority="54" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:IntelligentLevelEditor.Games.DenpaMen.DenpaMen+DenapMenData">
-      <Item value="Color" priority="80" />
-      <Item value="Name" priority="26" />
+      <Item value="Color" priority="163" />
+      <Item value="Name" priority="80" />
+      <Item value="HeadShape" priority="80" />
+      <Item value="Region" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
       <Item value="SelectedIndex" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Drawing.Graphics">
-      <Item value="FromImage`0" priority="26" />
+      <Item value="FromImage`0" priority="53" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Drawing.Bitmap">
-      <Item value="Height" priority="26" />
-      <Item value="Width" priority="26" />
+      <Item value="Height" priority="135" />
+      <Item value="Width" priority="162" />
       <Item value="GetPixel`0" priority="26" />
-      <Item value="SetPixel`0" priority="26" />
+      <Item value="SetPixel`0" priority="53" />
+      <Item value="Clone`0" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Drawing.Color">
-      <Item value="White" priority="192" />
+      <Item value="White" priority="219" />
       <Item value="Red" priority="27" />
       <Item value="Black" priority="27" />
       <Item value="Green" priority="27" />
@@ -620,6 +669,7 @@
       <Item value="Orange" priority="139" />
       <Item value="Magenta" priority="26" />
       <Item value="Lime" priority="26" />
+      <Item value="Wheat" priority="26" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@IntelligentLevelEditor.ImageBox">
       <Item value="ShowDialog`0" priority="26" />
@@ -627,6 +677,32 @@
     <ItemStatistics item="Qualified:System.Drawing.Color">
       <Item value="Equals`0" priority="54" />
       <Item value="ToArgb`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ImageList">
+      <Item value="Images" priority="80" />
+      <Item value="ImageSize" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ImageList+ImageCollection">
+      <Item value="Add`0" priority="26" />
+      <Item value="Count" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Resources.ResourceManager">
+      <Item value="GetResourceSet`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+SelectedListViewItemCollection">
+      <Item value="Count" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ListView+SelectedIndexCollection">
+      <Item value="Count" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Pens">
+      <Item value="Black" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.BinaryReader">
+      <Item value="ReadInt32`0" priority="26" />
+      <Item value="ReadInt16`0" priority="26" />
+      <Item value="ReadUInt16`0" priority="26" />
+      <Item value="ReadByte`0" priority="26" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>

@@ -11,5 +11,11 @@ namespace IntelligentLevelEditor
             lblTitle.Text = Application.ProductName + @" v." + Application.ProductVersion;
             picIcon.Image = icon;
         }
+
+        private void LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var link = (LinkLabel)sender;
+            System.Diagnostics.Process.Start(link.Text);
+        }
     }
 }

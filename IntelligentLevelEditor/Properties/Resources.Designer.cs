@@ -74,6 +74,195 @@ namespace IntelligentLevelEditor.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap denpamen_head_00 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_00", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_01 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_02 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_03 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_04 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_05 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_05", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_06 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_06", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_07 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_07", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_08 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_08", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_09 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_09", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_0A {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_0A", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_10 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_11 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_12 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_12", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_13 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_14 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_15 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_15", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_16 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_20 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_21 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_22 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_23 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_23", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_24 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap denpamen_head_25 {
+            get {
+                object obj = ResourceManager.GetObject("denpamen_head_25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap flag_eu {
+            get {
+                object obj = ResourceManager.GetObject("flag_eu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap flag_jp {
+            get {
+                object obj = ResourceManager.GetObject("flag_jp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap flag_us {
+            get {
+                object obj = ResourceManager.GetObject("flag_us", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap ico_arrow_down {
             get {
                 object obj = ResourceManager.GetObject("ico_arrow_down", resourceCulture);
