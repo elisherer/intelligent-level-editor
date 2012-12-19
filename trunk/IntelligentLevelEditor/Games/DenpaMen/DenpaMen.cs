@@ -1,18 +1,24 @@
-﻿using System.Runtime.InteropServices;
-using IntelligentLevelEditor.Utils;
+﻿using System.IO;
+//using System.Runtime.InteropServices;
+//using IntelligentLevelEditor.Utils;
 
 namespace IntelligentLevelEditor.Games.DenpaMen
 {
     public class DenpaMen
     {
+        public const uint RegionUs = 0x33346841;
+        public const uint RegionJp = 0x30385862;
+        public const uint RegionEu = 0x775A336A;
+
+        /*
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
-        public struct DenapMenData : IBitField
+        public struct DenapMenDataPacked : IBitField
         {
             public uint Region;
             public ushort Zeros;
             public ushort IDStart;
             [BitfieldLength(6)]
-            public ushort AntennaPower;
+            public byte AntennaPower;
             [BitfieldLength(5)]
             public byte Stats;
             [BitfieldLength(5)]
@@ -84,6 +90,48 @@ namespace IntelligentLevelEditor.Games.DenpaMen
 
             [BitfieldLength(24)]
             public uint IDEnd;
+        }*/
+
+        public struct DenapMenData
+        {
+            public string Name;
+
+            public uint Region;
+            public ushort IDStart; //16 bit
+            public uint IDEnd; //24 bit
+
+            public byte AntennaPower;
+            public byte Stats;
+            public byte Color;
+            public byte HeadShape;
+            public byte FaceShape;
+            public byte FaceColor;
+            public byte HairColor;
+            public byte Eyes;
+            public byte Nose;
+            public byte Mouth;
+            public byte Eyebrows;
+            public byte Cheeks;
+            public byte Glasses;
+
+            public byte[] Pack()
+            {
+                return new byte[53];
+            }
+
+            public void Unpack(byte[] input)
+            {
+                var ms = new MemoryStream(input);
+                var br = new BinaryReader(ms);
+                Region = br.ReadUInt32();
+                br.ReadInt16(); //skip 2 bytes                
+                IDStart = br.ReadUInt16();
+                var b = br.ReadByte();
+                AntennaPower = (byte)(b >> 2);
+                //...
+                ms.Close();
+            }
         }
+
     }
 }

@@ -472,4 +472,85 @@
   <data name="denpamen_body" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DenpaMen\denpamen_body.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="denpamen_head_00" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_00.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_09" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_0A" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_0A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_23" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_23.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="denpamen_head_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DenpaMen\denpamen_head_25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flag_eu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flags\flag_eu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flag_jp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flags\flag_jp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flag_us" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Flags\flag_us.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

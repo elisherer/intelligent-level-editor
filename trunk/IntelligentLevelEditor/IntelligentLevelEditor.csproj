@@ -295,6 +295,33 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Flags\flag_us.png" />
+    <None Include="Resources\Flags\flag_jp.png" />
+    <None Include="Resources\Flags\flag_eu.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_25.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_24.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_23.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_22.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_21.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_20.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_16.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_15.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_14.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_13.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_12.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_11.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_10.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_09.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_08.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_07.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_06.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_05.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_04.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_03.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_02.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_01.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_0A.png" />
+    <None Include="Resources\DenpaMen\denpamen_head_00.png" />
     <None Include="Resources\DenpaMen\denpamen_body.png" />
     <None Include="Resources\tool_cloud.png" />
     <None Include="Resources\tool_pencil.png" />
