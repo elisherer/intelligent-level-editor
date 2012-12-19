@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Text;
 using System.Windows.Forms;
 using IntelligentLevelEditor.Properties;
 using com.google.zxing.common;
@@ -11,29 +12,20 @@ namespace IntelligentLevelEditor.Games.DenpaMen
     {
         private DenpaMen.DenapMenData _data;
 
+        #region Rendering Items
+
         private static readonly Color[][] BodyColors = new [] {
-            new [] { Color.Black, Color.Black },
-            new [] { Color.White, Color.White },
-            new [] { Color.Red, Color.Red },
-            new [] { Color.Blue, Color.Blue},
-            new [] { Color.DeepSkyBlue, Color.DeepSkyBlue},
-            new [] { Color.Orange, Color.Orange},
-            new [] { Color.Lime, Color.Lime},
-            new [] { Color.Red, Color.Blue},
-            new [] { Color.Red, Color.DeepSkyBlue},
-            new [] { Color.Red, Color.Orange},
-            new [] { Color.Red, Color.Lime},
-            new [] { Color.Red, Color.White},
-            new [] { Color.Blue, Color.DeepSkyBlue},
-            new [] { Color.Blue, Color.Orange},
-            new [] { Color.Blue, Color.Lime},
-            new [] { Color.Blue, Color.White},
-            new [] { Color.DeepSkyBlue, Color.Orange},
-            new [] { Color.DeepSkyBlue, Color.Lime},
-            new [] { Color.DeepSkyBlue, Color.White},
-            new [] { Color.Orange, Color.Lime},
-            new [] { Color.Orange, Color.White},
-            new [] { Color.Lime, Color.White}
+            new [] { Color.Black, Color.Black },            new [] { Color.White, Color.White },
+            new [] { Color.Red, Color.Red },                new [] { Color.Blue, Color.Blue},
+            new [] { Color.DeepSkyBlue, Color.DeepSkyBlue}, new [] { Color.Orange, Color.Orange},
+            new [] { Color.Lime, Color.Lime},               new [] { Color.Red, Color.Blue},
+            new [] { Color.Red, Color.DeepSkyBlue},         new [] { Color.Red, Color.Orange},
+            new [] { Color.Red, Color.Lime},                new [] { Color.Red, Color.White},
+            new [] { Color.Blue, Color.DeepSkyBlue},        new [] { Color.Blue, Color.Orange},
+            new [] { Color.Blue, Color.Lime},               new [] { Color.Blue, Color.White},
+            new [] { Color.DeepSkyBlue, Color.Orange},      new [] { Color.DeepSkyBlue, Color.Lime},
+            new [] { Color.DeepSkyBlue, Color.White},       new [] { Color.Orange, Color.Lime},
+            new [] { Color.Orange, Color.White},            new [] { Color.Lime, Color.White}
         };
 
         private static readonly Bitmap[] HeadShapeBitmaps = {
@@ -50,6 +42,8 @@ namespace IntelligentLevelEditor.Games.DenpaMen
             Resources.denpamen_head_22, Resources.denpamen_head_23,
             Resources.denpamen_head_24
         };
+
+        #endregion
 
         public DenpaMenStudio()
         {
@@ -91,17 +85,20 @@ namespace IntelligentLevelEditor.Games.DenpaMen
 
         public void LoadData(byte[] data)
         {
-            return;
-            //DataToGui();
+            var decipheredData = Crypt.Decrypt(data);
+            _data.Unpack(decipheredData);
+            DataToGui();
         }
 
         public byte[] SaveData()
-        {
-            return null;
+        {            
+            var packedData = _data.Pack();
+            return Crypt.Encrypt(packedData);
         }
 
         public Image MakeQrCard(ByteMatrix qrMatrix)
         {
+            MessageBox.Show(Encoding.UTF8.GetString(SaveData())); //DEBUG
             return null;
         }
 
@@ -110,14 +107,22 @@ namespace IntelligentLevelEditor.Games.DenpaMen
             lvwHeadShape.Items[_data.HeadShape].Selected = true;
             lvwBodyColors.Items[_data.Color].Selected = true;
             txtName.Text = _data.Name;
-            if (_data.Region == DenpaMen.RegionUs)
-                radioRegionUS.Checked = true;
-            else if (_data.Region == DenpaMen.RegionJp)
-                radioRegionJP.Checked = true;
-            else
-                radioRegionEU.Checked = true;
+            switch (_data.Region)
+            {
+                case DenpaMen.RegionUs:
+                    radioRegionUS.Checked = true;
+                    break;
+                case DenpaMen.RegionJp:
+                    radioRegionJP.Checked = true;
+                    break;
+                case DenpaMen.RegionEu:
+                    radioRegionEU.Checked = true;
+                    break;
+            }
             RenderDenpa();
         }
+
+        #region Changing Events
 
         private void lvwHeadShape_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -139,10 +144,7 @@ namespace IntelligentLevelEditor.Games.DenpaMen
             _data.Name = txtName.Text;
         }
 
-        private const int RendererBodyStartX = 0;
-        private const int RendererBodyStartY = 112;
-        private const int RendererHeadStartX = 2;
-        private const int RendererHeadStartY = 24;
+        #endregion
 
         private static Bitmap ColorBitmapWith(Bitmap src, Color color1, Color color2)
         {
@@ -158,6 +160,11 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                 }
             return coloredBitmap;
         }
+
+        private const int RendererBodyStartX = 0;
+        private const int RendererBodyStartY = 112;
+        private const int RendererHeadStartX = 2;
+        private const int RendererHeadStartY = 24;
 
         private void RenderDenpa()
         {
