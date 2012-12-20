@@ -220,10 +220,8 @@
     <Compile Include="SimplePaletteQuantizer\Quantizers\XiaolinWu\WuColorCube.cs" />
     <Compile Include="SimplePaletteQuantizer\Quantizers\XiaolinWu\WuColorQuantizer.cs" />
     <Compile Include="Utils\BitMarshal.cs" />
-    <Compile Include="WebCam\WebCamCapture.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="WebCam\WebcamEventArgs.cs" />
+    <Compile Include="Capture\CAP.cs" />
+    <Compile Include="Capture\CaptureDevice.cs" />
     <EmbeddedResource Include="CameraCapture.resx">
       <DependentUpon>CameraCapture.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,10 +276,6 @@
     </Compile>
     <EmbeddedResource Include="PaletteEditor.resx">
       <DependentUpon>PaletteEditor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WebCam\WebCamCapture.resx">
-      <DependentUpon>WebCamCapture.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
