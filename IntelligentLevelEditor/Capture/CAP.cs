@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace IntelligentLevelEditor.Capture  
@@ -7,17 +8,19 @@ namespace IntelligentLevelEditor.Capture
     {
         // All information can be found on: http://msdn.microsoft.com/en-us/library/windows/desktop/dd743599(v=vs.85).aspx
 
+        // Todo: change all the Macros to actual MACROS from the avicap32.dll
+
         public delegate void FrameEventHandler(IntPtr lwnd, IntPtr lpVHdr);
 
         #region API Calls
         [DllImport("avicap32.dll")]   
-        public static extern IntPtr capCreateCaptureWindowA(byte[] lpszWindowName, int dwStyle, int x, int y, int nWidth, int nHeight, IntPtr hWndParent, int nID);  
+        public static extern IntPtr capCreateCaptureWindowA(byte[] lpszWindowName, int dwStyle, int x, int y, int nWidth, int nHeight, IntPtr hWndParent, int nID);
         [DllImport("avicap32.dll")]   
         public static extern bool capGetDriverDescriptionA(short wDriver, byte[] lpszName, int cbName, byte[] lpszVer, int cbVer);
         [DllImport("avicap32.dll")]
         public static extern int capGetVideoFormat(IntPtr hWnd, IntPtr psVideoFormat, int wSize);
         [DllImport("avicap32.dll")]
-        private static extern int capGetVideoFormatSize(IntPtr hWnd);
+        public static extern int capGetVideoFormatSize(IntPtr hWnd);
         [DllImport("User32.dll")]   
         public static extern bool SendMessage(IntPtr hWnd, int wMsg, bool wParam, int lParam);   
         [DllImport("User32.dll")]   
@@ -171,7 +174,7 @@ namespace IntelligentLevelEditor.Capture
         {
             return CAP.SendMessage(lwnd, CAP.WM_CAP_DLG_VIDEOFORMAT, 0, 0);
         }
-
+        
         public static bool capDlgVideoSource(IntPtr lwnd)
         {
             return CAP.SendMessage(lwnd, CAP.WM_CAP_DLG_VIDEOSOURCE, 0, 0);
@@ -220,6 +223,36 @@ namespace IntelligentLevelEditor.Capture
         public static bool capSetVideoFormat(IntPtr hCapWnd, ref CAP.BITMAPINFO psVideoFormat, int wSize)
         {
             return CAP.SendMessage(hCapWnd, CAP.WM_CAP_SET_VIDEOFORMAT, wSize, ref psVideoFormat);
+        }
+
+        #endregion
+
+        #region Extensions
+
+        public class CaptureDevice
+        {
+            public string Name;
+            public string Version;
+        }
+
+        private static string ConvertByteArrayToString(byte[] array)
+        {
+            var str = System.Text.Encoding.ASCII.GetString(array);
+            return str.Substring(0, str.IndexOf('\0'));
+        }
+
+        public static Dictionary<short, CaptureDevice> ListDevices()
+        {
+            var lpszName = new byte[80];
+            var lpszVersion = new byte[80];
+            var list = new Dictionary<short, CaptureDevice>();
+            for (short i = 0; i < 10; i++)
+                if (capGetDriverDescriptionA(i, lpszName, 80, lpszVersion, 80))
+                {
+                    var dev = new CaptureDevice() { Name = ConvertByteArrayToString(lpszName), Version = ConvertByteArrayToString(lpszVersion) };
+                    list.Add(i, dev);
+                }
+            return list;
         }
 
         #endregion
