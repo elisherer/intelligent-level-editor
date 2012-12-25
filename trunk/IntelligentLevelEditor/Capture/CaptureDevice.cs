@@ -36,24 +36,25 @@ namespace IntelligentLevelEditor.Capture
             _running = false;
         }
 
-        public bool Start(short deviceIndex = -1)
+        public short Start(short deviceIndex = -1)
         {
-            byte[] lpszName = new byte[100];
-            byte[] lpszVer = new byte[100];
+            var lpszName = new byte[80];
+            var lpszVer = new byte[80];
 
             var found = false;
-            
+
             if (deviceIndex < 0) //search for the first device
             {
-                short index = 0;
-                while (!found && index < 10) //try only values 0-9
-                    found = CAP.capGetDriverDescriptionA(index++, lpszName, 100, lpszVer, 100);
+                deviceIndex = 0;
+                while (!found && deviceIndex < 10) //try only values 0-9
+                    found = CAP.capGetDriverDescriptionA(deviceIndex++, lpszName, 80, lpszVer, 80);
+                deviceIndex--;
             }
             else //use the specified device
-                found = CAP.capGetDriverDescriptionA(deviceIndex, lpszName, 100, lpszVer, 100);
+                found = CAP.capGetDriverDescriptionA(deviceIndex, lpszName, 80, lpszVer, 80);
             
             if (!found)
-                return false;
+                return -1;
 
             _lwndC = CAP.capCreateCaptureWindowA(lpszName, CAP.WS_VISIBLE + CAP.WS_CHILD, 0, 0, _width, _height, _controlPtr, 0);
 
@@ -62,21 +63,19 @@ namespace IntelligentLevelEditor.Capture
                 CAP.capPreviewRate(_lwndC, _rate); //set preview mode refresh rate
                 CAP.capPreview(_lwndC, true); //enable preview mode
                 
-                /* //TODO: Do we need this?
-                CAP.BITMAPINFO bitmapinfo = new showVideo.BITMAPINFO();   
+                CAP.BITMAPINFO bitmapinfo = new CAP.BITMAPINFO();   
                 bitmapinfo.bmiHeader.biSize = Marshal.SizeOf(bitmapinfo.bmiHeader);  
                 bitmapinfo.bmiHeader.biWidth = _width;
                 bitmapinfo.bmiHeader.biHeight = _height;  
                 bitmapinfo.bmiHeader.biPlanes = 1;  
                 bitmapinfo.bmiHeader.biBitCount = 24;  
-                this.capSetVideoFormat(this._lwndC, ref bitmapinfo, Marshal.SizeOf(bitmapinfo));
-                */
+                CAP.capSetVideoFormat(_lwndC, ref bitmapinfo, Marshal.SizeOf(bitmapinfo));
 
                 CAP.capSetCallbackOnFrame(_lwndC, _frameEventHandler);
                 CAP.SetWindowPos(_lwndC, 0, 0, 0, _width, _height, 6);
                 _running = true;
             }
-            return _running;
+            return deviceIndex;
         }
 
         public bool IsRunning()
@@ -86,7 +85,6 @@ namespace IntelligentLevelEditor.Capture
 
         public void OpenVideoFormatDialog()
         {
-            Stop();
             CAP.capDlgVideoFormat(_lwndC);
 
             CAP.CAPSTATUS s = new CAP.CAPSTATUS();
@@ -97,19 +95,16 @@ namespace IntelligentLevelEditor.Capture
 
         public void OpenVideoSourceDialog()
         {
-            Stop();
             CAP.capDlgVideoSource(_lwndC);
         }
 
         public void OpenVideoDisplayDialog()
         {
-            Stop();
             CAP.capDlgVideoDisplay(_lwndC);
         }
 
         public void OpenVideoCompressionDialog()
         {
-            Stop();
             CAP.capDlgVideoCompression(_lwndC);
         }
 
@@ -129,10 +124,11 @@ namespace IntelligentLevelEditor.Capture
                 var videoHeader = new CAP.VIDEOHDR();
                 videoHeader = (CAP.VIDEOHDR)Marshal.PtrToStructure(lpVHdr, typeof(CAP.VIDEOHDR));
                 //videoHeader.lpData is (videoHeader.dwBytesUsed) bytes long.
-                var bmp24 = new Bitmap(_width, _height, _width * 3, System.Drawing.Imaging.PixelFormat.Format24bppRgb, new IntPtr(videoHeader.lpData));
+                var ptr = new IntPtr(videoHeader.lpData);
+                var bmp24 = new Bitmap(_width, _height, _width * 3, System.Drawing.Imaging.PixelFormat.Format24bppRgb, ptr);
                 var bmp = new Bitmap(bmp24); //convert to 32bpp
-                bmp.RotateFlip(RotateFlipType.RotateNoneFlipXY);
-                this.RecievedFrame(bmp);
+                bmp.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                this.RecievedFrame(bmp);                
             }
         }
         #endregion

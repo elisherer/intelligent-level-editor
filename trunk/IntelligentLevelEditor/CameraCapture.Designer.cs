@@ -85,7 +85,7 @@ namespace IntelligentLevelEditor
             // menuDeviceStart
             // 
             this.menuDeviceStart.Name = "menuDeviceStart";
-            this.menuDeviceStart.Size = new System.Drawing.Size(152, 22);
+            this.menuDeviceStart.Size = new System.Drawing.Size(143, 22);
             this.menuDeviceStart.Text = "&Start";
             this.menuDeviceStart.Click += new System.EventHandler(this.menuDeviceStart_Click);
             // 
@@ -93,21 +93,21 @@ namespace IntelligentLevelEditor
             // 
             this.menuDeviceStop.Enabled = false;
             this.menuDeviceStop.Name = "menuDeviceStop";
-            this.menuDeviceStop.Size = new System.Drawing.Size(152, 22);
+            this.menuDeviceStop.Size = new System.Drawing.Size(143, 22);
             this.menuDeviceStop.Text = "S&top";
             this.menuDeviceStop.Click += new System.EventHandler(this.menuDeviceStop_Click);
             // 
             // menuDeviceSeparator0
             // 
             this.menuDeviceSeparator0.Name = "menuDeviceSeparator0";
-            this.menuDeviceSeparator0.Size = new System.Drawing.Size(149, 6);
+            this.menuDeviceSeparator0.Size = new System.Drawing.Size(140, 6);
             // 
             // menuDeviceSelect
             // 
             this.menuDeviceSelect.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuDeviceSelectNone});
             this.menuDeviceSelect.Name = "menuDeviceSelect";
-            this.menuDeviceSelect.Size = new System.Drawing.Size(152, 22);
+            this.menuDeviceSelect.Size = new System.Drawing.Size(143, 22);
             this.menuDeviceSelect.Text = "Select &Device";
             // 
             // menuDeviceSelectNone
@@ -120,12 +120,12 @@ namespace IntelligentLevelEditor
             // menuDeviceSeparator1
             // 
             this.menuDeviceSeparator1.Name = "menuDeviceSeparator1";
-            this.menuDeviceSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.menuDeviceSeparator1.Size = new System.Drawing.Size(140, 6);
             // 
             // menuDeviceCancel
             // 
             this.menuDeviceCancel.Name = "menuDeviceCancel";
-            this.menuDeviceCancel.Size = new System.Drawing.Size(152, 22);
+            this.menuDeviceCancel.Size = new System.Drawing.Size(143, 22);
             this.menuDeviceCancel.Text = "&Cancel";
             this.menuDeviceCancel.Click += new System.EventHandler(this.menuDeviceCancel_Click);
             // 
