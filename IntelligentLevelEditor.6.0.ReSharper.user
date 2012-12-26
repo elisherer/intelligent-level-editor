@@ -1,8 +1,6 @@
 <Configuration>
   <RecentFiles>
     <RecentFiles>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/f:ImageImporter.cs" caret="379" fromTop="13" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/f:PaletteEditor.cs" caret="2817" fromTop="13" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:PyramidsGridControl.Designer.cs" caret="1880" fromTop="47" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Properties/f:Settings.Designer.cs" caret="0" fromTop="0" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:Pyramids/f:MakeQRCardForm.Designer.cs" caret="5207" fromTop="124" />
@@ -31,38 +29,40 @@
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMen.cs" caret="3083" fromTop="23" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="5283" fromTop="86" />
       <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="39448" fromTop="6" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="293" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CaptureDevice.cs" caret="2713" fromTop="69" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="42671" fromTop="16" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="42672" fromTop="18" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="42671" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="42671" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="42671" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="42672" fromTop="20" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="29682" fromTop="8" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="37819" fromTop="10" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="37819" fromTop="28" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="39004" fromTop="8" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="39735" fromTop="27" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="37819" fromTop="10" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="41043" fromTop="29" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="42676" fromTop="29" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="39759" fromTop="18" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="13" fromTop="0" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="29608" fromTop="15" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="4168" fromTop="8" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="4443" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="4699" fromTop="21" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="1496" fromTop="14" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="398" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="2439" fromTop="23" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="5451" fromTop="6" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="6818" fromTop="18" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="7027" fromTop="23" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="6162" fromTop="19" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="4972" fromTop="9" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:DenpaMenStudio.cs" caret="5282" fromTop="17" />
-      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Games/d:DenpaMen/f:Crypt.cs" caret="39448" fromTop="18" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CaptureDevice.cs" caret="3309" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CaptureDevice.cs" caret="2864" fromTop="19" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="8396" fromTop="2" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="8569" fromTop="7" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="8765" fromTop="12" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="8933" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="9089" fromTop="22" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="9273" fromTop="27" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="9498" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="8255" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="8047" fromTop="4" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="7742" fromTop="3" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="7907" fromTop="8" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="7582" fromTop="13" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="7411" fromTop="8" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="7271" fromTop="3" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="291" fromTop="8" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="1792" fromTop="24" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="939" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CaptureDevice.cs" caret="4635" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CaptureDevice.cs" caret="2864" fromTop="15" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="4693" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="5097" fromTop="27" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="4933" fromTop="17" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="4055" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="5291" fromTop="9" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="7052" fromTop="10" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CAP.cs" caret="5550" fromTop="16" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CaptureDevice.cs" caret="2864" fromTop="14" />
+      <File id="E8C3C4FC-55DC-4F0B-999C-CDC2E56BED95/d:Capture/f:CaptureDevice.cs" caret="2504" fromTop="7" />
     </RecentEdits>
   </RecentFiles>
   <CompletionStatisticsManager>
@@ -90,8 +90,8 @@
       <Item value="private" priority="831" />
       <Item value="_game" priority="127" />
       <Item value="value" priority="95" />
-      <Item value="var" priority="1951" />
-      <Item value="new" priority="1760" />
+      <Item value="var" priority="2111" />
+      <Item value="new" priority="1824" />
       <Item value="GameSelect" priority="29" />
       <Item value="gameSelect" priority="63" />
       <Item value="OK" priority="16" />
@@ -361,6 +361,17 @@
       <Item value="Alphanumerics" priority="31" />
       <Item value="input" priority="31" />
       <Item value="SaveData`0" priority="31" />
+      <Item value="bmp24" priority="31" />
+      <Item value="CAP`0" priority="31" />
+      <Item value="_lwndC" priority="31" />
+      <Item value="CAP" priority="28" />
+      <Item value="IntPtr" priority="28" />
+      <Item value="Marshal`0" priority="31" />
+      <Item value="bmpInfo" priority="63" />
+      <Item value="pBmpInfo" priority="58" />
+      <Item value="IntPtr`0" priority="31" />
+      <Item value="BITMAPINFO`0" priority="31" />
+      <Item value="_width" priority="31" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Forms.PictureBox">
       <Item value="Image" priority="80" />
@@ -678,6 +689,7 @@
       <Item value="GetPixel`0" priority="26" />
       <Item value="SetPixel`0" priority="53" />
       <Item value="Clone`0" priority="26" />
+      <Item value="PixelFormat" priority="27" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Drawing.Color">
       <Item value="White" priority="219" />
@@ -740,6 +752,12 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Text.Encoding">
       <Item value="UTF8" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@IntelligentLevelEditor.Capture.CAP">
+      <Item value="BITMAPINFO" priority="25" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Runtime.InteropServices.Marshal">
+      <Item value="StructureToPtr`0" priority="27" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <NAntValidationSettings>

@@ -56,7 +56,6 @@ d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Image
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.Pushmo.PushmoGridControl.resources
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Properties.Resources.resources
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.PaletteEditor.resources
-d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.WebCam.WebCamCapture.resources
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\GenerateResource.read.1.tlog
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\GenerateResource.write.1.tlog
 d:\dev\3DS\ile\IntelligentLevelEditor\obj\x86\Debug\ile.exe
