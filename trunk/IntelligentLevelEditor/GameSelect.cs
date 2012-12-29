@@ -31,7 +31,8 @@ namespace IntelligentLevelEditor
                 return GameMode.Pyramids;
             if (FreakyForms.IsMatchingData(data))
                 return GameMode.FreakyForms;
-            //TODO: DenpaMen
+            if (DenpaMen.IsMatchingData(data))
+                return GameMode.DenpaMen;
             return GameMode.Unknown;
         }
 
