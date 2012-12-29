@@ -32,6 +32,8 @@
             this.lblBodyColor = new System.Windows.Forms.Label();
             this.tctlDenpa = new System.Windows.Forms.TabControl();
             this.tabAntenna = new System.Windows.Forms.TabPage();
+            this.lvwAntennas = new System.Windows.Forms.ListView();
+            this.lblAntenna = new System.Windows.Forms.Label();
             this.tabColors = new System.Windows.Forms.TabPage();
             this.lvwBodyColors = new System.Windows.Forms.ListView();
             this.tabHead = new System.Windows.Forms.TabPage();
@@ -44,8 +46,6 @@
             this.lblRegion = new System.Windows.Forms.Label();
             this.lblStats = new System.Windows.Forms.Label();
             this.nudStats = new System.Windows.Forms.NumericUpDown();
-            this.lvwAntennas = new System.Windows.Forms.ListView();
-            this.lblAntenna = new System.Windows.Forms.Label();
             this.radioRegionUS = new System.Windows.Forms.RadioButton();
             this.radioRegionJP = new System.Windows.Forms.RadioButton();
             this.radioRegionEU = new System.Windows.Forms.RadioButton();
@@ -103,6 +103,28 @@
             this.tabAntenna.TabIndex = 0;
             this.tabAntenna.Text = "Antenna";
             this.tabAntenna.UseVisualStyleBackColor = true;
+            // 
+            // lvwAntennas
+            // 
+            this.lvwAntennas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwAntennas.HideSelection = false;
+            this.lvwAntennas.Location = new System.Drawing.Point(3, 24);
+            this.lvwAntennas.MultiSelect = false;
+            this.lvwAntennas.Name = "lvwAntennas";
+            this.lvwAntennas.Size = new System.Drawing.Size(579, 293);
+            this.lvwAntennas.TabIndex = 10;
+            this.lvwAntennas.UseCompatibleStateImageBehavior = false;
+            // 
+            // lblAntenna
+            // 
+            this.lblAntenna.AutoSize = true;
+            this.lblAntenna.Location = new System.Drawing.Point(3, 8);
+            this.lblAntenna.Name = "lblAntenna";
+            this.lblAntenna.Size = new System.Drawing.Size(89, 13);
+            this.lblAntenna.TabIndex = 9;
+            this.lblAntenna.Text = "Antenna (Power):";
             // 
             // tabColors
             // 
@@ -229,41 +251,10 @@
             0,
             0,
             0});
-            this.nudStats.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
             this.nudStats.Name = "nudStats";
             this.nudStats.Size = new System.Drawing.Size(42, 20);
             this.nudStats.TabIndex = 40;
-            this.nudStats.Value = new decimal(new int[] {
-            511,
-            0,
-            0,
-            0});
-            // 
-            // lvwAntennas
-            // 
-            this.lvwAntennas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.lvwAntennas.HideSelection = false;
-            this.lvwAntennas.Location = new System.Drawing.Point(3, 24);
-            this.lvwAntennas.MultiSelect = false;
-            this.lvwAntennas.Name = "lvwAntennas";
-            this.lvwAntennas.Size = new System.Drawing.Size(579, 293);
-            this.lvwAntennas.TabIndex = 10;
-            this.lvwAntennas.UseCompatibleStateImageBehavior = false;
-            // 
-            // lblAntenna
-            // 
-            this.lblAntenna.AutoSize = true;
-            this.lblAntenna.Location = new System.Drawing.Point(3, 8);
-            this.lblAntenna.Name = "lblAntenna";
-            this.lblAntenna.Size = new System.Drawing.Size(89, 13);
-            this.lblAntenna.TabIndex = 9;
-            this.lblAntenna.Text = "Antenna (Power):";
+            this.nudStats.ValueChanged += new System.EventHandler(this.nudStats_ValueChanged);
             // 
             // radioRegionUS
             // 
@@ -276,6 +267,7 @@
             this.radioRegionUS.TabIndex = 41;
             this.radioRegionUS.TabStop = true;
             this.radioRegionUS.UseVisualStyleBackColor = true;
+            this.radioRegionUS.CheckedChanged += new System.EventHandler(this.radioRegionUS_CheckedChanged);
             // 
             // radioRegionJP
             // 
@@ -286,6 +278,7 @@
             this.radioRegionJP.Size = new System.Drawing.Size(34, 30);
             this.radioRegionJP.TabIndex = 42;
             this.radioRegionJP.UseVisualStyleBackColor = true;
+            this.radioRegionJP.CheckedChanged += new System.EventHandler(this.radioRegionJP_CheckedChanged);
             // 
             // radioRegionEU
             // 
@@ -296,6 +289,7 @@
             this.radioRegionEU.Size = new System.Drawing.Size(34, 30);
             this.radioRegionEU.TabIndex = 43;
             this.radioRegionEU.UseVisualStyleBackColor = true;
+            this.radioRegionEU.CheckedChanged += new System.EventHandler(this.radioRegionEU_CheckedChanged);
             // 
             // DenpaMenStudio
             // 

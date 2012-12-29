@@ -119,6 +119,7 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                     radioRegionEU.Checked = true;
                     break;
             }
+            nudStats.Value = _data.Stats;
             RenderDenpa();
         }
 
@@ -188,6 +189,26 @@ namespace IntelligentLevelEditor.Games.DenpaMen
 
             g.Dispose();
             pnlDenpa.BackgroundImage = bmp;
+        }
+
+        private void radioRegionUS_CheckedChanged(object sender, EventArgs e)
+        {
+            _data.Region = DenpaMen.RegionUs;
+        }
+
+        private void radioRegionJP_CheckedChanged(object sender, EventArgs e)
+        {
+            _data.Region = DenpaMen.RegionJp;
+        }
+
+        private void radioRegionEU_CheckedChanged(object sender, EventArgs e)
+        {
+            _data.Region = DenpaMen.RegionEu;
+        }
+
+        private void nudStats_ValueChanged(object sender, EventArgs e)
+        {
+            _data.Stats = (ushort)nudStats.Value;
         }
 
 
