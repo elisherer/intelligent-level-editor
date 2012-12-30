@@ -56,7 +56,7 @@ The dechipred data:
 || 0x18:5 ||  3 || byte || ||
 || 0x19:0 ||  8 || byte || ||
 || 0x1A:0 || 192|| `wchar[12]` || Name (UTF-16) = 0x18 bytes ||
-|| 0x32:0 || 24 || `byte[3]` || ID End ||
+|| 0x32:0 || 24 || `byte[3]` || Random values ||
 || *0x35* || *424* || || *Summary = 53 bytes* ||
 
 == Conversion Table ==
@@ -79,7 +79,6 @@ todo.
 
 || *Value* || *Description* ||
 || any value || ID Start (2 bytes) ||
-|| any value || ID End (3 bytes) ||
 
 This can be any number and determins if this DenpaMan can be read by the game (if not already in the device).
 
