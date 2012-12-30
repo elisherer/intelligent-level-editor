@@ -471,6 +471,8 @@ namespace IntelligentLevelEditor.Games.DenpaMen
         //Using AlphaNumeric characters to reduce QR Code size (5.5 bits per character)
         public static byte[] Encrypt(byte[] input)
         {
+            if (input == null)
+                return null;
             var buffer = new byte[input.Length * 2];
             for (var i = 0; i < input.Length; i++)
                 Buffer.BlockCopy(Alphanumerics[input[i]], 0, buffer, i*2, 2);

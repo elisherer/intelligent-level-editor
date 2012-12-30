@@ -38,29 +38,56 @@ namespace IntelligentLevelEditor
         private void InitializeComponent()
         {
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnFreakyForms = new System.Windows.Forms.Button();
+            this.btnDenpaMen = new System.Windows.Forms.Button();
             this.btnPyramids = new System.Windows.Forms.Button();
             this.btnCrashmo = new System.Windows.Forms.Button();
             this.btnPushmo = new System.Windows.Forms.Button();
-            this.btnFreakyForms = new System.Windows.Forms.Button();
-            this.btnDenpaMen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(107, 173);
+            this.btnCancel.Location = new System.Drawing.Point(104, 229);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(96, 26);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
+            // btnFreakyForms
+            // 
+            this.btnFreakyForms.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnFreakyForms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnFreakyForms.Location = new System.Drawing.Point(86, 152);
+            this.btnFreakyForms.Name = "btnFreakyForms";
+            this.btnFreakyForms.Size = new System.Drawing.Size(137, 64);
+            this.btnFreakyForms.TabIndex = 4;
+            this.btnFreakyForms.Text = "Freaky Forms";
+            this.btnFreakyForms.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFreakyForms.UseVisualStyleBackColor = true;
+            this.btnFreakyForms.Click += new System.EventHandler(this.btnFreakyForms_Click);
+            // 
+            // btnDenpaMen
+            // 
+            this.btnDenpaMen.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnDenpaMen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnDenpaMen.Image = global::IntelligentLevelEditor.Properties.Resources.denpa_logo;
+            this.btnDenpaMen.Location = new System.Drawing.Point(10, 82);
+            this.btnDenpaMen.Name = "btnDenpaMen";
+            this.btnDenpaMen.Size = new System.Drawing.Size(137, 64);
+            this.btnDenpaMen.TabIndex = 4;
+            this.btnDenpaMen.Text = "DenpaMen";
+            this.btnDenpaMen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDenpaMen.UseVisualStyleBackColor = true;
+            this.btnDenpaMen.Click += new System.EventHandler(this.btnDenpaMen_Click);
+            // 
             // btnPyramids
             // 
             this.btnPyramids.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnPyramids.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnPyramids.Image = global::IntelligentLevelEditor.Properties.Resources.pyramids_logo;
-            this.btnPyramids.Location = new System.Drawing.Point(85, 82);
+            this.btnPyramids.Location = new System.Drawing.Point(163, 82);
             this.btnPyramids.Name = "btnPyramids";
             this.btnPyramids.Size = new System.Drawing.Size(137, 64);
             this.btnPyramids.TabIndex = 3;
@@ -97,35 +124,9 @@ namespace IntelligentLevelEditor
             this.btnPushmo.UseVisualStyleBackColor = true;
             this.btnPushmo.Click += new System.EventHandler(this.btnPushmo_Click);
             // 
-            // btnFreakyForms
-            // 
-            this.btnFreakyForms.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnFreakyForms.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnFreakyForms.Location = new System.Drawing.Point(228, 82);
-            this.btnFreakyForms.Name = "btnFreakyForms";
-            this.btnFreakyForms.Size = new System.Drawing.Size(70, 64);
-            this.btnFreakyForms.TabIndex = 4;
-            this.btnFreakyForms.Text = "Freaky Forms";
-            this.btnFreakyForms.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFreakyForms.UseVisualStyleBackColor = true;
-            this.btnFreakyForms.Click += new System.EventHandler(this.btnFreakyForms_Click);
-            // 
-            // btnDenpaMen
-            // 
-            this.btnDenpaMen.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnDenpaMen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnDenpaMen.Location = new System.Drawing.Point(10, 82);
-            this.btnDenpaMen.Name = "btnDenpaMen";
-            this.btnDenpaMen.Size = new System.Drawing.Size(70, 64);
-            this.btnDenpaMen.TabIndex = 4;
-            this.btnDenpaMen.Text = "DenpaMen";
-            this.btnDenpaMen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDenpaMen.UseVisualStyleBackColor = true;
-            this.btnDenpaMen.Click += new System.EventHandler(this.btnDenpaMen_Click);
-            // 
             // GameSelect
             // 
-            this.ClientSize = new System.Drawing.Size(310, 206);
+            this.ClientSize = new System.Drawing.Size(310, 267);
             this.ControlBox = false;
             this.Controls.Add(this.btnDenpaMen);
             this.Controls.Add(this.btnFreakyForms);

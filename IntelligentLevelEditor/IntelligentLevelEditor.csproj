@@ -289,6 +289,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\DenpaMen\denpa_logo.png" />
     <None Include="Resources\Flags\flag_us.png" />
     <None Include="Resources\Flags\flag_jp.png" />
     <None Include="Resources\Flags\flag_eu.png" />
