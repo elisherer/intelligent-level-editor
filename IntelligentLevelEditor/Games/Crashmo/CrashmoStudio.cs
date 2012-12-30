@@ -56,19 +56,26 @@ namespace IntelligentLevelEditor.Games.Crashmo
         public byte[] SaveData()
         {
             UpdateCrashmoDataFromGui();
-
-            var decompressed = MarshalUtil.StructureToByteArray(_pData);
-            var lz10 = new DSDecmp.Formats.Nitro.LZ10();
-            var ms = new MemoryStream(decompressed);
-            var qrData = new byte[Crashmo.EmptyQrData.Length];
-            Buffer.BlockCopy(Crashmo.EmptyQrData,0,qrData,0,qrData.Length);
-            var outs = new MemoryStream(qrData);
-            outs.Seek(12, SeekOrigin.Begin);
-            //outs.Write(new byte[] {0xAD, 0x0A, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0}, 0, 12); //header
-            var compressedSize = lz10.Compress(ms, decompressed.Length, outs);
-            var compressedSizeBytes = BitConverter.GetBytes(compressedSize);
-            Buffer.BlockCopy(compressedSizeBytes, 0, qrData, 8, 4);
-            return qrData;
+            try
+            {
+                var decompressed = MarshalUtil.StructureToByteArray(_pData);
+                var lz10 = new DSDecmp.Formats.Nitro.LZ10();
+                var ms = new MemoryStream(decompressed);
+                var qrData = new byte[Crashmo.EmptyQrData.Length];
+                Buffer.BlockCopy(Crashmo.EmptyQrData, 0, qrData, 0, qrData.Length);
+                var outs = new MemoryStream(qrData);
+                outs.Seek(12, SeekOrigin.Begin);
+                //outs.Write(new byte[] {0xAD, 0x0A, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0}, 0, 12); //header
+                var compressedSize = lz10.Compress(ms, decompressed.Length, outs);
+                var compressedSizeBytes = BitConverter.GetBytes(compressedSize);
+                Buffer.BlockCopy(compressedSizeBytes, 0, qrData, 8, 4);
+                return qrData;
+            }
+            catch
+            {
+                MessageBox.Show("Error: Data is too complex to encode as a QR code, or save as a binary.", "Intelligent Level Editor");
+                return null;
+            }
         }
 
         public void RefreshUI()
