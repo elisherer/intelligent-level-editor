@@ -91,7 +91,13 @@ namespace IntelligentLevelEditor.Games.DenpaMen
         }
 
         public byte[] SaveData()
-        {            
+        {
+            if (String.IsNullOrEmpty(_data.Name))
+            {
+                MessageBox.Show("Error: Name must be filled in.", "Intelligent Level Editor");
+                txtName.Focus();
+                return null;
+            }
             var packedData = _data.Pack();
             return Crypt.Encrypt(packedData);
         }
