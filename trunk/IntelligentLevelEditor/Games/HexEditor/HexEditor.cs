@@ -52,7 +52,14 @@ namespace IntelligentLevelEditor.Games.HexEditor
 
         public Image MakeQrCard(ByteMatrix qrMatrix)
         {
-            return null;
+            var img = new Bitmap(200, 200);
+            var g = Graphics.FromImage(img);
+            g.Clear(Color.White);
+            for (var y = 0; y < qrMatrix.Height; ++y)
+                for (var x = 0; x < qrMatrix.Width; ++x)
+                    if (qrMatrix.get_Renamed(x, y) != -1)
+                        g.FillRectangle(Brushes.Black, x * 2, y * 2, 2, 2);
+            return img;
         }
     }
 }
