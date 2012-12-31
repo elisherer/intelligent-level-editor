@@ -30,11 +30,14 @@ namespace IntelligentLevelEditor.Games.DenpaMen
 
         public struct DenapMenData
         {
+// ReSharper disable MemberCanBePrivate.Global
             public string Name;
 
             public uint Region;
+// ReSharper disable InconsistentNaming
             public ushort IDStart; //16 bit
             public uint IDEnd; //24 bit
+// ReSharper restore InconsistentNaming
 
             public byte AntennaPower;
             public ushort Stats;
@@ -49,29 +52,28 @@ namespace IntelligentLevelEditor.Games.DenpaMen
             public byte Eyebrows;
             public byte Cheeks;
             public byte Glasses;
+// ReSharper restore MemberCanBePrivate.Global
 
-            private byte written_bits;
-            private byte write_bits;
+            private byte _writtenBits;
+            private byte _writeBits;
 
-            private void WriteBits(BinaryWriter bw, byte data, byte bit_count)
+            private void WriteBits(BinaryWriter bw, byte data, byte bitCount)
             {
                 if (bw == null)
                     return;
-                if (bit_count > 8) bit_count = 8;
-                while (bit_count > 0)
+                if (bitCount > 8) bitCount = 8;
+                while (bitCount > 0)
                 {
-                    write_bits >>= 1;
+                    _writeBits >>= 1;
                     if((data & 1) == 1)
-                        write_bits |= 0x80;
+                        _writeBits |= 0x80;
                     data >>= 1;
-                    bit_count--;
-                    written_bits++;
-                    if (written_bits == 8)
-                    {
-                        bw.Write(write_bits);
-                        written_bits = 0;
-                        write_bits = 0;
-                    }
+                    bitCount--;
+                    _writtenBits++;
+                    if (_writtenBits != 8) continue;
+                    bw.Write(_writeBits);
+                    _writtenBits = 0;
+                    _writeBits = 0;
                 }
             }
 
@@ -86,13 +88,14 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                 bw.Write((ushort)0);
                 bw.Write(IDStart);
                 #region ColorClass
-                byte ColorClass = 0;
+                byte colorClass = 0;
                 byte color = Color;
                 if (color <= 6)
                 {
                     if ((((AntennaPower >= 7) && (AntennaPower <= 12)) || ((AntennaPower >= 19) && (AntennaPower <= 24))))
                     {
-                        byte[][] color_index_table = new byte[][] {
+                        var colorIndexTable = new[]
+                            {
                             new byte[] {6,1,0,2,3,4,5},
                             new byte[] {6,1,2,0,3,4,5},
                             new byte[] {6,1,2,3,0,4,5},
@@ -100,87 +103,87 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                             new byte[] {6,1,2,3,4,5,0},
                             new byte[] {6,0,1,2,3,4,5}
                         };
-                        color = color_index_table[(AntennaPower <= 12) ? AntennaPower - 7 : AntennaPower - 19][color];
+                        color = colorIndexTable[(AntennaPower <= 12) ? AntennaPower - 7 : AntennaPower - 19][color];
                     }
                     if (color != 0)
                     {
                         color--;
-                        ColorClass = 0x28;
+                        colorClass = 0x28;
                     }
                 }
                 else
                 {
                     color -= 7;
-                    ColorClass = 0x5F;
+                    colorClass = 0x5F;
                 }
                 #endregion
                 #region AntennaPowerClass
-                byte AntennaPowerClass = 0;
+                byte antennaPowerClass = 0;
                 byte antennapower = AntennaPower;
                 if ((antennapower >= 1) && (antennapower <= 12))
                 {
                     antennapower--;
-                    AntennaPowerClass = 0x46;
+                    antennaPowerClass = 0x46;
                 }
                 else if ((antennapower >= 13) && (antennapower <= 24))
                 {
                     antennapower -= 13;
-                    AntennaPowerClass = 0x5A;
+                    antennaPowerClass = 0x5A;
                 }
                 else if (antennapower >= 25)
                 {
                     antennapower -= 25;
-                    AntennaPowerClass = 0x5D;
+                    antennaPowerClass = 0x5D;
                 }
                 #endregion
                 #region HeadShapeClass
-                byte HeadShapeClass = 0;
+                byte headShapeClass = 0;
                 byte headshape = HeadShape;
                 if ((headshape >= 11) && (headshape <= 17))
                 {
                     headshape -= 11;
-                    HeadShapeClass = 0x50;
+                    headShapeClass = 0x50;
                 }
                 else if (headshape >= 18)
                 {
                     headshape -= 18;
-                    HeadShapeClass = 0x5F;
+                    headShapeClass = 0x5F;
                 }
                 #endregion
                 #region FaceShapeClass
-                byte FaceShapeClass = 0;
+                byte faceShapeClass = 0;
                 byte faceshape = FaceShape;
                 if (faceshape >= 9)
                 {
                     faceshape -= 9;
-                    FaceShapeClass = 0x5A;
+                    faceShapeClass = 0x5A;
                 }
                 #endregion
                 #region FaceColorClass
-                byte FaceColorClass = 0x0C;
+                byte faceColorClass = 0x0C;
                 byte facecolor = FaceColor;
                 if (facecolor >= 2)
                 {
                     facecolor -= 2;
-                    FaceColorClass = 0;
+                    faceColorClass = 0;
                 }
                 #endregion
                 #region GlassesClass
-                byte GlassesClass = 0;
+                byte glassesClass = 0;
                 byte glasses = Glasses;
                 if (glasses > 0)
                 {
                     glasses--;
-                    GlassesClass = 0x2D;
+                    glassesClass = 0x2D;
                 }
                 #endregion
                 #region CheeksClass
-                byte CheeksClass = 0;
+                byte cheeksClass = 0;
                 byte cheeks = Cheeks;
                 if (cheeks > 0)
                 {
                     cheeks--;
-                    CheeksClass = 0x5A;
+                    cheeksClass = 0x5A;
                 }
                 #endregion
                 WriteBits(bw, antennapower, 6);
@@ -203,19 +206,19 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                 WriteBits(bw, 0, 3);    //Unknown4
                 WriteBits(bw, (byte)(Stats >> 5), 4);
                 WriteBits(bw, 0, 4);    //Unknown5
-                WriteBits(bw, ColorClass, 7);
-                WriteBits(bw, HeadShapeClass, 7);
-                WriteBits(bw, AntennaPowerClass, 7);
-                WriteBits(bw, FaceShapeClass, 7);
+                WriteBits(bw, colorClass, 7);
+                WriteBits(bw, headShapeClass, 7);
+                WriteBits(bw, antennaPowerClass, 7);
+                WriteBits(bw, faceShapeClass, 7);
                 WriteBits(bw, 0, 4);    //Unknown6
-                WriteBits(bw, CheeksClass, 7);
+                WriteBits(bw, cheeksClass, 7);
                 WriteBits(bw, 0, 1);    //Unknown7
-                WriteBits(bw, GlassesClass, 6);
+                WriteBits(bw, glassesClass, 6);
                 WriteBits(bw, 0, 2);    //Unknown8
-                WriteBits(bw, FaceColorClass, 5);
+                WriteBits(bw, faceColorClass, 5);
                 WriteBits(bw, 0, 3);    //Unknown9
                 WriteBits(bw, 0, 8);    //Unknown10
-                byte[] namebytes = new byte[24];
+                var namebytes = new byte[24];
                 System.Text.Encoding.Unicode.GetBytes(Name).CopyTo(namebytes,0);
                 bw.Write(namebytes, 0, 24);
                 //IDEnd is ignored by the game, and when the game generates QR codes, it randomly fills these bytes.
@@ -223,29 +226,29 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                 return ba;
             }
 
-            private byte read_bits_left;
-            private byte read_bits;
+            private byte _readBitsLeft;
+            private byte _readBits;
 
-            private byte ReadBits(BinaryReader br, byte bit_count)
+            private byte ReadBits(BinaryReader br, byte bitCount)
             {
                 byte result = 0;
                 if (br == null)
                     return result;
-                byte result_mask = 1;
-                if (bit_count > 8) bit_count = 8;
-                while (bit_count > 0)
+                byte resultMask = 1;
+                if (bitCount > 8) bitCount = 8;
+                while (bitCount > 0)
                 {
-                    if (read_bits_left == 0)
+                    if (_readBitsLeft == 0)
                     {
-                        read_bits_left = 8;
-                        read_bits = br.ReadByte();
+                        _readBitsLeft = 8;
+                        _readBits = br.ReadByte();
                     }
-                    if ((read_bits & 1) == 1)
-                        result |= result_mask;
-                    result_mask <<= 1;
-                    read_bits >>= 1;
-                    read_bits_left--;
-                    bit_count--;
+                    if ((_readBits & 1) == 1)
+                        result |= resultMask;
+                    resultMask <<= 1;
+                    _readBits >>= 1;
+                    _readBitsLeft--;
+                    bitCount--;
                 }
                 return result;
             }
@@ -278,8 +281,8 @@ namespace IntelligentLevelEditor.Games.DenpaMen
 
                 Stats |= (ushort)(ReadBits(br, 4) << 5);
                 ReadBits(br, 4); //Unknown5
-                var ColorClass = ReadBits(br, 7);
-                int ColorShift = -1;
+                var colorClass = ReadBits(br, 7);
+                int colorShift = -1;
 
                 #region HeadShapeClass
                 var Class = ReadBits(br, 7);
@@ -302,14 +305,14 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                 {
                     AntennaPower %= 12;
                     if (AntennaPower >= 6)
-                        ColorShift = AntennaPower - 6;
+                        colorShift = AntennaPower - 6;
                     AntennaPower++;
                 }
                 else if ((Class > 0x59) && (Class <= 0x5C))
                 {
                     AntennaPower %= 12;
                     if (AntennaPower >= 6)
-                        ColorShift = AntennaPower - 6;
+                        colorShift = AntennaPower - 6;
                     AntennaPower += 13;
                 }
                 else if ((Class > 0x5C) && (Class <= 0x63))
@@ -322,15 +325,16 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                 #endregion
                 #region ColorClass
                 //AntennaPowerClass affects the Color, if the ColorClass is for a single color.
-                if ((ColorClass >= 0x5F) && (ColorClass <= 0x63))
+                if ((colorClass >= 0x5F) && (colorClass <= 0x63))
                 {
                     Color %= 15;
                     Color += 7;
                 }
                 else
                 {
-                    ColorShift++;
-                    byte[][] color_index_table = new byte[][] {
+                    colorShift++;
+                    var colorIndexTable = new[]
+                        {
                         new byte[] { 1,2,3,4,5,6,1 },
                         new byte[] { 1,3,4,5,6,0,1 },
                         new byte[] { 1,2,4,5,6,0,1 },
@@ -339,11 +343,11 @@ namespace IntelligentLevelEditor.Games.DenpaMen
                         new byte[] { 1,2,3,4,5,0,1 },
                         new byte[] { 2,3,4,5,6,0,1 }
                     };
-                    byte[] default_color = new byte[] { 0, 2, 3, 4, 5, 6, 1 };
-                    if ((ColorClass >= 0x28) && (ColorClass <= 0x5E))
-                        Color = color_index_table[ColorShift][Color % 7];
+                    var defaultColor = new byte[] { 0, 2, 3, 4, 5, 6, 1 };
+                    if ((colorClass >= 0x28) && (colorClass <= 0x5E))
+                        Color = colorIndexTable[colorShift][Color % 7];
                     else
-                        Color = default_color[ColorShift];
+                        Color = defaultColor[colorShift];
                 }
                 #endregion
 
