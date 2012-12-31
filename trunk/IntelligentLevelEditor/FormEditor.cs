@@ -35,6 +35,7 @@ namespace IntelligentLevelEditor
             menuHelpCheckUpdates.Checked = Settings.Default.CheckForUpdatesOnStartup;
             if (Settings.Default.CheckForUpdatesOnStartup)
                 bwCheckForUpdates.RunWorkerAsync();
+            menuQRCodeCaptureAutomaticallyReturnData.Checked = Settings.Default.AutomaticallyReturnWebcamQRData;
         }
 
         private void CleanStudio()
@@ -173,11 +174,17 @@ namespace IntelligentLevelEditor
 
         private void menuQRCodeCapture_Click(object sender, EventArgs e)
         {
-            var byteArray = CameraCapture.GetByteArray();
+            var byteArray = CameraCapture.GetByteArray(Settings.Default.AutomaticallyReturnWebcamQRData);
             if (byteArray != null)
             {
                 ReadByteArray(byteArray);
             }
+        }
+
+        private void menuQRCodeCaptureAutomacallyReturnData_Click(object sender, EventArgs e)
+        {
+            Settings.Default.AutomaticallyReturnWebcamQRData = menuQRCodeCaptureAutomaticallyReturnData.Checked;
+            Settings.Default.Save();
         }
 
         private ByteMatrix GetQRMatrix(int size, byte[] data)

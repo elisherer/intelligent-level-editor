@@ -77,6 +77,7 @@ namespace IntelligentLevelEditor
         private short _deviceIndex = -1;
         public byte[] ByteArray;
         public CheckBitmapForQR _checker;
+        public bool AutoReturnData = false;
 
         public CameraCapture()
         {
@@ -85,7 +86,13 @@ namespace IntelligentLevelEditor
 
         public static byte[] GetByteArray()
         {
+            return GetByteArray(false);
+        }
+
+        public static byte[] GetByteArray(bool returndata)
+        {
             var capture = new CameraCapture();
+            capture.AutoReturnData = returndata;
             return capture.ShowDialog() == DialogResult.OK ? capture.ByteArray : null;
         }
 
@@ -196,6 +203,12 @@ namespace IntelligentLevelEditor
 
         private void OnByteArrayReceived(byte[] array)
         {
+            if (AutoReturnData)
+            {
+                DialogResult = DialogResult.OK;
+                ByteArray = array;
+                return;
+            }
             if (MessageBox.Show(@"Data captured, Do you want to return it?", "Data Captured", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 DialogResult = DialogResult.OK;
