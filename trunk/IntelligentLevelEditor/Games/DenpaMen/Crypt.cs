@@ -335,7 +335,8 @@ namespace IntelligentLevelEditor.Games.DenpaMen
         #endregion
 
         #region Alphanumerics
-        private static readonly byte[][] Alphanumerics = new byte[][] {
+        private static readonly byte[][] Alphanumerics = new[]
+            {
 	        new byte[] { 0x24 , 0x2A }, new byte[] { 0x25 , 0x2A }, new byte[] { 0x2E , 0x46 },
 	        new byte[] { 0x2F , 0x46 }, new byte[] { 0x20 , 0x46 }, new byte[] { 0x34 , 0x37 },
 	        new byte[] { 0x3A , 0x2A }, new byte[] { 0x36 , 0x37 }, new byte[] { 0x34 , 0x46 },

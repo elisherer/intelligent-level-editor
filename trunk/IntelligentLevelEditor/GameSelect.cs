@@ -51,11 +51,11 @@ namespace IntelligentLevelEditor
                 case GameMode.Pyramids:
                     return new PyramidsStudio(strip) { Dock = DockStyle.Fill };
                 case GameMode.FreakyForms:
-                    return new FreakyFormsStudio() { Dock = DockStyle.Fill };
+                    return new FreakyFormsStudio { Dock = DockStyle.Fill };
                 case GameMode.DenpaMen:
-                    return new DenpaMenStudio() { Dock = DockStyle.Fill };
+                    return new DenpaMenStudio { Dock = DockStyle.Fill };
                 case GameMode.HexEditor:
-                    return new HexEditor() { Dock = DockStyle.Fill };
+                    return new HexEditor { Dock = DockStyle.Fill };
             }
             return null;
         }
