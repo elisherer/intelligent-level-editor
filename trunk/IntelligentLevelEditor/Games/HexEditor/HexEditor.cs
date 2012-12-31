@@ -10,7 +10,37 @@ namespace IntelligentLevelEditor.Games.HexEditor
 {
     public partial class HexEditor : UserControl, IStudio
     {
-    
+        public static bool IsMatchingData(byte[] data)
+        {
+            if (data.Length <= 2953)
+                return true;
+            if (data.Length <= 4296)
+            {
+                string AllowedChars = " $%*+-./:0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (int i = 0; i < data.Length; i++)
+                {
+                    if(!AllowedChars.Contains(System.Text.Encoding.ASCII.GetString(data,i,1)))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            if (data.Length <= 7089)
+            {
+                string AllowedChars = "0123456789";
+                for (int i = 0; i < data.Length; i++)
+                {
+                    if(!AllowedChars.Contains(System.Text.Encoding.ASCII.GetString(data,i,1)))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
+
         public HexEditor()
         {
             InitializeComponent();

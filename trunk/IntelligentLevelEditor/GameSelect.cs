@@ -19,6 +19,7 @@ namespace IntelligentLevelEditor
             Pyramids,
             FreakyForms,
             DenpaMen,
+            HexEditor,
             Unknown
         }
 
@@ -34,6 +35,8 @@ namespace IntelligentLevelEditor
                 return GameMode.FreakyForms;
             if (DenpaMen.IsMatchingData(data))
                 return GameMode.DenpaMen;
+            if (HexEditor.IsMatchingData(data))
+                return GameMode.HexEditor;
             return GameMode.Unknown;
         }
 
@@ -51,7 +54,7 @@ namespace IntelligentLevelEditor
                     return new FreakyFormsStudio() { Dock = DockStyle.Fill };
                 case GameMode.DenpaMen:
                     return new DenpaMenStudio() { Dock = DockStyle.Fill };
-                case GameMode.Unknown:
+                case GameMode.HexEditor:
                     return new HexEditor() { Dock = DockStyle.Fill };
             }
             return null;
