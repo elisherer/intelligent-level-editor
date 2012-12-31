@@ -161,3 +161,5 @@ D:\IntelligentLevelEditor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelE
 D:\IntelligentLevelEditor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Properties.Resources.resources
 D:\IntelligentLevelEditor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.PaletteEditor.resources
 D:\IntelligentLevelEditor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.csproj.GenerateResource.Cache
+D:\IntelligentLevelEditor\IntelligentLevelEditor\bin\Debug\Be.Windows.Forms.HexBox.dll
+D:\IntelligentLevelEditor\IntelligentLevelEditor\obj\x86\Debug\IntelligentLevelEditor.Games.HexEditor.HexEditor.resources
