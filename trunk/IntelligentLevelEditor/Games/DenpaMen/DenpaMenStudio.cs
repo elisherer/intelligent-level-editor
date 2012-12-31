@@ -94,7 +94,7 @@ namespace IntelligentLevelEditor.Games.DenpaMen
         {
             if (String.IsNullOrEmpty(_data.Name))
             {
-                MessageBox.Show("Error: Name must be filled in.", "Intelligent Level Editor");
+                MessageBox.Show("Error: Name must be filled in.", Application.ProductName);
                 txtName.Focus();
                 return null;
             }
@@ -104,7 +104,7 @@ namespace IntelligentLevelEditor.Games.DenpaMen
 
         public Image MakeQrCard(ByteMatrix qrMatrix)
         {
-            MessageBox.Show(Encoding.UTF8.GetString(SaveData())); //DEBUG
+            MessageBox.Show(Encoding.UTF8.GetString(SaveData()), Application.ProductName); //DEBUG
             return null;
         }
 

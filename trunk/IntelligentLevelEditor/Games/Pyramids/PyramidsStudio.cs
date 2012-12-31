@@ -117,7 +117,7 @@ namespace IntelligentLevelEditor.Games.Pyramids
                             doorSeen = true;
                         else
                         {
-                            MessageBox.Show("More than one door in the level!");
+                            MessageBox.Show("More than one door in the level!", Application.ProductName);
                             return false;
                         }
                     }
@@ -127,7 +127,7 @@ namespace IntelligentLevelEditor.Games.Pyramids
                             playerSeen = true;
                         else
                         {
-                            MessageBox.Show("More than one player in the level!");
+                            MessageBox.Show("More than one player in the level!", Application.ProductName);
                             return false;
                         }
                     }
@@ -137,7 +137,7 @@ namespace IntelligentLevelEditor.Games.Pyramids
                             keySeen = true;
                         else
                         {
-                            MessageBox.Show("More than one key in the level!");
+                            MessageBox.Show("More than one key in the level!", Application.ProductName);
                             return false;
                         }
                     }
@@ -146,7 +146,7 @@ namespace IntelligentLevelEditor.Games.Pyramids
                         tntCount++;
                         if (tntCount > TntMax)
                         {
-                            MessageBox.Show("TNT's maximum amount have been reached (" + TntMax + ")!");
+                            MessageBox.Show("TNT's maximum amount have been reached (" + TntMax + ")!", Application.ProductName);
                             return false;
                         }
                     }
@@ -157,17 +157,17 @@ namespace IntelligentLevelEditor.Games.Pyramids
                 }
             if (!doorSeen)
             {
-                MessageBox.Show("No door in the level!");
+                MessageBox.Show("No door in the level!", Application.ProductName);
                 return false;
             }
             if (!playerSeen)
             {
-                MessageBox.Show("No player in the level!");
+                MessageBox.Show("No player in the level!", Application.ProductName);
                 return false;
             }
             if (!keySeen)
             {
-                MessageBox.Show("No key in the level!");
+                MessageBox.Show("No key in the level!", Application.ProductName);
                 return false;
             }
             if (tntCount > 0 && !detonSeen)
