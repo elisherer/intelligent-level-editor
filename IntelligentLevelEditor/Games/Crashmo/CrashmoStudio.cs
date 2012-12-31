@@ -73,7 +73,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
             }
             catch
             {
-                MessageBox.Show("Error: Data is too complex to encode as a QR code, or save as a binary.", "Intelligent Level Editor");
+                MessageBox.Show("Error: Data is too complex to encode as a QR code, or save as a binary.", Application.ProductName);
                 return null;
             }
         }

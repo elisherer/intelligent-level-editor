@@ -37,7 +37,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
             {
                 _name = value.Contains('\0') ? value.Substring(0, value.IndexOf('\0')) : value;
                 if (_name.Length <= 16) return;
-                MessageBox.Show(@"The length of this property should <= 16");
+                MessageBox.Show(@"The length of this property should <= 16", Application.ProductName);
                 _name = _name.Substring(0,16);
             }
         }
@@ -50,7 +50,7 @@ namespace IntelligentLevelEditor.Games.Crashmo
             {
                 _author = value.Contains('\0') ? value.Substring(0, value.IndexOf('\0')) : value;
                 if (_author.Length <= 10) return;
-                MessageBox.Show(@"The length of this property should <= 10");
+                MessageBox.Show(@"The length of this property should <= 10", Application.ProductName);
                 _author = _author.Substring(0, 10);
             }
         }

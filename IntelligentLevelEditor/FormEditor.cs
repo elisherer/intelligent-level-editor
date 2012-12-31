@@ -51,7 +51,7 @@ namespace IntelligentLevelEditor
 
             if (_gameMode == GameSelect.GameMode.Unknown)
             {
-                MessageBox.Show(@"Unknown data.");
+                MessageBox.Show(@"Unknown data.", Application.ProductName);
                 return;
             }
 
@@ -107,7 +107,7 @@ namespace IntelligentLevelEditor
             }
             catch (Exception ex)
             {
-                MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message);
+                MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message, Application.ProductName);
             }
         }
 
@@ -167,7 +167,7 @@ namespace IntelligentLevelEditor
             }
             catch (ReaderException ex)
             {
-                MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message);
+                MessageBox.Show(@"Error Loading:" + Environment.NewLine + ex.Message, Application.ProductName);
             }
         }
 
@@ -274,9 +274,9 @@ namespace IntelligentLevelEditor
         private void bwCheckForUpdates_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             if (IsNewerAvailable(_remoteVer))
-                MessageBox.Show(string.Format(@"This version is v{0}" + Environment.NewLine + "The version on the server is v{1}" + Environment.NewLine + "You might want to download a newer version.", Application.ProductVersion, _remoteVer));
+                MessageBox.Show(string.Format(@"This version is v{0}" + Environment.NewLine + "The version on the server is v{1}" + Environment.NewLine + "You might want to download a newer version.", Application.ProductVersion, _remoteVer), Application.ProductName);
             else if (_checkNow)
-                MessageBox.Show(string.Format(@"v{0} is the latest version.", Application.ProductVersion));
+                MessageBox.Show(string.Format(@"v{0} is the latest version.", Application.ProductVersion), Application.ProductName);
         }
         #endregion
 

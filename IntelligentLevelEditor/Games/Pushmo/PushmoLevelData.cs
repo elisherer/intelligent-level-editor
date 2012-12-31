@@ -36,7 +36,7 @@ namespace IntelligentLevelEditor.Games.Pushmo
             {
                 _name = value.Contains('\0') ? value.Substring(0, value.IndexOf('\0')) : value;
                 if (_name.Length <= 16) return;
-                MessageBox.Show(@"The length of this property should <= 16");
+                MessageBox.Show(@"The length of this property should <= 16", Application.ProductName);
                 _name = _name.Substring(0,16);
             }
         }
