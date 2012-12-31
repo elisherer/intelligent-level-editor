@@ -50,11 +50,13 @@ namespace IntelligentLevelEditor
         {
             _gameMode = GameSelect.DetectGame(data);
 
+            /*
             if (_gameMode == GameSelect.GameMode.Unknown)
             {
                 MessageBox.Show(@"Unknown data.", Application.ProductName);
                 return;
             }
+            */
 
             CleanStudio();
             _studio = GameSelect.GetStudio(_gameMode, statusStrip);

@@ -6,6 +6,7 @@ using IntelligentLevelEditor.Games.DenpaMen;
 using IntelligentLevelEditor.Games.FreakyForms;
 using IntelligentLevelEditor.Games.Pushmo;
 using IntelligentLevelEditor.Games.Pyramids;
+using IntelligentLevelEditor.Games.HexEditor;
 
 namespace IntelligentLevelEditor
 {
@@ -50,6 +51,8 @@ namespace IntelligentLevelEditor
                     return new FreakyFormsStudio() { Dock = DockStyle.Fill };
                 case GameMode.DenpaMen:
                     return new DenpaMenStudio() { Dock = DockStyle.Fill };
+                case GameMode.Unknown:
+                    return new HexEditor() { Dock = DockStyle.Fill };
             }
             return null;
         }

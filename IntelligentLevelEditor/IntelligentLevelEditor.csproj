@@ -38,6 +38,10 @@
     <ApplicationIcon>ile.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Be.Windows.Forms.HexBox, Version=1.4.8.23985, Culture=neutral, PublicKeyToken=e0e5adf0ebc99863, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Be.Windows.Forms.HexBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -154,6 +158,12 @@
     <Compile Include="Games\FreakyForms\FreakyFormsStudio.Designer.cs">
       <DependentUpon>FreakyFormsStudio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Games\HexEditor\HexEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Games\HexEditor\HexEditor.Designer.cs">
+      <DependentUpon>HexEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games\IStudio.cs" />
     <Compile Include="Games\ImageImporter.cs" />
     <Compile Include="Games\Pushmo\PushmoStudio.cs">
@@ -246,6 +256,9 @@
     <EmbeddedResource Include="Games\FreakyForms\FreakyFormsStudio.resx">
       <DependentUpon>FreakyFormsStudio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Games\HexEditor\HexEditor.resx">
+      <DependentUpon>HexEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Games\Pushmo\PushmoStudio.resx">
       <DependentUpon>PushmoStudio.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +291,8 @@
       <DependentUpon>PaletteEditor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -289,7 +304,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Be.Windows.Forms.HexBox.dll" />
     <Content Include="Resources\DenpaMen\denpa_logo.png" />
+    <Content Include="zxing.dll" />
     <None Include="Resources\Flags\flag_us.png" />
     <None Include="Resources\Flags\flag_jp.png" />
     <None Include="Resources\Flags\flag_eu.png" />
