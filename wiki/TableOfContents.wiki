@@ -6,7 +6,7 @@
     * [Pushmo Pushmo]
     * [Crashmo Crashmo]
     * [Pyramids]
+    * [FreakyForms] (alpha)
+    * [DenpaMen Denpa Men] (beta)
   * Games - Not in the editor
-    * [FreakyForms]
-    * [DenpaMen Denpa Men]
     * [MarioTennisOpen Mario Tennis Open]
