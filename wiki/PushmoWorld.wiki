@@ -40,10 +40,9 @@ QR Version: 18 (L) - 89x89, 718 bytes
 || 0x2CC ||  1 || //`byte` || Protection (4=locked, 3=open) ||
 
 
-|| 0x0CE || 512 || `byte[512]` || Level data (Rastered, Nibble-per-
-pixel, bottom to top) ||
+|| 0x0CE || 512 || `byte[512]` || Level data (Rastered, Nibble-per-pixel, bottom to top) ||
 || 0x2CD || 22 || //`byte[22]` || Footer (Zeros) ||
-|| *0x2D0* || *720* || || *Summary* ||
+|| *0x2E4* || *740* || || *Summary* ||
 
 `*`All strings are nullified so last wchar equals 0.
 
