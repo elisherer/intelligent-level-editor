@@ -34,7 +34,7 @@ QR Version: 18 (L) - 89x89, 718 bytes
 || 0x044 ||  1 || `byte` || Protection (4=locked, 3=open) ||
 || 0x045 ||  1 || `byte` || Difficulty ||
 || 0x046 || 10 || `byte[10]` || Palette data ||
-|| 0x050 ||  2 || `ushort` || Number of gadgets (4 bytes each) ||
+|| 0x050 ||  2 || `uint16` || Number of gadgets (4 bytes each) ||
 || 0x052 ||124 || `gadget[31]` || Gadgets array`**` ||
 || 0x0CD ||512 || `byte[512]` || Level data (Rastered, Nibble-per-pixel, top to bottom) ||
 || 0x2CD || 22 || `byte[22]` || Footer (Zeros) ||
